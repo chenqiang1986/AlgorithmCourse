@@ -24,5 +24,7 @@ In this module, we will learn:
    Build a rooted general tree from a known root and undirected edges, then recover `parent_id` and `child_ids`
 5. [05-usaco-style-tree-practice.md](./05-usaco-style-tree-practice.md)
    Two USACO-style practice problems: tree height, and reconstructing post-order from pre-order plus in-order
+6. [06-usaco-tree-problems.md](./06-usaco-tree-problems.md)
+   A curated list of official USACO tree problems for extra practice
 
 More lessons can be added later as the course grows.
