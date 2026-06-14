@@ -9,7 +9,7 @@ In this module, we will learn:
 1. What a tree is and why it is useful
 2. How a binary tree is structured
 3. How to traverse a binary tree
-4. How to represent trees in C++
+4. How to represent binary trees and general trees in C++
 5. How common tree-based algorithms are designed
 
 ## Lessons
@@ -18,5 +18,7 @@ In this module, we will learn:
    Binary tree basics, traversal order, and a map-based storage design in C++
 2. [02-reading-a-tree-from-input.md](./02-reading-a-tree-from-input.md)
    Read a binary tree from input and output pre-order, in-order, and post-order traversal
+3. [03-general-tree-basics.md](./03-general-tree-basics.md)
+   General tree basics using `vector<int> child_ids`, with pre-order and post-order traversal
 
 More lessons can be added later as the course grows.
