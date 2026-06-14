@@ -213,6 +213,7 @@ Before coding, think carefully:
 
 - which node is the root?
 - is every node connected to the root?
+- Can you make the code to detect such abnormality and output gracefully?
 
 This is a good reminder that in contest problems, the input is often guaranteed to be valid, but when you practice on your own, you should still think about unusual cases.
 
