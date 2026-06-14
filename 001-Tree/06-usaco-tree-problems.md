@@ -10,9 +10,12 @@ Use it as a practice list:
 
 ## Suggested Starting Set
 
+1. `Bronze` - [Family Tree](https://usaco.org/index.php?page=viewproblem2&cpid=833)
+2. `Bronze` - [Evolution Tree](https://usaco.org/index.php?page=viewproblem2&cpid=941)
 1. `Silver` - [Cowntagion](https://usaco.org/index.php?page=viewproblem2&cpid=1062)
 2. `Silver` - [Clock Tree](https://usaco.org/index.php?page=viewproblem2&cpid=1016)
 3. `Silver` - [Barn Tree](https://usaco.org/index.php?page=viewproblem2&cpid=1254)
+
 
 ## How to Use This List
 
