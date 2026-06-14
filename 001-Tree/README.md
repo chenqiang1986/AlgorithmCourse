@@ -16,5 +16,7 @@ In this module, we will learn:
 
 1. [01-binary-tree-basics.md](./01-binary-tree-basics.md)
    Binary tree basics, traversal order, and a map-based storage design in C++
+2. [02-reading-a-tree-from-input.md](./02-reading-a-tree-from-input.md)
+   Read a binary tree from input and output pre-order, in-order, and post-order traversal
 
 More lessons can be added later as the course grows.
