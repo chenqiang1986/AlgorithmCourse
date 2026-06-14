@@ -1,6 +1,6 @@
 # Lesson 5: USACO-Style Tree Practice
 
-This lesson gives two practice problems in a contest style.
+This lesson gives three practice problems in a contest style.
 
 For each problem:
 
@@ -193,3 +193,104 @@ Now recursively solve:
 
 - left subtree from `2 4 5` and `4 2 5`
 - right subtree from `3 6` and `3 6`
+
+
+## Problem 3: Lowest Common Ancestor Queries
+
+You are given a rooted tree.
+
+The input gives:
+
+- the number of nodes
+- the root id
+- all `n - 1` edges
+- `k` queries
+
+Each edge is undirected in the input, so you must first recover the parent-child relationship from the root.
+
+Each query contains two node ids. For each query, output their **lowest common ancestor (LCA)**, meaning the deepest node that is an ancestor of both nodes.
+
+### Input Format
+
+The first line contains two integers:
+
+```text
+n root_id
+```
+
+The next `n - 1` lines each contain two integers:
+
+```text
+u v
+```
+
+meaning there is an edge between node `u` and node `v`.
+
+The next line contains one integer:
+
+```text
+k
+```
+
+The next `k` lines each contain two integers:
+
+```text
+a b
+```
+
+representing one query.
+
+### Output Format
+
+Output `k` lines.
+
+For each query, print one integer:
+
+```text
+lca(a, b)
+```
+
+the lowest common ancestor of nodes `a` and `b`.
+
+### Sample Input
+
+```text
+8 10
+10 20
+10 30
+10 40
+20 50
+20 60
+40 70
+60 80
+4
+50 80
+30 70
+50 30
+80 70
+```
+
+### Sample Output
+
+```text
+20
+10
+10
+10
+```
+
+### Explanation
+
+From the root `10`, the tree becomes:
+
+- `10` is the parent of `20`, `30`, `40`
+- `20` is the parent of `50`, `60`
+- `40` is the parent of `70`
+- `60` is the parent of `80`
+
+Then:
+
+- `LCA(50, 80) = 20`
+- `LCA(30, 70) = 10`
+- `LCA(50, 30) = 10`
+- `LCA(80, 70) = 10`
