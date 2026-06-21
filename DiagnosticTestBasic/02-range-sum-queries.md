@@ -1,5 +1,13 @@
 # Problem 2: Range Sum Queries
 
+## Expected Submission Filename
+
+Upload your solution as:
+
+```text
+dtb_range_sum_queries.cpp
+```
+
 You are given an array of numbers and many queries.
 
 Each query gives two indices `i` and `j`.
