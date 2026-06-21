@@ -1,5 +1,13 @@
 # Problem 1: Student Ranking
 
+## Expected Submission Filename
+
+Upload your solution as:
+
+```text
+student_ranking.cpp
+```
+
 You are given a list of students.
 
 Each student has:

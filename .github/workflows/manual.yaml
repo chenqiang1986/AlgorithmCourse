@@ -1,0 +1,43 @@
+# This is a basic workflow that is manually triggered
+
+name: Cpp Run workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  pull_request:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+   build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        id: s1
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get Changeset
+        id: s2
+        run: |
+          MERGE_BASE=$(git merge-base origin/main HEAD)
+          CHANGE_SET_WITH_NEW_LINE=$(git diff --relative --diff-filter=dr --name-only ${MERGE_BASE} -- '*')
+          CHANGE_SET=$(echo -n "$CHANGE_SET_WITH_NEW_LINE" | tr '\n' ' ')
+          echo "CHANGE_SET=$CHANGE_SET" >> $GITHUB_OUTPUT
+
+      - name: Set up C++ environment
+        run: sudo apt-get install g++
+
+      - name: Build the project
+        run: |
+          mkdir build
+          echo ${{steps.s2.outputs.CHANGE_SET}}
+          bash .util/build_cpp.sh "${{steps.s2.outputs.CHANGE_SET}}"
+      
+      - name: Run the project
+        run: |          
+          echo ${{steps.s2.outputs.CHANGE_SET}}
+          bash .util/grade.sh "${{steps.s2.outputs.CHANGE_SET}}"
+
