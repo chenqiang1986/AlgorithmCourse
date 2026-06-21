@@ -19,6 +19,8 @@ int main() {
     for (long long i = 0; i < q; i++) {
         long long start, stop;
         std::cin >> start >> stop;
+        start--;
+        stop--;
 
         long long sum = (start == 0) ? prefix_sum[stop] : prefix_sum[stop] - prefix_sum[start -1]; 
         std::cout << sum << std::endl;
