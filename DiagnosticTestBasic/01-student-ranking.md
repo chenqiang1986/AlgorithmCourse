@@ -5,7 +5,7 @@
 Upload your solution as:
 
 ```text
-student_ranking.cpp
+dtb_student_ranking.cpp
 ```
 
 You are given a list of students.
