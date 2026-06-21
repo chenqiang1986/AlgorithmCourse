@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 int main() {
     long long n, q;
