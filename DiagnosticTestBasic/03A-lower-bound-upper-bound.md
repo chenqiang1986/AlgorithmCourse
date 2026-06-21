@@ -1,5 +1,13 @@
 # Problem 3a: Lower Bound and Upper Bound Practice
 
+## Expected Submission Filename
+
+Upload your solution as:
+
+```text
+dtb_lower_bound_upper_bound.cpp
+```
+
 You are given a set of distinct integers `A` and many queries.
 
 Each query contains one integer `T`.

@@ -1,5 +1,13 @@
 # Problem 3b: Count Numbers Not Greater Than `T`
 
+## Expected Submission Filename
+
+Upload your solution as:
+
+```text
+dtb_count_less_than_or_equal.cpp
+```
+
 You are given a list of numbers `A` and many queries.
 
 Each query contains one number `T`.
