@@ -35,3 +35,8 @@ The basic principle for these kind of problem is to
    - Define map $A[x_i] = \sum_{k=0}^{i}y_i$
    - Easy to see $A[x_i] = A[x_{i-1}] + y_i$ (Check if $x_i==x_{i-1}$, there is no problem.)
    - For given $X_1$ $X_2$, result is $$(A.upper\\_bound(X_2) -1).second - (A.lower\\_bound(X_1)-1).second$$
+  
+## Practice
+1. 2024 Bronze Open 2nd https://usaco.org/index.php?page=viewproblem2&cpid=1420
+2. 2024 Bronze Open 1st https://usaco.org/index.php?page=viewproblem2&cpid=1419
+3. 2024 Bronze Feb 3rd https://usaco.org/index.php?page=viewproblem2&cpid=1397
