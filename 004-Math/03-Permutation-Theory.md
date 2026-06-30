@@ -267,3 +267,4 @@ just like ordinary functions.
 
 1. Write a program to print the cycle decomposition of a given permutation.
 2. 2023 Open Bronze 3rd: https://usaco.org/index.php?page=viewproblem2&cpid=1325
+3. 2024 Open Bronze 3rd: https://usaco.org/index.php?page=viewproblem2&cpid=1421
