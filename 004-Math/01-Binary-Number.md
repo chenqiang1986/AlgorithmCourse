@@ -51,3 +51,4 @@ xor is essentially addition with overflow neglected.
 ## Practice
 2026 Third Bronze 3rd: https://usaco.org/index.php?page=viewproblem2&cpid=1588
 - Q: Can you figure out the pattern on the chain $f(x), f(f(x)), f(f(f(x)))....$ if we only collect the number that contains 0 or 1.
+2026 Second Bronze 3rd: https://usaco.org/index.php?page=viewproblem2&cpid=1565
