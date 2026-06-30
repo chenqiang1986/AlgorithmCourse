@@ -39,3 +39,15 @@ std::vector<int> to_base2(int a) {
 ## Bitwise Operation
 
 Bitwise operation is just like boolean operation, but we treat each bit independently.
+
+Example for bitwise and (&), or (1):
+1. $3\\&5 = (011)_2 \\& (101)_2 = (001)_2 =1$
+2. $3|5 = (011)_2 | (101)_2 = (111)_2 =7$
+
+Example for bitwise xor (^):
+xor is essentially addition with overflow neglected.
+1. $3$ ^ $5 = (011)_2$ ^ $(101)_2 = (110)_2 =6$
+
+## Practice
+2026 Third Bronze 3rd: https://usaco.org/index.php?page=viewproblem2&cpid=1588
+- Q: Can you figure out the pattern on the chain $f(x), f(f(x)), f(f(f(x)))....$ if we only collect the number that contains 0 or 1.
