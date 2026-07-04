@@ -5,7 +5,8 @@ From time to time we may need to answer the following questions repeatedly:
 2. Given array $a$, what is the min/max of $a[0..i]$ or $a[i:]$
    - For generic question on $a[i..j]$, we need tree based optimization. Will cover later.
 3. Given an array of points $a={(x_i, y_i)}$ and X, what is the y min/max value for $x_i > X$.
-4. Given an array of points $a={(x_i, y_i)}$ and $X_1$, $X_2$, what is the sum of y values for $x_i \in [X_1, X_2]$. 
+4. Given an array of points $a={(x_i, y_i)}$ and $X_1$, $X_2$, what is the sum of y values for $x_i \in [X_1, X_2]$.
+5. Given array $a$ with initial value all zeros, now a list of operation like this: Add $k$ to all entries $a[u..v]$, and finally ask you the array $a$. 
 
 Typically in a problem, the array is given and fixed, but it may have tons of queries for you to process. 
 If we use brute force method to scan all the data we need for each query, the efficiency is not good enough.
@@ -17,7 +18,7 @@ The basic principle for these kind of problem is to
 
 ## Solution
 1. Given array $a$, what is the sum of $a[i..j]$
-   - Define vector $A[i]=\sum_{k=0}^{i}{a[k]}$
+   - Define vector $A[i]=\sum_{k=0}^{i}{a[k]}$, which is called the prefix sum of $a$
    - Easy to see $A[i] = A[i-1]+a[i]$
    - Then $\sum_{k=i}^{j}{a[k]} = A[j] - A[i-1]$
 2. Given array $a$, what is the min/max of $a[0..i]$ or $a[i:]$
@@ -35,8 +36,12 @@ The basic principle for these kind of problem is to
    - Define map $A[x_i] = \sum_{k=0}^{i}y_i$
    - Easy to see $A[x_i] = A[x_{i-1}] + y_i$ (Check if $x_i==x_{i-1}$, there is no problem.)
    - For given $X_1$ $X_2$, result is $$(A.upper\\_bound(X_2) -1).second - (A.lower\\_bound(X_1)-1).second$$
+5. We define difference array of $a$ like this $b[i] = a[i] - a[i-1]$
+   - Add $k$ to $a[u..v]$ is essentially $b[u] += k$ and $b[v+1] -=k$
+   - After applying all the operations, recover $a$ from $b$ that $a$ is the prefix sum of $b$.
   
 ## Practice
 1. 2024 Bronze Open 2nd https://usaco.org/index.php?page=viewproblem2&cpid=1420
 2. 2024 Bronze Open 1st https://usaco.org/index.php?page=viewproblem2&cpid=1419
 3. 2024 Bronze Feb 3rd https://usaco.org/index.php?page=viewproblem2&cpid=1397
+4. 2012 Bronze Jan 2nd https://usaco.org/current/index.php?page=viewproblem2&cpid=104
