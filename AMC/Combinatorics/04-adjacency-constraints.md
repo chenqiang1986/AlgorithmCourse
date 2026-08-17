@@ -78,7 +78,25 @@ $$4! \times 2! = 24 \times 2 = 48$$
 
 **Non-obvious detail:** for circular problems, the item count used in $(n - 1)!$ already accounts for one rotation being "used up," so always glue *first*, then apply the circular formula to the reduced count — do not apply $(n-1)!$ to the original $n$ and then try to glue afterward.
 
-## 7. Class Practice 1: Photo Line-Up
+## 7. Reading Example: Not All Three Sit Together
+
+7 people, including Amy, Ben, and Cara, sit in a row of 7 chairs. In how many ways can they sit if Amy, Ben, and Cara are **not** allowed to all sit together — but any two of the three (say Ben and Cara) may still sit next to each other, as long as Amy isn't adjacent to that pair?
+
+This is *not* a "no two adjacent" gap problem: pairs like Ben-and-Cara together are still allowed, so forcing all three into separate gaps (as in Section 5) would over-restrict and undercount. The condition only forbids one specific scenario — all three forming a single contiguous run — so the right tool is the complement, built on the bundling method from Section 1 extended to a block of $k = 3$.
+
+Total unrestricted arrangements: $7! = 5{,}040$.
+
+Glue Amy, Ben, and Cara into a single block. That leaves $7 - 3 + 1 = 5$ items to arrange (the block plus the other 4 people), and the block has $3! = 6$ internal orders:
+
+$$5! \times 3! = 120 \times 6 = 720$$
+
+Subtract the "all three together" count from the total:
+
+$$7! - 5! \times 3! = 5{,}040 - 720 = 4{,}320$$
+
+**Non-obvious detail:** "not all three together" is a much weaker restriction than "no two adjacent." It forbids only the single case where A, B, and C form one contiguous run — arrangements where exactly two of them (like Ben and Cara) sit together, with Amy elsewhere, are still perfectly valid and must be counted. That's precisely why the complement-of-the-fully-bundled-block is the right approach, not the gap method.
+
+## 8. Class Practice 1: Photo Line-Up
 
 ### Problem
 
@@ -99,7 +117,7 @@ The answer is **(B) 48**.
 
 </details>
 
-## 8. Class Practice 2: Avoiding Neighbors
+## 9. Class Practice 2: Avoiding Neighbors
 
 ### Problem
 
@@ -120,7 +138,7 @@ The answer is **(C) 3,600**.
 
 </details>
 
-## 9. Class Practice 3: Three Reserved Seats
+## 10. Class Practice 3: Three Reserved Seats
 
 ### Problem
 
@@ -141,28 +159,33 @@ The answer is **(D) 144**.
 
 </details>
 
-## 10. Common Mistakes
+## 11. Common Mistakes
 
-### 10.1 Forgetting the internal arrangement factor
+### 11.1 Forgetting the internal arrangement factor
 
 Gluing A and B into a block reduces the item count correctly, but forgetting to multiply by $2!$ (or $k!$ for a larger block) undercounts by exactly that factor.
 
-### 10.2 Miscounting the number of gaps
+### 11.2 Miscounting the number of gaps
 
 With $m$ other items arranged in a row, there are $m + 1$ gaps, not $m$. This off-by-one is the most common gap-method error.
 
-### 10.3 Using the linear gap count in a circular problem
+### 11.3 Using the linear gap count in a circular problem
 
 A circular table with $m$ other people seated has exactly $m$ gaps (the seats "wrap around," so there is no separate "before the first" and "after the last" gap) — not $m + 1$.
 
-### 10.4 Applying the gap method when items outnumber gaps
+### 11.4 Applying the gap method when items outnumber gaps
 
 If you need to place more mutually non-adjacent items than there are available gaps, the answer is $0$ — always check $(\text{items to separate}) \le (\text{number of gaps})$ before computing.
 
-## 11. Key Takeaways
+### 11.5 Using the gap method for "not all together" instead of the complement
+
+"No two adjacent" and "not all $k$ together" are different restrictions. The gap method solves the first; it over-restricts the second, since it also forbids valid cases where some (but not all) of the group sit together. For "not all $k$ together," bundle the whole group into one block and subtract from the total (Section 7).
+
+## 12. Key Takeaways
 
 - "Must be adjacent" → bundling method: glue into one block, arrange $(n - 1)$ items, multiply by the block's internal arrangements.
 - "Must not be adjacent" → gap method: arrange the rest first, then insert the restricted items into distinct gaps; or use the complement (total minus "must be adjacent").
+- "Not all $k$ of a group together" (partial togetherness still allowed) → complement only: total minus the fully-bundled-block count. The gap method does not apply here since it would also exclude valid partial-adjacency cases.
 - Circular versions glue first, then apply $(n - 1)!$ to the reduced item count; circular gap counts equal the number of already-seated people, not that number plus one.
 - Always sanity-check a "must not be adjacent" answer against the complement method.
 
