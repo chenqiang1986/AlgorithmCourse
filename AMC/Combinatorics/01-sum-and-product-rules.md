@@ -93,13 +93,16 @@ A student has 5 shirts, 4 pairs of pants, and 2 pairs of shoes. Every outfit con
 
 (A) 11  (B) 20  (C) 22  (D) 40  (E) 80
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Each outfit needs a shirt **and** pants **and** shoes — three sequential, independent choices. Multiply:
 
 $$5 \times 4 \times 2 = 40$$
 
 The answer is **(D) 40**.
+
+</details>
 
 ## 7. Class Practice 2: Weekend Plans
 
@@ -111,13 +114,16 @@ For a free afternoon, Maria will either go to the movies (6 movies are playing) 
 
 (A) 3  (B) 6  (C) 9  (D) 18  (E) 24
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 "Movies **or** hiking" — she does exactly one, and the two lists never overlap, so the cases are mutually exclusive. Add:
 
 $$6 + 3 = 9$$
 
 The answer is **(C) 9**.
+
+</details>
 
 ## 8. Common Mistakes
 

@@ -90,7 +90,8 @@ How many integers from 1 to 60 are divisible by 4 or by 6?
 
 (A) 15  (B) 20  (C) 25  (D) 30  (E) 35
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 $$
 \begin{aligned}
@@ -104,6 +105,8 @@ $$15 + 10 - 5 = 20$$
 
 The answer is **(B) 20**.
 
+</details>
+
 ## 5. Class Practice 2: Three-Set Overlap with Groups of People
 
 ### Problem
@@ -114,11 +117,14 @@ In a class of 40 students, 18 play soccer, 15 play basketball, and 10 play tenni
 
 (A) 24  (B) 27  (C) 29  (D) 33  (E) 36
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 $$(18 + 15 + 10) - (7 + 4 + 5) + 2 = 43 - 16 + 2 = 29$$
 
 The answer is **(C) 29**.
+
+</details>
 
 ## 6. Class Practice 3: Three-Set Overlap, Numeric
 
@@ -130,7 +136,8 @@ How many integers from 1 to 60 are divisible by 2, 3, or 5?
 
 (A) 38  (B) 40  (C) 42  (D) 44  (E) 46
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Single counts:
 
@@ -161,6 +168,8 @@ Combine:
 $$(30 + 20 + 12) - (10 + 4 + 6) + 2 = 62 - 20 + 2 = 44$$
 
 The answer is **(D) 44**.
+
+</details>
 
 ## 7. Common Mistakes
 

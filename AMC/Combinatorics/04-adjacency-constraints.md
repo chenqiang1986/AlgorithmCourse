@@ -88,13 +88,16 @@ $$4! \times 2! = 24 \times 2 = 48$$
 
 (A) 24  (B) 48  (C) 60  (D) 120  (E) 240
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Glue Jin and Kai into one block: $5 - 1 = 4$ items to arrange.
 
 $$4! \times 2! = 24 \times 2 = 48$$
 
 The answer is **(B) 48**.
+
+</details>
 
 ## 8. Class Practice 2: Avoiding Neighbors
 
@@ -106,13 +109,16 @@ The answer is **(B) 48**.
 
 (A) 720  (B) 1,440  (C) 3,600  (D) 4,320  (E) 5,040
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Total unrestricted arrangements: $7! = 5{,}040$. Arrangements with Lena and Omar forced together: $6! \times 2! = 720 \times 2 = 1{,}440$.
 
 $$5{,}040 - 1{,}440 = 3{,}600$$
 
 The answer is **(C) 3,600**.
+
+</details>
 
 ## 9. Class Practice 3: Three Reserved Seats
 
@@ -124,13 +130,16 @@ The answer is **(C) 3,600**.
 
 (A) 12  (B) 36  (C) 72  (D) 144  (E) 720
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Arrange the other $6 - 3 = 3$ people first: $3! = 6$ ways, creating $3 + 1 = 4$ gaps. Place the 3 friends into 3 of the 4 gaps (order matters, one friend per chosen gap): $P_4^3 = 4 \times 3 \times 2 = 24$.
 
 $$3! \times P_4^3 = 6 \times 24 = 144$$
 
 The answer is **(D) 144**.
+
+</details>
 
 ## 10. Common Mistakes
 

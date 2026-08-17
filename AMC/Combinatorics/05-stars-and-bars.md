@@ -86,13 +86,16 @@ How many ways can 12 identical stickers be distributed among 5 children, if a ch
 
 (A) 1,001  (B) 1,365  (C) 1,820  (D) 3,003  (E) 4,368
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Nonnegative integer solutions to $x_1 + \cdots + x_5 = 12$:
 
 $$C_{12+5-1}^{5-1} = C_{16}^{4} = 1{,}820$$
 
 The answer is **(C) 1,820**.
+
+</details>
 
 ## 8. Class Practice 2: Minimum Requirement
 
@@ -104,13 +107,16 @@ How many ways can 9 identical marbles be distributed among 3 bags, if each bag m
 
 (A) 10  (B) 28  (C) 36  (D) 45  (E) 55
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Positive integer solutions to $x_1 + x_2 + x_3 = 9$:
 
 $$C_{9-1}^{3-1} = C_{8}^{2} = 28$$
 
 The answer is **(B) 28**.
+
+</details>
 
 ## 9. Class Practice 3: Shifted Minimum
 
@@ -122,13 +128,16 @@ How many ways can 20 identical apples be distributed among 4 baskets, if each ba
 
 (A) 45  (B) 84  (C) 120  (D) 165  (E) 220
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Give each basket 3 apples first ($3 \times 4 = 12$ used), leaving $20 - 12 = 8$ to distribute freely among 4 baskets:
 
 $$C_{8+4-1}^{4-1} = C_{11}^{3} = 165$$
 
 The answer is **(D) 165**.
+
+</details>
 
 ## 10. Common Mistakes
 

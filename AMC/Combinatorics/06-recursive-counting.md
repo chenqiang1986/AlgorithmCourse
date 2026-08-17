@@ -97,7 +97,8 @@ A staircase has $n$ steps. Each move, you may climb either 1 step or 2 steps at 
 
 (A) 8  (B) 13  (C) 21  (D) 34  (E) 55
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Let $c_n$ be the number of ways to climb $n$ steps. Looking at the **last move**: it is either a single step from step $n - 1$ ($c_{n-1}$ ways) or a double step from step $n - 2$ ($c_{n-2}$ ways):
 
@@ -109,6 +110,8 @@ $$c_n = c_{n-1} + c_{n-2}, \qquad c_1 = 1, \qquad c_2 = 2$$
 
 The answer is **(B) 13**.
 
+</details>
+
 ## 7. Class Practice 2: Choosing Non-Adjacent Chairs
 
 ### Problem
@@ -119,7 +122,8 @@ In how many ways can you choose a subset of chairs from a row of 6 chairs so tha
 
 (A) 13  (B) 17  (C) 21  (D) 24  (E) 32
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Let $f_n$ be the number of valid subsets from a row of $n$ chairs. Look at the **last chair** (position $n$):
 
@@ -136,6 +140,8 @@ Base cases: $f_0 = 1$ (only the empty subset), $f_1 = 2$ (empty, or just the one
 
 The answer is **(C) 21**.
 
+</details>
+
 **Non-obvious detail:** this problem is the same recurrence as the tiling problem in Section 3, just re-indexed — a chosen chair "blocks" its neighbor the same way a placed tile blocks the next cell, which is why the numbers match up one index apart.
 
 ## 8. Class Practice 3: A Three-Term Recurrence
@@ -148,7 +154,8 @@ In how many ways can a $1 \times n$ board be tiled using $1\times1$, $1\times2$,
 
 (A) 13  (B) 15  (C) 24  (D) 30  (E) 37
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Let $g_n$ be the count. Looking at the **last tile**, it has length 1, 2, or 3:
 
@@ -161,6 +168,8 @@ Base cases: $g_0 = 1$ (empty board, one way to tile nothing), $g_1 = 1$, $g_2 = 
 | $g_n$ | 1 | 1 | 2 | 4 | 7 | 13 |
 
 The answer is **(A) 13**.
+
+</details>
 
 ## 9. Common Mistakes
 

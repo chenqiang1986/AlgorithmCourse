@@ -78,6 +78,23 @@ observed shape, in order:
    ### Sample Output
    ### Explanation
    ```
+   AMC-style modules (e.g. `AMC/Combinatorics`) use a multiple-choice variant instead:
+   ```markdown
+   ### Problem
+   ### Answer Choices
+   <details>
+   <summary>Solution</summary>
+
+   <worked solution, ending with "The answer is **(X) ...**.">
+
+   </details>
+   ```
+   Either way, **the solution/explanation must be collapsed** behind
+   `<details><summary>Solution</summary>...</details>` (blank line after `<summary>` and
+   before `</details>` so the enclosed Markdown/LaTeX renders) — this lets a lesson be used
+   as a drill sheet where the reader attempts the problem before revealing the answer.
+   Everything above the `<details>` block (Problem, Answer Choices / Input-Output samples)
+   stays visible; only the solution/explanation itself is collapsed.
 6. Optional **"Common Mistakes"** section for lessons with subtle pitfalls (numbered
    sub-sections like `### N.1 Mistake name`).
 7. **"Key Takeaways"** — a short bullet list, near the end.

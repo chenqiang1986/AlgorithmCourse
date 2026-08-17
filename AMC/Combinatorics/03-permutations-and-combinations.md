@@ -88,13 +88,16 @@ A vending machine has 12 different snacks. Jamal wants to buy 2 different snacks
 
 (A) 24  (B) 66  (C) 132  (D) 144  (E) 156
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Buying snack A and snack B is the same purchase as buying snack B and snack A — order does not matter, so this is a combination:
 
 $$C_{12}^{2} = \frac{12!}{2!10!} = 66$$
 
 The answer is **(B) 66**.
+
+</details>
 
 ## 9. Class Practice 2: Password Digits
 
@@ -106,13 +109,16 @@ A password consists of 4 different digits chosen from `0` through `9`, and the o
 
 (A) 210  (B) 720  (C) 2,520  (D) 5,040  (E) 10,000
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 Order matters (`1234` and `4321` are different passwords) and digits cannot repeat, so this is a permutation of 4 out of 10 digits:
 
 $$P_{10}^{4} = 10 \times 9 \times 8 \times 7 = 5{,}040$$
 
 The answer is **(D) 5,040**.
+
+</details>
 
 ## 10. Class Practice 3: Arranging a Word
 
@@ -124,13 +130,16 @@ How many distinct arrangements are there of the letters in the word `BANANA`?
 
 (A) 60  (B) 120  (C) 360  (D) 720  (E) 5,040
 
-### Solution
+<details>
+<summary>Solution</summary>
 
 `BANANA` has 6 letters: `B` (1 time), `A` (3 times), `N` (2 times).
 
 $$\frac{6!}{3!2!1!} = \frac{720}{12} = 60$$
 
 The answer is **(A) 60**.
+
+</details>
 
 ## 11. Common Mistakes
 
