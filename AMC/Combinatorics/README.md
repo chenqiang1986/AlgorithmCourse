@@ -33,11 +33,13 @@ In this module, we will learn:
 
 ## Practice Sets
 
+Each 20-problem practice set is a pure problem sheet; its answer key and full worked solutions live in a separate companion file.
+
 8. [08-practice-set-1-foundations.md](./08-practice-set-1-foundations.md)
-   Drills Lessons 01–03: counting principles, inclusion–exclusion, permutations and combinations.
+   Drills Lessons 01–03: counting principles, inclusion–exclusion, permutations and combinations. Solutions: [11-practice-set-1-solutions.md](./11-practice-set-1-solutions.md).
 9. [09-practice-set-2-twisted-models.md](./09-practice-set-2-twisted-models.md)
-   Drills Lessons 04–05: the adjacency-constraint (bundling/gap) and stars-and-bars special models.
+   Drills Lessons 04–05: the adjacency-constraint (bundling/gap) and stars-and-bars special models. Solutions: [12-practice-set-2-solutions.md](./12-practice-set-2-solutions.md).
 10. [10-practice-set-3-recursive-methods.md](./10-practice-set-3-recursive-methods.md)
-   Drills Lessons 06–07: building a recurrence from scratch, emphasizing the define-state/find-transition method over memorizing any specific formula.
+    Drills Lessons 06–07: building a recurrence from scratch, emphasizing the define-state/find-transition method over memorizing any specific formula. Solutions: [13-practice-set-3-solutions.md](./13-practice-set-3-solutions.md).
 
 More lessons can be added later as the course grows.
