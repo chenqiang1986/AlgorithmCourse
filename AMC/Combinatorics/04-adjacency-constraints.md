@@ -4,9 +4,12 @@ Many AMC arrangement problems take the standard permutation setup from [03-permu
 
 ## 1. When A and B Must Be Adjacent: The Bundling Method
 
-Concept: glue A and B into a single block so they can never be separated. Treat the block as **one item**, arrange it together with everything else, then multiply by the number of ways to arrange the items **inside** the block.
+Concept: glue A and B into a single block so they can never be separated. This is a clean application of the product rule, split into two independent steps:
 
-Let $\text{Adj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced adjacent. Gluing the block leaves $n - 1$ items to arrange, and the block itself has $2!$ internal orderings:
+1. Arrange the $n - 1$ items: the $n - 2$ untouched items plus the glued AB block.
+2. Arrange A and B *within* their block.
+
+Let $\text{Adj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced adjacent. Step 1 gives $(n-1)!$ ways, and step 2 gives $2!$ ways, so by the product rule:
 
 $$\text{Adj}(n) = (n - 1)! \times 2!$$
 
@@ -16,11 +19,14 @@ The $2!$ is there because inside the block, A and B can still be ordered two way
 
 ## 2. When A and B Must NOT Be Adjacent: The Gap Method
 
-Concept: first arrange everyone **except** A and B. This creates "gaps" — slots before the first person, between every consecutive pair, and after the last person — where A and B can be inserted without ever landing next to each other. With $n - 2$ other people arranged in a row, there are $(n - 2) + 1 = n - 1$ gaps.
+Concept: first arrange everyone **except** A and B. This creates "gaps" — slots before the first person, between every consecutive pair, and after the last person — where A and B can be inserted without ever landing next to each other. Again a two-step product rule:
 
-Let $\text{NonAdj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced non-adjacent. Arranging the other $n - 2$ items first, then placing $A$ and $B$ into 2 of the $n - 1$ gaps in order, gives:
+1. Arrange the $n - 2$ other items, which creates $(n - 2) + 1 = n - 1$ gaps.
+2. Place A and B into 2 of those $n - 1$ gaps, in order.
 
-$$\text{NonAdj}(n) = (n - 2)! \times P(n - 1, 2)$$
+Let $\text{NonAdj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced non-adjacent. Step 1 gives $(n-2)!$ ways, and step 2 gives $P_{n-1}^2$ ways, so by the product rule:
+
+$$\text{NonAdj}(n) = (n - 2)! \times P_{n-1}^2$$
 
 ### Cross-check via the complement
 
@@ -42,7 +48,7 @@ $$5! \times 2! = 120 \times 2 = 240$$
 
 Same 6 friends, but now Cara and Dan (two rivals) must **not** sit next to each other. How many valid seatings are there?
 
-**Method 1 — gap method.** Arrange the other 4 people first: $4! = 24$ ways. This creates $4 + 1 = 5$ gaps. Place Cara and Dan into 2 different gaps, in order: $P(5, 2) = 20$.
+**Method 1 — gap method.** Arrange the other 4 people first: $4! = 24$ ways. This creates $4 + 1 = 5$ gaps. Place Cara and Dan into 2 different gaps, in order: $P_5^2 = 20$.
 
 $$24 \times 20 = 480$$
 
@@ -56,9 +62,9 @@ Both methods agree: **480**.
 
 5 books, including 3 specific "small" books, are placed on a shelf in a row. In how many ways can they be arranged so that **no two** of the 3 small books are next to each other?
 
-Extend the gap method: arrange the other $5 - 3 = 2$ books first ($2! = 2$ ways), which creates $2 + 1 = 3$ gaps. We need to place all 3 small books into 3 *different* gaps (one per gap, since there are exactly 3 gaps and 3 books), in order — that is $P(3, 3) = 3! = 6$ ways.
+Extend the gap method: arrange the other $5 - 3 = 2$ books first ($2! = 2$ ways), which creates $2 + 1 = 3$ gaps. We need to place all 3 small books into 3 *different* gaps (one per gap, since there are exactly 3 gaps and 3 books), in order — that is $P_3^3 = 3! = 6$ ways.
 
-$$2! \times P(3, 3) = 2 \times 6 = 12$$
+$$2! \times P_3^3 = 2 \times 6 = 12$$
 
 **Non-obvious detail:** the gap method only works cleanly when the number of items being separated is no more than the number of gaps available. If you needed to separate more items than there are gaps, it would be impossible for all of them to be pairwise non-adjacent, and the count would be `0`.
 
@@ -120,9 +126,9 @@ The answer is **(C) 3,600**.
 
 ### Solution
 
-Arrange the other $6 - 3 = 3$ people first: $3! = 6$ ways, creating $3 + 1 = 4$ gaps. Place the 3 friends into 3 of the 4 gaps (order matters, one friend per chosen gap): $P(4, 3) = 4 \times 3 \times 2 = 24$.
+Arrange the other $6 - 3 = 3$ people first: $3! = 6$ ways, creating $3 + 1 = 4$ gaps. Place the 3 friends into 3 of the 4 gaps (order matters, one friend per chosen gap): $P_4^3 = 4 \times 3 \times 2 = 24$.
 
-$$3! \times P(4, 3) = 6 \times 24 = 144$$
+$$3! \times P_4^3 = 6 \times 24 = 144$$
 
 The answer is **(D) 144**.
 

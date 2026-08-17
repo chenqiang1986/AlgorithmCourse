@@ -122,7 +122,7 @@ This is the most important rule the user asked for. Observed lesson files run ro
     and align steps with `&`.
   - Use proper LaTeX operators/spacing instead of ASCII: `\ge`/`\le`/`\ne` not `>=`/`<=`/
     `!=`, `\times` or `\cdot` not `*`, `\cdots`/`\ldots` not `...`, subscripts as `x_1, x_i`
-    not `x1, xi`, and `C(n, k)` / `\binom{n}{k}` for combinations (match whichever a
+    not `x1, xi`, and `C_n^k` / `\binom{n}{k}` for combinations (match whichever a
     module already uses).
   - This applies to every module (C++ and `D0N-*` alike) — any time a variable, equation,
     or formula appears, even inline in a sentence, use `$...$`/`$$...$$` instead of

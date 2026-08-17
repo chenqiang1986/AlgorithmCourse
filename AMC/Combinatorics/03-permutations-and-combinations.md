@@ -8,7 +8,7 @@ A permutation is an **ordered** arrangement of items. If you are choosing $r$ it
 
 Build it with the multiplication principle: there are $n$ choices for the first slot, $n - 1$ remaining choices for the second slot (one item is used up), $n - 2$ for the third, and so on, for $r$ slots total:
 
-$$P(n, r) = n \times (n - 1) \times (n - 2) \times \cdots \times (n - r + 1) = \frac{n!}{(n - r)!}$$
+$$P_n^r = n \times (n - 1) \times (n - 2) \times \cdots \times (n - r + 1) = \frac{n!}{(n - r)!}$$
 
 When $r = n$ (arrange every item), this is just $n!$.
 
@@ -16,21 +16,21 @@ When $r = n$ (arrange every item), this is just $n!$.
 
 A combination is an **unordered** selection of items — a committee, a subset, a hand of cards. If swapping the order of the chosen items still counts as the same outcome, you are counting combinations.
 
-Every unordered group of $r$ items can be arranged in $r!$ different orders. So the ordered count $P(n, r)$ counts each unordered group $r!$ times. Divide it out:
+Every unordered group of $r$ items can be arranged in $r!$ different orders. So the ordered count $P_n^r$ counts each unordered group $r!$ times. Divide it out:
 
-$$C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!(n - r)!}$$
+$$C_n^r = \frac{P_n^r}{r!} = \frac{n!}{r!(n - r)!}$$
 
-**Non-obvious detail:** $C(n, r) = C(n, n - r)$ — choosing which $r$ items to include is the same act as choosing which $n - r$ items to leave out. This identity is a fast sanity check and often shortens a computation (e.g., $C(20, 18) = C(20, 2) = 190$, no need to expand $18!$).
+**Non-obvious detail:** $C_n^r = C_n^{n-r}$ — choosing which $r$ items to include is the same act as choosing which $n - r$ items to leave out. This identity is a fast sanity check and often shortens a computation (e.g., $C_{20}^{18} = C_{20}^{2} = 190$, no need to expand $18!$).
 
 ## 3. Core Template
 
 $$n! = n \times (n - 1) \times (n - 2) \times \cdots \times 1 \qquad (0! = 1 \text{ by convention})$$
 
-$$P(n, r) = \frac{n!}{(n - r)!} \quad \text{ordered selection of } r \text{ out of } n$$
+$$P_n^r = \frac{n!}{(n - r)!} \quad \text{ordered selection of } r \text{ out of } n$$
 
-$$C(n, r) = \frac{n!}{r!(n - r)!} \quad \text{unordered selection of } r \text{ out of } n$$
+$$C_n^r = \frac{n!}{r!(n - r)!} \quad \text{unordered selection of } r \text{ out of } n$$
 
-$$C(n, r) = C(n, n - r)$$
+$$C_n^r = C_n^{n-r}$$
 
 Quick decision rule: read the problem statement and ask "if I swap two chosen items, is it a different outcome?" Yes → permutation. No → combination.
 
@@ -40,7 +40,7 @@ Quick decision rule: read the problem statement and ask "if I swap two chosen it
 
 Swapping who gets 1st vs. 2nd clearly changes the outcome, so order matters:
 
-$$P(8, 3) = 8 \times 7 \times 6 = 336$$
+$$P_8^3 = 8 \times 7 \times 6 = 336$$
 
 ## 5. Reading Example: Committee Selection (Combination)
 
@@ -48,9 +48,9 @@ From a group of 10 people, how many ways can a 3-person committee be formed (no 
 
 The committee $\{\text{Alice}, \text{Bob}, \text{Carol}\}$ is the same committee no matter what order the names are listed, so order does not matter:
 
-$$C(10, 3) = \frac{10!}{3!7!} = 120$$
+$$C_{10}^{3} = \frac{10!}{3!7!} = 120$$
 
-**Non-obvious detail:** if the problem instead said "a president, a secretary, and a treasurer chosen from 10 people," that *is* a permutation ($P(10, 3) = 720$), because assigning the same three people to different roles produces different outcomes. The people involved can be identical between two problems — only the "does order/role matter" question changes the formula.
+**Non-obvious detail:** if the problem instead said "a president, a secretary, and a treasurer chosen from 10 people," that *is* a permutation ($P_{10}^{3} = 720$), because assigning the same three people to different roles produces different outcomes. The people involved can be identical between two problems — only the "does order/role matter" question changes the formula.
 
 ## 6. Reading Example: Arrangements with Repeated Items
 
@@ -92,7 +92,7 @@ A vending machine has 12 different snacks. Jamal wants to buy 2 different snacks
 
 Buying snack A and snack B is the same purchase as buying snack B and snack A — order does not matter, so this is a combination:
 
-$$C(12, 2) = \frac{12!}{2!10!} = 66$$
+$$C_{12}^{2} = \frac{12!}{2!10!} = 66$$
 
 The answer is **(B) 66**.
 
@@ -110,7 +110,7 @@ A password consists of 4 different digits chosen from `0` through `9`, and the o
 
 Order matters (`1234` and `4321` are different passwords) and digits cannot repeat, so this is a permutation of 4 out of 10 digits:
 
-$$P(10, 4) = 10 \times 9 \times 8 \times 7 = 5{,}040$$
+$$P_{10}^{4} = 10 \times 9 \times 8 \times 7 = 5{,}040$$
 
 The answer is **(D) 5,040**.
 
@@ -134,7 +134,7 @@ The answer is **(A) 60**.
 
 ## 11. Common Mistakes
 
-### 11.1 Using $C(n, r)$ when order actually matters
+### 11.1 Using $C_n^r$ when order actually matters
 
 Assigning distinct roles (president/secretary/treasurer, 1st/2nd/3rd place) is a permutation even though the underlying group of chosen people looks like a "selection." Ask whether swapping two chosen items changes the outcome.
 
@@ -148,8 +148,8 @@ Forgetting to divide by $n$ (for rotations) or by an extra $2$ (for reflections,
 
 ## 12. Key Takeaways
 
-- $P(n, r) = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C(n, r) = \dfrac{n!}{r!(n - r)!}$ counts unordered selections.
-- $C(n, r) = C(n, n - r)$.
+- $P_n^r = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C_n^r = \dfrac{n!}{r!(n - r)!}$ counts unordered selections.
+- $C_n^r = C_n^{n-r}$.
 - Arrangements of a multiset with repeated items divide $n!$ by the factorial of each repeat count.
 - Circular arrangements of $n$ distinct items: $(n - 1)!$, or $(n - 1)!/2$ if reflections are also equivalent.
 

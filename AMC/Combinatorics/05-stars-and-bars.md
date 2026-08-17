@@ -23,7 +23,7 @@ $$
 \begin{aligned}
 &\text{number of ways to put } n \text{ identical balls into } k \text{ distinct boxes (boxes may be empty)} \\
 &\quad = \text{number of nonnegative integer solutions to } x_1 + x_2 + \cdots + x_k = n \\
-&\quad = C(n + k - 1, k - 1) = C(n + k - 1, n)
+&\quad = C_{n+k-1}^{k-1} = C_{n+k-1}^{n}
 \end{aligned}
 $$
 
@@ -32,7 +32,7 @@ If every box must get **at least 1** ball (positive integers only, requires $n \
 $$
 \begin{aligned}
 &\text{number of positive integer solutions to } x_1 + x_2 + \cdots + x_k = n \quad (\text{each } x_i \ge 1) \\
-&\quad = C((n - k) + k - 1, k - 1) = C(n - 1, k - 1)
+&\quad = C_{(n-k)+k-1}^{k-1} = C_{n-1}^{k-1}
 \end{aligned}
 $$
 
@@ -44,7 +44,7 @@ How many ways can 10 identical candies be distributed among 3 kids (a kid may ge
 
 This is nonnegative integer solutions to $x_1 + x_2 + x_3 = 10$:
 
-$$C(10 + 3 - 1, 3 - 1) = C(12, 2) = 66$$
+$$C_{10+3-1}^{3-1} = C_{12}^{2} = 66$$
 
 ## 4. Reading Example: Everyone Gets At Least One
 
@@ -52,9 +52,9 @@ How many ways can 10 identical candies be distributed among 3 kids, if every kid
 
 Give each kid 1 candy first (uses 3 of the 10), then distribute the remaining $10 - 3 = 7$ candies with no restriction:
 
-$$C(7 + 3 - 1, 3 - 1) = C(9, 2) = 36$$
+$$C_{7+3-1}^{3-1} = C_{9}^{2} = 36$$
 
-Or directly with the positive-solutions formula: $C(10 - 1, 3 - 1) = C(9, 2) = 36$. Same answer.
+Or directly with the positive-solutions formula: $C_{10-1}^{3-1} = C_{9}^{2} = 36$. Same answer.
 
 ## 5. Reading Example: A Larger Minimum (the Shift Trick)
 
@@ -62,7 +62,7 @@ How many ways can 15 identical candies be distributed among 4 kids, if every kid
 
 Give each kid 2 candies first (uses $2 \times 4 = 8$ of the 15), leaving $15 - 8 = 7$ candies to distribute with no restriction among the 4 kids:
 
-$$C(7 + 4 - 1, 4 - 1) = C(10, 3) = 120$$
+$$C_{7+4-1}^{4-1} = C_{10}^{3} = 120$$
 
 **Non-obvious detail (the general shift trick):** for a minimum of $m$ per box, subtract $m \times k$ from $n$ first, then apply the no-restriction formula to the reduced total. This works because setting $y_i = x_i - m$ turns "$x_i \ge m$" into "$y_i \ge 0$," and the equation $x_1 + \cdots + x_k = n$ becomes $y_1 + \cdots + y_k = n - mk$, which is exactly the Section 2 formula.
 
@@ -70,7 +70,7 @@ $$C(7 + 4 - 1, 4 - 1) = C(10, 3) = 120$$
 
 How many ways can 8 identical candies be distributed among 3 kids, if no kid may get more than 5?
 
-First count with no restriction: $C(8 + 3 - 1, 3 - 1) = C(10, 2) = 45$. Now subtract the invalid distributions where some kid gets 6 or more. If one particular kid gets at least 6, give that kid 6 candies first, leaving $8 - 6 = 2$ to distribute freely among the 3 kids: $C(2 + 3 - 1, 3 - 1) = C(4, 2) = 6$ ways. Since $8 < 6 + 6$, at most one kid can possibly exceed the limit, so there is no double-counted overlap to correct for. With 3 choices for *which* kid is the one exceeding the limit:
+First count with no restriction: $C_{8+3-1}^{3-1} = C_{10}^{2} = 45$. Now subtract the invalid distributions where some kid gets 6 or more. If one particular kid gets at least 6, give that kid 6 candies first, leaving $8 - 6 = 2$ to distribute freely among the 3 kids: $C_{2+3-1}^{3-1} = C_{4}^{2} = 6$ ways. Since $8 < 6 + 6$, at most one kid can possibly exceed the limit, so there is no double-counted overlap to correct for. With 3 choices for *which* kid is the one exceeding the limit:
 
 $$45 - 3 \times 6 = 45 - 18 = 27$$
 
@@ -90,7 +90,7 @@ How many ways can 12 identical stickers be distributed among 5 children, if a ch
 
 Nonnegative integer solutions to $x_1 + \cdots + x_5 = 12$:
 
-$$C(12 + 5 - 1, 5 - 1) = C(16, 4) = 1{,}820$$
+$$C_{12+5-1}^{5-1} = C_{16}^{4} = 1{,}820$$
 
 The answer is **(C) 1,820**.
 
@@ -108,7 +108,7 @@ How many ways can 9 identical marbles be distributed among 3 bags, if each bag m
 
 Positive integer solutions to $x_1 + x_2 + x_3 = 9$:
 
-$$C(9 - 1, 3 - 1) = C(8, 2) = 28$$
+$$C_{9-1}^{3-1} = C_{8}^{2} = 28$$
 
 The answer is **(B) 28**.
 
@@ -126,7 +126,7 @@ How many ways can 20 identical apples be distributed among 4 baskets, if each ba
 
 Give each basket 3 apples first ($3 \times 4 = 12$ used), leaving $20 - 12 = 8$ to distribute freely among 4 baskets:
 
-$$C(8 + 4 - 1, 4 - 1) = C(11, 3) = 165$$
+$$C_{8+4-1}^{4-1} = C_{11}^{3} = 165$$
 
 The answer is **(D) 165**.
 
@@ -142,7 +142,7 @@ Splitting a row into $k$ groups needs exactly $k - 1$ dividers, not $k$. Using $
 
 ### 10.3 Forgetting to shift before applying the formula
 
-When there is a minimum-per-box requirement, applying $C(n + k - 1, k - 1)$ directly (without first subtracting $mk$) silently assumes boxes can be empty, which contradicts the minimum.
+When there is a minimum-per-box requirement, applying $C_{n+k-1}^{k-1}$ directly (without first subtracting $mk$) silently assumes boxes can be empty, which contradicts the minimum.
 
 ### 10.4 Applying stars and bars directly to an upper-bound problem
 
@@ -150,8 +150,8 @@ There is no "stars and bars formula" for upper bounds — you must use the no-re
 
 ## 11. Key Takeaways
 
-- Distributing $n$ identical items into $k$ distinct boxes (empty boxes allowed): $C(n + k - 1, k - 1)$.
-- Same, but every box needs at least 1: $C(n - 1, k - 1)$.
+- Distributing $n$ identical items into $k$ distinct boxes (empty boxes allowed): $C_{n+k-1}^{k-1}$.
+- Same, but every box needs at least 1: $C_{n-1}^{k-1}$.
 - Same, but every box needs at least $m$: shift by subtracting $mk$ from $n$ first, then apply the no-restriction formula.
 - Stars and bars requires identical items and distinct boxes — check both conditions before reaching for the formula.
 - Upper bounds require inclusion–exclusion on top of the basic formula, not a new formula.

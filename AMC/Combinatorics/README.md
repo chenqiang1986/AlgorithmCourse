@@ -20,7 +20,7 @@ In this module, we will learn:
 2. [02-inclusion-exclusion-principle.md](./02-inclusion-exclusion-principle.md)
    What to do when the addition principle's "or" cases overlap, covering the two-set and three-set formulas.
 3. [03-permutations-and-combinations.md](./03-permutations-and-combinations.md)
-   Ordered arrangements (`P(n, r)`) vs. unordered selections (`C(n, r)`), plus repeated-item and circular arrangements.
+   Ordered arrangements ($P_n^r$) vs. unordered selections ($C_n^r$), plus repeated-item and circular arrangements.
 4. [04-adjacency-constraints.md](./04-adjacency-constraints.md)
    Special model: counting arrangements where two specific items must be adjacent, or must never be adjacent.
 5. [05-stars-and-bars.md](./05-stars-and-bars.md)

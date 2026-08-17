@@ -64,7 +64,26 @@ $$26 \times 26 \times 10 \times 10 \times 10 = 676{,}000$$
 
 **Non-obvious detail:** if the problem instead said "no letter or digit repeats," step 2 would only have 25 options (one letter already used), step 4 would have 9, and step 5 would have 8. The multiplication principle still applies, but each factor shrinks because the *set of remaining options* now depends on earlier choices, even though the *procedure* (fill positions left to right) does not.
 
-## 5. Class Practice 1: Outfit Choices
+## 5. Reading Example: Counting Paths from A to D
+
+![A directed graph with node A on the left and node D on the right. A blue path goes A to B (2 routes) then B to D (3 routes). An orange path goes A to C (3 routes) then C to D (4 routes).](./images/path-counting-a-to-d.svg)
+
+How many different paths lead from $A$ to $D$?
+
+Every path from $A$ to $D$ goes **either** through $B$ **or** through $C$ — never both, since $B$ and $C$ are separate stops with no edge between them. That split is an addition-principle "or."
+
+Within each route, reaching the intermediate stop **and then** continuing to $D$ are two sequential, independent steps — a multiplication-principle "and."
+
+- Route through $B$: $2 \times 3 = 6$ paths.
+- Route through $C$: $3 \times 4 = 12$ paths.
+
+The two routes are mutually exclusive, so add them:
+
+$$6 + 12 = 18$$
+
+**Non-obvious detail:** this problem needs both rules at once, applied at two different levels. *Inside* a route, the two legs must both happen, so multiply. *Across* routes, a finished path comes from exactly one of the two cases, so add the routes' totals. Multiply first within each case, then add across cases — that nesting is the standard pattern for "how many ways from $X$ to $Y$" problems over a branching diagram like this one.
+
+## 6. Class Practice 1: Outfit Choices
 
 ### Problem
 
@@ -82,7 +101,7 @@ $$5 \times 4 \times 2 = 40$$
 
 The answer is **(D) 40**.
 
-## 6. Class Practice 2: Weekend Plans
+## 7. Class Practice 2: Weekend Plans
 
 ### Problem
 
@@ -100,21 +119,21 @@ $$6 + 3 = 9$$
 
 The answer is **(C) 9**.
 
-## 7. Common Mistakes
+## 8. Common Mistakes
 
-### 7.1 Adding when cases overlap
+### 8.1 Adding when cases overlap
 
 The addition principle requires the cases to be mutually exclusive. If two "or" cases can actually happen at the same time (e.g., "divisible by 3 or by 4," which overlap at multiples of 12), a plain sum double-counts the overlap. Always ask "can both happen at once?" before adding — if yes, plain addition does not apply; see [02-inclusion-exclusion-principle.md](./02-inclusion-exclusion-principle.md) for how to fix the count.
 
-### 7.2 Multiplying without adjusting for used-up options
+### 8.2 Multiplying without adjusting for used-up options
 
 "No repeated letters" or "at least one vowel" changes how many options remain at later steps. Multiplying with the same count at every step silently assumes independence that may not hold.
 
-### 7.3 Treating "and" problems as "or" problems
+### 8.3 Treating "and" problems as "or" problems
 
 A common reflex is to add counts for every category mentioned in a problem instead of asking whether the outcome requires *all* of them together (multiply) or *only one* of them (add).
 
-## 8. Key Takeaways
+## 9. Key Takeaways
 
 - Addition principle: mutually exclusive cases → add the counts.
 - Multiplication principle: sequential, independent stages that must all happen → multiply the counts.
