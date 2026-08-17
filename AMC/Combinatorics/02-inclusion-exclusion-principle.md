@@ -4,12 +4,9 @@ The addition principle from [01-sum-and-product-rules.md](./01-sum-and-product-r
 
 ## 1. Why Plain Addition Fails When Cases Overlap
 
-Picture two overlapping groups:
+Picture two overlapping groups as a Venn diagram:
 
-```text
-        A only     A and B     B only
-       [-------] [---------] [-------]
-```
+![Two overlapping sets A and B, with the overlap region labeled "A and B"](./images/two-set-venn.svg)
 
 If you add $|A| + |B|$, everything in the middle "A and B" region gets counted twice — once as part of $A$, once as part of $B$. To get the true count of "in A or B," you need to subtract that middle region back out once.
 
