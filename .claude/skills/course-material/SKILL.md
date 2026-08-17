@@ -114,6 +114,19 @@ This is the most important rule the user asked for. Observed lesson files run ro
   paragraphs of exposition.
 - Cross-link: when a lesson depends on something taught earlier, name the earlier lesson
   file rather than re-explaining it.
+- **Math formulas must use LaTeX, not backticks or plain text/```text blocks.**
+  - Inline math (variables, short expressions used in a sentence): `$n$`, `$k - 1$`,
+    `$x_i \ge 1$`.
+  - Display math (standalone formulas/derivations, previously a ```text block): `$$...$$`.
+    For multi-line derivations, wrap in `\begin{aligned}...\end{aligned}` inside the `$$`
+    and align steps with `&`.
+  - Use proper LaTeX operators/spacing instead of ASCII: `\ge`/`\le`/`\ne` not `>=`/`<=`/
+    `!=`, `\times` or `\cdot` not `*`, `\cdots`/`\ldots` not `...`, subscripts as `x_1, x_i`
+    not `x1, xi`, and `C(n, k)` / `\binom{n}{k}` for combinations (match whichever a
+    module already uses).
+  - This applies to every module (C++ and `D0N-*` alike) — any time a variable, equation,
+    or formula appears, even inline in a sentence, use `$...$`/`$$...$$` instead of
+    backticks or a plain code fence.
 
 ## Step 5: After writing
 

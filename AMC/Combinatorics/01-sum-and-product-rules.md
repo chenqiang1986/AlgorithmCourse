@@ -6,15 +6,9 @@ Every combinatorics problem, no matter how complicated, is eventually built out 
 
 Use the addition principle when a task can be completed by exactly **one** of several separate methods, and no outcome can happen under two methods at once (the methods are mutually exclusive).
 
-```text
-If method 1 has n1 outcomes,
-   method 2 has n2 outcomes,
-   ...
-   method k has nk outcomes,
-and no outcome belongs to two methods at once, then:
+If method 1 has $n_1$ outcomes, method 2 has $n_2$ outcomes, …, method $k$ has $n_k$ outcomes, and no outcome belongs to two methods at once, then:
 
-total outcomes = n1 + n2 + ... + nk
-```
+$$\text{total outcomes} = n_1 + n_2 + \cdots + n_k$$
 
 The keyword to watch for is **"or"**: "I take a bus **or** a train **or** a bike" — pick exactly one category.
 
@@ -22,23 +16,15 @@ The keyword to watch for is **"or"**: "I take a bus **or** a train **or** a bike
 
 To go from home to school, you can either walk (3 possible routes) or bike (2 possible routes). You are not doing both, so the two sets of routes never overlap.
 
-```text
-total routes = 3 + 2 = 5
-```
+$$\text{total routes} = 3 + 2 = 5$$
 
 ## 2. The Multiplication Principle (Product Rule)
 
 Use the multiplication principle when a task is completed by going through several **steps in sequence**, and the number of options at each step does not depend on which options were chosen earlier.
 
-```text
-If step 1 has n1 options,
-   step 2 has n2 options,
-   ...
-   step k has nk options,
-then:
+If step 1 has $n_1$ options, step 2 has $n_2$ options, …, step $k$ has $n_k$ options, then:
 
-total outcomes = n1 * n2 * ... * nk
-```
+$$\text{total outcomes} = n_1 \times n_2 \times \cdots \times n_k$$
 
 The keyword to watch for is **"and"**: "I choose a shirt **and** pants **and** shoes" — every step must happen.
 
@@ -46,9 +32,7 @@ The keyword to watch for is **"and"**: "I choose a shirt **and** pants **and** s
 
 A meal consists of one appetizer (4 choices), one main course (3 choices), and one dessert (2 choices).
 
-```text
-total meals = 4 * 3 * 2 = 24
-```
+$$\text{total meals} = 4 \times 3 \times 2 = 24$$
 
 ## 3. Core Template: Deciding Add vs. Multiply
 
@@ -76,9 +60,7 @@ A license plate has 2 letters followed by 3 digits (letters and digits may repea
 
 All five steps must happen for every plate, and the number of choices at each step does not depend on earlier steps, so we multiply:
 
-```text
-26 * 26 * 10 * 10 * 10 = 676,000
-```
+$$26 \times 26 \times 10 \times 10 \times 10 = 676{,}000$$
 
 **Non-obvious detail:** if the problem instead said "no letter or digit repeats," step 2 would only have 25 options (one letter already used), step 4 would have 9, and step 5 would have 8. The multiplication principle still applies, but each factor shrinks because the *set of remaining options* now depends on earlier choices, even though the *procedure* (fill positions left to right) does not.
 
@@ -96,9 +78,7 @@ A student has 5 shirts, 4 pairs of pants, and 2 pairs of shoes. Every outfit con
 
 Each outfit needs a shirt **and** pants **and** shoes — three sequential, independent choices. Multiply:
 
-```text
-5 * 4 * 2 = 40
-```
+$$5 \times 4 \times 2 = 40$$
 
 The answer is **(D) 40**.
 
@@ -116,9 +96,7 @@ For a free afternoon, Maria will either go to the movies (6 movies are playing) 
 
 "Movies **or** hiking" — she does exactly one, and the two lists never overlap, so the cases are mutually exclusive. Add:
 
-```text
-6 + 3 = 9
-```
+$$6 + 3 = 9$$
 
 The answer is **(C) 9**.
 

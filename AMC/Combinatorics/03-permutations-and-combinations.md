@@ -4,40 +4,33 @@ This lesson turns the multiplication principle from [01-sum-and-product-rules.md
 
 ## 1. Permutations: Order Matters
 
-A permutation is an **ordered** arrangement of items. If you are choosing `r` items out of `n` distinct items and the order in which you pick them matters (first place vs. second place, leftmost seat vs. rightmost seat), you are counting permutations.
+A permutation is an **ordered** arrangement of items. If you are choosing $r$ items out of $n$ distinct items and the order in which you pick them matters (first place vs. second place, leftmost seat vs. rightmost seat), you are counting permutations.
 
-Build it with the multiplication principle: there are `n` choices for the first slot, `n - 1` remaining choices for the second slot (one item is used up), `n - 2` for the third, and so on, for `r` slots total:
+Build it with the multiplication principle: there are $n$ choices for the first slot, $n - 1$ remaining choices for the second slot (one item is used up), $n - 2$ for the third, and so on, for $r$ slots total:
 
-```text
-P(n, r) = n * (n - 1) * (n - 2) * ... * (n - r + 1)
-        = n! / (n - r)!
-```
+$$P(n, r) = n \times (n - 1) \times (n - 2) \times \cdots \times (n - r + 1) = \frac{n!}{(n - r)!}$$
 
-When `r = n` (arrange every item), this is just `n!`.
+When $r = n$ (arrange every item), this is just $n!$.
 
 ## 2. Combinations: Order Does Not Matter
 
 A combination is an **unordered** selection of items — a committee, a subset, a hand of cards. If swapping the order of the chosen items still counts as the same outcome, you are counting combinations.
 
-Every unordered group of `r` items can be arranged in `r!` different orders. So the ordered count `P(n, r)` counts each unordered group `r!` times. Divide it out:
+Every unordered group of $r$ items can be arranged in $r!$ different orders. So the ordered count $P(n, r)$ counts each unordered group $r!$ times. Divide it out:
 
-```text
-C(n, r) = P(n, r) / r!
-        = n! / (r! * (n - r)!)
-```
+$$C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!\,(n - r)!}$$
 
-**Non-obvious detail:** `C(n, r) = C(n, n - r)` — choosing which `r` items to include is the same act as choosing which `n - r` items to leave out. This identity is a fast sanity check and often shortens a computation (e.g., `C(20, 18) = C(20, 2) = 190`, no need to expand `18!`).
+**Non-obvious detail:** $C(n, r) = C(n, n - r)$ — choosing which $r$ items to include is the same act as choosing which $n - r$ items to leave out. This identity is a fast sanity check and often shortens a computation (e.g., $C(20, 18) = C(20, 2) = 190$, no need to expand $18!$).
 
 ## 3. Core Template
 
-```text
-n! = n * (n - 1) * (n - 2) * ... * 1        (0! = 1 by convention)
+$$n! = n \times (n - 1) \times (n - 2) \times \cdots \times 1 \qquad (0! = 1 \text{ by convention})$$
 
-P(n, r) = n! / (n - r)!        ordered selection of r out of n
-C(n, r) = n! / (r! * (n - r)!) unordered selection of r out of n
+$$P(n, r) = \frac{n!}{(n - r)!} \quad \text{ordered selection of } r \text{ out of } n$$
 
-C(n, r) = C(n, n - r)
-```
+$$C(n, r) = \frac{n!}{r!\,(n - r)!} \quad \text{unordered selection of } r \text{ out of } n$$
+
+$$C(n, r) = C(n, n - r)$$
 
 Quick decision rule: read the problem statement and ask "if I swap two chosen items, is it a different outcome?" Yes → permutation. No → combination.
 
@@ -47,55 +40,43 @@ Quick decision rule: read the problem statement and ask "if I swap two chosen it
 
 Swapping who gets 1st vs. 2nd clearly changes the outcome, so order matters:
 
-```text
-P(8, 3) = 8 * 7 * 6 = 336
-```
+$$P(8, 3) = 8 \times 7 \times 6 = 336$$
 
 ## 5. Reading Example: Committee Selection (Combination)
 
 From a group of 10 people, how many ways can a 3-person committee be formed (no distinct roles)?
 
-The committee `{Alice, Bob, Carol}` is the same committee no matter what order the names are listed, so order does not matter:
+The committee $\{\text{Alice}, \text{Bob}, \text{Carol}\}$ is the same committee no matter what order the names are listed, so order does not matter:
 
-```text
-C(10, 3) = 10! / (3! * 7!) = 120
-```
+$$C(10, 3) = \frac{10!}{3!\,7!} = 120$$
 
-**Non-obvious detail:** if the problem instead said "a president, a secretary, and a treasurer chosen from 10 people," that *is* a permutation (`P(10, 3) = 720`), because assigning the same three people to different roles produces different outcomes. The people involved can be identical between two problems — only the "does order/role matter" question changes the formula.
+**Non-obvious detail:** if the problem instead said "a president, a secretary, and a treasurer chosen from 10 people," that *is* a permutation ($P(10, 3) = 720$), because assigning the same three people to different roles produces different outcomes. The people involved can be identical between two problems — only the "does order/role matter" question changes the formula.
 
 ## 6. Reading Example: Arrangements with Repeated Items
 
 How many distinct ways can the letters of the word `LEVEL` be arranged?
 
-`LEVEL` has 5 letters, but `L` repeats twice and `E` repeats twice. If all 5 letters were distinct, there would be `5! = 120` arrangements. But swapping the two `L`s with each other produces an arrangement that looks identical, and likewise for the two `E`s — so `5!` overcounts by a factor of `2!` for the `L`s and `2!` for the `E`s:
+`LEVEL` has 5 letters, but `L` repeats twice and `E` repeats twice. If all 5 letters were distinct, there would be $5! = 120$ arrangements. But swapping the two `L`s with each other produces an arrangement that looks identical, and likewise for the two `E`s — so $5!$ overcounts by a factor of $2!$ for the `L`s and $2!$ for the `E`s:
 
-```text
-5! / (2! * 2!) = 120 / 4 = 30
-```
+$$\frac{5!}{2!\,2!} = \frac{120}{4} = 30$$
 
-General rule for a multiset with `n` total items where one value repeats `k1` times, another repeats `k2` times, etc.:
+General rule for a multiset with $n$ total items where one value repeats $k_1$ times, another repeats $k_2$ times, etc.:
 
-```text
-n! / (k1! * k2! * ...)
-```
+$$\frac{n!}{k_1!\,k_2!\,\cdots}$$
 
 ## 7. Reading Example: Circular Permutations
 
 In how many distinct ways can 5 people be seated around a circular table, if seatings that are rotations of each other count as the same arrangement?
 
-A straight-line arrangement of 5 people has `5! = 120` orders. But around a circle, rotating everyone by one seat produces a "different" linear listing that is actually the same physical seating. Each circular arrangement corresponds to exactly `5` linear arrangements (one for each rotation), so divide by `5`:
+A straight-line arrangement of 5 people has $5! = 120$ orders. But around a circle, rotating everyone by one seat produces a "different" linear listing that is actually the same physical seating. Each circular arrangement corresponds to exactly $5$ linear arrangements (one for each rotation), so divide by $5$:
 
-```text
-5! / 5 = (5 - 1)! = 24
-```
+$$\frac{5!}{5} = (5 - 1)! = 24$$
 
-General rule: `n` distinct people around a circle (rotations equivalent, reflections counted as different) →
+General rule: $n$ distinct people around a circle (rotations equivalent, reflections counted as different) →
 
-```text
-(n - 1)!
-```
+$$(n - 1)!$$
 
-**Non-obvious detail:** this only removes rotational duplicates. If the problem also treats a clockwise seating and its mirror-image (counterclockwise) as the same — common when seats aren't physically distinguishable, e.g., people holding hands in a circle — divide by an additional factor of `2`, giving `(n - 1)! / 2`.
+**Non-obvious detail:** this only removes rotational duplicates. If the problem also treats a clockwise seating and its mirror-image (counterclockwise) as the same — common when seats aren't physically distinguishable, e.g., people holding hands in a circle — divide by an additional factor of $2$, giving $(n - 1)!/2$.
 
 ## 8. Class Practice 1: Choosing a Snack
 
@@ -111,9 +92,7 @@ A vending machine has 12 different snacks. Jamal wants to buy 2 different snacks
 
 Buying snack A and snack B is the same purchase as buying snack B and snack A — order does not matter, so this is a combination:
 
-```text
-C(12, 2) = 12! / (2! * 10!) = 66
-```
+$$C(12, 2) = \frac{12!}{2!\,10!} = 66$$
 
 The answer is **(B) 66**.
 
@@ -131,9 +110,7 @@ A password consists of 4 different digits chosen from `0` through `9`, and the o
 
 Order matters (`1234` and `4321` are different passwords) and digits cannot repeat, so this is a permutation of 4 out of 10 digits:
 
-```text
-P(10, 4) = 10 * 9 * 8 * 7 = 5,040
-```
+$$P(10, 4) = 10 \times 9 \times 8 \times 7 = 5{,}040$$
 
 The answer is **(D) 5,040**.
 
@@ -151,31 +128,29 @@ How many distinct arrangements are there of the letters in the word `BANANA`?
 
 `BANANA` has 6 letters: `B` (1 time), `A` (3 times), `N` (2 times).
 
-```text
-6! / (3! * 2! * 1!) = 720 / 12 = 60
-```
+$$\frac{6!}{3!\,2!\,1!} = \frac{720}{12} = 60$$
 
 The answer is **(A) 60**.
 
 ## 11. Common Mistakes
 
-### 11.1 Using `C(n, r)` when order actually matters
+### 11.1 Using $C(n, r)$ when order actually matters
 
 Assigning distinct roles (president/secretary/treasurer, 1st/2nd/3rd place) is a permutation even though the underlying group of chosen people looks like a "selection." Ask whether swapping two chosen items changes the outcome.
 
 ### 11.2 Forgetting to divide out repeated items
 
-When arranging a word or a set of objects with duplicates, dividing by `r!` once (as in a normal combination) is not enough — you must divide by the factorial of *each* repeated value's count.
+When arranging a word or a set of objects with duplicates, dividing by $r!$ once (as in a normal combination) is not enough — you must divide by the factorial of *each* repeated value's count.
 
 ### 11.3 Treating circular arrangements like linear ones
 
-Forgetting to divide by `n` (for rotations) or by an extra `2` (for reflections, when applicable) is the most common circular-permutation error.
+Forgetting to divide by $n$ (for rotations) or by an extra $2$ (for reflections, when applicable) is the most common circular-permutation error.
 
 ## 12. Key Takeaways
 
-- `P(n, r) = n! / (n - r)!` counts ordered selections; `C(n, r) = n! / (r! (n - r)!)` counts unordered selections.
-- `C(n, r) = C(n, n - r)`.
-- Arrangements of a multiset with repeated items divide `n!` by the factorial of each repeat count.
-- Circular arrangements of `n` distinct items: `(n - 1)!`, or `(n - 1)! / 2` if reflections are also equivalent.
+- $P(n, r) = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C(n, r) = \dfrac{n!}{r!\,(n - r)!}$ counts unordered selections.
+- $C(n, r) = C(n, n - r)$.
+- Arrangements of a multiset with repeated items divide $n!$ by the factorial of each repeat count.
+- Circular arrangements of $n$ distinct items: $(n - 1)!$, or $(n - 1)!/2$ if reflections are also equivalent.
 
 Next lesson: [04-adjacency-constraints.md](./04-adjacency-constraints.md) covers what to do when a permutation problem adds the extra condition that two specific items must (or must not) sit next to each other.
