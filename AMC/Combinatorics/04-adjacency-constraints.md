@@ -6,14 +6,9 @@ Many AMC arrangement problems take the standard permutation setup from [03-permu
 
 Concept: glue A and B into a single block so they can never be separated. Treat the block as **one item**, arrange it together with everything else, then multiply by the number of ways to arrange the items **inside** the block.
 
-$$
-\begin{aligned}
-&\text{arrangements of } n \text{ items with } A \text{ and } B \text{ forced adjacent} \\
-&\quad = (\text{arrangements of } (n - 1) \text{ "items", where the glued block counts as 1 item}) \\
-&\qquad \times (\text{arrangements inside the block}) \\
-&\quad = (n - 1)! \times 2!
-\end{aligned}
-$$
+Let $\text{Adj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced adjacent. Gluing the block leaves $n - 1$ items to arrange, and the block itself has $2!$ internal orderings:
+
+$$\text{Adj}(n) = (n - 1)! \times 2!$$
 
 The $2!$ is there because inside the block, A and B can still be ordered two ways (`AB` or `BA`).
 
@@ -23,19 +18,15 @@ The $2!$ is there because inside the block, A and B can still be ordered two way
 
 Concept: first arrange everyone **except** A and B. This creates "gaps" — slots before the first person, between every consecutive pair, and after the last person — where A and B can be inserted without ever landing next to each other. With $n - 2$ other people arranged in a row, there are $(n - 2) + 1 = n - 1$ gaps.
 
-$$
-\begin{aligned}
-&\text{arrangements of } n \text{ items with } A \text{ and } B \text{ forced non-adjacent} \\
-&\quad = (\text{arrangements of the other } n - 2 \text{ items}) \times (\text{ways to place } A \text{ and } B \text{ into 2 different gaps, in order}) \\
-&\quad = (n - 2)! \times P(n - 1, 2)
-\end{aligned}
-$$
+Let $\text{NonAdj}(n)$ be the number of arrangements of $n$ items with $A$ and $B$ forced non-adjacent. Arranging the other $n - 2$ items first, then placing $A$ and $B$ into 2 of the $n - 1$ gaps in order, gives:
+
+$$\text{NonAdj}(n) = (n - 2)! \times P(n - 1, 2)$$
 
 ### Cross-check via the complement
 
 You can also get this by subtracting the "must be adjacent" count (Section 1) from the total number of unrestricted arrangements:
 
-$$\text{arrangements with } A, B \text{ non-adjacent} = n! - (n - 1)! \times 2!$$
+$$\text{NonAdj}(n) = n! - \text{Adj}(n)$$
 
 Both formulas should always agree — this is a good way to catch an arithmetic mistake.
 

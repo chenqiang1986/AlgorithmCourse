@@ -18,7 +18,7 @@ A combination is an **unordered** selection of items — a committee, a subset, 
 
 Every unordered group of $r$ items can be arranged in $r!$ different orders. So the ordered count $P(n, r)$ counts each unordered group $r!$ times. Divide it out:
 
-$$C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!\,(n - r)!}$$
+$$C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!(n - r)!}$$
 
 **Non-obvious detail:** $C(n, r) = C(n, n - r)$ — choosing which $r$ items to include is the same act as choosing which $n - r$ items to leave out. This identity is a fast sanity check and often shortens a computation (e.g., $C(20, 18) = C(20, 2) = 190$, no need to expand $18!$).
 
@@ -28,7 +28,7 @@ $$n! = n \times (n - 1) \times (n - 2) \times \cdots \times 1 \qquad (0! = 1 \te
 
 $$P(n, r) = \frac{n!}{(n - r)!} \quad \text{ordered selection of } r \text{ out of } n$$
 
-$$C(n, r) = \frac{n!}{r!\,(n - r)!} \quad \text{unordered selection of } r \text{ out of } n$$
+$$C(n, r) = \frac{n!}{r!(n - r)!} \quad \text{unordered selection of } r \text{ out of } n$$
 
 $$C(n, r) = C(n, n - r)$$
 
@@ -48,7 +48,7 @@ From a group of 10 people, how many ways can a 3-person committee be formed (no 
 
 The committee $\{\text{Alice}, \text{Bob}, \text{Carol}\}$ is the same committee no matter what order the names are listed, so order does not matter:
 
-$$C(10, 3) = \frac{10!}{3!\,7!} = 120$$
+$$C(10, 3) = \frac{10!}{3!7!} = 120$$
 
 **Non-obvious detail:** if the problem instead said "a president, a secretary, and a treasurer chosen from 10 people," that *is* a permutation ($P(10, 3) = 720$), because assigning the same three people to different roles produces different outcomes. The people involved can be identical between two problems — only the "does order/role matter" question changes the formula.
 
@@ -58,11 +58,11 @@ How many distinct ways can the letters of the word `LEVEL` be arranged?
 
 `LEVEL` has 5 letters, but `L` repeats twice and `E` repeats twice. If all 5 letters were distinct, there would be $5! = 120$ arrangements. But swapping the two `L`s with each other produces an arrangement that looks identical, and likewise for the two `E`s — so $5!$ overcounts by a factor of $2!$ for the `L`s and $2!$ for the `E`s:
 
-$$\frac{5!}{2!\,2!} = \frac{120}{4} = 30$$
+$$\frac{5!}{2!2!} = \frac{120}{4} = 30$$
 
 General rule for a multiset with $n$ total items where one value repeats $k_1$ times, another repeats $k_2$ times, etc.:
 
-$$\frac{n!}{k_1!\,k_2!\,\cdots}$$
+$$\frac{n!}{k_1!k_2!\cdots}$$
 
 ## 7. Reading Example: Circular Permutations
 
@@ -92,7 +92,7 @@ A vending machine has 12 different snacks. Jamal wants to buy 2 different snacks
 
 Buying snack A and snack B is the same purchase as buying snack B and snack A — order does not matter, so this is a combination:
 
-$$C(12, 2) = \frac{12!}{2!\,10!} = 66$$
+$$C(12, 2) = \frac{12!}{2!10!} = 66$$
 
 The answer is **(B) 66**.
 
@@ -128,7 +128,7 @@ How many distinct arrangements are there of the letters in the word `BANANA`?
 
 `BANANA` has 6 letters: `B` (1 time), `A` (3 times), `N` (2 times).
 
-$$\frac{6!}{3!\,2!\,1!} = \frac{720}{12} = 60$$
+$$\frac{6!}{3!2!1!} = \frac{720}{12} = 60$$
 
 The answer is **(A) 60**.
 
@@ -148,7 +148,7 @@ Forgetting to divide by $n$ (for rotations) or by an extra $2$ (for reflections,
 
 ## 12. Key Takeaways
 
-- $P(n, r) = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C(n, r) = \dfrac{n!}{r!\,(n - r)!}$ counts unordered selections.
+- $P(n, r) = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C(n, r) = \dfrac{n!}{r!(n - r)!}$ counts unordered selections.
 - $C(n, r) = C(n, n - r)$.
 - Arrangements of a multiset with repeated items divide $n!$ by the factorial of each repeat count.
 - Circular arrangements of $n$ distinct items: $(n - 1)!$, or $(n - 1)!/2$ if reflections are also equivalent.
