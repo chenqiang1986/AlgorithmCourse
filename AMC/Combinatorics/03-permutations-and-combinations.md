@@ -78,7 +78,21 @@ $$(n - 1)!$$
 
 **Non-obvious detail:** this only removes rotational duplicates. If the problem also treats a clockwise seating and its mirror-image (counterclockwise) as the same — common when seats aren't physically distinguishable, e.g., people holding hands in a circle — divide by an additional factor of $2$, giving $(n - 1)!/2$.
 
-## 8. Class Practice 1: Choosing a Snack
+## 8. Reading Example: Splitting into Groups
+
+6 students are split into two discussion groups of 3 students each (the groups are not labeled — there is no "Group A" vs "Group B", just two groups of 3). How many ways can this be done?
+
+Start by picking which 3 students form one group: $C_6^3 = 20$. But this counts an *ordered pair* of groups — "students $\{1,2,3\}$ go first, $\{4,5,6\}$ go second" is counted separately from "$\{4,5,6\}$ first, $\{1,2,3\}$ second," even though both describe the exact same split into two groups. Since the groups aren't labeled, these two counts are the same outcome, so $C_6^3$ overcounts by a factor of $2$:
+
+$$\frac{C_6^3}{2} = \frac{20}{2} = 10$$
+
+**Non-obvious detail:** compare this to splitting 6 students into a group of 4 and a group of 2. Choosing which 4 students form the size-4 group automatically determines the size-2 group, and the two groups can never be confused with each other, because they have different sizes — there is no relabeling that maps one onto the other. So no overcounting occurs, and no division is needed:
+
+$$C_6^4 = C_6^2 = 15$$
+
+General rule: splitting $n$ items into unlabeled groups of equal size — $k$ groups of size $n/k$ — divide by $k!$ to remove the group-labeling overcount. Splitting into groups of *different* sizes needs no such division, since each group's size identifies it.
+
+## 9. Class Practice 1: Choosing a Snack
 
 ### Problem
 
@@ -99,7 +113,7 @@ The answer is **(B) 66**.
 
 </details>
 
-## 9. Class Practice 2: Password Digits
+## 10. Class Practice 2: Password Digits
 
 ### Problem
 
@@ -120,7 +134,7 @@ The answer is **(D) 5,040**.
 
 </details>
 
-## 10. Class Practice 3: Arranging a Word
+## 11. Class Practice 3: Arranging a Word
 
 ### Problem
 
@@ -141,25 +155,30 @@ The answer is **(A) 60**.
 
 </details>
 
-## 11. Common Mistakes
+## 12. Common Mistakes
 
-### 11.1 Using $C_n^r$ when order actually matters
+### 12.1 Using $C_n^r$ when order actually matters
 
 Assigning distinct roles (president/secretary/treasurer, 1st/2nd/3rd place) is a permutation even though the underlying group of chosen people looks like a "selection." Ask whether swapping two chosen items changes the outcome.
 
-### 11.2 Forgetting to divide out repeated items
+### 12.2 Forgetting to divide out repeated items
 
 When arranging a word or a set of objects with duplicates, dividing by $r!$ once (as in a normal combination) is not enough — you must divide by the factorial of *each* repeated value's count.
 
-### 11.3 Treating circular arrangements like linear ones
+### 12.3 Treating circular arrangements like linear ones
 
 Forgetting to divide by $n$ (for rotations) or by an extra $2$ (for reflections, when applicable) is the most common circular-permutation error.
 
-## 12. Key Takeaways
+### 12.4 Dividing by group symmetry when the groups aren't actually symmetric
+
+The $/2$ (or $/k!$) correction for splitting into groups only applies when the groups being formed are *unlabeled and equal-sized* — otherwise nothing gets divided out. $C_6^4$ for a 4-and-2 split is already the final answer; dividing it by $2$ would undercount, since the size-4 and size-2 groups can never be swapped with each other.
+
+## 13. Key Takeaways
 
 - $P_n^r = \dfrac{n!}{(n - r)!}$ counts ordered selections; $C_n^r = \dfrac{n!}{r!(n - r)!}$ counts unordered selections.
 - $C_n^r = C_n^{n-r}$.
 - Arrangements of a multiset with repeated items divide $n!$ by the factorial of each repeat count.
 - Circular arrangements of $n$ distinct items: $(n - 1)!$, or $(n - 1)!/2$ if reflections are also equivalent.
+- Splitting $n$ items into $k$ unlabeled, equal-sized groups: divide the combination count by $k!$. Splitting into differently-sized groups needs no such division.
 
 Next lesson: [04-adjacency-constraints.md](./04-adjacency-constraints.md) covers what to do when a permutation problem adds the extra condition that two specific items must (or must not) sit next to each other.
