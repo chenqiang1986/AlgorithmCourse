@@ -42,6 +42,8 @@ $$45 + 18 - 9 = 54$$
 
 With three overlapping sets, subtracting all three pairwise overlaps removes the very middle region (where all three sets meet) **three times** — once for each pair — even though it only ever got added in **three times** by the individual counts too. Net effect: the triple-overlap region has been completely erased and needs to be added back once.
 
+![Three overlapping sets A, B, and C, with pairwise overlap regions "A and B", "A and C", "B and C", and the center triple-overlap region "A, B, C" labeled "(add back)"](./images/three-set-venn.svg)
+
 $$
 |A \text{ or } B \text{ or } C| = |A| + |B| + |C|
                 - |A \text{ and } B| - |B \text{ and } C| - |C \text{ and } A|
