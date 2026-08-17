@@ -31,4 +31,13 @@ In this module, we will learn:
 7. [07-balls-into-buckets.md](./07-balls-into-buckets.md)
    Unifying framework for distributing $n$ balls into $k$ buckets across all four combinations of distinct/indistinguishable balls and buckets: product rule, stars and bars, Stirling numbers of the second kind, and integer partitions.
 
+## Practice Sets
+
+8. [08-practice-set-1-foundations.md](./08-practice-set-1-foundations.md)
+   Drills Lessons 01–03: counting principles, inclusion–exclusion, permutations and combinations.
+9. [09-practice-set-2-twisted-models.md](./09-practice-set-2-twisted-models.md)
+   Drills Lessons 04–05: the adjacency-constraint (bundling/gap) and stars-and-bars special models.
+10. [10-practice-set-3-recursive-methods.md](./10-practice-set-3-recursive-methods.md)
+   Drills Lessons 06–07: building a recurrence from scratch, emphasizing the define-state/find-transition method over memorizing any specific formula.
+
 More lessons can be added later as the course grows.
