@@ -64,7 +64,37 @@ $$b_1 = 2 \ \text{(strings "0" and "1")}, \qquad b_2 = 3 \ \text{(strings "00", 
 
 **Non-obvious detail:** this is again Fibonacci-shaped, but shifted — $b_n$ follows the same recurrence as the tiling problem's $a_n$ because both problems are really asking the same combinatorial question in disguise ("how do you build a length-$n$ sequence where a certain local pattern is forbidden at the end"). Recognizing that two different-looking problems share a recurrence is a powerful shortcut once you've solved one of them.
 
-## 5. Reading Example: Derangements (a Harder Recurrence)
+## 5. Reading Example: Knight Paths Using Only Upward Moves
+
+A knight starts on the bottom-left square of a chessboard (square $a1$) and is only allowed to make moves that increase its row number — moves that go "upward." A knight normally has up to 8 possible move shapes, $(\pm 1, \pm 2)$ and $(\pm 2, \pm 1)$ as (row, column) offsets, but requiring the row to increase leaves only **four** of them:
+
+$$(+1, +2), \quad (+1, -2), \quad (+2, +1), \quad (+2, -1)$$
+
+In how many distinct ways can the knight reach the top-right corner square?
+
+Number the rows and columns $0$ through $7$, with row $0$ the bottom row and column $0$ the leftmost column, so the knight starts at $(0,0)$ and the target is $(7,7)$.
+
+Let $f(r, c)$ be the number of ways to reach square $(r, c)$ using only upward moves. Instead of looking at the last *digit* or *tile* as in the previous examples, look at the knight's **last move**. Whatever path it took, that move landed it on $(r,c)$ from exactly one of four possible squares — the four upward moves, run in reverse:
+
+$$f(r, c) = f(r-1, c-2) + f(r-1, c+2) + f(r-2, c-1) + f(r-2, c+1)$$
+
+(a term is $0$ whenever its square falls off the board — the same convention as an out-of-range index contributing nothing in the earlier recurrences.)
+
+These four cases are mutually exclusive (a knight move has one specific shape) and exhaustive (every arrival has some last move), so the addition principle applies exactly as before.
+
+**Base case:** the knight starts at $(0,0)$ with zero moves, so $f(0,0) = 1$. Every other square in row $0$ is unreachable, because *every* allowed move increases the row: $f(0, c) = 0$ for $c \ne 0$.
+
+Because $f(r,c)$ only depends on rows $r-1$ and $r-2$, the table can be filled row by row, exactly like the 1-D tables in Sections 3 and 4 — just indexed by two coordinates instead of one. The figure below works this out on a smaller $5 \times 5$ board:
+
+![Left: a diagram showing that the last move into square (r,c) must arrive from one of four squares f(r-1,c-2), f(r-1,c+2), f(r-2,c-1), or f(r-2,c+1), giving the recurrence f(r,c) = sum of those four terms. Right: a 5x5 board with each square filled in with its computed path count, built up row by row from the bottom; the knight starts at the bottom-left corner with count 1, and the top-right corner is reached in 2 ways.](./images/knight-upward-paths.svg)
+
+Working row by row on the $5\times5$ board gives $f(4,4) = 2$. Applying the exact same recurrence and base case to a full, standard $8\times8$ board gives:
+
+$$f(7,7) = 18$$
+
+**Non-obvious detail:** this is the same "define the count, split on the last piece, build up from a base case" template as every recurrence in this lesson — the only new idea is that the *state* now needs two coordinates $(r,c)$ instead of one index $n$, since a knight's position isn't described by a single number. The recurrence still only ever refers to strictly smaller states (rows $r-1$ and $r-2$), which is exactly what makes the row-by-row build-up valid.
+
+## 6. Reading Example: Derangements (a Harder Recurrence)
 
 A derangement of $n$ items is a permutation where **no item stays in its original position**. Let $D_n$ be the number of derangements of $n$ items.
 
@@ -87,7 +117,7 @@ $$D_0 = 1 \ \text{(the empty arrangement, by convention)}, \qquad D_1 = 0 \ \tex
 
 **Non-obvious detail:** $D_1 = 0$ is the base case that makes everything else work, and it is easy to get wrong by instinct — a single item genuinely cannot be "deranged," since its only possible position is its own.
 
-## 6. Class Practice 1: Staircase Climbing
+## 7. Class Practice 1: Staircase Climbing
 
 ### Problem
 
@@ -112,7 +142,7 @@ The answer is **(B) 13**.
 
 </details>
 
-## 7. Class Practice 2: Choosing Non-Adjacent Chairs
+## 8. Class Practice 2: Choosing Non-Adjacent Chairs
 
 ### Problem
 
@@ -144,7 +174,7 @@ The answer is **(C) 21**.
 
 **Non-obvious detail:** this problem is the same recurrence as the tiling problem in Section 3, just re-indexed — a chosen chair "blocks" its neighbor the same way a placed tile blocks the next cell, which is why the numbers match up one index apart.
 
-## 8. Class Practice 3: A Three-Term Recurrence
+## 9. Class Practice 3: A Three-Term Recurrence
 
 ### Problem
 
@@ -171,30 +201,31 @@ The answer is **(A) 13**.
 
 </details>
 
-## 9. Common Mistakes
+## 10. Common Mistakes
 
-### 9.1 Choosing a base case that doesn't match the recurrence's assumptions
+### 10.1 Choosing a base case that doesn't match the recurrence's assumptions
 
 If the recurrence was derived assuming $n \ge 2$ (it needs $a_{n-2}$ to make sense), you need both $a_1$ and $a_2$ as base cases — supplying only $a_1$ and trying to run the recurrence at $n = 2$ will reference an undefined $a_0$ incorrectly, or silently use the wrong value.
 
-### 9.2 Missing a case in the split
+### 10.2 Missing a case in the split
 
 If the case split in step 3 does not cover every possible "last piece" (for example, forgetting that a tile could be length 3 when $1\times1$, $1\times2$, and $1\times3$ tiles are all allowed), the recurrence undercounts.
 
-### 9.3 Letting cases overlap
+### 10.3 Letting cases overlap
 
 If two cases in the split can both describe the same outcome, the recurrence overcounts — exactly the addition-principle trap from Lesson 1, now hiding inside a recurrence.
 
-### 9.4 Off-by-one errors when building the table
+### 10.4 Off-by-one errors when building the table
 
 Recurrences are unforgiving about indices — double-check which $n$ each row of your table corresponds to before reading off the final answer.
 
-## 10. Key Takeaways
+## 11. Key Takeaways
 
 - When no direct formula is visible, define $a_n$, look at the *last piece* of an outcome, and split into mutually exclusive, exhaustive cases to get a recurrence.
 - Solve small base cases directly by hand — this is where the recurrence "anchors" to real counts.
 - Build the answer up from the base cases; do not try to guess the closed form first.
 - Recognizing that two different-looking problems share the same recurrence (as in tiling vs. non-adjacent selection vs. no-consecutive-1s strings) is a fast way to reuse work.
+- The state you recurse on doesn't have to be a single index — the knight-paths example needed a row *and* a column — as long as every case in the split points to a strictly smaller state, the same build-up-from-base-cases approach still works.
 - This same "define state, find a recurrence, build up from base cases" mindset reappears as **dynamic programming** in the algorithms side of this course — the math and the code are the same idea.
 
-This concludes the introductory sequence of this module. Later lessons can extend these ideas to inclusion–exclusion with more than two sets, generating functions, and probability built on top of these counting techniques.
+Next lesson: [07-balls-into-buckets.md](./07-balls-into-buckets.md) uses this same recursive-counting method to build two new counting tools — Stirling numbers and integer partitions — as part of a unified framework for distributing balls into buckets.

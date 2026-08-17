@@ -12,6 +12,7 @@ In this module, we will learn:
 4. The "bundling" and "gap" methods for arrangements where two people must (or must not) sit together.
 5. The stars-and-bars method for distributing identical objects into groups.
 6. How to set up and solve a recursive formula when a counting problem has no clean closed form.
+7. The "balls into buckets" framework: how distinguishability of the balls and of the buckets determines which of four counting tools applies, including two new ones — Stirling numbers of the second kind and integer partitions.
 
 ## Lessons
 
@@ -26,6 +27,8 @@ In this module, we will learn:
 5. [05-stars-and-bars.md](./05-stars-and-bars.md)
    Special model: distributing identical items into distinct groups using separators.
 6. [06-recursive-counting.md](./06-recursive-counting.md)
-   Building a recursive formula when direct counting is too hard, with tiling and no-consecutive-choice problems.
+   Building a recursive formula when direct counting is too hard, with tiling, no-consecutive-choice, and two-coordinate (knight-path) problems.
+7. [07-balls-into-buckets.md](./07-balls-into-buckets.md)
+   Unifying framework for distributing $n$ balls into $k$ buckets across all four combinations of distinct/indistinguishable balls and buckets: product rule, stars and bars, Stirling numbers of the second kind, and integer partitions.
 
 More lessons can be added later as the course grows.
