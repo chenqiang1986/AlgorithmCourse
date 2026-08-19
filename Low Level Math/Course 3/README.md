@@ -5,8 +5,10 @@ This folder contains Course 3 of the Low Level Math sequence — the bridge betw
 
 ## Course Goals
 
-Before any lessons are written, this module opens with a diagnostic test that samples the
-full range of pre-algebra skills a student needs before starting Algebra I:
+The full 36-week scope and sequence lives in
+[00-syllabus.md](./00-syllabus.md). Before any lessons are written, this module opens with
+a diagnostic test that samples the full range of pre-algebra skills a student needs before
+starting Algebra I:
 
 1. Integer arithmetic and order of operations.
 2. Fractions, ratios, proportions, and percents.
@@ -18,7 +20,11 @@ full range of pre-algebra skills a student needs before starting Algebra I:
 
 ## Lessons
 
-1. [01-diagnostic-test.md](./01-diagnostic-test.md)
+1. [00-syllabus.md](./00-syllabus.md)
+   The 36-week syllabus: six units spanning the number system, linear equations and
+   systems, functions, transformational geometry, right triangles and volume, and
+   bivariate data.
+2. [01-diagnostic-test.md](./01-diagnostic-test.md)
    A 20-question, ~40-minute diagnostic test covering all major Course 3 topics. Answer
    key and full solutions: [02-diagnostic-test-solutions.md](./02-diagnostic-test-solutions.md).
 

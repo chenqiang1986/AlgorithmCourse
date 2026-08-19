@@ -7,8 +7,10 @@ the accelerated pathway.
 
 ## Course Goals
 
-Before any lessons are written, this module opens with a diagnostic test that samples the
-full range of skills a student needs before starting Course 3:
+The full 36-week scope and sequence lives in
+[00-syllabus.md](./00-syllabus.md). Before any lessons are written, this module opens with
+a diagnostic test that samples the full range of skills a student needs before starting
+Course 3:
 
 1. Operations with rational numbers: integers, decimals, and fractions.
 2. Ratios, rates, unit rates, and proportional relationships.
@@ -20,7 +22,11 @@ full range of skills a student needs before starting Course 3:
 
 ## Lessons
 
-1. [01-diagnostic-test.md](./01-diagnostic-test.md)
+1. [00-syllabus.md](./00-syllabus.md)
+   The 36-week syllabus: six units spanning rational number operations, ratios and
+   proportional relationships, percentages, expressions and equations, geometry and scale
+   drawings, and statistics and probability.
+2. [01-diagnostic-test.md](./01-diagnostic-test.md)
    A 20-question, ~40-minute diagnostic test covering all major Course 2 topics. Answer
    key and full solutions: [02-diagnostic-test-solutions.md](./02-diagnostic-test-solutions.md).
 
