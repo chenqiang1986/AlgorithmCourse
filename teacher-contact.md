@@ -11,6 +11,7 @@
 **Subjects:**
 - Math — up to AP Calculus BC
 - Math Competition — AMC 8/10/12
+- Physics - up to AP Physics C
 - Computer Science — up to AP CSA
 - USACO Bronze / Silver
 
