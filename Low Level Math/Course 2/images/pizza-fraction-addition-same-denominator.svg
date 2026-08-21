@@ -1,0 +1,51 @@
+<svg width="760" height="270" viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="760" height="270" fill="#ffffff"/>
+
+  <!-- Panel 1: pizza cut into 8ths, 3 shaded orange -->
+  <text x="110" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">3/8 of a pizza</text>
+
+  <path d="M110,130 L110.0,65.0 A65,65 0 0,1 155.96,84.04 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M110,130 L155.96,84.04 A65,65 0 0,1 175.0,130.0 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M110,130 L175.0,130.0 A65,65 0 0,1 155.96,175.96 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M110,130 L155.96,175.96 A65,65 0 0,1 110.0,195.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M110,130 L110.0,195.0 A65,65 0 0,1 64.04,175.96 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M110,130 L64.04,175.96 A65,65 0 0,1 45.0,130.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M110,130 L45.0,130.0 A65,65 0 0,1 64.04,84.04 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M110,130 L64.04,84.04 A65,65 0 0,1 110.0,65.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <circle cx="110" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <text x="110" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">3 orange slices of 8</text>
+
+  <text x="230" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#333333">+</text>
+
+  <!-- Panel 2: same-size pizza cut into 8ths, 2 shaded blue -->
+  <text x="350" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">2/8 of a pizza</text>
+
+  <path d="M350,130 L350.0,65.0 A65,65 0 0,1 395.96,84.04 Z" fill="#4C72B0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M350,130 L395.96,84.04 A65,65 0 0,1 415.0,130.0 Z" fill="#4C72B0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M350,130 L415.0,130.0 A65,65 0 0,1 395.96,175.96 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L395.96,175.96 A65,65 0 0,1 350.0,195.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L350.0,195.0 A65,65 0 0,1 304.04,175.96 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L304.04,175.96 A65,65 0 0,1 285.0,130.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L285.0,130.0 A65,65 0 0,1 304.04,84.04 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L304.04,84.04 A65,65 0 0,1 350.0,65.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <circle cx="350" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <text x="350" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">2 blue slices of 8</text>
+
+  <text x="470" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#333333">=</text>
+
+  <!-- Panel 3: same pizza, 3 orange + 2 blue shaded = 5/8 -->
+  <text x="590" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">5/8 of a pizza</text>
+
+  <path d="M590,130 L590.0,65.0 A65,65 0 0,1 635.96,84.04 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M590,130 L635.96,84.04 A65,65 0 0,1 655.0,130.0 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M590,130 L655.0,130.0 A65,65 0 0,1 635.96,175.96 Z" fill="#DD8452" stroke="#333333" stroke-width="1.2"/>
+  <path d="M590,130 L635.96,175.96 A65,65 0 0,1 590.0,195.0 Z" fill="#4C72B0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M590,130 L590.0,195.0 A65,65 0 0,1 544.04,175.96 Z" fill="#4C72B0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M590,130 L544.04,175.96 A65,65 0 0,1 525.0,130.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M590,130 L525.0,130.0 A65,65 0 0,1 544.04,84.04 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <path d="M590,130 L544.04,84.04 A65,65 0 0,1 590.0,65.0 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1"/>
+  <circle cx="590" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <text x="590" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">3 + 2 = 5 slices of 8</text>
+
+  <text x="380" y="255" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">Same-size slices: just count the total shaded slices. 3/8 + 2/8 = (3+2)/8 = 5/8.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg width="700" height="220" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="axisArrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333333"/>
+    </marker>
+    <marker id="hopArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4C72B0"/>
+    </marker>
+    <marker id="hopArrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DD8452"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="220" fill="#ffffff"/>
+
+  <text x="350" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f">(-2) + (-5): both hops move left</text>
+
+  <!-- number line -->
+  <line x1="40" y1="130" x2="660" y2="130" stroke="#333333" stroke-width="1.5" marker-start="url(#axisArrow2)" marker-end="url(#axisArrow2)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">
+    <line x1="40" y1="124" x2="40" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="40" y="155" text-anchor="middle">-8</text>
+    <line x1="117.5" y1="124" x2="117.5" y2="136" stroke="#333333" stroke-width="2"/>
+    <text x="117.5" y="155" text-anchor="middle" font-weight="bold">-7</text>
+    <line x1="195" y1="124" x2="195" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="195" y="155" text-anchor="middle">-6</text>
+    <line x1="272.5" y1="124" x2="272.5" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="272.5" y="155" text-anchor="middle">-5</text>
+    <line x1="350" y1="124" x2="350" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="350" y="155" text-anchor="middle">-4</text>
+    <line x1="427.5" y1="124" x2="427.5" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="427.5" y="155" text-anchor="middle">-3</text>
+    <line x1="505" y1="124" x2="505" y2="136" stroke="#333333" stroke-width="2"/>
+    <text x="505" y="155" text-anchor="middle" font-weight="bold">-2</text>
+    <line x1="582.5" y1="124" x2="582.5" y2="136" stroke="#333333" stroke-width="1.5"/>
+    <text x="582.5" y="155" text-anchor="middle">-1</text>
+    <line x1="660" y1="124" x2="660" y2="136" stroke="#333333" stroke-width="2"/>
+    <text x="660" y="155" text-anchor="middle" font-weight="bold">0</text>
+  </g>
+
+  <!-- hop 1: 0 to -2 -->
+  <path d="M 660 125 Q 582.5 95 507 125" fill="none" stroke="#4C72B0" stroke-width="2.5" marker-end="url(#hopArrow)"/>
+  <text x="582.5" y="88" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4C72B0">-2</text>
+
+  <!-- hop 2: -2 to -7 -->
+  <path d="M 505 125 Q 311 55 120 125" fill="none" stroke="#DD8452" stroke-width="2.5" marker-end="url(#hopArrow2)"/>
+  <text x="311" y="48" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#DD8452">-5</text>
+
+  <circle cx="660" cy="130" r="5" fill="#333333"/>
+  <text x="660" y="185" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">start</text>
+
+  <circle cx="117.5" cy="130" r="5" fill="#333333"/>
+  <text x="117.5" y="185" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">landing</text>
+
+  <text x="350" y="210" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">(-2) + (-5) = -7</text>
+</svg>

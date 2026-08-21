@@ -1,0 +1,64 @@
+<svg width="760" height="270" viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="760" height="270" fill="#ffffff"/>
+
+  <!-- Panel 1: pizza cut into 4 pieces, one quarter highlighted -->
+  <text x="110" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">Step 1: cut into 4 pieces</text>
+
+  <path d="M110,130 L110,65 A65,65 0 0,1 175,130 Z" fill="#DD8452" stroke="#333333" stroke-width="1.5"/>
+  <path d="M110,130 L175,130 A65,65 0 0,1 110,195 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M110,130 L110,195 A65,65 0 0,1 45,130 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M110,130 L45,130 A65,65 0 0,1 110,65 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="110" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <text x="138" y="106" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">1/4</text>
+  <text x="110" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">1/4 of the pizza</text>
+
+  <text x="230" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#333333">&#8594;</text>
+
+  <!-- Panel 2: same pizza, the selected quarter subdivided into 5 -->
+  <text x="350" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">Step 2: cut that piece into 5</text>
+
+  <path d="M350,130 L350,65 A65,65 0 0,1 370.09,68.18 Z" fill="#DD8452" stroke="#333333" stroke-width="1.5"/>
+  <path d="M350,130 L370.09,68.18 A65,65 0 0,1 388.21,77.41 Z" fill="#f5d0b8" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L388.21,77.41 A65,65 0 0,1 402.59,91.79 Z" fill="#f5d0b8" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L402.59,91.79 A65,65 0 0,1 411.82,109.91 Z" fill="#f5d0b8" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L411.82,109.91 A65,65 0 0,1 415,130 Z" fill="#f5d0b8" stroke="#333333" stroke-width="1"/>
+  <path d="M350,130 L415,130 A65,65 0 0,1 350,195 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M350,130 L350,195 A65,65 0 0,1 285,130 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <path d="M350,130 L285,130 A65,65 0 0,1 350,65 Z" fill="#f0f0f0" stroke="#333333" stroke-width="1.2"/>
+  <circle cx="350" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <line x1="360.16" y1="65.81" x2="367" y2="56" stroke="#333333" stroke-width="1"/>
+  <text x="370" y="58" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333">1/4 of 1/5</text>
+  <text x="350" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">1/4, then cut into 5</text>
+
+  <text x="470" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#333333">=</text>
+
+  <!-- Panel 3: whole pizza cut into 4x5 = 20 equal pieces -->
+  <text x="590" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f3a5f">= cut the whole into 4&#215;5</text>
+
+  <path d="M590,130 L590,65 A65,65 0 0,1 610.09,68.18 Z" fill="#DD8452" stroke="#333333" stroke-width="1.5"/>
+  <path d="M590,130 L610.09,68.18 A65,65 0 0,1 628.21,77.41 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L628.21,77.41 A65,65 0 0,1 642.59,91.79 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L642.59,91.79 A65,65 0 0,1 651.82,109.91 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L651.82,109.91 A65,65 0 0,1 655,130 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L655,130 A65,65 0 0,1 651.82,150.09 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L651.82,150.09 A65,65 0 0,1 642.59,168.21 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L642.59,168.21 A65,65 0 0,1 628.21,182.59 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L628.21,182.59 A65,65 0 0,1 610.09,191.82 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L610.09,191.82 A65,65 0 0,1 590,195 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L590,195 A65,65 0 0,1 569.91,191.82 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L569.91,191.82 A65,65 0 0,1 551.79,182.59 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L551.79,182.59 A65,65 0 0,1 537.41,168.21 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L537.41,168.21 A65,65 0 0,1 528.18,150.09 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L528.18,150.09 A65,65 0 0,1 525,130 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L525,130 A65,65 0 0,1 528.18,109.91 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L528.18,109.91 A65,65 0 0,1 537.41,91.79 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L537.41,91.79 A65,65 0 0,1 551.79,77.41 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L551.79,77.41 A65,65 0 0,1 569.91,68.18 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <path d="M590,130 L569.91,68.18 A65,65 0 0,1 590,65 Z" fill="#f0f0f0" stroke="#333333" stroke-width="0.8"/>
+  <circle cx="590" cy="130" r="65" fill="none" stroke="#c9974f" stroke-width="5"/>
+  <line x1="600.16" y1="65.81" x2="607" y2="56" stroke="#333333" stroke-width="1"/>
+  <text x="610" y="58" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">1/20</text>
+  <text x="590" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">1/20 of the whole pizza</text>
+
+  <text x="380" y="255" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">Cutting a piece into smaller pieces multiplies the number of cuts: 4 &#215; 5 = 20 equal pieces.</text>
+</svg>

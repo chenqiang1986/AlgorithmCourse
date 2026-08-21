@@ -1,0 +1,62 @@
+<svg width="700" height="430" viewBox="0 0 700 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="axisArrowChk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333333"/>
+    </marker>
+    <marker id="distArrowChk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DD8452"/>
+    </marker>
+    <marker id="hopArrowChk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4C72B0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="430" fill="#ffffff"/>
+
+  <text x="350" y="18" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f">-8 - (-3) = -8 + 3: two readings, same answer</text>
+
+  <!-- Panel A: signed distance -->
+  <g transform="translate(0,30)" font-family="Helvetica, Arial, sans-serif">
+    <text x="350" y="15" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f3a5f">Reading 1: signed distance from b to a</text>
+    <line x1="40" y1="100" x2="660" y2="100" stroke="#333333" stroke-width="1.5" marker-start="url(#axisArrowChk)" marker-end="url(#axisArrowChk)"/>
+    <g font-size="13" fill="#333333">
+      <line x1="40" y1="94" x2="40" y2="106" stroke="#333333" stroke-width="1.5"/><text x="40" y="125" text-anchor="middle">-9</text>
+      <line x1="117.5" y1="94" x2="117.5" y2="106" stroke="#333333" stroke-width="2"/><text x="117.5" y="125" text-anchor="middle" font-weight="bold">-8</text>
+      <line x1="195" y1="94" x2="195" y2="106" stroke="#333333" stroke-width="1.5"/><text x="195" y="125" text-anchor="middle">-7</text>
+      <line x1="272.5" y1="94" x2="272.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="272.5" y="125" text-anchor="middle">-6</text>
+      <line x1="350" y1="94" x2="350" y2="106" stroke="#333333" stroke-width="1.5"/><text x="350" y="125" text-anchor="middle">-5</text>
+      <line x1="427.5" y1="94" x2="427.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="427.5" y="125" text-anchor="middle">-4</text>
+      <line x1="505" y1="94" x2="505" y2="106" stroke="#333333" stroke-width="2"/><text x="505" y="125" text-anchor="middle" font-weight="bold">-3</text>
+      <line x1="582.5" y1="94" x2="582.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="582.5" y="125" text-anchor="middle">-2</text>
+      <line x1="660" y1="94" x2="660" y2="106" stroke="#333333" stroke-width="1.5"/><text x="660" y="125" text-anchor="middle">-1</text>
+    </g>
+    <text x="117.5" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">a</text>
+    <text x="505" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">b</text>
+    <line x1="501" y1="65" x2="121.5" y2="65" stroke="#DD8452" stroke-width="2.5" marker-end="url(#distArrowChk)"/>
+    <text x="311" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#DD8452">a - b = -8 - (-3) = -5</text>
+    <circle cx="117.5" cy="100" r="5" fill="#333333"/>
+    <circle cx="505" cy="100" r="5" fill="#333333"/>
+    <text x="350" y="155" text-anchor="middle" font-size="13" fill="#333333">Walk from b = -3 to a = -8: 5 units left, so a - b = -5.</text>
+  </g>
+
+  <!-- Panel B: add the opposite, as movement -->
+  <g transform="translate(0,250)" font-family="Helvetica, Arial, sans-serif">
+    <text x="350" y="15" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f3a5f">Reading 2: add the opposite, as movement</text>
+    <line x1="40" y1="100" x2="660" y2="100" stroke="#333333" stroke-width="1.5" marker-start="url(#axisArrowChk)" marker-end="url(#axisArrowChk)"/>
+    <g font-size="13" fill="#333333">
+      <line x1="40" y1="94" x2="40" y2="106" stroke="#333333" stroke-width="1.5"/><text x="40" y="125" text-anchor="middle">-9</text>
+      <line x1="117.5" y1="94" x2="117.5" y2="106" stroke="#333333" stroke-width="2"/><text x="117.5" y="125" text-anchor="middle" font-weight="bold">-8</text>
+      <line x1="195" y1="94" x2="195" y2="106" stroke="#333333" stroke-width="1.5"/><text x="195" y="125" text-anchor="middle">-7</text>
+      <line x1="272.5" y1="94" x2="272.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="272.5" y="125" text-anchor="middle">-6</text>
+      <line x1="350" y1="94" x2="350" y2="106" stroke="#333333" stroke-width="2"/><text x="350" y="125" text-anchor="middle" font-weight="bold">-5</text>
+      <line x1="427.5" y1="94" x2="427.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="427.5" y="125" text-anchor="middle">-4</text>
+      <line x1="505" y1="94" x2="505" y2="106" stroke="#333333" stroke-width="1.5"/><text x="505" y="125" text-anchor="middle">-3</text>
+      <line x1="582.5" y1="94" x2="582.5" y2="106" stroke="#333333" stroke-width="1.5"/><text x="582.5" y="125" text-anchor="middle">-2</text>
+      <line x1="660" y1="94" x2="660" y2="106" stroke="#333333" stroke-width="1.5"/><text x="660" y="125" text-anchor="middle">-1</text>
+    </g>
+    <path d="M 117.5 95 Q 233.75 60 346 95" fill="none" stroke="#4C72B0" stroke-width="2.5" marker-end="url(#hopArrowChk)"/>
+    <text x="233.75" y="45" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C72B0">+3 (right)</text>
+    <circle cx="117.5" cy="100" r="5" fill="#333333"/>
+    <circle cx="350" cy="100" r="5" fill="#333333"/>
+    <text x="350" y="155" text-anchor="middle" font-size="13" fill="#333333">Start at a = -8, add the opposite of b (+3): land on -5.</text>
+  </g>
+</svg>
