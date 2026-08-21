@@ -24,5 +24,21 @@ a diagnostic test that samples the full range of Algebra I skills:
 2. [01-diagnostic-test.md](./01-diagnostic-test.md)
    A 20-question, ~40-minute diagnostic test covering all major Algebra I topics. Answer
    key and full solutions: [02-diagnostic-test-solutions.md](./02-diagnostic-test-solutions.md).
+3. [03-systems-graphing-and-substitution.md](./03-systems-graphing-and-substitution.md)
+   Two-variable linear systems and solving them by substitution, including rearranging an
+   equation before substituting and picking either variable to substitute for.
+4. [04-elimination-method.md](./04-elimination-method.md)
+   Solving systems by elimination, with and without scaling one or both equations first.
+5. [04-homework-substitution-and-elimination.md](./04-homework-substitution-and-elimination.md)
+   Homework covering Lessons 3–4: substitution, elimination, and choosing between them.
+6. [05-geometric-interpretation-and-solution-count.md](./05-geometric-interpretation-and-solution-count.md)
+   The geometric meaning of a system's solutions as intersecting lines, and how to
+   recognize the no-solution and infinite-solution cases using substitution or elimination.
+7. [06-unknown-coefficients.md](./06-unknown-coefficients.md)
+   Solving for one or two unknown coefficients given that a system has no solution or
+   infinitely many solutions, including cases where no valid coefficient exists.
+8. [06-homework-solution-count-and-unknown-coefficients.md](./06-homework-solution-count-and-unknown-coefficients.md)
+   Homework covering Lessons 5–6: classifying a system's solution count and solving for
+   unknown coefficients.
 
 More lessons can be added later as the course grows.

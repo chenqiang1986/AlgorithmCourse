@@ -78,7 +78,8 @@ observed shape, in order:
    ### Sample Output
    ### Explanation
    ```
-   AMC-style modules (e.g. `AMC/Combinatorics`) use a multiple-choice variant instead:
+   AMC-style modules (e.g. `AMC/Combinatorics`) commonly use a multiple-choice variant
+   instead:
    ```markdown
    ### Problem
    ### Answer Choices
@@ -89,6 +90,12 @@ observed shape, in order:
 
    </details>
    ```
+   Multiple choice is not required, even in AMC-style modules — many real AMC/competition
+   problems are free-response (numeric-answer), and class/homework problems you write don't
+   need to be forced into an A-E format just to match the surrounding lessons. When a
+   problem is naturally free-response, drop `### Answer Choices` and end the solution with
+   "The answer is **N**." (or the appropriate value) instead of a lettered choice. Match
+   whatever the source problem actually is rather than inventing distractors.
    Either way, **the solution/explanation must be collapsed** behind
    `<details><summary>Solution</summary>...</details>` (blank line after `<summary>` and
    before `</details>` so the enclosed Markdown/LaTeX renders) — this lets a lesson be used
@@ -103,6 +110,26 @@ observed shape, in order:
 A dedicated "problem list" file (e.g. `05-usaco-bfs-problems.md`) is a valid, shorter
 lesson type: title, a short intro line, a flat list of linked problems grouped by
 difficulty, and a one-line "How to Use This List" section. No solution analysis in these.
+
+A **homework file** is another valid shorter type: a self-contained problem set assigned
+after one or more lessons, using the same judge-style `### Problem` +
+`<details><summary>Solution</summary>...</details>` format as Class Practice sections
+(worked, non-collapsed problem statement; collapsed solution). Structure:
+`# Homework: Lessons N–M — Title`, a 1-2 sentence intro naming which lesson file(s) it
+covers and linking them, then problems grouped into `## Part A/B/C: ...` sections mirroring
+the lessons' subtopics, numbered `### Problem 1`, `### Problem 2`, ... continuously across
+parts (don't restart numbering per part). No "Core template", "Common Mistakes", or
+"Key Takeaways" sections, and no "next lesson" closing sentence — homework is a drill
+artifact, not a teaching one.
+
+**Numbering convention for homework filenames:** a homework file's `NN` is **not** the next
+unused number — it **inherits the largest lesson number it covers**. Homework for lessons
+3–4 is numbered `04` (`04-homework-<slug>.md`); homework for lessons 5–6 is numbered `06`.
+This deliberately collides with that lesson's own file number (e.g. both
+`04-elimination-method.md` and `04-homework-substitution-and-elimination.md` exist) — that
+collision is intentional, not an error, and signals "graded/assigned after lesson NN" rather
+than claiming a new slot in the lesson sequence. Place the homework's README.md entry
+immediately after the last lesson it covers, regardless of how the filenames alphabetize.
 
 ## Step 3: Length control — split, don't cram
 
