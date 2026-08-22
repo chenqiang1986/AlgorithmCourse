@@ -27,5 +27,26 @@ starting Algebra I:
 2. [01-diagnostic-test.md](./01-diagnostic-test.md)
    A 20-question, ~40-minute diagnostic test covering all major Course 3 topics. Answer
    key and full solutions: [02-diagnostic-test-solutions.md](./02-diagnostic-test-solutions.md).
+3. [03-irrational-numbers.md](./03-irrational-numbers.md)
+   Quick review of negative-number and fraction operations from Course 2, then rational vs.
+   irrational numbers and a proof that $\sqrt{2}$ is irrational.
+4. [04-decimal-fraction-conversion.md](./04-decimal-fraction-conversion.md)
+   Converting terminating and repeating decimals to fractions and back, including the
+   prime-factor test for whether a fraction terminates.
+5. [04-homework-irrational-numbers-and-decimal-conversion.md](./04-homework-irrational-numbers-and-decimal-conversion.md)
+   An 18-problem homework set covering Lessons 3–4: integer/fraction review, classifying
+   and proving numbers irrational, and converting between fractions and decimals
+   (terminating and repeating, in both directions).
+6. [05-exponent-rules.md](./05-exponent-rules.md)
+   The primitive definition of a positive-integer exponent, then the core laws derived from
+   it: product of powers, power of a power, power of a product/quotient, and quotient of
+   powers.
+7. [06-zero-negative-fractional-exponents.md](./06-zero-negative-fractional-exponents.md)
+   Extending the exponent definition to zero, negative, and fractional exponents — each
+   chosen so the Lesson 5 rules keep working without exception.
+8. [06-homework-exponent-rules-and-extensions.md](./06-homework-exponent-rules-and-extensions.md)
+   An 18-problem homework set covering Lessons 5–6: the basic exponent rules, combining them
+   with the quotient rule, and zero/negative/fractional exponents (including a proof that
+   $\sqrt{5}$ is irrational).
 
 More lessons can be added later as the course grows.
