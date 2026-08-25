@@ -48,5 +48,16 @@ starting Algebra I:
    An 18-problem homework set covering Lessons 5–6: the basic exponent rules, combining them
    with the quotient rule, and zero/negative/fractional exponents (including a proof that
    $\sqrt{5}$ is irrational).
+9. [07-scientific-notation.md](./07-scientific-notation.md)
+   Writing very large and very small numbers as $a \times 10^n$, converting to and from
+   standard form, and multiplying, dividing, adding, and subtracting in scientific notation.
+10. [08-single-variable-linear-equations.md](./08-single-variable-linear-equations.md)
+    A quick review of one- and two-step equations, then the distributive property and
+    combining like terms, equations with variables on both sides (including no-solution and
+    infinite-solution cases), and translating word problems into equations.
+11. [08-homework-scientific-notation-and-linear-equations.md](./08-homework-scientific-notation-and-linear-equations.md)
+    A 19-problem homework set covering Lessons 7–8: converting to/from scientific notation,
+    multiplying/dividing/adding/subtracting in scientific notation, the distributive
+    property and combining like terms, variables on both sides, and word problems.
 
 More lessons can be added later as the course grows.

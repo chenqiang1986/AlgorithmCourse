@@ -215,6 +215,7 @@ Take the root first whenever the base is a recognizable perfect power.
 - Fractional exponents connect directly back to [Lesson 3](./03-irrational-numbers.md): a
   root like $2^{1/2} = \sqrt{2}$ is often irrational, even when the base is a whole number.
 
-Next lesson moves to Weeks 5–6 of the syllabus ([00-syllabus.md](./00-syllabus.md)):
-scientific notation, which relies on powers of $10$ — including the negative exponents
-defined here — to represent very large and very small quantities.
+[Next lesson](./07-scientific-notation.md) moves to Weeks 5–6 of the syllabus
+([00-syllabus.md](./00-syllabus.md)): scientific notation, which relies on powers of $10$ —
+including the negative exponents defined here — to represent very large and very small
+quantities.
