@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-from sklearn.compose import ColumnTransformer
+import math
+from sklearn.compose import ColumnTransformer, TransformedTargetRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, r2_score
 from sklearn.model_selection import train_test_split
@@ -8,12 +9,25 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
+def mean_squared_percentage_error(y_true, y_pred):
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    return math.sqrt(np.mean(((y_true - y_pred) / y_true) ** 2))
+
+
 def main():
     df = pd.read_csv("Walmart_Sales.csv")
 
     df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y")
     df["Year"] = df["Date"].dt.year
+    df["Year_SQR"] = df["Year"] * df["Year"]
+    df["Year_CUB"] = df["Year_SQR"] * df["Year"]
     df["Month"] = df["Date"].dt.month
+    df["Month_SQR"] = df["Month"] * df["Month"]
+    df["Month_CUB"] = df["Month_SQR"] * df["Month"]
+    df["Month_QUA"] = df["Month_CUB"] * df["Month"]
+    df["Month_FIF"] = df["Month_QUA"] * df["Month"]
+    df["Month_Year"] = df["Month"] * df["Year"]
 
     categorical_features = ["Store"]
     numeric_features = [
@@ -23,14 +37,21 @@ def main():
         "CPI",
         "Unemployment",
         "Year",
+        "Year_SQR",
+        "Year_CUB",
         "Month",
+        "Month_SQR",
+        "Month_CUB",
+        "Month_QUA",
+        "Month_FIF",
+        "Month_Year",
     ]
     features = categorical_features + numeric_features
     X = df[features]
     y = df["Weekly_Sales"]
 
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
+        X, y, test_size=0.2, random_state=22
     )
 
     preprocessor = ColumnTransformer(
@@ -40,10 +61,14 @@ def main():
         ]
     )
 
+    regressor = TransformedTargetRegressor(
+        regressor=LinearRegression(), func=np.log, inverse_func=np.exp
+    )
+
     model = Pipeline(
         [
             ("preprocess", preprocessor),
-            ("regressor", LinearRegression()),
+            ("regressor", regressor),
         ]
     )
     model.fit(X_train, y_train)
@@ -53,6 +78,7 @@ def main():
     print(f"R^2: {r2_score(y_train, y_pred_train):.4f}")
     print(f"MAE: {mean_absolute_error(y_train, y_pred_train):.2f}")
     print(f"MAPE: {mean_absolute_percentage_error(y_train, y_pred_train):.2%}")
+    print(f"MSPE: {mean_squared_percentage_error(y_train, y_pred_train):.2%}")
 
     y_pred = model.predict(X_test)
 
@@ -60,15 +86,9 @@ def main():
     print(f"R^2: {r2_score(y_test, y_pred):.4f}")
     print(f"MAE: {mean_absolute_error(y_test, y_pred):.2f}")
     print(f"MAPE: {mean_absolute_percentage_error(y_test, y_pred):.2%}")
+    print(f"MSPE: {mean_squared_percentage_error(y_test, y_pred):.2%}")
 
 
-    print("\n\nCoffifient:")
-    feature_names = model.named_steps["preprocess"].get_feature_names_out()
-    regressor = model.named_steps["regressor"]
-    for feature, coef in zip(feature_names, regressor.coef_):
-        print(f"{feature}: {coef:.2f}")
-    print(f"Intercept: {regressor.intercept_:.2f}")
-
-
+    
 if __name__ == "__main__":
     main()
