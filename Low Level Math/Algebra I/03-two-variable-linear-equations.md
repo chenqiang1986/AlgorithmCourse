@@ -425,41 +425,103 @@ The answer is **$(2, -3)$**.
 
 </details>
 
-## 14. Common Mistakes
+## 14. Class Practice 4: A System With No Solution
 
-### 14.1 Solving for only one variable
+### Problem
+
+Solve the system for $(x, y)$, or show that it has no solution:
+
+$$
+\begin{cases}
+2x + 3y = 6 \\
+4x + 6y = 20
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+Eliminate $x$: multiply the first equation by $2$:
+
+$$2(2x+3y) = 2(6) \implies 4x+6y = 12$$
+
+Subtract this from the second equation:
+
+$$(4x+6y) - (4x+6y) = 20 - 12 \implies 0 = 8$$
+
+Both variables vanish, leaving a false statement.
+
+The answer is **no solution**. (Lesson 5 explains what this means geometrically and how to
+recognize it without fully solving.)
+
+</details>
+
+## 15. Class Practice 5: A System With Infinitely Many Solutions
+
+### Problem
+
+Solve the system for $(x, y)$, or show that it has infinitely many solutions:
+
+$$
+\begin{cases}
+2x - y = 4 \\
+-6x + 3y = -12
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+Eliminate $x$: multiply the first equation by $3$:
+
+$$3(2x-y) = 3(4) \implies 6x-3y = 12$$
+
+Add this to the second equation:
+
+$$(6x-3y) + (-6x+3y) = 12 + (-12) \implies 0 = 0$$
+
+Both variables vanish, leaving a true statement.
+
+The answer is **infinitely many solutions**. (Lesson 5 explains what this means
+geometrically and how to recognize it without fully solving.)
+
+</details>
+
+## 16. Common Mistakes
+
+### 16.1 Solving for only one variable
 
 Finding $x$ and stopping is an incomplete answer — always back-substitute to report both
 coordinates of the solution point.
 
-### 14.2 Sign errors when substituting a negative expression
+### 16.2 Sign errors when substituting a negative expression
 
 When substituting an expression like $y = 3x - 1$ into $2x + y = 9$, remember the entire
 expression $(3x - 1)$ replaces $y$, including its sign — a common error is writing
 $2x + 3x - 1 = 9$ correctly here, but dropping a sign when the substituted expression
 itself starts with a negative term (e.g., substituting $y = -x + 4$).
 
-### 14.3 Dropping the denominator when substituting a fraction
+### 16.3 Dropping the denominator when substituting a fraction
 
 When the expression you substitute is a fraction, like $x = \dfrac{1-3y}{2}$, the entire
 fraction — numerator and denominator together — replaces the variable. A common error is
 substituting only the numerator ($1 - 3y$) and forgetting to divide, which silently
 multiplies the whole equation by the denominator.
 
-### 14.4 Scaling only part of an equation
+### 16.4 Scaling only part of an equation
 
 When multiplying an equation by a constant, every term — both variable coefficients and
 the constant on the right-hand side — must be multiplied. Forgetting the right-hand side
 is the single most common elimination error.
 
-### 14.5 Adding when you should subtract (or vice versa)
+### 16.5 Adding when you should subtract (or vice versa)
 
 Adding two equations eliminates a variable only when its coefficients are opposites;
 subtracting eliminates it only when they're equal. Mixing this up reintroduces the
 variable instead of removing it. When in doubt, multiply one equation by $-1$ first and
 always add — see Section 8's non-obvious detail.
 
-## 15. Key Takeaways
+## 17. Key Takeaways
 
 - Substitution: solve one equation for one variable, plug into the other equation, solve,
   then back-substitute. You may pick either variable — both choices lead to the same

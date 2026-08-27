@@ -429,41 +429,144 @@ The three angles are **$80°$, $60°$, and $40°$**.
 
 </details>
 
-## 11. Common Mistakes
+## 11. Class Practice 5: No Solution, Even Though No Two Equations Conflict
 
-### 11.1 Reusing a derived equation instead of a different original pair
+### Problem
+
+Solve the system for $(x, y, z)$, or show that it has no solution:
+
+$$
+\begin{cases}
+x + 2y + 3z = 6 \\
+2x + y - z = 3 \\
+3x + 3y + 2z = 10
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+Label the equations (1), (2), (3). Unlike the two-variable no-solution case (Lesson 3),
+none of these three equations are parallel planes — check any pair, and the coefficients
+aren't proportional to each other. So no single pair of equations looks broken; each pair
+alone shares a whole line of common solutions. The trouble only shows up once all three are
+combined.
+
+Eliminate $x$ from (1) and (2): coefficients $1$ and $2$, so multiply (1) by $2$:
+
+$$2(x+2y+3z) = 2(6) \implies 2x+4y+6z = 12$$
+
+Subtract (2):
+
+$$(2x+4y+6z) - (2x+y-z) = 12-3 \implies 3y+7z = 9 \quad (4)$$
+
+Eliminate $x$ from (1) and (3) — a different pair. Coefficients $1$ and $3$, so multiply
+(1) by $3$:
+
+$$3(x+2y+3z) = 3(6) \implies 3x+6y+9z = 18$$
+
+Subtract (3):
+
+$$(3x+6y+9z) - (3x+3y+2z) = 18-10 \implies 3y+7z = 8 \quad (5)$$
+
+(4) and (5) have the **exact same left-hand side** but different right-hand sides.
+Subtracting them:
+
+$$(3y+7z) - (3y+7z) = 9 - 8 \implies 0 = 1$$
+
+A false statement. The answer is **no solution** — even though (1)&(2), (1)&(3), and
+(2)&(3) each individually describe two planes crossing in a whole line of shared points.
+Only combining all three constraints at once exposes the contradiction; inspecting any two
+equations by themselves gives no warning that something is wrong.
+
+</details>
+
+## 12. Class Practice 6: Infinitely Many Solutions, Even Though No Two Equations Match
+
+### Problem
+
+Solve the system for $(x, y, z)$, or show that it has infinitely many solutions:
+
+$$
+\begin{cases}
+x + 2y + 3z = 6 \\
+2x + y - z = 3 \\
+3x + 3y + 2z = 9
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+This is the same system as Class Practice 5, with only the constant in equation (3)
+changed from $10$ to $9$ — and, as before, no two of the three equations are proportional,
+so no pair looks unusual on its own. Label the equations (1), (2), (3) and run the same
+elimination.
+
+Eliminate $x$ from (1) and (2), exactly as in Class Practice 5:
+
+$$3y+7z = 9 \quad (4)$$
+
+Eliminate $x$ from (1) and (3):
+
+$$3(x+2y+3z) = 3(6) \implies 3x+6y+9z = 18$$
+
+Subtract (3):
+
+$$(3x+6y+9z) - (3x+3y+2z) = 18-9 \implies 3y+7z = 9 \quad (5)$$
+
+This time (4) and (5) are the **exact same equation**. Equation (3) turned out to be
+redundant — it's exactly equation (1) plus equation (2), adding no new constraint beyond
+what (1) and (2) already say. One equation in two unknowns, $3y+7z=9$, has infinitely many
+solutions: pick any $z$, then $y = \dfrac{9-7z}{3}$, then back-substitute into (1) for $x$.
+
+The answer is **infinitely many solutions**, forming a line in $(x,y,z)$-space — even
+though no two of the three planes are parallel or identical by themselves. Only the
+specific combination of all three reveals that the third equation was never independent.
+
+</details>
+
+## 13. Common Mistakes
+
+### 13.1 Reusing a derived equation instead of a different original pair
 
 After eliminating $x$ from (1)&(2) to get equation (4), it's tempting to try to "eliminate
 $x$ again" from (4) and (2) — but (4) no longer contains $x$, so there's nothing left to
 eliminate there. The second elimination must go back to two of the three **original**
 equations (a different pair than the first), not reuse a result from the first step.
 
-### 11.2 Assuming a one-step shortcut always exists
+### 13.2 Assuming a one-step shortcut always exists
 
 Hoping that adding two equations will conveniently cancel two variables at once (Section 6)
 usually wastes time checking for a coincidence that isn't there. Default to the two-step
 generic method from Section 3 unless the coincidence is already obvious from the
 coefficients.
 
-### 11.3 Forgetting to check all three original equations
+### 13.3 Forgetting to check all three original equations
 
 Back-substituting $y$ and $z$ into just one original equation to find $x$ is required, but
 not sufficient to confirm the whole solution — an arithmetic slip earlier in the
 elimination can still produce a triple that satisfies one original equation by chance.
 Always verify against all three.
 
-## 12. Key Takeaways
+## 14. Key Takeaways
 
 - A three-variable system reduces to a two-variable system by eliminating one variable
   **twice**, from two different pairs of the original three equations — each elimination
   is worked out independently, the way Lesson 3 handles any two-equation system.
-- Any two of the three possible pairs work for the first round of eliminations; the
-  resulting $y$-$z$ equations are always consistent with each other no matter which pairs
-  you picked.
+- Any two of the three possible pairs work for the first round of eliminations; when the
+  system has a solution, the resulting $y$-$z$ equations from different pairs are always
+  consistent with each other, no matter which pairs you picked.
 - A single combination that cancels two variables at once can happen, but only when one
   equation's non-eliminated terms are already exact negatives (or multiples) of another's —
   a special relationship, not something to plan around. The reliable method always budgets
   for two separate eliminations.
+- Checking equations two at a time never rules out no solution or infinitely many
+  solutions — any two non-parallel planes always share a line of points, even when all
+  three together share nothing (Class Practice 5) or share that entire line (Class
+  Practice 6). Only running the full elimination on all three equations reveals which case
+  you're in; this is genuinely more subtle than the two-variable case, where checking the
+  two equations directly is enough.
 - The same idea extends to four or more variables: eliminate one variable from enough
   different pairs to strip it out of every remaining equation, then repeat on the smaller
   system.
