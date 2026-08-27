@@ -1,11 +1,11 @@
 # Lesson 5: Systems of Linear Equations — Geometric Interpretation and Solution Count
 
-Lessons 3 and 4 taught two algebraic techniques — substitution and elimination — for
-finding a system's solution. This lesson steps back to ask what a solution *means*: two
-linear equations graph as two lines, and their intersection is exactly the system's
-solution set. That picture explains why every two-variable linear system has exactly one
-solution, no solution, or infinitely many, and it gives a fast way to tell which case
-you're in without fully solving.
+Lesson 3 taught two algebraic techniques — substitution and elimination — for finding a
+system's solution. This lesson steps back to ask what a solution *means*: two linear
+equations graph as two lines, and their intersection is exactly the system's solution set.
+That picture explains why every two-variable linear system has exactly one solution, no
+solution, or infinitely many, and it gives a fast way to tell which case you're in without
+fully solving.
 
 ## 1. Systems and Lines: The Geometric Picture
 
@@ -13,8 +13,8 @@ Every linear equation in two variables graphs as a straight line in the coordina
 A point that satisfies an equation is exactly a point that lies on its line. So a solution
 to a system — a point satisfying both equations — is exactly a point that lies on **both**
 lines: an **intersection point**. This is the geometric meaning behind the algebra of
-Lessons 3 and 4: solving a system by substitution or elimination is a way of *computing*
-where two lines cross without having to graph them.
+Lesson 3: solving a system by substitution or elimination is a way of *computing* where two
+lines cross without having to graph them.
 
 Two distinct lines in a plane relate to each other in exactly one of three ways, which
 gives every two-variable linear system exactly one of three possible outcomes:

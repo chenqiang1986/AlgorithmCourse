@@ -126,10 +126,11 @@ artifact, not a teaching one.
 unused number — it **inherits the largest lesson number it covers**. Homework for lessons
 3–4 is numbered `04` (`04-homework-<slug>.md`); homework for lessons 5–6 is numbered `06`.
 This deliberately collides with that lesson's own file number (e.g. both
-`04-elimination-method.md` and `04-homework-substitution-and-elimination.md` exist) — that
-collision is intentional, not an error, and signals "graded/assigned after lesson NN" rather
-than claiming a new slot in the lesson sequence. Place the homework's README.md entry
-immediately after the last lesson it covers, regardless of how the filenames alphabetize.
+`04-three-variable-linear-equations.md` and `04-homework-solving-linear-equations.md`
+exist) — that collision is intentional, not an error, and signals "graded/assigned after
+lesson NN" rather than claiming a new slot in the lesson sequence. Place the homework's
+README.md entry immediately after the last lesson it covers, regardless of how the
+filenames alphabetize.
 
 ## Step 3: Length control — split, don't cram
 

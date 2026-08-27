@@ -24,13 +24,17 @@ a diagnostic test that samples the full range of Algebra I skills:
 2. [01-diagnostic-test.md](./01-diagnostic-test.md)
    A 20-question, ~40-minute diagnostic test covering all major Algebra I topics. Answer
    key and full solutions: [02-diagnostic-test-solutions.md](./02-diagnostic-test-solutions.md).
-3. [03-systems-graphing-and-substitution.md](./03-systems-graphing-and-substitution.md)
-   Two-variable linear systems and solving them by substitution, including rearranging an
-   equation before substituting and picking either variable to substitute for.
-4. [04-elimination-method.md](./04-elimination-method.md)
-   Solving systems by elimination, with and without scaling one or both equations first.
-5. [04-homework-substitution-and-elimination.md](./04-homework-substitution-and-elimination.md)
-   Homework covering Lessons 3–4: substitution, elimination, and choosing between them.
+3. [03-two-variable-linear-equations.md](./03-two-variable-linear-equations.md)
+   Two-variable linear systems and solving them by substitution and elimination, including
+   rearranging an equation before substituting, picking either variable, and scaling one or
+   both equations before eliminating.
+4. [04-three-variable-linear-equations.md](./04-three-variable-linear-equations.md)
+   Extending elimination to three-variable systems: eliminating one variable from two
+   different pairs of equations, and why that two-step process is the generic method
+   rather than a shortcut that happens to remove two variables at once.
+5. [04-homework-solving-linear-equations.md](./04-homework-solving-linear-equations.md)
+   Homework covering Lessons 3–4: two-variable substitution and elimination, plus
+   three-variable elimination.
 6. [05-geometric-interpretation-and-solution-count.md](./05-geometric-interpretation-and-solution-count.md)
    The geometric meaning of a system's solutions as intersecting lines, and how to
    recognize the no-solution and infinite-solution cases using substitution or elimination.

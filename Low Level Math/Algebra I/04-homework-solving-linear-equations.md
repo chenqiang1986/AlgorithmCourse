@@ -1,8 +1,10 @@
-# Homework: Lessons 3–4 — Substitution and Elimination
+# Homework: Lessons 3–4 — Solving Linear Equations
 
-This homework covers [03-systems-graphing-and-substitution.md](./03-systems-graphing-and-substitution.md)
-(substitution) and [04-elimination-method.md](./04-elimination-method.md) (elimination).
-Attempt each problem before revealing its solution.
+This homework covers [03-two-variable-linear-equations.md](./03-two-variable-linear-equations.md)
+(substitution, elimination, and choosing between them) and
+[04-three-variable-linear-equations.md](./04-three-variable-linear-equations.md)
+(extending elimination to three variables). Attempt each problem before revealing its
+solution.
 
 ## Part A: Substitution
 
@@ -261,5 +263,160 @@ Back-substitute into $x + y = 15$: $6 + y = 15 \implies y = 9$.
 Check: $6 + 9 = 15$ ✓, and $2(6) - 9 = 12 - 9 = 3$ ✓.
 
 The two numbers are **$6$ and $9$**.
+
+</details>
+
+## Part D: Three-Variable Systems
+
+Each problem below needs two independent eliminations of the same variable, from two
+different pairs of equations, before it reduces to a two-variable system.
+
+### Problem 8
+
+Solve the system for $(x, y, z)$:
+
+$$
+\begin{cases}
+3x - 2y + z = 16 \\
+x + 4y - 3z = -22 \\
+2x - y + 2z = 15
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+Label the equations (1), (2), (3). Eliminate $x$ from (1) and (2): the $x$-coefficients
+are $3$ and $1$, so multiply (2) by $3$:
+
+$$
+3(x+4y-3z) = 3(-22) \implies 3x+12y-9z = -66
+$$
+
+Subtract from (1): $(3x-2y+z)-(3x+12y-9z) = 16-(-66) \implies -14y+10z = 82$, which
+simplifies (dividing by $-2$) to $7y - 5z = -41 \quad (4)$
+
+Eliminate $x$ from (1) and (3) — a different pair. The $x$-coefficients are $3$ and $2$,
+LCM $6$. Multiply (1) by $2$ and (3) by $3$:
+
+$$
+\begin{aligned}
+2(3x-2y+z) &= 2(16) &\implies 6x-4y+2z &= 32 \\
+3(2x-y+2z) &= 3(15) &\implies 6x-3y+6z &= 45
+\end{aligned}
+$$
+
+Subtract: $(6x-4y+2z)-(6x-3y+6z) = 32-45 \implies -y-4z = -13$, i.e.
+$y + 4z = 13 \quad (5)$
+
+Solve (4) and (5). From (5): $y = 13 - 4z$. Substitute into (4):
+
+$$
+7(13-4z) - 5z = -41 \implies 91 - 28z - 5z = -41 \implies -33z = -132 \implies z = 4
+$$
+
+Then $y = 13 - 4(4) = -3$. Back-substitute into (1): $3x - 2(-3) + 4 = 16 \implies
+3x + 10 = 16 \implies x = 2$.
+
+Check (2): $2+4(-3)-3(4) = 2-12-12 = -22$ ✓. Check (3): $2(2)-(-3)+2(4) = 4+3+8 = 15$ ✓.
+
+The answer is **$(2, -3, 4)$**.
+
+</details>
+
+### Problem 9
+
+Solve the system for $(x, y, z)$:
+
+$$
+\begin{cases}
+2x + 3y - z = -9 \\
+x - 2y + 3z = 20 \\
+3x - y + 2z = 15
+\end{cases}
+$$
+
+<details>
+<summary>Solution</summary>
+
+Label the equations (1), (2), (3). Eliminate $x$ from (1) and (2): the $x$-coefficients
+are $2$ and $1$, so multiply (2) by $2$:
+
+$$
+2(x-2y+3z) = 2(20) \implies 2x-4y+6z = 40
+$$
+
+Subtract from (1): $(2x+3y-z)-(2x-4y+6z) = -9-40 \implies 7y-7z = -49$, which simplifies
+(dividing by $7$) to $y - z = -7 \quad (4)$
+
+Eliminate $x$ from (1) and (3) — a different pair. The $x$-coefficients are $2$ and $3$,
+LCM $6$. Multiply (1) by $3$ and (3) by $2$:
+
+$$
+\begin{aligned}
+3(2x+3y-z) &= 3(-9) &\implies 6x+9y-3z &= -27 \\
+2(3x-y+2z) &= 2(15) &\implies 6x-2y+4z &= 30
+\end{aligned}
+$$
+
+Subtract: $(6x+9y-3z)-(6x-2y+4z) = -27-30 \implies 11y-7z = -57 \quad (5)$
+
+Solve (4) and (5). From (4): $y = z - 7$. Substitute into (5):
+
+$$
+11(z-7) - 7z = -57 \implies 11z - 77 - 7z = -57 \implies 4z = 20 \implies z = 5
+$$
+
+Then $y = 5 - 7 = -2$. Back-substitute into (1): $2x + 3(-2) - 5 = -9 \implies
+2x - 11 = -9 \implies x = 1$.
+
+Check (2): $1-2(-2)+3(5) = 1+4+15 = 20$ ✓. Check (3): $3(1)-(-2)+2(5) = 3+2+10 = 15$ ✓.
+
+The answer is **$(1, -2, 5)$**.
+
+</details>
+
+### Problem 10 (Word Problem)
+
+The sum of three numbers is $20$. The first number plus twice the second number minus the
+third number is $9$. Twice the first number minus the second number plus the third number
+is $17$. Find the three numbers.
+
+<details>
+<summary>Solution</summary>
+
+Let $x$, $y$, $z$ be the first, second, and third numbers:
+
+$$
+\begin{cases}
+x + y + z = 20 & (1) \\
+x + 2y - z = 9 & (2) \\
+2x - y + z = 17 & (3)
+\end{cases}
+$$
+
+Eliminate $x$ from (1) and (2): the $x$-coefficients already match ($1$ and $1$), so
+subtract (2) from (1):
+
+$$(x+y+z) - (x+2y-z) = 20-9 \implies -y+2z = 11 \quad (4)$$
+
+Eliminate $x$ from (1) and (3) — a different pair, and a different technique, since the
+$x$-coefficients ($1$ and $2$) don't already match. Multiply (1) by $2$:
+
+$$2(x+y+z) = 2(20) \implies 2x+2y+2z = 40$$
+
+Subtract (3): $(2x+2y+2z) - (2x-y+z) = 40-17 \implies 3y+z = 23 \quad (5)$
+
+Solve (4) and (5). From (4): $y = 2z - 11$. Substitute into (5):
+
+$$
+3(2z-11) + z = 23 \implies 6z - 33 + z = 23 \implies 7z = 56 \implies z = 8
+$$
+
+Then $y = 2(8) - 11 = 5$. Back-substitute into (1): $x + 5 + 8 = 20 \implies x = 7$.
+
+Check (2): $7+2(5)-8 = 7+10-8 = 9$ ✓. Check (3): $2(7)-5+8 = 14-5+8 = 17$ ✓.
+
+The three numbers are **$7$, $5$, and $8$**.
 
 </details>
