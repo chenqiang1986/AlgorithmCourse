@@ -144,29 +144,105 @@ The answer is **$9$**.
 
 </details>
 
-## 8. Common Mistakes
+## 8. Class Practice 4: Combined Expression With Multiplication and Addition
 
-### 8.1 Applying the addition sign rule to multiplication
+### Problem
+
+Evaluate: $(-6) \times 4 + 9$
+
+<details>
+<summary>Solution</summary>
+
+As with positive numbers, multiplication is done before addition. Multiply first
+(different signs, negative product):
+
+$$(-6) \times 4 = -24$$
+
+Then add:
+
+$$-24 + 9 = -15$$
+
+The answer is **$-15$**.
+
+</details>
+
+## 9. Class Practice 5: Combined Expression With Division and Subtraction
+
+### Problem
+
+Evaluate: $10 - (-24) \div 6$
+
+<details>
+<summary>Solution</summary>
+
+Divide first (different signs, negative quotient):
+
+$$(-24) \div 6 = -4$$
+
+Then subtract, which means adding the opposite of $-4$:
+
+$$10 - (-4) = 10 + 4 = 14$$
+
+The answer is **$14$**.
+
+</details>
+
+## 10. Class Practice 6: All Four Operations Together
+
+### Problem
+
+Evaluate: $8 + (-3) \times (-5) - 18 \div (-2)$
+
+<details>
+<summary>Solution</summary>
+
+Do every multiplication and division first, left to right, before any addition or
+subtraction — the usual order-of-operations rule, applied here with the sign rules from
+Section 2.
+
+$$(-3) \times (-5) = 15 \qquad \qquad 18 \div (-2) = -9$$
+
+Substituting back leaves only addition and subtraction, worked left to right:
+
+$$8 + 15 - (-9)$$
+
+$$8 + 15 = 23 \qquad \qquad 23 - (-9) = 23 + 9 = 32$$
+
+The answer is **$32$**.
+
+</details>
+
+## 11. Common Mistakes
+
+### 11.1 Applying the addition sign rule to multiplication
 
 Adding integers (Lesson 3) compares *absolute values* to pick the sign; multiplying and
 dividing integers never compares absolute values — the sign depends only on whether the
 signs *match*, regardless of which number is larger. $(-2) \times 100$ is negative even
 though $100$ is much larger than $2$ in absolute value.
 
-### 8.2 Losing track of the sign with three or more factors
+### 11.2 Losing track of the sign with three or more factors
 
 Multiplying the absolute values correctly but guessing the final sign is a common error
 in problems like $(-2)\times(-3)\times(-4)$. Count the negative factors first (three here
 — odd — so the result is negative), separately from computing the magnitude
 ($2\times3\times4=24$), then combine: $-24$.
 
-### 8.3 Treating $0 \div n$ and $n \div 0$ as the same
+### 11.3 Treating $0 \div n$ and $n \div 0$ as the same
 
 $0 \div n = 0$ for any nonzero $n$ (zero split into any number of groups is still zero in
 each group), but $n \div 0$ is **undefined** for any $n$, including $n = 0$. These are not
 symmetric — don't assume one follows from the other.
 
-## 9. Key Takeaways
+### 11.4 Doing addition/subtraction before multiplication/division
+
+In a combined expression like $8 + (-3) \times (-5)$, the multiplication must be done
+first even though the addition sign appears earlier when reading left to right. Skipping
+straight to $8 + (-3) = 5$ and then multiplying by $-5$ gives the wrong answer ($-25$
+instead of the correct $23$); always resolve every $\times$ and $\div$ before any $+$ or
+$-$.
+
+## 12. Key Takeaways
 
 - Multiplying/dividing integers: same signs give a positive result, different signs give a
   negative result — this is unlike adding integers, which depends on comparing absolute
@@ -176,6 +252,9 @@ symmetric — don't assume one follows from the other.
 - Division inherits its sign rule from multiplication, since $a \div b$ is defined as "the
   number that, times $b$, gives $a$."
 - Division by $0$ is always undefined, regardless of sign.
+- In expressions combining all four operations, resolve every multiplication and division
+  first, left to right, then every addition and subtraction, left to right — apply the
+  sign rules from this lesson and Lesson 3 at each step.
 
 This completes the integer operations covered in Weeks 1–4 of the syllabus
 ([00-syllabus.md](./00-syllabus.md)). The next unit applies these same operations to

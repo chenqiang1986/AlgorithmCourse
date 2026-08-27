@@ -234,30 +234,100 @@ The answer is **$1$**.
 
 </details>
 
-## 11. Common Mistakes
+## 11. Class Practice 4: Mixed Addition/Subtraction Chain
 
-### 11.1 Treating "subtract a negative" as a special case
+### Problem
+
+Evaluate: $15 - 20 + (-7) - (-12)$
+
+<details>
+<summary>Solution</summary>
+
+Rewrite every subtraction as adding the opposite first, so the whole expression is a chain
+of additions:
+
+$$15 - 20 + (-7) - (-12) = 15 + (-20) + (-7) + 12$$
+
+Work left to right:
+
+$$\begin{aligned}
+15 + (-20) &= -5 \\
+-5 + (-7) &= -12 \\
+-12 + 12 &= 0
+\end{aligned}$$
+
+The answer is **$0$**.
+
+</details>
+
+## 12. Class Practice 5: Comparing Larger Absolute Values
+
+### Problem
+
+Evaluate: $(-34) + 19$
+
+<details>
+<summary>Solution</summary>
+
+The addends have different signs, so subtract the smaller absolute value from the larger
+($34 - 19 = 15$) and keep the sign of the number with the larger absolute value
+($|-34| = 34 > |19| = 19$, and $-34$ is negative):
+
+$$(-34) + 19 = -(34 - 19) = -15$$
+
+The answer is **$-15$**.
+
+</details>
+
+## 13. Class Practice 6: Word Problem — Temperature Change
+
+### Problem
+
+At midnight, the temperature was $-8°$F. By noon it had risen $15°$F, and by evening it had
+dropped another $21°$F. What was the temperature that evening?
+
+<details>
+<summary>Solution</summary>
+
+"Rose $15°$" means add $15$; "dropped $21°$" means add $-21$:
+
+$$-8 + 15 + (-21)$$
+
+Work left to right:
+
+$$\begin{aligned}
+-8 + 15 &= 7 \\
+7 + (-21) &= -(21 - 7) = -14
+\end{aligned}$$
+
+The evening temperature was **$-14°$F**.
+
+</details>
+
+## 14. Common Mistakes
+
+### 14.1 Treating "subtract a negative" as a special case
 
 Students often memorize "minus a minus is a plus" as an isolated rule, then get stuck on
 $-8 - (-3)$ vs. $8 - (-3)$ vs. $-8 - 3$. There's only one rule: $a - b = a + (-b)$. Apply
 it every time, and the correct sign falls out automatically — no need to memorize
 separate cases for every combination of signs.
 
-### 11.2 Forgetting to compare absolute values before assigning a sign
+### 14.2 Forgetting to compare absolute values before assigning a sign
 
 For different-sign addition like $(-9) + 5$, a common error is guessing the sign instead
 of checking which number has the larger absolute value. Here $|-9| = 9 > |5| = 5$, so the
 answer is negative: $-(9-5) = -4$. Always identify the larger absolute value first, *then*
 attach its sign to the result.
 
-### 11.3 Confusing $-n$ with "$n$ is negative"
+### 14.3 Confusing $-n$ with "$n$ is negative"
 
 $-n$ means "the opposite of $n$," not "a negative number." If $n$ itself is negative
 (say $n = -5$), then $-n = -(-5) = 5$, which is positive. The negative sign in front of a
 variable flips whatever sign that variable currently has — it doesn't guarantee a negative
 result.
 
-## 12. Key Takeaways
+## 15. Key Takeaways
 
 - Integers extend the number line below zero; $|n|$ measures distance from $0$ regardless
   of direction.
