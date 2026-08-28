@@ -90,6 +90,6 @@ def main():
     print(f"MSPE: {mean_squared_percentage_error(y_test, y_pred):.2%}")
 
 
-    
+# Results recorded in https://docs.google.com/spreadsheets/d/1I_qK9cHIvwvts7d9nXeyzzCB1nM1ivz-z9D5V2HY3nI/edit?gid=0#gid=0    
 if __name__ == "__main__":
     main()
