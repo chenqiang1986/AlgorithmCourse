@@ -64,7 +64,7 @@ observed shape, in order:
 
 1. `# Lesson N: Title`, immediately followed by an italic breadcrumb line
    `*Top-Level-Folder / Module-Folder*` (the two path components the file lives under,
-   e.g. `*ML / D01-Dataframe*` or `*Low Level Math / Algebra I*`), then a blank line and a
+   e.g. `*ML / D01-Dataframe*` or `*Fundamental Math / Algebra I*`), then a blank line and a
    1-2 sentence intro of what the lesson covers. This breadcrumb is what lets a printed
    page be identified by module at a glance — every lesson, README, homework, and
    problem-list file in a module gets one, including files that don't start with an H1
