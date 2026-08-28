@@ -28,6 +28,7 @@ def main():
     df["Month_QUA"] = df["Month_CUB"] * df["Month"]
     df["Month_FIF"] = df["Month_QUA"] * df["Month"]
     df["Month_Year"] = df["Month"] * df["Year"]
+    
 
     categorical_features = ["Store"]
     numeric_features = [
@@ -51,7 +52,7 @@ def main():
     y = df["Weekly_Sales"]
 
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=22
+        X, y, test_size=0.2, random_state=22, stratify=df["Store"]
     )
 
     preprocessor = ColumnTransformer(
