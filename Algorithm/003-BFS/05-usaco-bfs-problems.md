@@ -1,4 +1,5 @@
 # Lesson 5: Official USACO BFS Practice
+*Algorithm / 003-BFS*
 
 This file is a curated set of official USACO problems where BFS is a natural technique.
 

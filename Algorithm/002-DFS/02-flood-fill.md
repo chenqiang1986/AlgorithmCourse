@@ -1,4 +1,5 @@
 # Lesson 2: Flood Fill
+*Algorithm / 002-DFS*
 
 Flood fill is one of the most important applications of DFS.
 

@@ -1,4 +1,5 @@
 # Lesson 1: Visualizing Continuous Data with `matplotlib.pyplot`
+*ML / D04-DataVisualization*
 
 This lesson introduces `matplotlib.pyplot`, the standard Python plotting library, and shows how to use it to visualize **continuous data** — numeric values that can fall anywhere in a range, like price, temperature, score, or sales.
 

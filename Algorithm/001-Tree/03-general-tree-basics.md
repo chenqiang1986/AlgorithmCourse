@@ -1,4 +1,5 @@
 # Lesson 3: General Tree Basics
+*Algorithm / 001-Tree*
 
 In the first two lessons, we focused on binary trees, where each node has at most two children.
 

@@ -1,4 +1,5 @@
 # Lesson 5: Exponent Notation and the Laws of Exponents
+*Low Level Math / Course 3*
 
 This lesson opens Weeks 3–4 of the syllabus ([00-syllabus.md](./00-syllabus.md)): exponents.
 It starts from the most basic definition — a positive integer exponent as repeated

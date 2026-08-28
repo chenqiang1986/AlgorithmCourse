@@ -1,4 +1,5 @@
 # Problem 1: Student Ranking
+*Algorithm / DiagnosticTestBasic*
 
 ## Expected Submission Filename
 

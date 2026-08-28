@@ -1,4 +1,5 @@
 # Course 2 Diagnostic Test
+*Low Level Math / Course 2*
 
 This test samples every major 7th-grade topic to identify which skills a student already
 has and which need review before starting Course 2, the bridge between Middle School

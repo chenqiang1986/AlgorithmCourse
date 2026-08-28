@@ -1,4 +1,5 @@
 # Course 2 Syllabus
+*Low Level Math / Course 2*
 
 A 36-week, 7th-grade syllabus covering the six units below, each anchored by an essential
 question that frames why the unit's skills matter.

@@ -1,4 +1,5 @@
 # Lesson 3: Permutations and Combinations
+*AMC / Combinatorics*
 
 This lesson turns the multiplication principle from [01-sum-and-product-rules.md](./01-sum-and-product-rules.md) into two named formulas: **permutations**, for when order matters, and **combinations**, for when it does not. Almost every "standard" counting question on the AMC is really asking you to identify which of these two formulas applies.
 

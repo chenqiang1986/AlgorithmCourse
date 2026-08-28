@@ -1,4 +1,5 @@
 # Lesson 4: Special Model — Adjacency Constraints
+*AMC / Combinatorics*
 
 Many AMC arrangement problems take the standard permutation setup from [03-permutations-and-combinations.md](./03-permutations-and-combinations.md) and add one extra condition: two particular people or items must sit together, or must never sit together. Two clean techniques handle these — the **bundling method** and the **gap method**.
 

@@ -1,4 +1,5 @@
 # Lesson 7: Balls Into Buckets — The Four Cases
+*AMC / Combinatorics*
 
 Every "distribute $n$ balls into $k$ buckets" problem hides the same two yes/no questions: **are the balls distinguishable from each other**, and **are the buckets distinguishable from each other**? Answering both questions picks out one of exactly four cases, and each case has its own tool — some you already know, and two brand-new ones this lesson introduces.
 

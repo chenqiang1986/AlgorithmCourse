@@ -1,4 +1,5 @@
 # Course 1
+*Low Level Math / Course 1*
 
 This folder contains Course 1 of the Low Level Math sequence — the standard-paced
 6th-grade course that precedes [Course 2](../Course%202).

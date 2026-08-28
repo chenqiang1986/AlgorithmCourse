@@ -1,4 +1,5 @@
 # Homework: Lessons 5–6 — Solution Count and Unknown Coefficients
+*Low Level Math / Algebra I*
 
 This homework covers
 [05-geometric-interpretation-and-solution-count.md](./05-geometric-interpretation-and-solution-count.md)

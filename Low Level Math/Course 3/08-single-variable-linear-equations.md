@@ -1,4 +1,5 @@
 # Lesson 8: Single-Variable Linear Equations
+*Low Level Math / Course 3*
 
 This lesson opens Unit 2 of the syllabus ([00-syllabus.md](./00-syllabus.md)), Weeks 7–8:
 expressions and linear equations. The diagnostic test ([01-diagnostic-test.md](./01-diagnostic-test.md),

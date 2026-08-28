@@ -1,3 +1,5 @@
+*Algorithm / 000-Basic*
+
 2025 Bronze Feb 1st https://usaco.org/index.php?page=viewproblem2&cpid=1491
 
 2025 Bronze Feb 2nd https://usaco.org/index.php?page=viewproblem2&cpid=1492

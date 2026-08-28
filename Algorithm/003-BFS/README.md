@@ -1,4 +1,5 @@
 # 003 - Breadth First Search
+*Algorithm / 003-BFS*
 
 This folder contains the Breadth First Search section of the algorithm course.
 

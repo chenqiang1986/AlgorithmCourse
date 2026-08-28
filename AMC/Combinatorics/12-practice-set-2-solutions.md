@@ -1,4 +1,5 @@
 # Practice Set 2 Solutions
+*AMC / Combinatorics*
 
 Answer key and full worked solutions for [09-practice-set-2-twisted-models.md](./09-practice-set-2-twisted-models.md). Try every problem first — checking the key or opening a solution before attempting a problem defeats the point of a drill set.
 

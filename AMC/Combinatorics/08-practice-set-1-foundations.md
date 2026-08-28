@@ -1,4 +1,5 @@
 # Practice Set 1: Foundations — Counting Principles, Inclusion–Exclusion, Permutations & Combinations
+*AMC / Combinatorics*
 
 This set drills [01-sum-and-product-rules.md](./01-sum-and-product-rules.md), [02-inclusion-exclusion-principle.md](./02-inclusion-exclusion-principle.md), and [03-permutations-and-combinations.md](./03-permutations-and-combinations.md) — the basic toolkit every later lesson builds on. Attempt each problem before checking your answer.
 

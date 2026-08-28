@@ -1,4 +1,5 @@
 # Lesson 7: Scientific Notation
+*Low Level Math / Course 3*
 
 This lesson finishes Weeks 5–6 of the syllabus ([00-syllabus.md](./00-syllabus.md)):
 scientific notation. It uses powers of $10$ — including the negative and zero exponents

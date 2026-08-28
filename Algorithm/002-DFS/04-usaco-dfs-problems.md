@@ -1,4 +1,5 @@
 # Lesson 4: USACO DFS Problem List
+*Algorithm / 002-DFS*
 
 This file is a curated set of official USACO problems where DFS is a central idea.
 

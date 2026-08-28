@@ -1,4 +1,5 @@
 # Algebra I
+*Low Level Math / Algebra I*
 
 This folder contains the Algebra I section of the Low Level Math course.
 

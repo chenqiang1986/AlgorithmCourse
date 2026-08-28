@@ -1,4 +1,5 @@
 # Lesson 6: Systems of Linear Equations — Solving for Unknown Coefficients
+*Low Level Math / Algebra I*
 
 Lesson 5 went from a system to its solution count: given the equations, tell whether
 there's no solution, one solution, or infinitely many. This lesson runs that process in

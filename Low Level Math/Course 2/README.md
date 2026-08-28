@@ -1,4 +1,5 @@
 # Course 2
+*Low Level Math / Course 2*
 
 This folder contains Course 2 of the Low Level Math sequence — the standard-paced
 7th-grade bridge between [Middle School Placement](../Middle%20School%20Placement) and

@@ -1,4 +1,5 @@
 # Lesson 5: Systems of Linear Equations — Geometric Interpretation and Solution Count
+*Low Level Math / Algebra I*
 
 Lesson 3 taught two algebraic techniques — substitution and elimination — for finding a
 system's solution. This lesson steps back to ask what a solution *means*: two linear

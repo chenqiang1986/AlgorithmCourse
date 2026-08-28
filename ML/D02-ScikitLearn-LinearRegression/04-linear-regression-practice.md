@@ -1,3 +1,4 @@
+*ML / D02-ScikitLearn-LinearRegression*
 
 Make use of the data
 https://www.kaggle.com/datasets/mikhail1681/walmart-sales

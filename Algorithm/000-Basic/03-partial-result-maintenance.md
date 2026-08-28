@@ -1,4 +1,6 @@
 # Partial Result Maintenance - Linear Based
+*Algorithm / 000-Basic*
+
 ## Questions
 From time to time we may need to answer the following questions repeatedly:
 1. Given array $a$, what is the sum of $a[i..j]$

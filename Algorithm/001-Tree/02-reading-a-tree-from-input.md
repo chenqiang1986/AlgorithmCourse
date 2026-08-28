@@ -1,4 +1,5 @@
 # Lesson 2: Reading a Tree From Input
+*Algorithm / 001-Tree*
 
 In real contest problems such as USACO, the tree is usually not already built for you in memory. Instead, you must read the input, build the tree yourself, and then run the algorithm.
 

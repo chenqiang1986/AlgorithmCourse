@@ -1,4 +1,5 @@
 # Permutation Theory
+*Algorithm / 004-Math*
 
 We only cover the very basic but very useful facts here.
 

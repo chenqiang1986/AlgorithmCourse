@@ -1,4 +1,5 @@
 # 002 - Depth First Search
+*Algorithm / 002-DFS*
 
 This folder contains the Depth First Search section of the algorithm course.
 

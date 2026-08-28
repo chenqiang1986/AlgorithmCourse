@@ -1,4 +1,5 @@
 # Lesson 1: Logistic Regression Overview
+*ML / D03-ScikitLearn-LinearCategoryIdentification*
 
 This lesson gives a first look at the full code flow for training a logistic regression model with scikit-learn.
 

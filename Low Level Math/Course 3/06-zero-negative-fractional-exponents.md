@@ -1,4 +1,5 @@
 # Lesson 6: Zero, Negative, and Fractional Exponents
+*Low Level Math / Course 3*
 
 [Lesson 5](./05-exponent-rules.md) defined $a^n$ only for positive integer $n$, as $n$
 copies of $a$ multiplied together, and restricted the quotient rule to $\dfrac{a^m}{a^n} =

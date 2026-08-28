@@ -1,4 +1,5 @@
 # D03 - scikit-learn Classification Basics (Logistic / Softmax Regression)
+*ML / D03-ScikitLearn-LinearCategoryIdentification*
 
 This folder continues the [D02-ScikitLearn-LinearRegression](../D02-ScikitLearn-LinearRegression) module, but now the target is a **category** instead of a number.
 

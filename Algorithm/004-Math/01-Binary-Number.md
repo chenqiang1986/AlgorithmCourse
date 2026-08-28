@@ -1,4 +1,5 @@
 # Binary Number
+*Algorithm / 004-Math*
 
 ## Base Change Formula
 In computer, all the numbers are really represented in base 2.

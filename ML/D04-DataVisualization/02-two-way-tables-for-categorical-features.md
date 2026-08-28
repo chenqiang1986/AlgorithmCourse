@@ -1,4 +1,5 @@
 # Lesson 2: Two-Way Tables for Categorical Features
+*ML / D04-DataVisualization*
 
 [Lesson 1](./01-visualizing-continuous-data.md) visualized continuous data. This lesson covers **categorical data** — values that come from a fixed set of labels, like `gender`, `department`, or `pass_fail` — and how to summarize the relationship between two categorical features at once.
 

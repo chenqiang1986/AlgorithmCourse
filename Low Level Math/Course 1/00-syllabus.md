@@ -1,4 +1,5 @@
 # Course 1 Syllabus
+*Low Level Math / Course 1*
 
 A 36-week, 6th-grade syllabus covering the five units below, each anchored by an essential
 question that frames why the unit's skills matter.

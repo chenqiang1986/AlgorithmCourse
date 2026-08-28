@@ -1,4 +1,5 @@
 # Lesson 6: USACO Tree Problem List
+*Algorithm / 001-Tree*
 
 This file is a small collection of USACO problems related to trees.
 

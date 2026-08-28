@@ -1,4 +1,5 @@
 # Lesson 4: Three-Variable Linear Equations — Elimination Method
+*Low Level Math / Algebra I*
 
 Lesson 3 solved systems of two equations in two variables. This lesson extends the
 **elimination method** to systems of three equations in three variables $x$, $y$, and $z$.

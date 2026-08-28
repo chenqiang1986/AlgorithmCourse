@@ -1,4 +1,5 @@
 # USACO Combinatorics Problems
+*Algorithm / 000-Basic*
 
 - [Just Stalling](https://usaco.org/index.php?page=viewproblem2&cpid=1085)
 - [Even More Odd Photos](https://usaco.org/index.php?page=viewproblem2&cpid=1084)

@@ -1,4 +1,5 @@
 # Lesson 4: Building a General Tree From Root and Edges
+*Algorithm / 001-Tree*
 
 In the previous lesson, the input directly told us the children of each node.
 

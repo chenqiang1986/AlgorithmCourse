@@ -1,4 +1,5 @@
 # Practice Set 2: Twisted Models — Adjacency Constraints & Stars and Bars
+*AMC / Combinatorics*
 
 This set drills the two "special model" lessons: [04-adjacency-constraints.md](./04-adjacency-constraints.md) (bundling and gap methods for arrangements) and [05-stars-and-bars.md](./05-stars-and-bars.md) (distributing identical items). Both lessons take the basic tools from Set 1 and twist them into a new shape — the goal here is recognizing *which* twisted model a problem is hiding, not just running a formula.
 

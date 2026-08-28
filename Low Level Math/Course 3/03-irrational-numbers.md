@@ -1,4 +1,5 @@
 # Lesson 3: Reviewing Negative Numbers and Meeting Irrational Numbers
+*Low Level Math / Course 3*
 
 Course 2 covered negative-number and fraction arithmetic in full detail. This lesson opens
 Course 3's first unit — the number system — with a quick refresher on those rules, then

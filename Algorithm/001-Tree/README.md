@@ -1,4 +1,5 @@
 # 001 - Tree
+*Algorithm / 001-Tree*
 
 This folder contains the tree section of the algorithm course.
 

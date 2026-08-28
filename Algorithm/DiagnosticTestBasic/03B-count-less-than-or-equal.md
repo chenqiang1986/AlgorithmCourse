@@ -1,4 +1,5 @@
 # Problem 3b: Count Numbers Not Greater Than `T`
+*Algorithm / DiagnosticTestBasic*
 
 ## Expected Submission Filename
 

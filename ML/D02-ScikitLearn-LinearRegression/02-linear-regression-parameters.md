@@ -1,4 +1,5 @@
 # Lesson 2: Linear Regression Parameters
+*ML / D02-ScikitLearn-LinearRegression*
 
 This lesson continues with the same `LinearRegression` model, but now we focus on the parameters we can control when training it.
 

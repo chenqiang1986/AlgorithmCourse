@@ -1,4 +1,5 @@
 # Lesson 5: Special Model — Stars and Bars
+*AMC / Combinatorics*
 
 Every technique so far — permutations, combinations, adjacency constraints — has counted arrangements of **distinct** items. This lesson introduces **stars and bars**, the standard tool for counting distributions of **identical** items, and shows that three questions that look completely different are secretly the same problem.
 

@@ -1,4 +1,5 @@
 # Lesson 4: Integer Multiplication and Division
+*Low Level Math / Course 2*
 
 [Lesson 3](./03-negative-integers-addition-subtraction.md) covered adding and subtracting
 negative integers. This lesson covers the sign rules for **multiplying** and **dividing**

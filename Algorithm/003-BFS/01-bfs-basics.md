@@ -1,4 +1,5 @@
 # Lesson 1: BFS Basics
+*Algorithm / 003-BFS*
 
 This lesson introduces the main idea of Breadth First Search, the queue-based code shape, and why generic graph BFS usually needs a `visited` structure.
 

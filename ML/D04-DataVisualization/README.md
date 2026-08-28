@@ -1,4 +1,5 @@
 # D04 - Data Visualization
+*ML / D04-DataVisualization*
 
 This folder introduces how to visualize the tables we built in [D01-Dataframe](../D01-Dataframe): turning raw rows and columns into plots that reveal patterns, distributions, and relationships.
 

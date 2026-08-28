@@ -1,4 +1,5 @@
 # Lesson 2: Logistic Regression Parameters
+*ML / D03-ScikitLearn-LinearCategoryIdentification*
 
 This lesson continues with `LogisticRegression`, focusing on the parameters we can control when training it.
 

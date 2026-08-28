@@ -1,4 +1,5 @@
 # Homework: Lessons 5–6 — Exponent Rules and Extensions
+*Low Level Math / Course 3*
 
 This homework covers [05-exponent-rules.md](./05-exponent-rules.md) (the primitive
 positive-integer definition of an exponent, plus the product, power-of-a-power,

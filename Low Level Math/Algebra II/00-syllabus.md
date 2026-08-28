@@ -1,4 +1,5 @@
 # Algebra II Syllabus
+*Low Level Math / Algebra II*
 
 A year-long Algebra II syllabus covering the eight units below, four per semester.
 

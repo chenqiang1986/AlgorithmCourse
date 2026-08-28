@@ -1,4 +1,5 @@
 # Incremental Update Strategy
+*Algorithm / 000-Basic*
 
 In previous lesson, we learned the conception **index** using partial result maintenance as example.
 From time to time, we might need to update the index for reasons like 

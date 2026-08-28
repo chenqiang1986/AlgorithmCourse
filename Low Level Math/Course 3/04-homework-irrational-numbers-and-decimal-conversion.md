@@ -1,4 +1,5 @@
 # Homework: Lessons 3–4 — Irrational Numbers and Decimal-Fraction Conversion
+*Low Level Math / Course 3*
 
 This homework covers [03-irrational-numbers.md](./03-irrational-numbers.md) (a quick
 integer/fraction review, rational vs. irrational numbers, and the proof that $\sqrt{2}$ is

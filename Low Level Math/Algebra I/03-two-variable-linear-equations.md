@@ -1,4 +1,5 @@
 # Lesson 3: Two-Variable Linear Equations — Substitution and Elimination
+*Low Level Math / Algebra I*
 
 A **system of equations** is a set of two or more equations that must be satisfied at the
 same time. This lesson covers two-variable linear systems: what a solution means

@@ -1,4 +1,5 @@
 # Lesson 6: The Recursive Formula Method
+*AMC / Combinatorics*
 
 Some counting problems have no clean closed-form formula — no single application of the multiplication principle, combinations, or stars and bars will finish the job directly. For these, the cleanest approach is to define a sequence $a_n$ for the count you want, find how $a_n$ relates to smaller values like $a_{n-1}$ by looking at the "last piece" of an outcome, and then build the answer up from small base cases.
 

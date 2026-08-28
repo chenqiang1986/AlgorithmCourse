@@ -1,4 +1,5 @@
 # Lesson 5: USACO-Style Tree Practice
+*Algorithm / 001-Tree*
 
 This lesson gives three practice problems in a contest style.
 

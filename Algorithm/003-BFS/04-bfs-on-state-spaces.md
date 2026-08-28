@@ -1,4 +1,5 @@
 # Lesson 4: BFS on State Spaces
+*Algorithm / 003-BFS*
 
 This lesson studies an important idea:
 

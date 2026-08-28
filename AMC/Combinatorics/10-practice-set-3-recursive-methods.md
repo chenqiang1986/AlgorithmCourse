@@ -1,4 +1,5 @@
 # Practice Set 3: The Recursive Method — Building Recurrences From Scratch
+*AMC / Combinatorics*
 
 This set drills [06-recursive-counting.md](./06-recursive-counting.md) and [07-balls-into-buckets.md](./07-balls-into-buckets.md).
 

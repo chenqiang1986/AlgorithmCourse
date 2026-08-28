@@ -1,4 +1,5 @@
 # Lesson 3: DFS as Dynamic Layers of Search
+*Algorithm / 002-DFS*
 
 This lesson studies a very important idea:
 

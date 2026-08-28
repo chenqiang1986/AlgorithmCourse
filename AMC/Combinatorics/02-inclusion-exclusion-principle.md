@@ -1,4 +1,5 @@
 # Lesson 2: The Inclusion–Exclusion Principle (Two and Three Sets)
+*AMC / Combinatorics*
 
 The addition principle from [01-sum-and-product-rules.md](./01-sum-and-product-rules.md) only works when the "or" cases are mutually exclusive. When they can overlap, plain addition double-counts the overlap. This lesson fixes that with two concrete patterns: overlapping **two** sets, and overlapping **three** sets. These two cases cover the vast majority of AMC-level problems, so we stop there rather than building a general $n$-set formula.
 

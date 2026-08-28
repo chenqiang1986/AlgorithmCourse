@@ -1,4 +1,5 @@
 # Homework: Lessons 3–4 — Solving Linear Equations
+*Low Level Math / Algebra I*
 
 This homework covers [03-two-variable-linear-equations.md](./03-two-variable-linear-equations.md)
 (substitution, elimination, and choosing between them) and

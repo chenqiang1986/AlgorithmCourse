@@ -1,4 +1,5 @@
 # Game Theory
+*Algorithm / 004-Math*
 
 We won't touch very deep on game theory, but it is necessary for us to understand the basics.
 

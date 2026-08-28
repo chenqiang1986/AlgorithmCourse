@@ -1,4 +1,5 @@
 # Lesson 3: Negative Integers — Addition and Subtraction
+*Low Level Math / Course 2*
 
 Up to now, numbers have measured "how much" of something. **Negative integers** let
 numbers also measure *direction* — below zero, before a reference point, or owed instead

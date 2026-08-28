@@ -1,4 +1,5 @@
 # AMC Combinatorics
+*AMC / Combinatorics*
 
 This folder contains the combinatorics section of the AMC (competition math) course.
 

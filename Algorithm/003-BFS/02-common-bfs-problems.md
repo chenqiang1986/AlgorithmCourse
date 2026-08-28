@@ -1,4 +1,5 @@
 # Lesson 2: Common BFS Problems
+*Algorithm / 003-BFS*
 
 This lesson focuses on the most common situations where BFS is the right tool.
 

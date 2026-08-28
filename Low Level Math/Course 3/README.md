@@ -1,4 +1,5 @@
 # Course 3
+*Low Level Math / Course 3*
 
 This folder contains Course 3 of the Low Level Math sequence — the bridge between
 [Middle School Placement](../Middle%20School%20Placement) and [Algebra I](../Algebra%20I).

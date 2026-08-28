@@ -1,4 +1,5 @@
 # Lesson 1: Binary Tree Basics
+*Algorithm / 001-Tree*
 
 This lesson introduces the binary tree, three classic traversal orders, and a simple way to store a tree in C++ without using pointers.
 

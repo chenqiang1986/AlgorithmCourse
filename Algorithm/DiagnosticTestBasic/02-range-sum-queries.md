@@ -1,4 +1,5 @@
 # Problem 2: Range Sum Queries
+*Algorithm / DiagnosticTestBasic*
 
 ## Expected Submission Filename
 

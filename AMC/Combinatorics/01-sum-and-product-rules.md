@@ -1,4 +1,5 @@
 # Lesson 1: The Addition Principle and the Multiplication Principle
+*AMC / Combinatorics*
 
 Every combinatorics problem, no matter how complicated, is eventually built out of two basic rules: the **addition principle** and the **multiplication principle**. Knowing when to add and when to multiply is the single most important skill in this module — every later lesson is really a more elaborate application of these two rules.
 

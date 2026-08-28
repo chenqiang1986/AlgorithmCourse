@@ -1,4 +1,5 @@
 # Algebra I Syllabus
+*Low Level Math / Algebra I*
 
 A 30-week Algebra I syllabus covering the five units below, each anchored by an essential
 question that frames why the unit's skills matter.

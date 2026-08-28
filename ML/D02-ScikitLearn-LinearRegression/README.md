@@ -1,4 +1,5 @@
 # D02 - scikit-learn Basics
+*ML / D02-ScikitLearn-LinearRegression*
 
 This folder contains an introductory machine learning lesson using scikit-learn.
 

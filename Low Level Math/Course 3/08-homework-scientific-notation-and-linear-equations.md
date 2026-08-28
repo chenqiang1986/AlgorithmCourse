@@ -1,4 +1,5 @@
 # Homework: Lessons 7–8 — Scientific Notation and Linear Equations
+*Low Level Math / Course 3*
 
 This homework covers [07-scientific-notation.md](./07-scientific-notation.md) (writing
 numbers as $a \times 10^n$, converting to and from standard form, and multiplying, dividing,

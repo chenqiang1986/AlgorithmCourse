@@ -1,4 +1,5 @@
 # Lesson 6: Adding Fractions — Same and Different Denominators
+*Low Level Math / Course 2*
 
 [Lesson 5](./05-fraction-multiplication-division.md) covered fraction signs, multiplication,
 and division. This lesson covers **addition**: first the easy case where two fractions

@@ -1,4 +1,5 @@
 # Lesson 1: DFS Basics
+*Algorithm / 002-DFS*
 
 This lesson introduces the main idea of Depth First Search, the standard recursive code shape, and why generic DFS often needs a `visited` array.
 

@@ -1,4 +1,5 @@
 # Practice Set 3 Solutions
+*AMC / Combinatorics*
 
 Answer key and full worked solutions for [10-practice-set-3-recursive-methods.md](./10-practice-set-3-recursive-methods.md). Try every problem first — checking the key or opening a solution before attempting a problem defeats the point of a drill set.
 

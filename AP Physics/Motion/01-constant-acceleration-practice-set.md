@@ -1,4 +1,5 @@
 # Practice Set: Constant Acceleration Kinematics
+*AP Physics / Motion*
 
 This practice set covers **one-dimensional motion with constant (uniform) acceleration**.
 For each problem, try to solve it yourself first, then expand the solution to check your

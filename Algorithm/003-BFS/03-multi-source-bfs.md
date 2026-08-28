@@ -1,4 +1,5 @@
 # Lesson 3: Multi-Source BFS
+*Algorithm / 003-BFS*
 
 This lesson studies a very useful BFS variation:
 

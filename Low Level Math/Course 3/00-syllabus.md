@@ -1,4 +1,5 @@
 # Course 3 Syllabus
+*Low Level Math / Course 3*
 
 A 36-week, 8th-grade pre-algebra syllabus covering the six units below, each anchored by
 an essential question that frames why the unit's skills matter.

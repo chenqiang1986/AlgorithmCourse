@@ -1,4 +1,5 @@
 # More exercise
+*Algorithm / 004-Math*
 
 Not limited to the theories we learned in this chapter, a lot of USACO problems need some math analysis, but the math it used is not deep.
 However it requires the student to have tricky perspective from time to time.
