@@ -45,5 +45,9 @@ a diagnostic test that samples the full range of Algebra I skills:
 8. [06-homework-solution-count-and-unknown-coefficients.md](./06-homework-solution-count-and-unknown-coefficients.md)
    Homework covering Lessons 5–6: classifying a system's solution count and solving for
    unknown coefficients.
+9. [07-determinants-and-solution-count.md](./07-determinants-and-solution-count.md)
+   Extending solution-count classification to three-variable systems: the trivial solution
+   and determinant test for homogeneous systems, and the determinant plus elimination check
+   for general systems.
 
 More lessons can be added later as the course grows.
