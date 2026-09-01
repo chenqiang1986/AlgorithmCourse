@@ -128,8 +128,8 @@ df["year"] = df["dates"].dt.year
 
 
 base_features = [
-    "month",
     "year",
+    "month",
     "Unemployment",
     "CPI",
     "Fuel_Price",
@@ -161,7 +161,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 centered_poly = Pipeline(
     steps=[
         ("center", StandardScaler(with_std=False)),
-        ("poly", LegendrePolynomialFeatures(degree=3, mixed_degree=2, include_bias=False)),
+        ("poly", PolynomialFeatures(degree=3, include_bias=False)),
     ]
 )
 
@@ -193,7 +193,7 @@ feature_pipeline = Pipeline(
     steps=[
         ("polyexpand", poly_expander),
         ("preprocess", preprocessor),
-        ("regressor", Ridge(alpha=2.5))
+        ("regressor", Ridge(alpha=1e-6))
     ]
 )
 
