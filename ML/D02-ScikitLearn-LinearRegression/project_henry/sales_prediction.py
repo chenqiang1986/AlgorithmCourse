@@ -1,3 +1,4 @@
+import itertools
 import math
 
 import pandas as pd
@@ -9,6 +10,7 @@ from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures, StandardScaler
+from sklearn.utils.validation import check_array
 
 
 def mean_abs_p_error(actual, pred):
@@ -46,6 +48,73 @@ class GroupInteraction(BaseEstimator, TransformerMixin):
     def get_feature_names_out(self, input_features=None):
         groups = self.ohe_.categories_[0]
         return [f"{g}_{f}" for g in groups for f in self.numeric_cols_]
+
+
+class LegendrePolynomialFeatures(TransformerMixin, BaseEstimator):
+    def __init__(self, degree=2, include_bias=False, mixed_degree=None):
+        self.degree = degree
+        self.include_bias = include_bias
+        self.mixed_degree = mixed_degree
+
+    def _compute_powers(self, n_cols):
+        powers = []
+        if self.include_bias:
+            powers.append((0,) * n_cols)
+
+        for i in range(n_cols):
+            for d in range(1, self.degree + 1):
+                power = [0] * n_cols
+                power[i] = d
+                powers.append(tuple(power))
+
+        if self.mixed_degree:
+            for combo in itertools.product(range(self.degree + 1), repeat=n_cols):
+                if sum(1 for d in combo if d > 0) >= 2 and sum(combo) <= self.mixed_degree:
+                    powers.append(combo)
+
+        return powers
+
+    def fit(self, X, y=None):
+        if hasattr(X, "columns"):
+            self.feature_names_in_ = np.asarray(X.columns, dtype=object)
+        X = check_array(X, accept_sparse=False, ensure_all_finite=True)
+        self.n_features_in_ = X.shape[1]
+        self.powers_ = self._compute_powers(self.n_features_in_)
+        return self
+
+    def transform(self, X):
+        X = check_array(X, accept_sparse=False, ensure_all_finite=True)
+        n_rows, n_cols = X.shape
+        # legvanders[i][:, d] = P_d(X[:, i]), the degree-d Legendre term for column i
+        legvanders = [np.polynomial.legendre.legvander(X[:, i], self.degree) for i in range(n_cols)]
+
+        columns = []
+        for power in self.powers_:
+            col = np.ones(n_rows)
+            for i, d in enumerate(power):
+                if d:
+                    col = col * legvanders[i][:, d]
+            columns.append(col)
+
+        return np.column_stack(columns)
+
+    def get_feature_names_out(self, input_features=None):
+        if input_features is not None:
+            names = np.asarray(input_features, dtype=object)
+        elif hasattr(self, "feature_names_in_"):
+            names = self.feature_names_in_
+        else:
+            names = np.array([f"x{i}" for i in range(self.n_features_in_)], dtype=object)
+
+        feature_names = []
+        for power in self.powers_:
+            if sum(power) == 0:
+                feature_names.append("1")
+                continue
+            parts = [f"{names[i]}_legendre{d}" for i, d in enumerate(power) if d]
+            feature_names.append("*".join(parts))
+
+        return np.asarray(feature_names, dtype=object)
 
 
 df = pd.read_csv("Walmart_Sales.csv")
@@ -92,7 +161,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 centered_poly = Pipeline(
     steps=[
         ("center", StandardScaler(with_std=False)),
-        ("poly", PolynomialFeatures(degree=3, include_bias=False)),
+        ("poly", LegendrePolynomialFeatures(degree=3, mixed_degree=2, include_bias=False)),
     ]
 )
 
@@ -124,7 +193,7 @@ feature_pipeline = Pipeline(
     steps=[
         ("polyexpand", poly_expander),
         ("preprocess", preprocessor),
-        ("regressor", Ridge(alpha=1.5))
+        ("regressor", Ridge(alpha=2.5))
     ]
 )
 
