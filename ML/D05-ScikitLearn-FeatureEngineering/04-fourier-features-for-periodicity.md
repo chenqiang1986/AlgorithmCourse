@@ -57,7 +57,7 @@ That's the general pattern, not a square-wave-only quirk: **low-frequency terms 
 For a column with training-data range (period) $L$ and a chosen number of harmonics `degree`, `FourierFeatures` builds:
 
 $$
-\sin\!\left(\frac{2\pi n x}{L}\right), \quad \cos\!\left(\frac{2\pi n x}{L}\right), \qquad n = 1, \ldots, \text{degree}
+\sin\left(\frac{2\pi n x}{L}\right), \quad \cos\left(\frac{2\pi n x}{L}\right), \qquad n = 1, \ldots, \text{degree}
 $$
 
 This is exactly the truncated Fourier series from Section 2, with `degree` playing the role of $N$: each harmonic $n$ adds one more $\sin$/$\cos$ "wiggle" that `LinearRegression` weights with a learned coefficient (standing in for $a_n$/$b_n$), instead of the fixed formula a hand-derived Fourier series would use. Combining enough wiggles can approximate any periodic-ish shape — low harmonics for the coarse outline, high harmonics for detail, same as the square wave in Desmos. Crucially, $\sin$ and $\cos$ always stay in $[-1, 1]$ no matter how large `degree` gets, so raising the number of harmonics does **not** reintroduce the magnitude blowup from Lesson 3 — there is no equivalent of "scale after expanding" required here.
