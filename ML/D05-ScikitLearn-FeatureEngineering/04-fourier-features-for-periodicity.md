@@ -12,7 +12,7 @@ A single polynomial term $x^d$ is smooth and, past low degrees, essentially mono
 A **Fourier series** writes a periodic function as a sum of sine and cosine waves of increasing frequency:
 
 $$
-f(x) \approx \frac{a_0}{2} + \sum_{n=1}^{N} \left[ a_n \cos\!\left(\frac{2\pi n x}{L}\right) + b_n \sin\!\left(\frac{2\pi n x}{L}\right) \right]
+f(x) \approx \frac{a_0}{2} + \sum_{n=1}^{N} \left[ a_n \cos\left(\frac{2\pi n x}{L}\right) + b_n \sin\left(\frac{2\pi n x}{L}\right) \right]
 $$
 
 where $L$ is the period of $f$ and $a_n$, $b_n$ are coefficients (one pair per harmonic $n$) that say how much of that harmonic's wave is present in $f$. We won't derive the formulas for $a_n$/$b_n$ here — that's a Real Analysis topic. The part that matters for this lesson: **almost any repeating shape can be built by adding up enough sine/cosine waves of the right frequencies and heights**, and the more harmonics $N$ you add, the closer the sum gets to $f$.
