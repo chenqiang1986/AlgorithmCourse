@@ -15,7 +15,7 @@ $$
 f(x) \approx \frac{a_0}{2} + \sum_{n=1}^{N} \left[ a_n \cos\left(\frac{2\pi n x}{L}\right) + b_n \sin\left(\frac{2\pi n x}{L}\right) \right]
 $$
 
-where $L$ is the period of $f$ and $a_n$, $b_n$ are coefficients (one pair per harmonic $n$) that say how much of that harmonic's wave is present in $f$. We won't derive the formulas for $a_n$/$b_n$ here — that's a Real Analysis topic. The part that matters for this lesson: **almost any repeating shape can be built by adding up enough sine/cosine waves of the right frequencies and heights**, and the more harmonics $N$ you add, the closer the sum gets to $f$.
+where $L$ is the period of $f$ and $a_n$, $b_n$ are coefficients (one pair per harmonic $n$) that say how much of that harmonic's wave is present in $f$. We won't derive the formulas for $a_n$ / $b_n$ here — that's a Real Analysis topic. The part that matters for this lesson: **almost any repeating shape can be built by adding up enough sine/cosine waves of the right frequencies and heights**, and the more harmonics $N$ you add, the closer the sum gets to $f$.
 
 ### Worked Example: The Square Wave
 
@@ -60,7 +60,7 @@ $$
 \sin\left(\frac{2\pi n x}{L}\right), \quad \cos\left(\frac{2\pi n x}{L}\right), \qquad n = 1, \ldots, \text{degree}
 $$
 
-This is exactly the truncated Fourier series from Section 2, with `degree` playing the role of $N$: each harmonic $n$ adds one more $\sin$/$\cos$ "wiggle" that `LinearRegression` weights with a learned coefficient (standing in for $a_n$/$b_n$), instead of the fixed formula a hand-derived Fourier series would use. Combining enough wiggles can approximate any periodic-ish shape — low harmonics for the coarse outline, high harmonics for detail, same as the square wave in Desmos. Crucially, $\sin$ and $\cos$ always stay in $[-1, 1]$ no matter how large `degree` gets, so raising the number of harmonics does **not** reintroduce the magnitude blowup from Lesson 3 — there is no equivalent of "scale after expanding" required here.
+This is exactly the truncated Fourier series from Section 2, with `degree` playing the role of $N$: each harmonic $n$ adds one more $\sin$ / $\cos$ "wiggle" that `LinearRegression` weights with a learned coefficient (standing in for $a_n$ / $b_n$), instead of the fixed formula a hand-derived Fourier series would use. Combining enough wiggles can approximate any periodic-ish shape — low harmonics for the coarse outline, high harmonics for detail, same as the square wave in Desmos. Crucially, $\sin$ and $\cos$ always stay in $[-1, 1]$ no matter how large `degree` gets, so raising the number of harmonics does **not** reintroduce the magnitude blowup from Lesson 3 — there is no equivalent of "scale after expanding" required here.
 
 ## 4. Where period_ Comes From
 
