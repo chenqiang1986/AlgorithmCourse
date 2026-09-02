@@ -125,7 +125,7 @@ Unlike the polynomial degree sweep in Lesson 3, this one improves *steadily* wit
 
 ## 8. Key Takeaways
 
-- A Fourier series approximates a periodic function as a weighted sum of $\sin$/$\cos$ harmonics; low harmonics set the coarse outline, high harmonics add fine detail (see the square wave in Desmos, Section 2).
+- A Fourier series approximates a periodic function as a weighted sum of $\sin$ / $\cos$ harmonics; low harmonics set the coarse outline, high harmonics add fine detail (see the square wave in Desmos, Section 2).
 - Periodic or quasi-periodic signals (like a yearly retail sales cycle) are a poor fit for a handful of polynomial terms, which bend smoothly instead of repeating.
 - `FourierFeatures` builds `sin`/`cos` harmonics of a column, with the period learned from the training data's own range — the same construction as a truncated Fourier series, with `LinearRegression` learning the coefficients.
 - Because `sin`/`cos` are bounded in $[-1, 1]$, increasing the number of harmonics does not cause the magnitude blowup that increasing a polynomial's degree does.
