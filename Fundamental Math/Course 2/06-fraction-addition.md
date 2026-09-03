@@ -237,35 +237,83 @@ The answer is **$-\dfrac{1}{12}$**.
 
 </details>
 
-## 12. Common Mistakes
+## 12. Class Practice 4: Same-Denominator Word Problem
 
-### 12.1 Adding the denominators together
+### Problem
+
+A pitcher already holds $\dfrac{5}{8}$ gallon of lemonade. Someone pours in another
+$\dfrac{7}{8}$ gallon. How much lemonade is in the pitcher now?
+
+<details>
+<summary>Solution</summary>
+
+The denominators already match, so add the numerators and keep the denominator:
+
+$$\frac{5}{8} + \frac{7}{8} = \frac{5+7}{8} = \frac{12}{8}$$
+
+$12$ and $8$ share the factor $c = 4$ ($12 = 3 \times 4$, $8 = 2 \times 4$), so reduce:
+
+$$\frac{12}{8} = \frac{3 \times 4}{2 \times 4} = \frac{3}{2}$$
+
+The answer is **$\dfrac{3}{2}$ gallons**.
+
+</details>
+
+## 13. Class Practice 5: Different-Denominator Word Problem
+
+### Problem
+
+Alex spent $\dfrac{3}{4}$ hour on his math homework and $\dfrac{5}{6}$ hour on his science
+homework. How much total time did he spend on homework?
+
+<details>
+<summary>Solution</summary>
+
+Multiply each fraction so both denominators become $4 \times 6 = 24$:
+
+$$\frac{3}{4} \times \frac{6}{6} = \frac{18}{24} \qquad \qquad \frac{5}{6} \times \frac{4}{4} = \frac{20}{24}$$
+
+Add the numerators:
+
+$$\frac{18}{24} + \frac{20}{24} = \frac{18+20}{24} = \frac{38}{24}$$
+
+$38$ and $24$ share the factor $c = 2$ ($38 = 19 \times 2$, $24 = 12 \times 2$), so reduce:
+
+$$\frac{38}{24} = \frac{19 \times 2}{12 \times 2} = \frac{19}{12}$$
+
+The answer is **$\dfrac{19}{12}$ hours**.
+
+</details>
+
+## 14. Common Mistakes
+
+### 14.1 Adding the denominators together
 
 $\dfrac{a}{b} + \dfrac{c}{d}$ is **not** $\dfrac{a+c}{b+d}$ — that isn't even true when
 $b = d$ (Section 2 shows the denominator stays $b$, it doesn't double). Denominators are
 never added; they're only combined by multiplying, to build a common denominator.
 
-### 12.2 Multiplying only one side of a fraction when building the common denominator
+### 14.2 Multiplying only one side of a fraction when building the common denominator
 
 Turning $\dfrac{a}{b}$ into an equivalent fraction requires multiplying by $\dfrac{c}{c}$ —
 **both** the numerator and the denominator get multiplied by $c$. Multiplying only the
 denominator (or only the numerator) changes the fraction's value instead of preserving it.
 
-### 12.3 Adding numerators before the denominators match
+### 14.3 Adding numerators before the denominators match
 
 The same-denominator rule (Section 2) only applies once both fractions describe same-size
 pieces. Adding numerators while the denominators are still different — like turning
 $\dfrac13 + \dfrac16$ straight into $\dfrac{1+1}{6}$ — skips the equivalence step and gives
 a wrong answer.
 
-### 12.4 Reducing only the numerator or only the denominator
+### 14.4 Reducing only the numerator or only the denominator
 
 Canceling a common factor $c$ (Section 6) means dividing **both** $a$ and $b$ by $c$ — the
 same "both parts together" requirement as building an equivalent fraction, just in reverse.
 Dividing only the numerator, or only the denominator, by $c$ changes the fraction's value
 instead of preserving it.
 
-## 13. Key Takeaways
+## 15. Key Takeaways
 
 - Fractions with the **same denominator** add by adding the numerators and keeping the
   denominator: $\dfrac{a}{b} + \dfrac{c}{b} = \dfrac{a+c}{b}$.

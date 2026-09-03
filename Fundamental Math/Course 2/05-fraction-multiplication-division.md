@@ -277,29 +277,74 @@ The answer is **$-\dfrac{12}{18}$**.
 
 </details>
 
-## 12. Common Mistakes
+## 12. Class Practice 4: Multiplication Word Problem
 
-### 12.1 Flipping the wrong fraction in division
+### Problem
+
+A trail mix recipe makes a full batch using $\dfrac{5}{6}$ cup of peanuts. Sam is only
+making $\dfrac{3}{5}$ of the recipe. How many cups of peanuts does Sam need?
+
+<details>
+<summary>Solution</summary>
+
+Making $\dfrac35$ of the recipe means multiplying $\dfrac35$ by the full-batch amount:
+
+$$\frac{3}{5} \times \frac{5}{6} = \frac{3 \times 5}{5 \times 6} = \frac{15}{30}$$
+
+$15$ and $30$ share the factor $15$, so reduce:
+
+$$\frac{15}{30} = \frac{1 \times 15}{2 \times 15} = \frac{1}{2}$$
+
+The answer is **$\dfrac{1}{2}$ cup**.
+
+</details>
+
+## 13. Class Practice 5: Division Word Problem
+
+### Problem
+
+A ribbon is $\dfrac{9}{4}$ yards long. Each bracelet uses $\dfrac{3}{8}$ yard of ribbon. How
+many bracelets can be made from the ribbon?
+
+<details>
+<summary>Solution</summary>
+
+The number of bracelets is how many $\dfrac38$'s fit inside $\dfrac94$ — that's division.
+Flip the divisor to its reciprocal and multiply:
+
+$$\frac{9}{4} \div \frac{3}{8} = \frac{9}{4} \times \frac{8}{3} = \frac{9 \times 8}{4 \times 3} = \frac{72}{12}$$
+
+$72$ and $12$ share the factor $12$, so reduce:
+
+$$\frac{72}{12} = \frac{6 \times 12}{1 \times 12} = 6$$
+
+The answer is **$6$ bracelets**.
+
+</details>
+
+## 14. Common Mistakes
+
+### 14.1 Flipping the wrong fraction in division
 
 In $\dfrac{a}{b} \div \dfrac{c}{d}$, only the **second** fraction (the one being divided
 by) gets flipped. Flipping the first fraction instead, or flipping both, gives a different
 — and wrong — answer. If it helps, say the operation out loud first: "divided by
 $\dfrac{c}{d}$" names exactly which fraction turns into its reciprocal.
 
-### 12.2 Forgetting that a fraction's sign depends on both parts
+### 14.2 Forgetting that a fraction's sign depends on both parts
 
 A fraction with a negative numerator *or* a negative denominator is negative — but a
 fraction with both negative is positive, same as $(-1) \times (-1) = 1$ from Lesson 4.
 Check numerator and denominator signs the same way you'd check two factors, not just by
 glancing for a minus sign anywhere in the fraction.
 
-### 12.3 Multiplying only the numerators, or only the denominators
+### 14.3 Multiplying only the numerators, or only the denominators
 
 Fraction multiplication touches *both* parts: numerator times numerator, denominator times
 denominator. A common slip is multiplying the numerators but leaving one denominator
 unchanged, or vice versa — always update both parts of the result together.
 
-## 13. Key Takeaways
+## 15. Key Takeaways
 
 - A fraction $\dfrac{a}{b}$ is exactly $a \div b$ — the value that keeps a division exact
   even when it doesn't come out to a whole number.

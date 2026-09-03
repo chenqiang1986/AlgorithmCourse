@@ -403,15 +403,16 @@ The answer is **$\dfrac{1}{2}$**.
 
 ### Problem 19
 
-A bucket already has $\dfrac{1}{3}$ gallon of blue paint in it. A painter adds $\dfrac{3}{4}$
-of a $\dfrac{2}{5}$-gallon can of white paint. Write an expression for the total amount of
-paint in the bucket, and evaluate it.
+A bucket already has $\dfrac{1}{3}$ gallon of blue paint in it. To mix a matching shade, the
+recipe calls for $\dfrac{2}{5}$ gallon of white paint per full batch, but the painter only
+needs $\dfrac{3}{4}$ of that recipe. Write an expression for the total amount of paint in the
+bucket, and evaluate it.
 
 <details>
 <summary>Solution</summary>
 
-$\dfrac34$ of $\dfrac25$ gallon means multiplying, and that amount is added to the paint
-already in the bucket:
+Using $\dfrac34$ of the recipe's $\dfrac25$ gallon means multiplying, and that amount is
+added to the paint already in the bucket:
 
 $$\frac{1}{3} + \frac{3}{4} \times \frac{2}{5}$$
 
@@ -437,14 +438,16 @@ The answer is **$\dfrac{19}{30}$ gallon**.
 
 ### Problem 20
 
-A baker uses $\dfrac{3}{4}$ cup of flour for the bread's base, $\dfrac{1}{3}$ of $\dfrac{2}{3}$
-cup of flour for the topping, and $\dfrac{1}{5}$ cup of flour for dusting the pan. Write an
-expression for the total flour used, and evaluate it.
+A baker uses $\dfrac{3}{4}$ cup of flour for the bread's base and $\dfrac{1}{5}$ cup of flour
+for dusting the pan. The topping recipe calls for $\dfrac{2}{3}$ cup of flour per full batch,
+but the baker only wants to make $\dfrac{1}{3}$ of that topping recipe. Write an expression
+for the total flour used, and evaluate it.
 
 <details>
 <summary>Solution</summary>
 
-$\dfrac13$ of $\dfrac23$ cup means multiplying; all three amounts are added together:
+Making $\dfrac13$ of the topping recipe's $\dfrac23$ cup means multiplying; all three amounts
+are added together:
 
 $$\frac{3}{4} + \frac{1}{3} \times \frac{2}{3} + \frac{1}{5}$$
 
@@ -467,5 +470,130 @@ $$\frac{175}{180} + \frac{36}{180} = \frac{175+36}{180} = \frac{211}{180}$$
 $211$ is prime and doesn't divide $180$, so $\dfrac{211}{180}$ is already in simplest form.
 
 The answer is **$\dfrac{211}{180}$ cup**.
+
+</details>
+
+## Part D: Division, Rates, and Proportions
+
+These problems bring fraction division into the mix, along with two common real-world uses of
+fractions: **rates** (an amount per unit of time, like miles per hour) and **proportions** (a
+fixed ratio, like the scale on a map). For any problem that asks "how many whole ___ can be
+made," keep in mind that the division might not come out even — round down to the nearest
+whole number, and check how much (if anything) is left over.
+
+### Problem 21
+
+To bake one tray of muffins, you need $\dfrac{1}{4}$ cup of oil for the batter, $\dfrac{1}{6}$
+cup of oil for greasing the tin, and $\dfrac{1}{3}$ cup of oil for the glaze. You have $5$
+cups of oil. How many trays can you bake? (Hint: the number of trays must be a whole number —
+find how much oil one tray needs first, then think about what to do if the division doesn't
+come out even.)
+
+<details>
+<summary>Solution</summary>
+
+First find how much oil one tray needs, using a common denominator of $12$:
+
+$$\frac{1}{4} + \frac{1}{6} + \frac{1}{3} = \frac{3}{12} + \frac{2}{12} + \frac{4}{12} = \frac{9}{12} = \frac{3}{4} \text{ cup per tray}$$
+
+Now divide the total oil by the amount needed per tray:
+
+$$5 \div \frac{3}{4} = 5 \times \frac{4}{3} = \frac{20}{3} = 6\frac{2}{3}$$
+
+The number of trays must be a whole number, so $6\dfrac23$ means you have enough oil for $6$
+full trays, with $\dfrac23$ of a tray's worth of oil left over. In cups, that leftover is:
+
+$$5 - \left(6 \times \frac{3}{4}\right) = \frac{10}{2} - \frac{9}{2} = \frac{1}{2} \text{ cup}$$
+
+Since $\dfrac12$ cup is less than the $\dfrac34$ cup a $7$ th tray would need, there isn't
+enough for another tray.
+
+The answer is **$6$ trays, with $\dfrac12$ cup of oil left over**.
+
+</details>
+
+### Problem 22
+
+A spool holds $\dfrac{17}{2}$ feet of ribbon. Each gift bow uses $\dfrac{3}{4}$ foot of
+ribbon. How many bows can be made from the spool, and how much ribbon (if any) is left over?
+
+<details>
+<summary>Solution</summary>
+
+Divide the total ribbon by the amount each bow uses:
+
+$$\frac{17}{2} \div \frac{3}{4} = \frac{17}{2} \times \frac{4}{3} = \frac{68}{6} = \frac{34}{3} = 11\frac{1}{3}$$
+
+The number of bows must be a whole number, so $11\dfrac13$ means there's enough ribbon for
+$11$ full bows, with some ribbon left over. In feet, that leftover is:
+
+$$\frac{17}{2} - \left(11 \times \frac{3}{4}\right) = \frac{34}{4} - \frac{33}{4} = \frac{1}{4} \text{ foot}$$
+
+Since $\dfrac14$ foot is less than the $\dfrac34$ foot a $12$th bow would need, there isn't
+enough for another bow.
+
+The answer is **$11$ bows, with $\dfrac14$ foot of ribbon left over**.
+
+</details>
+
+### Problem 23
+
+On a map, $1$ cm represents $\dfrac{4}{7}$ mile of real distance. The distance between two
+towns on the map measures $\dfrac{5}{6}$ cm. What is the real distance between the towns?
+
+<details>
+<summary>Solution</summary>
+
+Each cm on the map stands for $\dfrac47$ mile, so the real distance is the map distance times
+that scale:
+
+$$\frac{5}{6} \times \frac{4}{7} = \frac{5 \times 4}{6 \times 7} = \frac{20}{42}$$
+
+$20$ and $42$ share the factor $2$, so reduce:
+
+$$\frac{20}{42} = \frac{10 \times 2}{21 \times 2} = \frac{10}{21}$$
+
+The answer is **$\dfrac{10}{21}$ mile**.
+
+</details>
+
+### Problem 24
+
+A runs $7$ miles in $60$ minutes, keeping a steady pace. At that same pace, how far does A run
+in $1$ hour $15$ minutes?
+
+<details>
+<summary>Solution</summary>
+
+Running $7$ miles in $60$ minutes is the same as a speed of $7$ miles per hour. Write $1$ hour
+$15$ minutes as a fraction of an hour:
+
+$$1 \text{ hour } 15 \text{ minutes} = \frac{75}{60} \text{ hour} = \frac{5}{4} \text{ hour}$$
+
+Distance is speed times time:
+
+$$7 \times \frac{5}{4} = \frac{35}{4} = 8\frac{3}{4}$$
+
+The answer is **$\dfrac{35}{4}$ miles, or $8\dfrac34$ miles**.
+
+</details>
+
+### Problem 25
+
+A printer prints $\dfrac{9}{4}$ pages every $\dfrac{1}{3}$ minute, working at a constant rate.
+At this rate, how many minutes does it take to print $27$ pages?
+
+<details>
+<summary>Solution</summary>
+
+First find the rate in pages per minute — divide the pages by the time:
+
+$$\frac{9}{4} \div \frac{1}{3} = \frac{9}{4} \times 3 = \frac{27}{4} \text{ pages per minute}$$
+
+Now divide the total pages by that rate to find the time:
+
+$$27 \div \frac{27}{4} = 27 \times \frac{4}{27} = 4$$
+
+The answer is **$4$ minutes**.
 
 </details>

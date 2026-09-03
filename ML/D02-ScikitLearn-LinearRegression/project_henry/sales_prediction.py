@@ -6,6 +6,7 @@ from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from fourier_features import FourierFeatures
 
 
 def mean_abs_p_error(actual, pred):
@@ -23,33 +24,22 @@ df["dates"] = pd.to_datetime(df["Date"], format='%d-%m-%Y')
 # Step 2: create date features
 df["month"] = df["dates"].dt.month
 df["year"] = df["dates"].dt.year
+df["doy"] = df["dates"].dt.day_of_year
 
 numeric_features = [
     "Temperature",
     "Fuel_Price",
     "CPI",
     "Unemployment",
+    "month"
 ]
 
-for i in range(1, 46):
-    df[f"store{i}_month"] = (df["Store"] == i) * df["month"]
-    df[f"store{i}_month2"] = df[f"store{i}_month"] * df[f"store{i}_month"]
-    df[f"store{i}_month3"] = df[f"store{i}_month"] * df[f"store{i}_month"] * df[f"store{i}_month"]
-    numeric_features.append(f"store{i}_month")
-    numeric_features.append(f"store{i}_month2")
-    numeric_features.append(f"store{i}_month3")
+categorical_features = ["Store", "Holiday_Flag", "year"]
 
-for i in range(1, 46):
-    df[f"store{i}_year"] = (df["Store"] == i) * df["year"]
-    df[f"store{i}_year2"] = df[f"store{i}_year"] * df[f"store{i}_year"]
-    numeric_features.append(f"store{i}_year")
-    numeric_features.append(f"store{i}_year2")
-
-
-categorical_features = ["Store", "Holiday_Flag"]
+fourier_features = ["doy"]
 
 # Step 3: choose features and target
-X = df[numeric_features + categorical_features]
+X = df[numeric_features + categorical_features + fourier_features]
 y = df["Weekly_Sales"]
 
 # Step 4: split first
@@ -61,7 +51,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 preprocessor = ColumnTransformer(
     transformers=[
         ("num", StandardScaler(), numeric_features),
-        ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features)
+        ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
+        ("fourier", FourierFeatures(degree=48), fourier_features)
     ]
 )
 
