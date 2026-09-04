@@ -21,6 +21,25 @@ $$\frac{x}{3} + 4 = 10 \implies \frac{x}{3} = 6 \implies x = 18 \qquad \text{(un
 The rest of this lesson is the same "undo, keep both sides balanced" idea applied to
 equations that need extra simplification first.
 
+### Class Practice 1: A Two-Step Equation
+
+#### Problem
+
+Solve $\dfrac{x}{2} - 3 = 5$.
+
+<details>
+<summary>Solution</summary>
+
+Undo subtraction, then undo division:
+
+$$\frac{x}{2} - 3 = 5 \implies \frac{x}{2} = 8 \implies x = 16$$
+
+Check: $\dfrac{16}{2} - 3 = 8 - 3 = 5$. $\checkmark$
+
+The answer is **$x = 16$**.
+
+</details>
+
 ## 2. Distributive Property and Combining Like Terms
 
 Before an equation can be solved by undoing operations, both sides need to be in their
@@ -48,7 +67,7 @@ $$2(x + 3) + 4x = 2x + 6 + 4x = (2x + 4x) + 6 = 6x + 6$$
 cannot be combined with $4x$ while it's still in parentheses, since $x + 3$ is not a single
 "like term" until the $2$ is distributed across it.
 
-### Class Practice 1: Simplify, Then Solve
+### Class Practice 2: Simplify, Then Solve
 
 #### Problem
 
@@ -68,6 +87,29 @@ $$2x = 10 \implies x = 5$$
 Check: $3(5 + 2) - 5 = 3(7) - 5 = 21 - 5 = 16$. $\checkmark$
 
 The answer is **$x = 5$**.
+
+</details>
+
+### Class Practice 3: Distributing a Negative Sign
+
+#### Problem
+
+Solve $-2(x - 4) + 5x = 17$.
+
+<details>
+<summary>Solution</summary>
+
+Distribute the $-2$ across $(x - 4)$, then combine like terms:
+
+$$-2(x - 4) + 5x = -2x + 8 + 5x = 3x + 8$$
+
+So the equation becomes $3x + 8 = 17$. Undo addition, then undo multiplication:
+
+$$3x = 9 \implies x = 3$$
+
+Check: $-2(3 - 4) + 5(3) = -2(-1) + 15 = 2 + 15 = 17$. $\checkmark$
+
+The answer is **$x = 3$**.
 
 </details>
 
@@ -124,7 +166,7 @@ $$4x + 1 = 4x + 1 \implies 1 = 1 \quad \text{(true for every $x$)} \implies \tex
 which is exactly what makes $x$ cancel out — the number left over then decides everything: a
 false statement means no value of $x$ works, a true statement means every value of $x$ works.
 
-### Class Practice 2: Variables on Both Sides
+### Class Practice 4: Variables on Both Sides
 
 #### Problem
 
@@ -148,7 +190,30 @@ The answer is **$x = 6$**.
 
 </details>
 
-### Class Practice 3: Identifying the Solution Count
+### Class Practice 5: Distributing on Both Sides, Then Solving
+
+#### Problem
+
+Solve $3(x - 2) = 2(x + 5)$.
+
+<details>
+<summary>Solution</summary>
+
+Distribute on each side first:
+
+$$3x - 6 = 2x + 10$$
+
+Subtract $2x$ from both sides to collect $x$ terms on the left:
+
+$$x - 6 = 10 \implies x = 16$$
+
+Check: $3(16 - 2) = 3(14) = 42$ and $2(16 + 5) = 2(21) = 42$. $\checkmark$
+
+The answer is **$x = 16$**.
+
+</details>
+
+### Class Practice 6: Identifying the Solution Count
 
 #### Problem
 
@@ -167,6 +232,28 @@ The equation is now $8x - 6 = 8x + 5$. Subtract $8x$ from both sides:
 $$-6 = 5$$
 
 This is false for every $x$, so there is **no solution**.
+
+</details>
+
+### Class Practice 7: Infinitely Many Solutions
+
+#### Problem
+
+Without fully solving, determine whether $5(x + 2) - x = 4x + 10$ has one solution, no
+solution, or infinitely many solutions.
+
+<details>
+<summary>Solution</summary>
+
+Simplify the left side first (Section 2):
+
+$$5(x + 2) - x = 5x + 10 - x = 4x + 10$$
+
+The equation is now $4x + 10 = 4x + 10$. Subtract $4x$ from both sides:
+
+$$10 = 10$$
+
+This is true for every $x$, so there are **infinitely many solutions**.
 
 </details>
 
@@ -202,7 +289,7 @@ of it ($n+1$, $n+2$) turns a three-unknown problem into a single-variable equati
 same trick works for "consecutive even integers" ($n$, $n+2$, $n+4$) by stepping by $2$
 instead of $1$.
 
-### Class Practice 4: A "Both Sides" Word Problem
+### Class Practice 8: A "Both Sides" Word Problem
 
 #### Problem
 
@@ -230,6 +317,62 @@ Check: Ana has $12$, Ben has $2(12) + 3 = 27$, combined $= 39$; and $4(12) - 9 =
 $\checkmark$
 
 The answer is **Ana has \$12**.
+
+</details>
+
+### Class Practice 9: Consecutive Even Integers
+
+#### Problem
+
+Find three consecutive even integers whose sum is $72$.
+
+<details>
+<summary>Solution</summary>
+
+Let the first even integer be $n$; the next two are $n + 2$ and $n + 4$ (consecutive even
+integers step by $2$, as noted in the Reading Example above):
+
+$$n + (n + 2) + (n + 4) = 72$$
+
+Combine like terms, then solve as a two-step equation:
+
+$$3n + 6 = 72 \implies 3n = 66 \implies n = 22$$
+
+The three integers are $22$, $24$, $26$. Check: $22 + 24 + 26 = 72$. $\checkmark$
+
+The answer is **$22$, $24$, and $26$**.
+
+</details>
+
+### Class Practice 10: A Perimeter Word Problem
+
+#### Problem
+
+A rectangle's length is $3$ more than twice its width. If the perimeter is $54$, find the
+width and the length.
+
+<details>
+<summary>Solution</summary>
+
+Let the width be $w$; the length is "$3$ more than twice the width":
+
+$$\text{length} = 2w + 3$$
+
+The perimeter of a rectangle is twice the sum of its length and width:
+
+$$2\big(w + (2w + 3)\big) = 54$$
+
+Distribute, then combine like terms (Section 2):
+
+$$2(3w + 3) = 54 \implies 6w + 6 = 54$$
+
+Undo addition, then undo multiplication:
+
+$$6w = 48 \implies w = 8$$
+
+The length is $2(8) + 3 = 19$. Check: $2(8 + 19) = 2(27) = 54$. $\checkmark$
+
+The answer is **width $= 8$, length $= 19$**.
 
 </details>
 

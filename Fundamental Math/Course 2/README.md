@@ -18,7 +18,8 @@ Course 3:
 2. Operations with rational numbers: integers, decimals, and fractions.
 3. Ratios, rates, unit rates, and proportional relationships.
 4. Percents: percent of a number, tax, and discount.
-5. Evaluating expressions, combining like terms, and one-step equations.
+5. Evaluating expressions, combining like terms, the distributive property, and solving
+   one- and two-step equations.
 6. Geometry: circumference and area of circles, area of a trapezoid, and surface area of
    a rectangular prism.
 7. Probability, statistics (mean), and the coordinate plane.
@@ -55,5 +56,15 @@ Course 3:
    A 20-problem homework set covering Lessons 5–6: fraction signs, multiplication, and
    division; adding fractions with same and different denominators and reducing to
    simplest form; plus composite expressions that combine multiplication and addition.
+9. [07-algebraic-expressions-and-like-terms.md](./07-algebraic-expressions-and-like-terms.md)
+   Introduces variables, terms, and coefficients; evaluating expressions by substitution;
+   combining like terms; and the distributive property for removing parentheses.
+10. [08-one-variable-linear-equations.md](./08-one-variable-linear-equations.md)
+    Solving one-step equations (undoing addition/subtraction or multiplication/division) and
+    two-step equations, using the balance-scale model to keep both sides equal.
+11. [08-homework-expressions-and-equations.md](./08-homework-expressions-and-equations.md)
+    A 20-problem homework set covering Lessons 7–8: evaluating expressions, combining like
+    terms, the distributive property, and solving one- and two-step equations, including word
+    problems that require building an equation first.
 
 More lessons can be added later as the course grows.

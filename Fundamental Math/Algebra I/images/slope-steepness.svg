@@ -1,0 +1,40 @@
+<svg width="700" height="380" viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-steep" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="380" fill="#ffffff"/>
+
+  <text x="350" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Slope Magnitude: Steep vs. Gentle</text>
+  <text x="350" y="44" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">bigger |m| makes a line climb faster for the same run</text>
+
+  <!-- axes, origin at (150,310) -->
+  <line x1="40" y1="310" x2="600" y2="310" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow-steep)"/>
+  <line x1="150" y1="350" x2="150" y2="80" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow-steep)"/>
+  <text x="605" y="314" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">x</text>
+  <text x="156" y="86" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">y</text>
+  <circle cx="150" cy="310" r="3.5" fill="#333333"/>
+
+  <!-- steep ray, m = 3, red -->
+  <line x1="150" y1="310" x2="225" y2="85" stroke="#C44E52" stroke-width="3.5"/>
+  <text x="231" y="81" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#C44E52">steep (m = 3)</text>
+
+  <!-- steep rise/run triangle, close to the origin -->
+  <line x1="150" y1="310" x2="180" y2="310" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="180" y1="310" x2="180" y2="220" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="165" y="324" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">run</text>
+  <text x="194" y="269" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">rise</text>
+
+  <!-- gentle ray, m = 1/4, blue -->
+  <line x1="150" y1="310" x2="550" y2="210" stroke="#4C72B0" stroke-width="3.5"/>
+  <text x="556" y="206" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4C72B0">gentle (m = 1/4)</text>
+
+  <!-- gentle rise/run triangle, farther out along the ray -->
+  <line x1="370" y1="255" x2="490" y2="255" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="490" y1="255" x2="490" y2="225" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="430" y="269" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">run</text>
+  <text x="498" y="243" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">rise</text>
+
+  <text x="350" y="362" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">same idea of run and rise on both lines &#8212; the steep line's rise is much bigger for a similar run</text>
+</svg>

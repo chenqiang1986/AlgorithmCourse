@@ -71,6 +71,27 @@ observed shape, in order:
    (put the breadcrumb on its own first line there instead).
 2. **Concept introduction** — define the term, give the mental model, use a small
    diagram/example in a ```text block if helpful. No code yet.
+   - **Whenever the concept is geometric or spatial** (slope, lines, angles, shapes,
+     graphs, transformations, anything a student would otherwise sketch on paper) —
+     draw it. Don't hesitate or ration this because of token cost; a diagram that
+     clarifies "steep vs. gentle slope" or "why perpendicular slopes are negative
+     reciprocals" earns far more than its token cost in reduced confusion. Default to
+     drawing one any time a written description would make a reader want to sketch it
+     themselves.
+   - Follow the existing SVG convention (see any file under a module's `images/`
+     folder, e.g. `Fundamental Math/Algebra I/images/three-line-cases.svg`): plain
+     `<svg>` with a white background rect, `Helvetica, Arial, sans-serif` labels,
+     `#1f3a5f` bold titles, `#333333` axis/body text and strokes, and the matplotlib
+     "deep" palette for data series (`#4C72B0` blue, `#DD8452` orange, `#55A868`
+     green, `#C44E52` red, `#8172B2` purple). Multi-panel comparisons get a bordered
+     `rx="8"` box per panel, matching `three-line-cases.svg`; a single diagram just
+     needs a title/subtitle pair at the top, matching `determinant-sarrus-positive.svg`.
+   - Save each diagram as its own `NN-lesson-slug/../images/descriptive-name.svg` file
+     next to the lesson (create the module's `images/` folder if it doesn't exist yet),
+     and embed it with a **long, descriptive alt-text** description of the whole
+     picture (not just a caption) — that's what makes the diagram accessible and
+     searchable, following the alt-text style already used in this repo's `images/`
+     references.
 3. **Core template** — the minimal, canonical code pattern for the technique, in a fenced
    code block, introduced only after the concept is understood.
 4. One or more **"Reading Example"** sections — a complete, runnable-looking worked

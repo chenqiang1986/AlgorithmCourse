@@ -1,0 +1,27 @@
+<svg width="460" height="380" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="460" height="380" fill="#ffffff"/>
+
+  <text x="230" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Distance from a Point to a Line</text>
+  <text x="230" y="44" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">measured along the perpendicular &#8212; any other path is longer</text>
+
+  <!-- the line Ax + By + C = 0 -->
+  <line x1="20" y1="320" x2="410" y2="60" stroke="#4C72B0" stroke-width="3.5"/>
+  <text x="360" y="82" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4C72B0" text-anchor="middle">Ax + By + C = 0</text>
+
+  <!-- perpendicular segment from the point to its foot on the line -->
+  <line x1="340" y1="230" x2="282.9" y2="144.6" stroke="#DD8452" stroke-width="2.5" stroke-dasharray="7,5"/>
+  <text x="326" y="182" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#DD8452">d</text>
+
+  <!-- right-angle marker at the foot of the perpendicular -->
+  <path d="M 0 0 L 12 0 L 12 12 L 0 12" fill="none" stroke="#333333" stroke-width="1.5" transform="translate(282.9,144.6) rotate(-33.68)"/>
+
+  <!-- foot of the perpendicular -->
+  <circle cx="282.9" cy="144.6" r="4" fill="#333333"/>
+  <text x="252" y="132" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">foot on the line</text>
+
+  <!-- the point off the line -->
+  <circle cx="340" cy="230" r="5.5" fill="#1f3a5f"/>
+  <text x="358" y="234" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f3a5f">(x&#8320;, y&#8320;)</text>
+
+  <text x="230" y="360" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">d = |Ax&#8320; + By&#8320; + C| / &#8730;(A&#178; + B&#178;)</text>
+</svg>

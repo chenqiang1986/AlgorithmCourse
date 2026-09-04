@@ -65,6 +65,80 @@ dividing $a$ by $10$, so the exponent must increase by $1$ to compensate (and sh
 divides the exponent's job the other way) — this is exactly the product-of-powers rule
 ($10^1 \times 10^6 = 10^{1+6}$) running in the background every time $a$ is renormalized.
 
+### Class Practice 1: Converting a Large Number
+
+#### Problem
+
+Write $82{,}300{,}000$ in scientific notation.
+
+<details>
+<summary>Solution</summary>
+
+Count how many places the decimal point moves to land just after the first nonzero digit,
+$8$. Starting from $82300000.$, the point moves $7$ places left:
+
+$$82{,}300{,}000 = 8.23 \times 10^{7}$$
+
+$8.23$ is in $[1, 10)$, so this is already in proper scientific notation.
+
+The answer is **$8.23 \times 10^{7}$**.
+
+</details>
+
+### Class Practice 2: Converting a Small Number
+
+#### Problem
+
+Write $0.000512$ in scientific notation.
+
+<details>
+<summary>Solution</summary>
+
+The first nonzero digit is $5$. Moving the decimal point from its starting position to just
+after that $5$ takes $4$ places to the right, which gives a **negative** exponent:
+
+$$0.000512 = 5.12 \times 10^{-4}$$
+
+The answer is **$5.12 \times 10^{-4}$**.
+
+</details>
+
+### Class Practice 3: Converting Back to Standard Form
+
+#### Problem
+
+Write $9.04 \times 10^{-6}$ in standard (decimal) form.
+
+<details>
+<summary>Solution</summary>
+
+A negative exponent moves the decimal point left, padding with zeros as needed. Moving the
+point in $9.04$ left $6$ places:
+
+$$9.04 \times 10^{-6} = 0.00000904$$
+
+The answer is **$0.00000904$**.
+
+</details>
+
+### Class Practice 4: Renormalizing an Out-of-Range Number
+
+#### Problem
+
+Rewrite $68.5 \times 10^{4}$ in proper scientific notation.
+
+<details>
+<summary>Solution</summary>
+
+$68.5$ is not less than $10$, so it isn't in $[1, 10)$ yet. Shift its decimal point one place
+left (dividing $a$ by $10$) and compensate by raising the exponent by $1$:
+
+$$68.5 \times 10^4 = 6.85 \times 10^1 \times 10^4 = 6.85 \times 10^{1+4} = 6.85 \times 10^5$$
+
+The answer is **$6.85 \times 10^{5}$**.
+
+</details>
+
 ## 3. Multiplying and Dividing in Scientific Notation
 
 To multiply, multiply the $a$-parts and add the exponents (product of powers,
@@ -91,7 +165,29 @@ $$20 \times 10^9 = 2.0 \times 10^1 \times 10^9 = 2.0 \times 10^{10}$$
 $10^n$ parts — it's only the $a$-parts, which are ordinary decimal multiplication, that can
 push the result out of range and require a follow-up renormalization step.
 
-### Class Practice 1: Dividing in Scientific Notation
+### Class Practice 5: Multiplying With Renormalization
+
+#### Problem
+
+Compute $(6 \times 10^5) \times (7 \times 10^2)$, giving the answer in scientific notation.
+
+<details>
+<summary>Solution</summary>
+
+Multiply the $a$-parts, add the exponents:
+
+$$(6 \times 10^5) \times (7 \times 10^2) = (6 \times 7) \times 10^{5+2} = 42 \times 10^7$$
+
+$42$ is not less than $10$, so renormalize by shifting its decimal point one place left and
+raising the exponent by $1$:
+
+$$42 \times 10^7 = 4.2 \times 10^1 \times 10^7 = 4.2 \times 10^{8}$$
+
+The answer is **$4.2 \times 10^{8}$**.
+
+</details>
+
+### Class Practice 6: Dividing in Scientific Notation
 
 #### Problem
 
@@ -127,7 +223,7 @@ decimal point left $2$ places and raising its exponent from $4$ to $6$ to compen
 same compensating move as Section 2's Reading Example, just run to match a target exponent
 instead of to reach $[1, 10)$.
 
-### Class Practice 2: Adding With Different Exponents
+### Class Practice 7: Adding With Different Exponents
 
 #### Problem
 
@@ -151,6 +247,28 @@ The answer is **$6.9 \times 10^8$**.
 
 </details>
 
+### Class Practice 8: Subtracting in Scientific Notation
+
+#### Problem
+
+Compute $8.5 \times 10^{6} - 3 \times 10^{5}$, giving the answer in scientific notation.
+
+<details>
+<summary>Solution</summary>
+
+Rewrite $3 \times 10^5$ with exponent $6$ to match: shifting its decimal point left $1$
+place raises the exponent from $5$ to $6$:
+
+$$3 \times 10^5 = 0.3 \times 10^6$$
+
+Now subtract the $a$-parts:
+
+$$8.5 \times 10^6 - 0.3 \times 10^6 = (8.5 - 0.3) \times 10^6 = 8.2 \times 10^6$$
+
+The answer is **$8.2 \times 10^6$**.
+
+</details>
+
 ## 5. Real-World Conversions
 
 Scientific notation is most useful when comparing measurements that span many orders of
@@ -163,7 +281,7 @@ magnitude — the whole point of the unit's essential question. Two common tasks
   answers "how many times bigger/smaller," directly, without first expanding either number
   back to standard form.
 
-### Class Practice 3: Comparing and Scaling
+### Class Practice 9: Comparing and Scaling
 
 #### Problem
 
@@ -179,6 +297,25 @@ cell?
 $$\frac{7 \times 10^{-5}}{7 \times 10^{-6}} = (7 \div 7) \times 10^{-5-(-6)} = 1 \times 10^{1} = 10$$
 
 The answer is **$10$** — a human hair is about $10$ times wider than a red blood cell.
+
+</details>
+
+### Class Practice 10: Comparing Planetary Masses
+
+#### Problem
+
+The mass of Earth is about $5.97 \times 10^{24}$ kg. The mass of the Moon is about
+$7.35 \times 10^{22}$ kg. About how many times more massive is Earth than the Moon? Round to
+the nearest whole number.
+
+<details>
+<summary>Solution</summary>
+
+Divide the $a$-parts and subtract the exponents:
+
+$$\frac{5.97 \times 10^{24}}{7.35 \times 10^{22}} = (5.97 \div 7.35) \times 10^{24-22} \approx 0.812 \times 10^{2} = 81.2$$
+
+The answer is **about $81$ times** — Earth is roughly $81$ times more massive than the Moon.
 
 </details>
 

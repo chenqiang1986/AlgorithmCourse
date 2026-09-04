@@ -1,0 +1,32 @@
+<svg width="640" height="380" viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-dir" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="380" fill="#ffffff"/>
+
+  <text x="320" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Slope Direction: Rises, Flat, or Falls</text>
+  <text x="320" y="44" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">same steepness, mirrored &#8212; only the sign of m changes the direction</text>
+
+  <!-- axes, origin at (150,220) -->
+  <line x1="40" y1="220" x2="600" y2="220" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow-dir)"/>
+  <line x1="150" y1="340" x2="150" y2="80" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow-dir)"/>
+  <text x="605" y="224" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">x</text>
+  <text x="156" y="86" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">y</text>
+  <circle cx="150" cy="220" r="3.5" fill="#333333"/>
+
+  <!-- increasing, m > 0, blue -->
+  <line x1="150" y1="220" x2="450" y2="100" stroke="#4C72B0" stroke-width="3.5"/>
+  <text x="456" y="96" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4C72B0">increasing (m &gt; 0)</text>
+
+  <!-- flat, m = 0, green, offset slightly above the x-axis so its label isn't struck through -->
+  <line x1="150" y1="213" x2="450" y2="213" stroke="#55A868" stroke-width="3.5"/>
+  <text x="456" y="209" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#55A868">flat (m = 0)</text>
+
+  <!-- falling, m < 0, orange -->
+  <line x1="150" y1="220" x2="450" y2="340" stroke="#DD8452" stroke-width="3.5"/>
+  <text x="456" y="344" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#DD8452">falling (m &lt; 0)</text>
+
+  <text x="320" y="366" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">reading left to right: a positive slope rises, zero stays level, a negative slope falls</text>
+</svg>

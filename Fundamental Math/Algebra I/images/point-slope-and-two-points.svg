@@ -1,0 +1,54 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+
+  <!-- Panel A: point-slope form -->
+  <g transform="translate(10,10)">
+    <rect x="0" y="0" width="300" height="330" fill="none" stroke="#333333" stroke-width="2" rx="8"/>
+    <text x="150" y="24" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Point-Slope Form</text>
+    <text x="150" y="40" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">one known point + slope m</text>
+
+    <!-- the line, extended beyond the two marked points -->
+    <line x1="52" y1="247" x2="230" y2="77" stroke="#4C72B0" stroke-width="3"/>
+
+    <!-- rise/run guides from (x1,y1) to (x,y) -->
+    <line x1="80" y1="220" x2="191" y2="220" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="191" y1="220" x2="191" y2="114" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="135" y="234" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle">run = x &#8722; x&#8321;</text>
+    <text x="199" y="170" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666">rise = y &#8722; y&#8321;</text>
+
+    <!-- known point (x1,y1), filled -->
+    <circle cx="80" cy="220" r="5" fill="#1f3a5f"/>
+    <text x="60" y="238" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f3a5f" text-anchor="middle">(x&#8321;, y&#8321;)</text>
+
+    <!-- generic point (x,y), open -->
+    <circle cx="191" cy="114" r="5" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+    <text x="213" y="110" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f3a5f">(x, y) &#8212; any other point</text>
+
+    <text x="150" y="305" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">y &#8722; y&#8321; = m(x &#8722; x&#8321;)</text>
+  </g>
+
+  <!-- Panel B: line through two points -->
+  <g transform="translate(330,10)">
+    <rect x="0" y="0" width="300" height="330" fill="none" stroke="#333333" stroke-width="2" rx="8"/>
+    <text x="150" y="24" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Line Through Two Points</text>
+    <text x="150" y="40" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">both points known &#8212; slope computed first</text>
+
+    <!-- the line, extended a bit past both points -->
+    <line x1="31" y1="280" x2="234" y2="37" stroke="#DD8452" stroke-width="3"/>
+
+    <!-- rise/run guides between the two given points -->
+    <line x1="60" y1="245" x2="205" y2="245" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="205" y1="245" x2="205" y2="72" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="132" y="259" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle">run = x&#8322; &#8722; x&#8321;</text>
+    <text x="213" y="165" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666">rise = y&#8322; &#8722; y&#8321;</text>
+
+    <!-- both points given, filled -->
+    <circle cx="60" cy="245" r="5" fill="#1f3a5f"/>
+    <text x="60" y="264" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f3a5f" text-anchor="middle">(x&#8321;, y&#8321;)</text>
+
+    <circle cx="205" cy="72" r="5" fill="#1f3a5f"/>
+    <text x="205" y="60" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f3a5f" text-anchor="middle">(x&#8322;, y&#8322;)</text>
+
+    <text x="150" y="300" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">m = (y&#8322; &#8722; y&#8321;) / (x&#8322; &#8722; x&#8321;), then point-slope</text>
+  </g>
+</svg>

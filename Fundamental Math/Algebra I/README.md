@@ -42,12 +42,21 @@ a diagnostic test that samples the full range of Algebra I skills:
 7. [06-unknown-coefficients.md](./06-unknown-coefficients.md)
    Solving for one or two unknown coefficients given that a system has no solution or
    infinitely many solutions, including cases where no valid coefficient exists.
-8. [06-homework-solution-count-and-unknown-coefficients.md](./06-homework-solution-count-and-unknown-coefficients.md)
+8. [07-homework-solution-count-and-unknown-coefficients.md](./07-homework-solution-count-and-unknown-coefficients.md)
    Homework covering Lessons 5–6: classifying a system's solution count and solving for
    unknown coefficients.
 9. [07-determinants-and-solution-count.md](./07-determinants-and-solution-count.md)
    Extending solution-count classification to three-variable systems: the trivial solution
    and determinant test for homogeneous systems, and the determinant plus elimination check
    for general systems.
+10. [08-linear-equation-forms.md](./08-linear-equation-forms.md)
+    Slope, $x$- and $y$-intercepts, point-slope form, building an equation from two points,
+    general (standard) form, and why slope-intercept form can't represent vertical lines.
+11. [09-parallel-perpendicular-and-distance.md](./09-parallel-perpendicular-and-distance.md)
+    Connecting a line's slope to its geometry: recognizing and constructing parallel and
+    perpendicular lines, and finding the distance from a point to a line.
+12. [09-homework-line-equations-and-relations.md](./09-homework-line-equations-and-relations.md)
+    Homework covering Lessons 8–9: slope/intercepts/point-slope/general form, and
+    parallel/perpendicular lines with point-to-line distance.
 
 More lessons can be added later as the course grows.

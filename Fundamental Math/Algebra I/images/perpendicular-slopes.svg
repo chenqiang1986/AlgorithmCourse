@@ -1,0 +1,55 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+
+  <!-- Panel A: general perpendicular pair, flip-and-negate -->
+  <g transform="translate(10,10)">
+    <rect x="0" y="0" width="300" height="330" fill="none" stroke="#333333" stroke-width="2" rx="8"/>
+    <text x="150" y="24" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Flip &#38; Negate</text>
+    <text x="150" y="40" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">m&#8321; &#183; m&#8322; = &#8722;1</text>
+
+    <!-- line 1: slope 2/3, blue -->
+    <line x1="15" y1="270" x2="285" y2="90" stroke="#4C72B0" stroke-width="3"/>
+    <!-- rise/run guide for line 1 -->
+    <line x1="150" y1="180" x2="285" y2="180" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="285" y1="180" x2="285" y2="90" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="217" y="194" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">run 3</text>
+    <text x="293" y="140" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">rise 2</text>
+    <text x="228" y="80" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4C72B0">m&#8321; = 2/3</text>
+
+    <!-- line 2: slope -3/2, orange -->
+    <line x1="60" y1="45" x2="240" y2="315" stroke="#DD8452" stroke-width="3"/>
+    <!-- rise/run guide for line 2 -->
+    <line x1="150" y1="180" x2="240" y2="180" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="240" y1="180" x2="240" y2="315" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="192" y="194" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">run 2</text>
+    <text x="248" y="255" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">rise &#8722;3</text>
+    <text x="180" y="335" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#DD8452">m&#8322; = &#8722;3/2</text>
+
+    <!-- right angle marker at intersection (150,180) -->
+    <path d="M 150 165 L 165 165 L 165 180" fill="none" stroke="#333333" stroke-width="1.5"/>
+    <circle cx="150" cy="180" r="3.5" fill="#333333"/>
+
+    <text x="150" y="305" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">flip the fraction, then flip the sign</text>
+  </g>
+
+  <!-- Panel B: horizontal / vertical special case -->
+  <g transform="translate(330,10)">
+    <rect x="0" y="0" width="300" height="330" fill="none" stroke="#333333" stroke-width="2" rx="8"/>
+    <text x="150" y="24" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f3a5f" text-anchor="middle">Horizontal &#8596; Vertical</text>
+    <text x="150" y="40" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">the formula &#8722;1/m&#8321; can't compute this case</text>
+
+    <!-- horizontal line, blue -->
+    <line x1="30" y1="180" x2="270" y2="180" stroke="#4C72B0" stroke-width="3.5"/>
+    <text x="150" y="205" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4C72B0" text-anchor="middle">slope = 0</text>
+
+    <!-- vertical line, orange -->
+    <line x1="150" y1="60" x2="150" y2="300" stroke="#DD8452" stroke-width="3.5"/>
+    <text x="200" y="90" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#DD8452" text-anchor="middle">slope: undefined</text>
+
+    <!-- right angle marker at intersection (150,180) -->
+    <path d="M 150 165 L 165 165 L 165 180" fill="none" stroke="#333333" stroke-width="1.5"/>
+    <circle cx="150" cy="180" r="3.5" fill="#333333"/>
+
+    <text x="150" y="305" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">recognize this pairing directly, don't force the formula</text>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="700" height="400" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="700" height="400" fill="#ffffff"/>
+
+  <text x="350" y="28" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1f3a5f">Solving Equations: Keep Both Sides Balanced</text>
+  <text x="350" y="48" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">Whatever you do to one side, do to the other — the scale stays level</text>
+
+  <!-- Panel 1: Start -->
+  <rect x="20" y="68" width="310" height="300" rx="8" fill="#fafafa" stroke="#cccccc" stroke-width="1.5"/>
+  <text x="175" y="94" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1f3a5f">Step 1: Start Balanced</text>
+
+  <!-- fulcrum -->
+  <path d="M175,230 L155,270 L195,270 Z" fill="#333333"/>
+  <!-- beam -->
+  <line x1="65" y1="225" x2="285" y2="225" stroke="#333333" stroke-width="5"/>
+  <!-- strings -->
+  <line x1="75" y1="225" x2="75" y2="270" stroke="#333333" stroke-width="1.5"/>
+  <line x1="275" y1="225" x2="275" y2="270" stroke="#333333" stroke-width="1.5"/>
+  <!-- pans -->
+  <ellipse cx="75" cy="270" rx="45" ry="8" fill="#e0e0e0" stroke="#333333" stroke-width="1.5"/>
+  <ellipse cx="275" cy="270" rx="45" ry="8" fill="#e0e0e0" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- left pan blocks: x, x, 3 -->
+  <rect x="35" y="232" width="30" height="30" rx="5" fill="#4C72B0"/>
+  <text x="50" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">x</text>
+  <rect x="68" y="232" width="30" height="30" rx="5" fill="#4C72B0"/>
+  <text x="83" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">x</text>
+  <rect x="101" y="232" width="30" height="30" rx="5" fill="#DD8452"/>
+  <text x="116" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">3</text>
+
+  <!-- right pan block: 11 -->
+  <rect x="245" y="232" width="60" height="30" rx="5" fill="#DD8452"/>
+  <text x="275" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">11</text>
+
+  <text x="175" y="315" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f3a5f">2x + 3 = 11</text>
+  <text x="175" y="340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-style="italic" fill="#333333">both sides weigh the same</text>
+
+  <!-- Panel 2: After -->
+  <rect x="370" y="68" width="310" height="300" rx="8" fill="#fafafa" stroke="#cccccc" stroke-width="1.5"/>
+  <text x="525" y="94" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1f3a5f">Step 2: Subtract 3 From Both Sides</text>
+
+  <!-- fulcrum -->
+  <path d="M525,230 L505,270 L545,270 Z" fill="#333333"/>
+  <!-- beam -->
+  <line x1="415" y1="225" x2="635" y2="225" stroke="#333333" stroke-width="5"/>
+  <!-- strings -->
+  <line x1="440" y1="225" x2="440" y2="270" stroke="#333333" stroke-width="1.5"/>
+  <line x1="610" y1="225" x2="610" y2="270" stroke="#333333" stroke-width="1.5"/>
+  <!-- pans -->
+  <ellipse cx="440" cy="270" rx="40" ry="8" fill="#e0e0e0" stroke="#333333" stroke-width="1.5"/>
+  <ellipse cx="610" cy="270" rx="40" ry="8" fill="#e0e0e0" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- left pan blocks: x, x -->
+  <rect x="410" y="232" width="30" height="30" rx="5" fill="#4C72B0"/>
+  <text x="425" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">x</text>
+  <rect x="443" y="232" width="30" height="30" rx="5" fill="#4C72B0"/>
+  <text x="458" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">x</text>
+
+  <!-- right pan block: 8 -->
+  <rect x="580" y="232" width="60" height="30" rx="5" fill="#DD8452"/>
+  <text x="610" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff">8</text>
+
+  <text x="525" y="315" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f3a5f">2x = 8</text>
+  <text x="525" y="340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-style="italic" fill="#333333">removed 3 from each pan — beam stays level</text>
+
+  <text x="350" y="388" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333333">Next, divide both sides by 2 to isolate x — the same "do it to both pans" rule.</text>
+</svg>
