@@ -265,7 +265,7 @@ Exactly the same idea as regression: chain preprocessing and the model so `fit`/
 
 ## 10. A New Wrinkle: Missing or Malformed Values
 
-Real classification datasets, like the Telco Customer Churn dataset used in [Lesson 4](./04-logistic-regression-practice.md), often have a column that looks numeric but is stored as text, sometimes with blank entries.
+Real classification datasets, like the Telco Customer Churn dataset used in [Lesson 5](./05-logistic-regression-practice.md), often have a column that looks numeric but is stored as text, sometimes with blank entries.
 
 A common pattern:
 
@@ -297,7 +297,7 @@ Same answer as regression: usually not needed. `0`/`1` values are already on a s
 
 ### Why `stratify=y` here but not always mentioned in regression?
 
-Regression targets are continuous, so there is no discrete class balance to preserve. Classification targets can be imbalanced (see [Lesson 4](./04-logistic-regression-practice.md)), so preserving class proportions in the split matters more.
+Regression targets are continuous, so there is no discrete class balance to preserve. Classification targets can be imbalanced (see [Lesson 5](./05-logistic-regression-practice.md)), so preserving class proportions in the split matters more.
 
 ## 12. Common Mistakes
 

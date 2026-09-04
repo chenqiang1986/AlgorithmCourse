@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from fourier_features import FourierFeatures
-
+from group_features import GroupInteraction
 
 def mean_abs_p_error(actual, pred):
     diff = actual - pred
@@ -27,11 +27,14 @@ df["year"] = df["dates"].dt.year
 df["doy"] = df["dates"].dt.day_of_year
 
 numeric_features = [
+    "month"
+]
+
+group_features = [
     "Temperature",
     "Fuel_Price",
     "CPI",
     "Unemployment",
-    "month"
 ]
 
 categorical_features = ["Store", "Holiday_Flag", "year"]
@@ -39,7 +42,7 @@ categorical_features = ["Store", "Holiday_Flag", "year"]
 fourier_features = ["doy"]
 
 # Step 3: choose features and target
-X = df[numeric_features + categorical_features + fourier_features]
+X = df[numeric_features + categorical_features + fourier_features + group_features]
 y = df["Weekly_Sales"]
 
 # Step 4: split first
@@ -51,8 +54,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 preprocessor = ColumnTransformer(
     transformers=[
         ("num", StandardScaler(), numeric_features),
+        ("grp", GroupInteraction("Store"), ["Store"] + group_features),
         ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
-        ("fourier", FourierFeatures(degree=48), fourier_features)
+        ("fourier", FourierFeatures(degree=100), fourier_features),
     ]
 )
 

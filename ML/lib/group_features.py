@@ -19,8 +19,10 @@ class GroupInteraction(BaseEstimator, TransformerMixin):
         groups = self.ohe_.transform(X[[self.group_col]]).toarray()  # (n, n_groups)
         nums = self.scaler_.transform(X[self.numeric_cols_])         # (n, n_features)
         # outer product per row -> (n, n_groups * n_features)
-        return (groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1)
+        #print(X[[self.group_col]].shape)
+        #print((groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1).shape)
+        return np.hstack((X[[self.group_col]].to_numpy(), (groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1)))
 
     def get_feature_names_out(self, input_features=None):
         groups = self.ohe_.categories_[0]
-        return [f"{g}_{f}" for g in groups for f in self.numeric_cols_]
+        return [self.group_col] + [f"{g}_{f}" for g in groups for f in self.numeric_cols_]

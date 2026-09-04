@@ -262,7 +262,7 @@ A model that has not converged may have unreliable coefficients. Increase `max_i
 
 ### Mistake 3: Trusting accuracy alone on imbalanced data
 
-High accuracy can hide a model that never predicts the minority class. This is covered further in [Lesson 4](./04-logistic-regression-practice.md).
+High accuracy can hide a model that never predicts the minority class. This is covered further in [Lesson 4](./04-classification-metrics.md).
 
 ### Mistake 4: Forgetting `stratify=y` on imbalanced targets
 

@@ -64,7 +64,7 @@ def main():
 
     regressor=FixedThresholdClassifier(
         estimator=LogisticRegression(
-            class_weight={"No": 1, "Yes": 500}
+            class_weight={"No": 1, "Yes": 1}
         ),
         threshold=0.5,
     )

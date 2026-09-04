@@ -25,7 +25,9 @@ In this module, we will learn:
    A guided look at the main `LogisticRegression` parameters (`C`, `penalty`, `solver`, `multi_class`, `class_weight`) and when changing them matters
 3. [03-classification-data-preprocess.md](./03-classification-data-preprocess.md)
    A deliberate repeat of the linear regression preprocessing lesson (categorical values, dates, differently scaled numeric columns) applied to a classification target, plus what is different for classification
-4. [04-logistic-regression-practice.md](./04-logistic-regression-practice.md)
+4. [04-classification-metrics.md](./04-classification-metrics.md)
+   How to read a confusion matrix and compute accuracy, precision, recall, and F1-score, and why accuracy alone is misleading on imbalanced data
+5. [05-logistic-regression-practice.md](./05-logistic-regression-practice.md)
    A guided class project using the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) to predict which customers will churn
 
 More lessons can be added later as the course grows.

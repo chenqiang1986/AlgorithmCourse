@@ -26,4 +26,4 @@ Consider the following questions:
 
 7. **Bonus (softmax regression):** Instead of predicting `Churn`, pick a multi-category column such as `Contract` (`Month-to-month` / `One year` / `Two year`) or `PaymentMethod` as the target, and train a multinomial `LogisticRegression` model to predict it from the remaining columns.
    7.a Compare `multi_class="ovr"` versus `multi_class="multinomial"` on this target. Do the predictions differ?
-   7.b Which evaluation metrics from Lesson 1/2 still apply directly, and which need to be adapted for more than two classes (for example, a confusion matrix now has more than 2x2 cells)?
+   7.b Which evaluation metrics from [Lesson 4](./04-classification-metrics.md) still apply directly, and which need to be adapted for more than two classes (for example, a confusion matrix now has more than 2x2 cells)?

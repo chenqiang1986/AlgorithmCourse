@@ -26,6 +26,7 @@ df["dates"] = pd.to_datetime(df["Date"], format='%d-%m-%Y')
 df["month"] = df["dates"].dt.month
 df["dayofweek"] = df["dates"].dt.dayofweek
 df["year"] = df["dates"].dt.year
+df["doy"]= df["dates"].dt.day_of_year
 
 # Step 3: choose features and target
 X = df[[
@@ -35,7 +36,7 @@ X = df[[
     "Fuel_Price",
     "CPI",
     "month",
-    "dayofweek",
+    "doy",
     "year",
     "Unemployment"
 ]]
