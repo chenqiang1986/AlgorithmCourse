@@ -16,13 +16,16 @@ class FourierFeatures(BaseEstimator, TransformerMixin):
         Highest harmonic n to generate.
     """
 
-    def __init__(self, degree=1):
+    def __init__(self, degree=1, period=None):
         self.degree = degree
+        self.period = period
 
     def fit(self, X, y=None):
         X = check_array(X)
         self.n_features_in_ = X.shape[1]
         self.period_ = X.max(axis=0) - X.min(axis=0) + 1
+        if self.period is not None:
+            self.period_ = np.array([self.period] * self.n_features_in_)
         return self
 
     def transform(self, X):
