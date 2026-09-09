@@ -79,14 +79,14 @@ data so the pattern becomes learnable?
 ## Unit 5: Regularization — Controlling Overfitting (Weeks 13–14)
 
 **Core Focus:** One session watching a model overfit on purpose, one session fixing it —
-directly on the now feature-rich Walmart model from Unit 5, which is exactly complex enough
+directly on the now feature-rich Walmart model from Unit 4, which is exactly complex enough
 to overfit.
 **Module:** *Planned* — `D06-Regularization` (builds on `ML/lib/multi_alpha_ridge.py`,
 a custom per-column Ridge estimator already in the shared library).
 
 - Week 13 (syntax): Overfitting vs. underfitting via training-vs-test error as complexity
   grows, then the Ridge (L2) penalty and what it changes about fitted coefficients.
-- Week 14 (project): Apply `RidgePerColumn` to the Unit 5 engineered-feature model; tune
+- Week 14 (project): Apply `RidgePerColumn` to the Unit 4 engineered-feature model; tune
   $\alpha$ per feature by comparing validation error, and confirm it beats the unregularized
   version on held-out data.
 
@@ -102,12 +102,12 @@ project.
 
 - Week 15: Why one train/test split can mislead (re-split the same data, watch the score
   move) → $k$-fold cross-validation → train/validation/test structure and avoiding leakage
-  during hyperparameter search — one session, run against Unit 2/3/6 models directly.
+  during hyperparameter search — one session, run against Unit 2/3/5 models directly.
 
 **Essential Question:** How do we know a model will work on data it has never seen, not
 just the one test set we happened to pick?
 
-## Unit 7: Tree-Based Models — Decision Trees & Random Forests (Weeks 16–18)
+## Unit 7: Tree-Based Models — Decision Trees & Random Forests (Weeks 16–19)
 
 **Core Focus:** One session of tree syntax and theory, then two project sessions applying
 trees to the churn dataset and asking whether they actually beat the Unit 3 logistic
@@ -124,21 +124,26 @@ baseline.
 **Essential Question:** How can a model learn "if-then" rules instead of a straight line,
 and why do many weak trees beat one strong one?
 
-## Unit 8: Neural Networks — Learning Nonlinear Patterns (Weeks 19–21)
+## Unit 8: Neural Networks — Learning Nonlinear Patterns (Weeks 20–23)
 
 **Core Focus:** Train a working neural network in the first session before touching
 backpropagation, treating it as the natural next step after logistic regression (one
-neuron) rather than a totally new topic.
-**Module:** *Planned* — `D09-NeuralNetworks`.
+neuron) rather than a totally new topic. This is also the first unit to leave
+scikit-learn's uniform `fit`/`predict` interface behind for TensorFlow.
+**Module:** *Planned* — `D09-NeuralNetworks` (first module built on TensorFlow/Keras
+instead of scikit-learn).
 
-- Week 20 (syntax): Train `MLPClassifier` on a familiar dataset and compare it to Unit 3's
-  logistic regression, then open it up — layers, weights, activation functions as stacked
-  sigmoid/softmax units, and gradient descent/backpropagation as "how the weights get
-  updated," explained as an extension of ideas already known, not new math.
+- Week 20 (syntax): Build a small feedforward network in TensorFlow/Keras
+  (`Sequential`, `Dense` layers, `model.compile`/`model.fit`) on a familiar dataset and
+  compare it to Unit 3's logistic regression, then open it up — layers, weights, and
+  activation functions as stacked sigmoid/softmax units, with `model.compile`/`model.fit`
+  as gradient descent/backpropagation made concrete, explained as an extension of ideas
+  already known, not new math.
 - Weeks 21–23 (project): Handwritten digit recognition (`sklearn.datasets.load_digits`,
-  or MNIST) — images as arrays ties back to Unit 1. Tune hidden-layer sizes, watch it
-  overfit and apply Unit 6 regularization instincts, and compare against a tree-based
-  baseline from Unit 8.
+  or MNIST) — images as arrays ties back to Unit 1. Build and train the network in
+  TensorFlow/Keras, tune hidden-layer sizes, watch it overfit and apply Unit 5
+  regularization instincts (dropout as the neural-network analog of Ridge), and compare
+  against the tree-based baseline from Unit 7.
 
 **Essential Question:** How does stacking many simple linear decisions let a model learn
 patterns no single line, sigmoid, or tree split could capture on its own?
