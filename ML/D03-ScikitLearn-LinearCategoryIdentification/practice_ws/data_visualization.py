@@ -15,9 +15,9 @@ def main():
 
     df['TotalCharges'] = pd.to_numeric(
         df['TotalCharges'], 
-        errors='coerce').fillna(1)
+        errors='coerce').fillna(0)
 
-    df['ChargeRatio'] = (np.log1p(df['MonthlyCharges'] * df['tenure']) - np.log1p(df['TotalCharges']))
+    df['ChargeRatio'] = df['TotalCharges'] / df['tenure']
     
     target_column = ['Churn']
 
@@ -26,11 +26,18 @@ def main():
     ]
 
     category_columns = [
-        'gender', 'Partner', 'Dependents',
-        'PhoneService', 'MultipleLines', 'InternetService',
+        'gender', 
+        'Partner',
+        'Dependents',
+        'PhoneService', 'MultipleLines', # Phone service is redudant
+
+        'InternetService',
+        # No need to include No Internet Service for the following features.
        'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
-       'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling',
-       'PaymentMethod',
+       'StreamingTV', 'StreamingMovies', 
+
+       'Contract', 
+       'PaperlessBilling', 'PaymentMethod',
     ]
 
     feature_columns = numeric_columns + category_columns
@@ -38,10 +45,14 @@ def main():
     X = df[feature_columns]
     y = df[target_column[0]]
 
-    plot_stacked_bar(df, 'InternetService', 'Churn')
-    plot_binned_stacked_bar(df[df['InternetService'] == 'Fiber optic'], 'MonthlyCharges', 'Churn', n_bins=20)
-    plot_binned_stacked_bar(df[df['InternetService'] == 'DSL'], 'MonthlyCharges', 'Churn', n_bins=20)
-    plot_binned_stacked_bar(df[df['InternetService'] == 'No'], 'MonthlyCharges', 'Churn', n_bins=20)
+    plot_stacked_bar(df, 'SeniorCitizen', 'Churn')
+    #plot_binned_stacked_bar(df[df['InternetService'] == 'Fiber optic'], 'Contract', 'Churn', n_bins=20)
+    #plot_binned_stacked_bar(df[df['InternetService'] == 'DSL'], 'Contract', 'Churn', n_bins=20)
+    #plot_binned_stacked_bar(df[df['InternetService'] == 'No'], 'Contract', 'Churn', n_bins=20)
+
+    plot_stacked_bar(df[df['Contract'] == 'Two year'], 'tenure', 'Churn')
+    plot_stacked_bar(df[df['Contract'] == 'One year'], 'tenure', 'Churn')
+    plot_stacked_bar(df[df['Contract'] == 'Month-to-month'], 'tenure', 'Churn')
     plt.show()
 
 if __name__ == "__main__":

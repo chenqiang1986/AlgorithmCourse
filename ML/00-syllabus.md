@@ -1,11 +1,11 @@
-# ML Syllabus
+# Machine Learning Syllabus
 *ML*
 
-A 23-week machine learning syllabus for high school students, built around scikit-learn
-and real datasets. Each unit opens with a **hands-on project** — training a model on real
-data and seeing what it gets right and wrong — before opening up the **underlying math**
-that explains why it worked. Concepts are motivated by a working model first, then made
-precise second, rather than the other way around.
+Learning machine learning is about more than learning a collection of algorithms and tools. It is also about learning how to approach a problem when you do not yet know all the answers. Students learn to step back and see the big picture before getting lost in the details, to choose tools based on the problem at hand rather than relying on a fixed toolkit, and—perhaps most importantly—to become comfortable experimenting before they fully understand why something will work.
+
+That is how science and engineering often work in practice. You form a hypothesis, try something, see what happens, and let the results tell you what to investigate next. Not every detail needs to be understood before the first experiment; sometimes the experiment itself tells you which details are worth understanding.
+
+This course is designed around that idea. We start with hands-on projects: students train models on real data, look closely at what the models get right and wrong, and try to make them better. The math and theory are introduced along the way, as tools for understanding what students are seeing and deciding what to try next—not as a separate track of lectures to master first. In class, the instructor works alongside students: asking questions, suggesting possible directions, and helping debug unsuccessful attempts. The goal is for students to gradually develop the judgment and confidence to do machine learning themselves, rather than simply learn how machine learning is supposed to work.
 
 
 ## Unit 1: Data Foundations — Working with Real Tables (Week 1)

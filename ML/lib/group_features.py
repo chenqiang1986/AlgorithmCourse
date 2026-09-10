@@ -4,8 +4,9 @@ from sklearn.utils.validation import check_array, check_is_fitted
 from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures, StandardScaler
 
 class GroupInteraction(BaseEstimator, TransformerMixin):
-    def __init__(self, group_col):
+    def __init__(self, group_col, preserve_group_col=False):
         self.group_col = group_col
+        self.preserve_group_col=preserve_group_col
 
     def fit(self, X, y=None):
         self.numeric_cols_ = [c for c in X.columns if c != self.group_col]
@@ -21,8 +22,14 @@ class GroupInteraction(BaseEstimator, TransformerMixin):
         # outer product per row -> (n, n_groups * n_features)
         #print(X[[self.group_col]].shape)
         #print((groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1).shape)
-        return np.hstack((X[[self.group_col]].to_numpy(), (groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1)))
+        if self.preserve_group_col:
+            return np.hstack((X[[self.group_col]].to_numpy(), (groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1)))
+        else:
+            return (groups[:, :, None] * nums[:, None, :]).reshape(len(X), -1)
 
     def get_feature_names_out(self, input_features=None):
         groups = self.ohe_.categories_[0]
-        return [self.group_col] + [f"{g}_{f}" for g in groups for f in self.numeric_cols_]
+        if self.preserve_group_col:
+            return [self.group_col] + [f"{g}_{f}" for g in groups for f in self.numeric_cols_]
+        else:
+            return [f"{g}_{f}" for g in groups for f in self.numeric_cols_]
