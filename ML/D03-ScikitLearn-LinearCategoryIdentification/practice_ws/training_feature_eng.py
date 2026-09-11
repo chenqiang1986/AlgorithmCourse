@@ -1,3 +1,4 @@
+from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 import math
@@ -11,6 +12,7 @@ from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures, StandardSca
 from fourier_features import FourierFeatures
 from group_features import GroupInteraction
 from plot_graphs import report_precision_recall
+from plot_roc import plot_precision_vs_recall
 
 def numerify(df, columns):
     for column in columns:
@@ -74,9 +76,9 @@ def main():
 
     nonlinearize = ColumnTransformer(
         [
-            ("poly", FourierFeatures(degree=3),["tenure"]),
-            ("poly2", FourierFeatures(degree=3),["MonthlyCharges"]),
-            ("poly3", FourierFeatures(degree=3),["ChargeRatio"]),
+            ("poly", PolynomialFeatures(degree=3, include_bias=False),["tenure", "MonthlyCharges", "ChargeRatio"]),
+            #("poly2", FourierFeatures(degree=3),["MonthlyCharges"]),
+            #("poly3", FourierFeatures(degree=3),["ChargeRatio"]),
         ],
         remainder = "passthrough",
         verbose_feature_names_out=False,
@@ -105,7 +107,7 @@ def main():
             #max_iter=100000,
             class_weight="balanced"
         ),
-        threshold=0.5,
+        threshold=0.64,
     )
 
     model = model = Pipeline(
@@ -119,16 +121,17 @@ def main():
     model.fit(X_train, y_train)
 
     y_train_pred = model.predict(X_train)
+    y_train_pred_prob = model.predict_proba(X_train)[:, 1]
     report_precision_recall(y_train, y_train_pred, "Training Metric")
+    plot_precision_vs_recall(y_train_pred_prob, y_train, "Yes", title="Training Precision vs Recall")
 
 
     y_test_pred = model.predict(X_test)
+    y_test_pred_prob = model.predict_proba(X_test)[:, 1]
     report_precision_recall(y_test, y_test_pred, "Test Metric")
-    
+    plot_precision_vs_recall(y_test_pred_prob, y_test, "Yes", title="Test Precision vs Recall")
 
-
-
-
+    plt.show()
 
 
     
