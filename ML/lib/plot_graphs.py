@@ -1,6 +1,150 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 from matplotlib.widgets import RadioButtons
+from matplotlib.ticker import PercentFormatter
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.utils.multiclass import unique_labels
+
+
+def report_precision_recall(true_value, pred_value, title="Classification Report"):
+    """Render confusion-matrix counts, recall, and precision for predictions.
+
+    Rows are actual classes and columns are predicted classes. Recall
+    normalizes each actual-class row; precision normalizes each
+    predicted-class column, retaining the same confusion-matrix orientation.
+
+    ``title`` is shown above the complete report figure.
+    """
+    labels = unique_labels(true_value, pred_value)
+    counts = confusion_matrix(true_value, pred_value, labels=labels)
+
+    recall = np.divide(
+        counts,
+        counts.sum(axis=1, keepdims=True),
+        out=np.zeros_like(counts, dtype=float),
+        where=counts.sum(axis=1, keepdims=True) != 0,
+    )
+    precision = np.divide(
+        counts,
+        counts.sum(axis=0, keepdims=True),
+        out=np.zeros_like(counts, dtype=float),
+        where=counts.sum(axis=0, keepdims=True) != 0,
+    )
+
+    fig, ((table_ax, metrics_ax), (recall_ax, precision_ax)) = plt.subplots(
+        2, 2, figsize=(16, 11)
+    )
+    fig.suptitle(f"{title} (Accuracy: {accuracy_score(true_value, pred_value):.3f})")
+
+    table_ax.axis("off")
+    table = table_ax.table(
+        cellText=counts,
+        rowLabels=[f"Actual {label}" for label in labels],
+        colLabels=[f"Predicted {label}" for label in labels],
+        cellLoc="center",
+        loc="center",
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.scale(1.2, 1.6)
+    table_ax.set_title("Confusion Matrix: Raw Counts")
+
+    metrics = classification_report(
+        true_value,
+        pred_value,
+        labels=labels,
+        target_names=[str(label) for label in labels],
+        output_dict=True,
+        zero_division=0,
+    )
+    metric_rows = [str(label) for label in labels] + ["macro avg", "weighted avg"]
+    metric_table = [
+        [
+            f"{metrics[row]['precision']:.2f}",
+            f"{metrics[row]['recall']:.2f}",
+            f"{metrics[row]['f1-score']:.2f}",
+            f"{metrics[row]['support']:.0f}",
+        ]
+        for row in metric_rows
+    ]
+    metrics_ax.axis("off")
+    summary_table = metrics_ax.table(
+        cellText=metric_table,
+        rowLabels=metric_rows,
+        colLabels=["Precision", "Recall", "F1 Score", "Support"],
+        cellLoc="center",
+        loc="center",
+    )
+    summary_table.auto_set_font_size(False)
+    summary_table.set_fontsize(9)
+    summary_table.scale(1.1, 1.6)
+    metrics_ax.set_title("Classification Report")
+
+    _plot_stacked_matrix(
+        recall_ax, recall, labels, "actual", "predicted", "Recall by Actual Class"
+    )
+    _plot_stacked_matrix(
+        precision_ax, precision, labels, "predicted", "actual", "Precision by Predicted Class"
+    )
+
+    fig.tight_layout(rect=(0, 0.03, 1, 0.95))
+    return fig, ((table_ax, metrics_ax), (recall_ax, precision_ax))    
+
+
+def _plot_stacked_matrix(ax, matrix, labels, bar_axis, segment_axis, title):
+    """Draw a normalized confusion-matrix view using its matching axis."""
+    positions = np.arange(len(labels))
+    values_by_segment = matrix.T if bar_axis == "actual" else matrix
+
+    if bar_axis == "actual":
+        left = np.zeros(len(labels))
+        for label, values in zip(labels, values_by_segment):
+            ax.barh(positions, values, left=left, label=f"{segment_axis.title()}: {label}")
+            for position, start, value in zip(positions, left, values):
+                if value > 0:
+                    ax.text(
+                        start + value / 2,
+                        position,
+                        f"{value:.2%}",
+                        ha="center",
+                        va="center",
+                        color="white" if value >= 0.12 else "black",
+                        fontsize=9,
+                    )
+            left += values
+        ax.set_yticks(positions, [str(label) for label in labels])
+        ax.set_xlabel("Percentage")
+        ax.set_ylabel("Actual Class")
+        ax.set_xlim(0, 1)
+        ax.xaxis.set_major_formatter(PercentFormatter(xmax=1))
+        # Match confusion-matrix row order: the first actual class is on top.
+        ax.invert_yaxis()
+    else:
+        bottom = np.zeros(len(labels))
+        # Match confusion-matrix row order: the first actual class is on top.
+        for label, values in zip(labels[::-1], values_by_segment[::-1]):
+            ax.bar(positions, values, bottom=bottom, label=f"{segment_axis.title()}: {label}")
+            for position, start, value in zip(positions, bottom, values):
+                if value > 0:
+                    ax.text(
+                        position,
+                        start + value / 2,
+                        f"{value:.2%}",
+                        ha="center",
+                        va="center",
+                        color="white" if value >= 0.12 else "black",
+                        fontsize=9,
+                    )
+            bottom += values
+        ax.set_xticks(positions, [str(label) for label in labels])
+        ax.set_xlabel("Predicted Class")
+        ax.set_ylabel("Percentage")
+        ax.set_ylim(0, 1)
+        ax.yaxis.set_major_formatter(PercentFormatter(xmax=1))
+
+    ax.set_title(title)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.35), ncol=2)
 
 
 def _interactive_stacked_bar(counts, xlabel, hue_label, mode='count'):
@@ -113,10 +257,12 @@ def plot_2d_binned_heatmap(df, x_column, y_column, n_bins=10, mode='count'):
     that count as a percentage of all rows. Draws radio buttons on the figure
     so the user can toggle between the two after the plot is shown.
     """
-    x_bins = pd.cut(df[x_column], bins=n_bins).astype(str)
-    y_bins = pd.cut(df[y_column], bins=n_bins).astype(str)
+    x_bins = pd.cut(df[x_column], bins=n_bins)
+    y_bins = pd.cut(df[y_column], bins=n_bins)
     counts = pd.crosstab(y_bins, x_bins)
     percents = counts / counts.values.sum() * 100
+    counts.index = percents.index = counts.index.astype(str)
+    counts.columns = percents.columns = counts.columns.astype(str)
     data_by_mode = {'count': counts, 'percent': percents}
     return _interactive_heatmap(data_by_mode, x_column, y_column, mode)
 
@@ -129,15 +275,17 @@ def plot_2d_binned_heatmap_by_category(df, x_column, y_column, category_column, 
     falling into the same bucket. Draws radio buttons on the figure so the user can
     toggle between the two after the plot is shown.
     """
-    x_bins = pd.cut(df[x_column], bins=n_bins).astype(str)
-    y_bins = pd.cut(df[y_column], bins=n_bins).astype(str)
+    x_bins = pd.cut(df[x_column], bins=n_bins)
+    y_bins = pd.cut(df[y_column], bins=n_bins)
 
     total_counts = pd.crosstab(y_bins, x_bins)
     is_category = df[category_column] == category_value
     category_counts = pd.crosstab(y_bins[is_category], x_bins[is_category])
     category_counts = category_counts.reindex(index=total_counts.index, columns=total_counts.columns, fill_value=0)
 
-    percents = (category_counts / total_counts.replace(0, pd.NA) * 100).fillna(0)
+    percents = (category_counts / total_counts.replace(0, np.nan) * 100).fillna(0)
+    category_counts.index = percents.index = category_counts.index.astype(str)
+    category_counts.columns = percents.columns = category_counts.columns.astype(str)
     data_by_mode = {'count': category_counts, 'percent': percents}
 
     title = f'{category_column} = {category_value}'

@@ -25,9 +25,10 @@ expression $3x + 5$ has two terms: $3x$ and $5$.
 
 $$\underbrace{3x}_{\text{coefficient }3,\text{ variable }x} \;+\; \underbrace{5}_{\text{constant term}}$$
 
-This lesson works only with **linear terms** — a variable raised to the first power (no
-$x^2$, $x^3$, etc.) — since that's what's needed to build and solve the linear equations in
-[Lesson 8](./08-one-variable-linear-equations.md).
+Most of this lesson uses **linear terms** — a variable raised to the first power — because
+they lead directly to the linear equations in [Lesson 8](./08-one-variable-linear-equations.md).
+The like-term rule also works for terms such as $x^2$ and $xy$; those are included below as
+an extension.
 
 ## 2. Core Template: Evaluating an Expression by Substitution
 
@@ -80,13 +81,18 @@ The answer is **$14$**.
 
 ## 6. Like Terms
 
-Two terms are **like terms** if they have the exact same variable (or are both constants).
-Only the coefficient may differ — the variable part must match exactly.
+Two terms are **like terms** if they have the exact same variable part (or are both
+constants). Only the coefficient may differ — the variable part, including any exponents,
+must match exactly.
 
 - $3x$ and $7x$ are like terms (both have variable $x$).
 - $5$ and $-2$ are like terms (both are constants).
 - $3x$ and $5$ are **not** like terms — one has a variable, the other doesn't.
 - $3x$ and $3y$ are **not** like terms — the variables are different letters.
+- $4x^2$ and $-7x^2$ are like terms (both have the variable part $x^2$).
+- $3xy$ and $5yx$ are like terms because multiplication can be reordered: $yx=xy$.
+- $2x^2$, $2x$, and $2xy$ are **not** like terms with one another: their variable parts
+  are $x^2$, $x$, and $xy$, which are all different.
 
 ![Two bordered panels side by side. The left panel, titled "Before: Mixed Order," shows the expression 3x + 5 + x + 3 written above four colored tiles in that order: a blue tile labeled 3x, an orange tile labeled 5, a smaller blue tile labeled x, and an orange tile labeled 3, with a caption "scattered — not yet grouped" and a legend marking blue tiles as x-terms and orange tiles as constant terms. The right panel, titled "After: Grouped by Type," shows the same four tiles rearranged so both blue tiles sit together on the left with a bracket underneath labeled "3x + x = 4x," and both orange tiles sit together on the right with a bracket labeled "5 + 3 = 8," with the final result "Simplified: 4x + 8" written below. A caption under both panels reads: like terms have the exact same variable part — combine their coefficients; unlike terms stay separate.](./images/like-terms-grouping.svg)
 
@@ -191,6 +197,68 @@ Group the $x$-terms and constants separately (remember $-x$ means $-1x$):
 $$\underbrace{-5x - x}_{x\text{-terms}} + \underbrace{3 - 8}_{\text{constants}} = -6x - 5$$
 
 The answer is **$-6x - 5$**.
+
+</details>
+
+## 12.1 Extension: Like Terms With Powers and More Than One Variable
+
+The same combining rule applies to more complicated variable parts. Treat $x^2$, $xy$, and
+$y^2$ as three different labels: terms can be combined only when their labels match.
+
+$$3x^2 - 5xy + 4x^2 + 2xy - y^2 = (3+4)x^2 + (-5+2)xy - y^2 = 7x^2 - 3xy - y^2$$
+
+Notice that $x^2$ cannot combine with $x$, and $xy$ cannot combine with $y^2$. Also,
+$xy$ and $yx$ *can* combine because $x\cdot y=y\cdot x$.
+
+## 12.2 Class Practice 6A: Identifying More Complicated Like Terms
+
+### Problem
+
+Which terms are like terms with $-3xy$? $\quad 7xy, \quad 2yx, \quad -5x^2, \quad 4y, \quad xy^2$
+
+<details>
+<summary>Solution</summary>
+
+$7xy$ is a like term because it has variable part $xy$. Also, $2yx=2xy$, so it is a like
+term. The other terms have different variable parts: $x^2$, $y$, and $xy^2$.
+
+The answer is **$7xy$ and $2yx$**.
+
+</details>
+
+## 12.3 Class Practice 6B: Simplifying With Powers and Products
+
+### Problem
+
+Simplify: $5x^2 - 3xy + 2x - 7x^2 + 6xy - x$
+
+<details>
+<summary>Solution</summary>
+
+Group terms by their complete variable parts:
+
+$$\underbrace{(5x^2-7x^2)}_{x^2\text{-terms}}+\underbrace{(-3xy+6xy)}_{xy\text{-terms}}+\underbrace{(2x-x)}_{x\text{-terms}}$$
+
+$$=-2x^2+3xy+x$$
+
+The answer is **$-2x^2+3xy+x$**.
+
+</details>
+
+## 12.4 Quick Practice: More Complicated Like Terms
+
+Simplify each expression before checking the solution.
+
+1. $8x^2 + 3x - 5x^2 + 4x$
+2. $6ab - 2a + 5ba + 7a$
+3. $4m^2n - 3mn^2 + 6m^2n + mn^2$
+
+<details>
+<summary>Answers</summary>
+
+1. $3x^2+7x$
+2. $11ab+5a$ (because $ba=ab$)
+3. $10m^2n-2mn^2$
 
 </details>
 
@@ -347,8 +415,8 @@ track of it), not to its position in the expression.
   its variable (no number written means coefficient $1$; a lone minus sign means $-1$).
 - **Evaluate** an expression by substituting the given value for the variable, then following
   the order of operations.
-- **Like terms** share the exact same variable part and can be combined by adding or
-  subtracting their coefficients: $3x + x = 4x$.
+- **Like terms** share the exact same variable part (including exponents) and can be combined
+  by adding or subtracting their coefficients: $3x + x = 4x$ and $3x^2 + x^2 = 4x^2$.
 - The **distributive property** removes parentheses: $a(b+c) = ab+ac$. Distributing a negative
   number flips the sign of every term inside.
 - To fully simplify an expression: **distribute first**, then **combine like terms**.

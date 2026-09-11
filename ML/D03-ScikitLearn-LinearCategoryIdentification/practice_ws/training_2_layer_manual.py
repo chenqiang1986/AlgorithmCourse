@@ -1,3 +1,4 @@
+from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 import math
@@ -10,24 +11,8 @@ from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures, StandardSca
 
 from fourier_features import FourierFeatures
 from group_features import GroupInteraction
-
-def report(true_value, pred_value):
-    accuracy = accuracy_score(true_value, pred_value)    
-    print("  Accuracy:", accuracy,"\n")
-    print("  Confusion Matrix Count:")
-    print(confusion_matrix(true_value, pred_value),"\n")
-
-    print("  Confusion Matrix Normalize on Actual:")
-    print("  [Recall_Neg, 1-Recall_Neg]")
-    print("  [1-Recall_Pos, Recall_Pos]")
-    print(confusion_matrix(true_value, pred_value, normalize="true"),"\n")
-
-    print("  Confusion Matrix Normalize on Prediction:")
-    print("  [Precision_Neg, 1-Precision_Pos]")
-    print("  [1-Precision_Neg, Precision_Pos]")
-    print(confusion_matrix(true_value, pred_value, normalize="pred"),"\n")
-
-    print(classification_report(true_value, pred_value))
+from plot_graphs import report_precision_recall
+from plot_roc import plot_roc
 
 def numerify(df, columns):
     for column in columns:
@@ -112,6 +97,69 @@ def first_layer(X_train, y_train):
     model.fit(X_train, y_train)
     return model
 
+
+def second_layer(X_train, y_train):
+
+
+    numeric_columns = [        
+        'tenure',            
+        "MonthlyCharges",
+        "TotalCharges",
+        "ChargeRatio", 
+        "Pred_Churn_Prod",        
+    ]
+
+    category_columns = [
+       'gender',
+       'MultipleLines', 
+       'InternetSeniorContract',
+       'PaymentMethod',
+    ]
+
+
+
+    preprocessor = ColumnTransformer(
+        [
+            ("cat", OneHotEncoder(handle_unknown="ignore"), category_columns),
+            ("num", StandardScaler(), numeric_columns),
+        ]
+    )
+
+    regressor=FixedThresholdClassifier(
+        estimator=LogisticRegression(
+            #max_iter=100000,
+            class_weight="balanced"
+        ),
+        threshold=0.35,
+    )
+
+    model = model = Pipeline(
+            [
+                ("preprocess", preprocessor),
+                ("regressor", regressor),
+            ]
+        )
+
+    model.fit(X_train, y_train)
+    return model
+
+def attach_pred_prob(X, y, column_name_pred, y_pred, column_name_pred_prob, y_pred_prob):
+    X_attached = X.copy()
+    X_attached[column_name_pred] = y_pred
+    X_attached[column_name_pred_prob] = y_pred_prob
+
+    return X_attached, y
+
+def filter_pred_yes(X, y, column_name, value):
+    combined = pd.concat([X,y], axis=1)
+    filtered = combined[combined[column_name]==value]
+
+    print(filtered)
+    X_filtered = filtered[X.columns]
+    y_filtered = filtered[y.name]
+
+    return X_filtered, y_filtered
+
 def main():
     df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
     df['TotalCharges'] = pd.to_numeric(
@@ -140,25 +188,66 @@ def main():
     model = first_layer(X_train, y_train)
 
     y_train_pred = model.predict(X_train)
-    y_train_pred_prob = model.predict_proba(X_train)
-    print("Training Metric:")
-    report(y_train, y_train_pred)
+    y_train_pred_prob = model.predict_proba(X_train)[:, 1]
+    report_precision_recall(y_train, y_train_pred, "Training Metric")
+    #plot_roc(y_train_pred_prob[:, 1], y_train, "Yes")
+    #plot_roc(y_train_pred_prob[:, 0], y_train, "No")
 
 
     y_test_pred = model.predict(X_test)
-    print("Test Metric:")
-    report(y_test, y_test_pred)
-
-    df2 = pd.concat([X_train, y_train], axis=1)
-    df2["Pred_Churn"] = y_train_pred
-    df2["Pred_Churn_Prod"] = y_train_pred_prob[:, 1]
-    df2 = df2[df2["Pred_Churn"] == "Yes"]
-    print(df2)
-    df2.to_csv('Remainder_for_Model2.csv',index=False, sep=',')
-    
+    y_test_pred_prob = model.predict_proba(X_test)[:, 1]
+    report_precision_recall(y_test, y_test_pred, "Test Metric")
 
 
+    X_train_2, y_train_2 = attach_pred_prob(
+        X_train, y_train, 
+        "Pred_Churn", y_train_pred, 
+        "Pred_Churn_Prod", y_train_pred_prob)
+    X_train_2_filtered, y_train_2_filtered = filter_pred_yes(
+        X_train_2, y_train_2,
+        "Pred_Churn", "Yes",
+    )
 
+    model2 = second_layer(X_train_2_filtered, y_train_2_filtered) 
+
+    y_train_2_pred = model2.predict(X_train_2)
+    y_train_2_pred_prob = model2.predict_proba(X_train_2)[:, 1]
+
+    X_train_3, y_train_3 = attach_pred_prob(
+        X_train_2, y_train_2,
+        "Fixed_Pred_Churn", y_train_2_pred,
+        "Fixed_Pred_Churn_Prod", y_train_2_pred_prob,
+    )
+
+    # Fixed Pred Churn won't work on the the predicted No part.
+    X_train_3["Final_Churn_Pred"] = np.where(X_train_3["Pred_Churn"] == "Yes", X_train_3["Fixed_Pred_Churn"], X_train_3["Pred_Churn"])
+
+    report_precision_recall(
+        y_train_3, X_train_3["Final_Churn_Pred"], "Fixed Training Metric"
+    )
+
+
+    X_test_2, y_test_2 = attach_pred_prob(
+        X_test, y_test,
+        "Pred_Churn", y_test_pred, 
+        "Pred_Churn_Prod", y_test_pred_prob
+    )
+
+    y_test_2_pred = model2.predict(X_test_2)
+    y_test_2_pred_prob = model2.predict_proba(X_test_2)[:, 1]
+
+    X_test_3, y_test_3 = attach_pred_prob(
+        X_test_2, y_test_2,
+        "Fixed_Pred_Churn", y_test_2_pred, 
+        "Fixed_Pred_Churn_Prod", y_test_2_pred_prob
+    )
+    X_test_3["Final_Churn_Pred"] = np.where(X_test_3["Pred_Churn"] == "Yes", X_test_3["Fixed_Pred_Churn"], X_test_3["Pred_Churn"])
+
+    report_precision_recall(
+        y_test_3, X_test_3["Final_Churn_Pred"], "Fixed Testing Metric"
+    )
+
+    plt.show()
 
 
 

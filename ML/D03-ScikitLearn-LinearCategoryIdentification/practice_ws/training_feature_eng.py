@@ -10,24 +10,7 @@ from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures, StandardSca
 
 from fourier_features import FourierFeatures
 from group_features import GroupInteraction
-
-def report(true_value, pred_value):
-    accuracy = accuracy_score(true_value, pred_value)    
-    print("  Accuracy:", accuracy,"\n")
-    print("  Confusion Matrix Count:")
-    print(confusion_matrix(true_value, pred_value),"\n")
-
-    print("  Confusion Matrix Normalize on Actual:")
-    print("  [Recall_Neg, 1-Recall_Neg]")
-    print("  [1-Recall_Pos, Recall_Pos]")
-    print(confusion_matrix(true_value, pred_value, normalize="true"),"\n")
-
-    print("  Confusion Matrix Normalize on Prediction:")
-    print("  [Precision_Neg, 1-Precision_Pos]")
-    print("  [1-Precision_Neg, Precision_Pos]")
-    print(confusion_matrix(true_value, pred_value, normalize="pred"),"\n")
-
-    print(classification_report(true_value, pred_value))
+from plot_graphs import report_precision_recall
 
 def numerify(df, columns):
     for column in columns:
@@ -136,13 +119,11 @@ def main():
     model.fit(X_train, y_train)
 
     y_train_pred = model.predict(X_train)
-    print("Training Metric:")
-    report(y_train, y_train_pred)
+    report_precision_recall(y_train, y_train_pred, "Training Metric")
 
 
     y_test_pred = model.predict(X_test)
-    print("Test Metric:")
-    report(y_test, y_test_pred)
+    report_precision_recall(y_test, y_test_pred, "Test Metric")
     
 
 
