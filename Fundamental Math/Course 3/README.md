@@ -67,5 +67,15 @@ starting Algebra I:
 13. [09-homework-unknown-coefficients-and-solution-structure.md](./09-homework-unknown-coefficients-and-solution-structure.md)
     A 10-problem homework set practicing solution-structure classifications for equations
     with unknown coefficients.
+14. [10-two-variable-linear-equations.md](./10-two-variable-linear-equations.md)
+    Two-variable linear systems and solving them by substitution and elimination, including
+    rearranging an equation before substituting, choosing either variable, and scaling one
+    or both equations before eliminating.
+15. [11-three-variable-linear-equations.md](./11-three-variable-linear-equations.md)
+    Extending elimination to three-variable systems by eliminating one variable from two
+    different pairs of equations before solving the resulting two-variable system.
+16. [11-homework-solving-linear-equations.md](./11-homework-solving-linear-equations.md)
+    Homework covering Lessons 10–11: two-variable substitution and elimination, plus
+    three-variable elimination.
 
 More lessons can be added later as the course grows.

@@ -1,0 +1,13 @@
+<svg width="650" height="410" viewBox="0 0 650 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Graph of x squared plus three x minus one</title>
+  <desc id="d">An upward-opening parabola with vertex negative three halves comma negative thirteen fourths, axis x equals negative three halves, and approximate x-intercepts negative three point three and zero point three.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#27364a"/></marker></defs>
+  <rect width="650" height="410" fill="#fff"/>
+  <text x="325" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f3a5f">Fractional Completion: s(x) = (x + 3/2)² − 13/4</text>
+  <g stroke="#dbe3eb"><path d="M90 55V340M170 55V340M250 55V340M330 55V340M410 55V340M490 55V340M570 55V340M50 70H600M50 110H600M50 150H600M50 190H600M50 230H600M50 270H600M50 310H600"/></g>
+  <g stroke="#27364a" stroke-width="1.7"><path d="M50 190H610" marker-end="url(#a)"/><path d="M410 350V45" marker-end="url(#a)"/></g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#27364a"><text x="615" y="195">x</text><text x="416" y="49">y</text><text x="82" y="209">−4</text><text x="162" y="209">−3</text><text x="242" y="209">−2</text><text x="322" y="209">−1</text><text x="405" y="209">0</text><text x="486" y="209">1</text></g>
+  <path d="M130 160Q290 480 450 160" fill="none" stroke="#2878b5" stroke-width="4"/><path d="M290 55V340" stroke="#8b5ca7" stroke-width="2" stroke-dasharray="7 6"/><text x="298" y="76" font-family="Arial, sans-serif" font-size="14" fill="#71478b">axis: x = −3/2</text>
+  <g fill="#d1533d" stroke="#fff" stroke-width="2"><circle cx="146" cy="190" r="5"/><circle cx="290" cy="320" r="6"/><circle cx="410" cy="230" r="5"/><circle cx="434" cy="190" r="5"/></g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#26384c"><text x="154" y="184">root ≈ −3.30</text><text x="298" y="314" font-weight="bold">vertex (−3/2, −13/4)</text><text x="418" y="224">(0, −1)</text><text x="442" y="184">root ≈ 0.30</text></g>
+</svg>

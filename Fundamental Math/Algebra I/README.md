@@ -67,6 +67,18 @@ a diagnostic test that samples the full range of Algebra I skills:
     Three problems on graphing inequalities, feasible-region vertices, and classifying a
     system's solution set.
 16. [11-homework-linear-programming.md](./11-homework-linear-programming.md)
-    Three applications of revenue/profit maximization and cost minimization.
+   Three applications of revenue/profit maximization and cost minimization.
+17. [12-quadratic-equations-square-roots-and-completing-the-square.md](./12-quadratic-equations-square-roots-and-completing-the-square.md)
+   The start of quadratic equations: finding roots by isolating a square, then completing
+   the square to solve quadratic equations.
+18. [12-homework-quadratic-equations-completing-the-square.md](./12-homework-quadratic-equations-completing-the-square.md)
+   A 12-problem homework set on square-root equations and completing the square, including
+   fractional coefficients, repeated roots, and no-real-solution cases.
+19. [13-graphing-quadratic-functions.md](./13-graphing-quadratic-functions.md)
+   Graphing quadratic functions from vertex and standard form: vertices, symmetry, opening
+   direction, intercepts, and completing the square as a graphing tool.
+20. [13-homework-graphing-quadratic-functions.md](./13-homework-graphing-quadratic-functions.md)
+   A 12-problem homework set on graphing quadratics, including vertex form, intercept
+   cases, leading coefficients, and fractional completing-the-square work.
 
 More lessons can be added later as the course grows.
