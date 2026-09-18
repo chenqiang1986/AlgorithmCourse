@@ -417,5 +417,5 @@ equation like $x = 0$, with the variable still present.
 - Word problems translate phrase-by-phrase into an equation; for related unknowns (like
   consecutive integers), name only the first one and write the rest in terms of it.
 
-Next lesson continues Unit 2: introducing systems of two linear equations and solving them
-by graphing and substitution.
+Next lesson extends the one/zero/infinite idea to equations with an unknown coefficient:
+which values of a parameter make each solution structure happen?

@@ -26,9 +26,11 @@ systems.
   terms.
 - Week 8: Solving linear equations with variables on both sides (identifying 1, 0, or
   infinite solutions).
-- Weeks 9–10: Introduction to systems of linear equations (solving by graphing and
+- Week 9: Linear equations with an unknown coefficient; determining when the equation has
+  one, zero, or infinitely many solutions.
+- Weeks 10–11: Introduction to systems of linear equations (solving by graphing and
   substitution).
-- Weeks 11–12: Solving systems algebraically (elimination and applications).
+- Week 12: Solving systems algebraically (elimination and applications).
 
 **Essential Question:** What does it mean for two different situations to have the exact
 same value or outcome?

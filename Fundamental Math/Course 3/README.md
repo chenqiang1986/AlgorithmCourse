@@ -60,5 +60,12 @@ starting Algebra I:
     A 19-problem homework set covering Lessons 7–8: converting to/from scientific notation,
     multiplying/dividing/adding/subtracting in scientific notation, the distributive
     property and combining like terms, variables on both sides, and word problems.
+12. [09-unknown-coefficients-and-solution-structure.md](./09-unknown-coefficients-and-solution-structure.md)
+    Classifying parameterized single-variable linear equations as having exactly one, no,
+    or infinitely many solutions, including equations with multiple exceptional parameter
+    values.
+13. [09-homework-unknown-coefficients-and-solution-structure.md](./09-homework-unknown-coefficients-and-solution-structure.md)
+    A 10-problem homework set practicing solution-structure classifications for equations
+    with unknown coefficients.
 
 More lessons can be added later as the course grows.

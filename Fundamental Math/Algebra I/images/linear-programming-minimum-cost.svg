@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="490" viewBox="0 0 760 490" role="img" aria-labelledby="title desc">
+  <title id="title">Minimum-cost linear programming graph</title>
+  <desc id="desc">For 3x plus y greater than or equal to 18 and x plus 3y greater than or equal to 12 in the first quadrant, the unbounded feasible region above both lines is shaded. The intersection 21 fourths comma 9 fourths is highlighted as the minimum-cost point.</desc>
+  <rect width="760" height="490" fill="#fff"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">Minimize cost over an unbounded feasible region</text>
+  <g stroke="#dbe4f0" stroke-width="1">
+    <path d="M110 70V400 M150 70V400 M190 70V400 M230 70V400 M270 70V400 M310 70V400 M350 70V400 M390 70V400 M430 70V400 M470 70V400 M510 70V400 M550 70V400 M590 70V400 M630 70V400 M670 70V400"/>
+    <path d="M110 80H670 M110 110H670 M110 140H670 M110 170H670 M110 200H670 M110 230H670 M110 260H670 M110 290H670 M110 320H670 M110 350H670 M110 380H670 M110 400H670"/>
+  </g>
+  <!-- Above both constraints, clipped to the displayed first quadrant. -->
+  <path d="M110 70L670 70L670 400L590 400L320 366.25L110 130Z" fill="#bbf7d0" opacity=".75"/>
+  <g stroke="#334155" stroke-width="2.5"><path d="M94 400H688"/><path d="M672 384L688 400L672 416" fill="none"/><path d="M110 416V54"/><path d="M94 70L110 54L126 70" fill="none"/></g>
+  <!-- 3x+y=18 and x+3y=12 -->
+  <path d="M110 130L350 400" stroke="#2563eb" stroke-width="4"/>
+  <path d="M110 340L590 400" stroke="#db2777" stroke-width="4"/>
+  <!-- C=69/4 objective line through the winning vertex -->
+  <path d="M110 313.75L455 400" stroke="#f59e0b" stroke-width="3" stroke-dasharray="10 7"/>
+  <g fill="#0f766e"><circle cx="110" cy="130" r="6"/><circle cx="590" cy="400" r="6"/></g>
+  <circle cx="320" cy="366.25" r="10" fill="#f97316" stroke="#9a3412" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <text x="172" y="158" fill="#1d4ed8">3x + y = 18</text><text x="470" y="365" fill="#be185d">x + 3y = 12</text>
+    <text x="168" y="300" fill="#b45309">C = 69/4</text><text x="332" y="357" fill="#9a3412">(21/4, 9/4)</text>
+    <text x="332" y="376" fill="#9a3412">minimum: $17.25</text><text x="120" y="120" fill="#047857">(0, 18)</text><text x="545" y="390" fill="#047857">(12, 0)</text>
+    <text x="420" y="170" fill="#166534">feasible region</text>
+  </g>
+  <path d="M360 292L334 318M360 292L349 315" stroke="#f97316" stroke-width="4" fill="none"/>
+  <text x="368" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#c2410c">lower cost ↙</text>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle"><text x="110" y="424">0</text><text x="190" y="424">2</text><text x="270" y="424">4</text><text x="350" y="424">6</text><text x="430" y="424">8</text><text x="510" y="424">10</text><text x="590" y="424">12</text><text x="670" y="424">14</text></g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#475569" text-anchor="end"><text x="101" y="404">0</text><text x="101" y="374">2</text><text x="101" y="344">4</text><text x="101" y="314">6</text><text x="101" y="284">8</text><text x="101" y="254">10</text><text x="101" y="224">12</text><text x="101" y="194">14</text><text x="101" y="164">16</text><text x="101" y="134">18</text></g>
+  <text x="698" y="406" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="118" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

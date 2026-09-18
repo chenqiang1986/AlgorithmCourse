@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">A system of inequalities with no solution</title><desc id="desc">For y less than x minus 1, x plus y greater than 5, and x less than 0, all three boundaries are dashed. To the left of x equals 0, the required region above x plus y equals 5 lies above the required region below y equals x minus 1, so there is no overlap.</desc>
+  <rect width="760" height="480" fill="#fff"/><text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">No overlap means no solution</text>
+  <g stroke="#dbe4f0" stroke-width="1"><path d="M130 70V410 M210 70V410 M290 70V410 M370 70V410 M450 70V410 M530 70V410 M610 70V410 M690 70V410"/><path d="M130 110H690 M130 160H690 M130 210H690 M130 260H690 M130 310H690 M130 360H690 M130 410H690"/></g>
+  <!-- Left of x=0, the blue requirement is above the pink requirement: no common band. -->
+  <path d="M130 70H370V410H130Z" fill="#f8fafc"/>
+  <g stroke="#334155" stroke-width="2.5"><path d="M114 360H708"/><path d="M692 344L708 360L692 376" fill="none"/><path d="M370 426V54"/><path d="M354 70L370 54L386 70" fill="none"/></g>
+  <!-- x=0 is at x=370; the diagonals meet at (3,2), then visibly continue. -->
+  <path d="M130 560L690 210" stroke="#db2777" stroke-width="4" stroke-dasharray="11 8"/>
+  <path d="M130 -40L690 310" stroke="#2563eb" stroke-width="4" stroke-dasharray="11 8"/>
+  <path d="M370 70V410" stroke="#16a34a" stroke-width="5" stroke-dasharray="11 8"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700"><text x="158" y="135" fill="#1d4ed8">x + y = 5</text><text x="158" y="392" fill="#be185d">y = x − 1</text><text x="380" y="92" fill="#15803d">x = 0</text><text x="168" y="235" fill="#991b1b">need to be above blue</text><text x="168" y="257" fill="#991b1b">and below pink</text><text x="183" y="285" fill="#991b1b">— impossible here</text><text x="435" y="240" fill="#991b1b">no overlap</text></g>
+  <text x="718" y="366" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="378" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

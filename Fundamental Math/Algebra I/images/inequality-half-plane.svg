@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Graph of 2x plus y less than or equal to 6</title>
+  <desc id="desc">A solid downward sloping boundary line through 0 comma 6 and 3 comma 0. The half-plane below the line, including the origin, is shaded blue.</desc>
+  <rect width="760" height="430" fill="#fff"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#172554">Graph: 2x + y ≤ 6</text>
+  <g stroke="#dbe4f0" stroke-width="1">
+    <path d="M80 70V370 M140 70V370 M200 70V370 M260 70V370 M320 70V370 M380 70V370 M440 70V370 M500 70V370 M560 70V370 M620 70V370 M680 70V370"/>
+    <path d="M80 70H680 M80 110H680 M80 150H680 M80 190H680 M80 230H680 M80 270H680 M80 310H680 M80 350H680 M80 370H680"/>
+  </g>
+  <!-- below 2x+y=6 in the displayed coordinate window -->
+  <path d="M200 70 L410 350 L680 370 L680 370 L80 370 L80 70 Z" fill="#bfdbfe" opacity=".72"/>
+  <g stroke="#334155" stroke-width="2.5">
+    <path d="M80 310H696"/><path d="M680 294L696 310L680 326" fill="none"/>
+    <path d="M200 386V54"/><path d="M184 70L200 54L216 70" fill="none"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#475569" text-anchor="middle">
+    <text x="80" y="332">−2</text><text x="140" y="332">−1</text><text x="200" y="332">0</text><text x="260" y="332">1</text><text x="320" y="332">2</text><text x="380" y="332">3</text><text x="440" y="332">4</text><text x="500" y="332">5</text><text x="560" y="332">6</text><text x="620" y="332">7</text><text x="680" y="332">8</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#475569" text-anchor="end">
+    <text x="188" y="375">−1</text><text x="188" y="315">0</text><text x="188" y="275">1</text><text x="188" y="235">2</text><text x="188" y="195">3</text><text x="188" y="155">4</text><text x="188" y="115">5</text><text x="188" y="75">6</text>
+  </g>
+  <!-- y=-2x+6, through (0,6) and (3,0) -->
+  <path d="M200 70L410 350" stroke="#2563eb" stroke-width="5"/>
+  <g fill="#2563eb"><circle cx="200" cy="70" r="5"/><circle cx="380" cy="310" r="5"/></g>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1d4ed8">
+    <text x="455" y="278">boundary: 2x + y = 6</text><text x="455" y="300">solid: equality is included</text>
+  </g>
+  <circle cx="200" cy="310" r="6" fill="#f97316"/><text x="214" y="296" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#c2410c">test point (0, 0)</text>
+  <text x="485" y="355" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1e40af">shade this side</text>
+  <text x="704" y="315" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="208" y="50" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

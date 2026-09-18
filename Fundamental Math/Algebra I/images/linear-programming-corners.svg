@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" role="img" aria-labelledby="title desc">
+  <title id="title">Corner point optimization graph</title>
+  <desc id="desc">The first quadrant feasible region for 2x plus y less than or equal to 12 and x plus 2y less than or equal to 12. Vertices are shown, with 4 comma 4 highlighted as the maximum profit point.</desc>
+  <rect width="760" height="470" fill="#fff"/><text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">Check the objective at every feasible corner</text>
+  <g stroke="#dbe4f0" stroke-width="1"><path d="M100 70V390 M145 70V390 M190 70V390 M235 70V390 M280 70V390 M325 70V390 M370 70V390 M415 70V390 M460 70V390 M505 70V390 M550 70V390 M595 70V390 M640 70V390"/><path d="M100 70H640 M100 96.7H640 M100 123.3H640 M100 150H640 M100 176.7H640 M100 203.3H640 M100 230H640 M100 256.7H640 M100 283.3H640 M100 310H640 M100 336.7H640 M100 363.3H640 M100 390H640"/></g>
+  <!-- (0,0)(6,0)(4,4)(0,6) -->
+  <path d="M100 390L370 390L280 283.3L100 230Z" fill="#bfdbfe" opacity=".85"/>
+  <g stroke="#334155" stroke-width="2.5"><path d="M84 390H658"/><path d="M642 374L658 390L642 406" fill="none"/><path d="M100 406V54"/><path d="M84 70L100 54L116 70" fill="none"/></g>
+  <path d="M100 70L370 390" stroke="#2563eb" stroke-width="4"/><path d="M100 230L640 390" stroke="#db2777" stroke-width="4"/>
+  <!-- equal profit line P=36, 5x+4y=36, through (0,9),(4,4),(7.2,0) -->
+  <path d="M100 150L424 390" stroke="#f59e0b" stroke-width="3" stroke-dasharray="10 7"/>
+  <g fill="#1e3a8a"><circle cx="100" cy="390" r="5"/><circle cx="370" cy="390" r="5"/><circle cx="100" cy="230" r="5"/></g>
+  <circle cx="280" cy="283.3" r="10" fill="#f97316" stroke="#9a3412" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700"><text x="386" y="202" fill="#2563eb">2x + y = 12</text><text x="424" y="325" fill="#be185d">x + 2y = 12</text><text x="406" y="235" fill="#b45309">P = 36</text><text x="293" y="273" fill="#9a3412">(4, 4): P = 36</text><text x="375" y="379" fill="#1e3a8a">(6, 0): 30</text><text x="112" y="219" fill="#1e3a8a">(0, 6): 24</text><text x="112" y="380" fill="#1e3a8a">(0, 0): 0</text></g>
+  <path d="M352 238L334 249M352 238L347 260" stroke="#f97316" stroke-width="4" fill="none"/><text x="360" y="230" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#c2410c">higher profit ↗</text>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle"><text x="100" y="414">0</text><text x="190" y="414">2</text><text x="280" y="414">4</text><text x="370" y="414">6</text><text x="460" y="414">8</text><text x="550" y="414">10</text><text x="640" y="414">12</text></g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#475569" text-anchor="end"><text x="91" y="394">0</text><text x="91" y="337">2</text><text x="91" y="284">4</text><text x="91" y="230">6</text><text x="91" y="177">8</text><text x="91" y="123">10</text><text x="91" y="74">12</text></g>
+  <text x="668" y="396" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="108" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

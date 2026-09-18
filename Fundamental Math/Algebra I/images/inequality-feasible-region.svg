@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" role="img" aria-labelledby="title desc">
+  <title id="title">Feasible region for two linear inequalities</title>
+  <desc id="desc">A first-quadrant coordinate plane. The region satisfying x plus y less than or equal to 8 and x plus 2y less than or equal to 10 is shaded. Its vertices are 0 comma 0, 8 comma 0, 6 comma 2, and 0 comma 5.</desc>
+  <rect width="760" height="470" fill="#fff"/><text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">The overlap is the feasible region</text>
+  <g stroke="#dbe4f0" stroke-width="1"><path d="M110 70V390 M170 70V390 M230 70V390 M290 70V390 M350 70V390 M410 70V390 M470 70V390 M530 70V390 M590 70V390 M650 70V390"/><path d="M110 70H650 M110 110H650 M110 150H650 M110 190H650 M110 230H650 M110 270H650 M110 310H650 M110 350H650 M110 390H650"/></g>
+  <!-- vertices (0,0) 110,390; (8,0) 590,390; (6,2) 470,310; (0,5) 110,190 -->
+  <path d="M110 390L590 390L470 310L110 190Z" fill="#a7f3d0" opacity=".85"/>
+  <g stroke="#334155" stroke-width="2.5"><path d="M94 390H668"/><path d="M652 374L668 390L652 406" fill="none"/><path d="M110 406V54"/><path d="M94 70L110 54L126 70" fill="none"/></g>
+  <path d="M110 70L590 390" stroke="#2563eb" stroke-width="4"/><path d="M110 190L650 370" stroke="#db2777" stroke-width="4"/>
+  <g fill="#0f766e"><circle cx="110" cy="390" r="6"/><circle cx="590" cy="390" r="6"/><circle cx="470" cy="310" r="6"/><circle cx="110" cy="190" r="6"/></g>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f766e"><text x="122" y="380">(0, 0)</text><text x="560" y="380">(8, 0)</text><text x="480" y="300">(6, 2)</text><text x="122" y="182">(0, 5)</text></g>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700"><text x="365" y="182" fill="#2563eb">x + y = 8</text><text x="420" y="264" fill="#be185d">x + 2y = 10</text><text x="225" y="333" fill="#047857">all constraints true</text></g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#475569" text-anchor="middle"><text x="110" y="414">0</text><text x="170" y="414">1</text><text x="230" y="414">2</text><text x="290" y="414">3</text><text x="350" y="414">4</text><text x="410" y="414">5</text><text x="470" y="414">6</text><text x="530" y="414">7</text><text x="590" y="414">8</text></g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#475569" text-anchor="end"><text x="100" y="394">0</text><text x="100" y="354">1</text><text x="100" y="314">2</text><text x="100" y="274">3</text><text x="100" y="234">4</text><text x="100" y="194">5</text><text x="100" y="154">6</text><text x="100" y="114">7</text><text x="100" y="74">8</text></g>
+  <text x="678" y="396" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="118" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

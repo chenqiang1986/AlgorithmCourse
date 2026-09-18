@@ -56,7 +56,17 @@ a diagnostic test that samples the full range of Algebra I skills:
     Connecting a line's slope to its geometry: recognizing and constructing parallel and
     perpendicular lines, and finding the distance from a point to a line.
 12. [09-homework-line-equations-and-relations.md](./09-homework-line-equations-and-relations.md)
-    Homework covering Lessons 8–9: slope/intercepts/point-slope/general form, and
-    parallel/perpendicular lines with point-to-line distance.
+   Homework covering Lessons 8–9: slope/intercepts/point-slope/general form, and
+   parallel/perpendicular lines with point-to-line distance.
+13. [10-two-variable-inequalities-graphing-area.md](./10-two-variable-inequalities-graphing-area.md)
+    Graphing two-variable inequalities: boundary styles, test points, overlap, and
+    feasible-region vertices.
+14. [11-linear-programming-optimization.md](./11-linear-programming-optimization.md)
+   Optimizing a linear objective over a feasible region with the corner-point method.
+15. [10-homework-two-variable-inequalities.md](./10-homework-two-variable-inequalities.md)
+    Three problems on graphing inequalities, feasible-region vertices, and classifying a
+    system's solution set.
+16. [11-homework-linear-programming.md](./11-homework-linear-programming.md)
+    Three applications of revenue/profit maximization and cost minimization.
 
 More lessons can be added later as the course grows.

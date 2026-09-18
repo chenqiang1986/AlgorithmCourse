@@ -2,7 +2,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.metrics import auc, precision_recall_curve
+from sklearn.metrics import auc, precision_recall_curve, roc_curve
 
 
 def plot_roc(probabilities, actual_values, positive_label=1, ax=None):

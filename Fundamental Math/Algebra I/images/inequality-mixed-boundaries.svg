@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">Feasible region with mixed solid and dashed boundaries</title>
+  <desc id="desc">The system y greater than x minus 1, x plus y less than or equal to 5, and x greater than or equal to 0. The wedge between a dashed lower line and solid upper and left boundaries is shaded. The point 3 comma 2 is excluded because it lies on the dashed line.</desc>
+  <rect width="760" height="480" fill="#fff"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">Mixed boundaries: keep only the overlap</text>
+  <g stroke="#dbe4f0" stroke-width="1">
+    <path d="M130 70V410 M210 70V410 M290 70V410 M370 70V410 M450 70V410 M530 70V410 M610 70V410"/>
+    <path d="M130 110H610 M130 160H610 M130 210H610 M130 260H610 M130 310H610 M130 360H610 M130 410H610"/>
+  </g>
+  <!-- Interior is shaded, but the dashed lower edge is not included. -->
+  <path d="M130 410L130 110L370 260Z" fill="#c4b5fd" opacity=".70"/>
+  <g stroke="#334155" stroke-width="2.5">
+    <path d="M114 360H628"/><path d="M612 344L628 360L612 376" fill="none"/>
+    <path d="M130 426V54"/><path d="M114 70L130 54L146 70" fill="none"/>
+  </g>
+  <!-- x+y=5, solid; y=x-1, dashed; x=0 is the solid y-axis -->
+  <path d="M130 110L530 360" stroke="#2563eb" stroke-width="4"/>
+  <path d="M130 410L530 160" stroke="#db2777" stroke-width="4" stroke-dasharray="11 8"/>
+  <path d="M130 110V410" stroke="#0f766e" stroke-width="5"/>
+  <circle cx="370" cy="260" r="7" fill="#fff" stroke="#db2777" stroke-width="4"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700">
+    <text x="425" y="225" fill="#1d4ed8">x + y = 5 (solid)</text>
+    <text x="432" y="175" fill="#be185d">y = x − 1 (dashed)</text>
+    <text x="143" y="92" fill="#047857">x = 0 (solid)</text>
+    <text x="190" y="257" fill="#5b21b6">feasible region</text>
+    <text x="382" y="280" fill="#be185d">(3, 2) excluded</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#475569" text-anchor="middle">
+    <text x="130" y="384">0</text><text x="210" y="384">1</text><text x="290" y="384">2</text><text x="370" y="384">3</text><text x="450" y="384">4</text><text x="530" y="384">5</text><text x="610" y="384">6</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#475569" text-anchor="end">
+    <text x="120" y="414">−1</text><text x="120" y="364">0</text><text x="120" y="314">1</text><text x="120" y="264">2</text><text x="120" y="214">3</text><text x="120" y="164">4</text><text x="120" y="114">5</text>
+  </g>
+  <text x="638" y="366" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text>
+  <text x="138" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>

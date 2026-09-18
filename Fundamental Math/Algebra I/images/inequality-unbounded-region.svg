@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">An unbounded feasible region</title><desc id="desc">For y less than x minus 1, x plus y less than or equal to 5, and x greater than or equal to 0, the shaded solution region is below both diagonal boundaries and extends indefinitely downward and rightward. It is not the enclosed triangle between the lines.</desc>
+  <rect width="760" height="480" fill="#fff"/><text x="380" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#172554">Follow the inequality directions — do not assume the triangle</text>
+  <g stroke="#dbe4f0" stroke-width="1"><path d="M130 70V410 M210 70V410 M290 70V410 M370 70V410 M450 70V410 M530 70V410 M610 70V410"/><path d="M130 110H610 M130 160H610 M130 210H610 M130 260H610 M130 310H610 M130 360H610 M130 410H610"/></g>
+  <!-- all points below both boundaries, x>=0 -->
+  <path d="M130 410L130 410L370 260L610 410Z" fill="#fde68a" opacity=".8"/>
+  <g stroke="#334155" stroke-width="2.5"><path d="M114 360H628"/><path d="M612 344L628 360L612 376" fill="none"/><path d="M130 426V54"/><path d="M114 70L130 54L146 70" fill="none"/></g>
+  <path d="M130 110L530 360" stroke="#2563eb" stroke-width="4"/><path d="M130 410L530 160" stroke="#db2777" stroke-width="4" stroke-dasharray="11 8"/>
+  <path d="M130 70V410" stroke="#0f766e" stroke-width="5"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700"><text x="423" y="225" fill="#1d4ed8">x + y = 5 (solid)</text><text x="428" y="175" fill="#be185d">y = x − 1 (dashed)</text><text x="184" y="330" fill="#92400e">solution continues downward →</text><text x="385" y="283" fill="#92400e">not this triangle</text></g>
+  <path d="M278 294L350 272" stroke="#92400e" stroke-width="3"/><path d="M342 264L350 272L338 277" stroke="#92400e" stroke-width="3" fill="none"/>
+  <text x="638" y="366" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">x</text><text x="138" y="51" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">y</text>
+</svg>
