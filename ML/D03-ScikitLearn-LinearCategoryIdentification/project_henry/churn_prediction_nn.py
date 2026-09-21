@@ -5,6 +5,7 @@ from sklearn.compose import ColumnTransformer, TransformedTargetRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.model_selection import train_test_split, FixedThresholdClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, PolynomialFeatures
 from fourier_features import FourierFeatures
@@ -75,10 +76,7 @@ df["ContractPayment"] = df["Contract"] + df["PaymentMethod"]
 numeric_features = [
     "tenure",
     'TotalCharges',
-    #'MonthlyCharges',
-    #"MonthlyCharges2",
-    #"MonthlyCharges3",
-    "tenure2"
+    'MonthlyCharges'
 ]
 
 categorical_features = [
@@ -86,33 +84,36 @@ categorical_features = [
     'PhoneService', 'MultipleLines', 'InternetService',
     'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
     'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling',
-    'PaymentMethod', 
-    #"ContractInternet",
-    #"ContractPayment",
+    'PaymentMethod',
 ]
 
-X = df[numeric_features + categorical_features + ["MonthlyCharges"]]
+X = df[numeric_features + categorical_features]
 y = df["Churn"]
 
-X_train, X_test_vali, y_train, y_test_vali = train_test_split(X, y, test_size = 0.4, shuffle=True, random_state=5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, shuffle=True, random_state=5)
 
-X_vali, X_test, y_vali, y_test = train_test_split(X_test_vali, y_test_vali, test_size = 0.5, shuffle=True, random_state=25)
-
-sample_weights = np.where((y_train == "Yes") & (X_train["MonthlyCharges"] > 20), X_train["MonthlyCharges"] / 20, 1)
+sample_weights = np.where(y_train == "Yes", X_train["MonthlyCharges"] / 20, 1)
 
 preprocessor = ColumnTransformer(
     transformers=[
         ("num", StandardScaler(), numeric_features),
         ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
-        ("con", GroupInteraction("Contract"), ["Contract", "tenure", "tenure2"]),
-        ("for", FourierFeatures(degree = 10), ["MonthlyCharges"])
     ]
+)
+
+two_layer_nn = MLPClassifier(
+    hidden_layer_sizes=(16, 8 ),  # One hidden layer with 16 neurons
+    activation='logistic',     # Sigmoid activation function for the hidden layer
+    solver='adam',             # Optimization algorithm 
+    max_iter=1000,
+    random_state=42,
+    #alpha = 1.7
 )
 
 feature_pipeline = Pipeline(
     steps=[
         ("preprocess", preprocessor),
-        ("regressor", LogisticRegression())
+        ("regressor", two_layer_nn)
     ]
 )
 
@@ -122,14 +123,14 @@ model.fit(X_train, y_train,
           regressor__sample_weight=sample_weights
         )
 
-y_vali_pred = model.predict(X_vali)
-y_vali_pred_prob = model.predict_proba(X_vali)
 y_pred = model.predict(X_test)
 y_pred_prob = model.predict_proba(X_test)
+y_pred_prob_train = model.predict_proba(X_train)
 
 print(y_pred_prob)
-_, num = find_minimum_cost(X_vali, y_vali, y_vali_pred_prob[:,1])
-print(find_cost(X_test, y_test, y_pred_prob[:,1], num/100))
+print(find_cost(X_test, y_test, y_pred_prob[:,1], 0.5))
+print(find_minimum_cost(X_test, y_test, y_pred_prob[:,1]))
+print(find_minimum_cost(X_train, y_train, y_pred_prob_train[:,1]))
 
 print("Counts:\n", confusion_matrix(y_test, y_pred))
 print("Precision per class (normalize='pred'):\n", confusion_matrix(y_test, y_pred, normalize="pred").round(3))
