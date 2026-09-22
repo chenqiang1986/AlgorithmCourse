@@ -138,21 +138,36 @@ $$3^{10}=(3^2)^5\equiv2^5=32\equiv4\pmod7.$$
 
 The remainder is **$4$**.
 
-## 5. What You May *Not* Do: Cancel Automatically
+## 5. What You May *Not* Do: Divide Automatically
 
-Multiplication is always safe, but division or cancellation is not automatically safe.
-For example,
+Multiplication is always safe, but division is not automatically safe. For example,
 
 $$2\cdot1\equiv2\cdot4\pmod6$$
 
-is true, because $2\equiv8\pmod6$. But $1\not\equiv4\pmod6$. Cancelling the $2$
-would turn a true statement into a false one.
+is true, because $2\equiv8\pmod6$. But $1\not\equiv4\pmod6$. Dividing both sides by
+$2$ while keeping the modulus $6$ would turn a true statement into a false one.
 
-Cancellation by $c$ modulo $n$ is valid only when $c$ and $n$ have no common factor
-greater than $1$. For now, use this safe rule:
+Here is the division rule we may use. If
 
-> Add, subtract, and multiply congruences freely. Do not divide or cancel unless you
-> have checked that it is allowed.
+$$a\equiv b\pmod n,$$
+
+and a nonzero integer $d$ divides $a$, $b$, and $n$, then
+
+$$\frac{a}{d}\equiv\frac{b}{d}\pmod{n/d}.$$
+
+All three divisions must be exact. In general, this does **not** mean
+
+$$\frac{a}{d}\equiv\frac{b}{d}\pmod n\qquad\text{❌}$$
+
+The modulus must also be divided by $d$. For example, since $18\equiv6\pmod{12}$ and
+$6$ divides $18$, $6$, and $12$, we get
+
+$$\frac{18}{6}\equiv\frac{6}{6}\pmod{12/6},$$
+
+or $3\equiv1\pmod2$, which is true.
+
+> Add, subtract, and multiply congruences freely. Divide only when the divisor divides
+> both numbers and the modulus; then divide the modulus as well.
 
 ## 6. Divisibility Tests as Congruences
 
@@ -256,7 +271,8 @@ as $-1$ may be congruent to a valid remainder, but it is not itself the standard
 
 ### 8.4 Cancelling without checking
 
-From $ca\equiv cb\pmod n$, one cannot generally conclude $a\equiv b\pmod n$.
+From $ca\equiv cb\pmod n$, one cannot generally conclude $a\equiv b\pmod n$. If $c$
+divides both sides and $n$, the safe division rule gives $a\equiv b\pmod{n/c}$ instead.
 
 ## 9. Key Takeaways
 
@@ -265,6 +281,7 @@ From $ca\equiv cb\pmod n$, one cannot generally conclude $a\equiv b\pmod n$.
 - $a\equiv b\pmod n$ exactly when $n\mid(a-b)$, or when $a$ and $b$ have the same
   remainder on division by $n$.
 - Congruences can be added, subtracted, and multiplied.
-- Division and cancellation require special care and are not automatic.
+- Division is allowed when the divisor divides both numbers and the modulus; the new
+  modulus is the original modulus divided by that divisor.
 
 The next lesson will use this language to study prime numbers and factorization.

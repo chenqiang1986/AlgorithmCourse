@@ -30,5 +30,27 @@ solving. The complete scope and sequence is in [00-syllabus.md](./00-syllabus.md
 8. [04-homework-euclidean-algorithm-for-gcd.md](./04-homework-euclidean-algorithm-for-gcd.md)
    Euclidean-algorithm practice, GCD-to-LCM calculations, applications, and proof
    reasoning with remainders.
-
-Additional lessons will be added following the syllabus sequence.
+9. [05-bezouts-identity-and-linear-congruences.md](./05-bezouts-identity-and-linear-congruences.md)
+   Bézout's identity and extended Euclidean algorithm, modular inverses, linear
+   congruences, and the solution structure for non-coprime coefficients.
+10. [05-homework-bezouts-identity-and-linear-congruences.md](./05-homework-bezouts-identity-and-linear-congruences.md)
+    Practice with Bézout coefficients, modular inverses, linear congruences, and
+    their solution structure.
+11. [06-simultaneous-congruences-and-crt.md](./06-simultaneous-congruences-and-crt.md)
+   Simultaneous congruences, the Chinese Remainder Theorem, construction, and
+   substitution methods.
+12. [06-homework-simultaneous-congruences-and-crt.md](./06-homework-simultaneous-congruences-and-crt.md)
+    Practice with two- and three-congruence systems, compatibility for non-coprime
+    moduli, CRT applications, and uniqueness reasoning.
+13. [07-divisor-counting-and-eulers-totient.md](./07-divisor-counting-and-eulers-totient.md)
+    Counting positive divisors from prime exponents; introduction to Euler's totient
+    function through relatively prime residues and prime powers.
+14. [07-homework-divisor-counting-and-eulers-totient.md](./07-homework-divisor-counting-and-eulers-totient.md)
+    Practice with divisor counts, restricted divisor families, reverse divisor-count
+    reasoning, and initial totient calculations.
+15. [08-eulers-theorem.md](./08-eulers-theorem.md)
+    Euler's theorem, reduced residue systems, the relative-primality condition,
+    exponent reduction, and Fermat's little theorem.
+16. [08-homework-eulers-theorem.md](./08-homework-eulers-theorem.md)
+    Practice checking hypotheses, finding power remainders, proving the residue-system
+    step, and handling cases where Euler's theorem does not apply.

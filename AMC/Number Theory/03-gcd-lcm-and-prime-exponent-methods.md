@@ -102,7 +102,45 @@ at most both exponents, so the largest possible choice is their minimum.
 Likewise, if $m$ is a multiple of both $a$ and $b$, each exponent in $m$ must be at
 least both exponents, so the smallest possible choice is their maximum.
 
-## 4. A Reliable Factorization Table
+## 4. GCD and LCM Divisibility Theorems
+
+For positive integers $a$, $b$, and $x$, GCD and LCM are characterized by the
+following two complementary properties:
+
+$$\boxed{x\mid a\text{ and }x\mid b\quad\Longleftrightarrow\quad x\mid\gcd(a,b)}$$
+
+$$\boxed{a\mid x\text{ and }b\mid x\quad\Longleftrightarrow\quad\operatorname{lcm}(a,b)\mid x}$$
+
+The forward directions are the requested GCD and LCM theorems:
+
+- If $x\mid a$ and $x\mid b$, then $x\mid\gcd(a,b)$.
+- If $a\mid x$ and $b\mid x$, then $\operatorname{lcm}(a,b)\mid x$.
+
+The reverse directions follow immediately because $\gcd(a,b)$ divides both $a$ and
+$b$, while both $a$ and $b$ divide $\operatorname{lcm}(a,b)$.
+
+### Proof From Prime Exponents
+
+Suppose a prime $p$ has exponents $\alpha$, $\beta$, and $\gamma$ in $a$, $b$, and
+$x$, respectively. If $x\mid a$ and $x\mid b$, then
+
+$$\gamma\le\alpha\qquad\text{and}\qquad\gamma\le\beta.$$
+
+Therefore $\gamma\le\min(\alpha,\beta)$, so the $p$-power in $x$ divides the
+$p$-power in $\gcd(a,b)$. This holds for every prime, proving
+
+$$x\mid\gcd(a,b).$$
+
+Similarly, if $a\mid x$ and $b\mid x$, then
+
+$$\alpha\le\gamma\qquad\text{and}\qquad\beta\le\gamma.$$
+
+Thus $\max(\alpha,\beta)\le\gamma$, so the $p$-power in $\operatorname{lcm}(a,b)$
+divides the $p$-power in $x$. This holds for every prime, proving
+
+$$\operatorname{lcm}(a,b)\mid x.$$
+
+## 5. A Reliable Factorization Table
 
 For $252$ and $660$, first factor:
 
@@ -130,7 +168,7 @@ This table makes an important detail visible: a prime that occurs in only one nu
 has exponent $0$ in the other. It contributes nothing to the GCD but must appear in
 the LCM.
 
-## 5. The Product Formula
+## 6. The Product Formula
 
 For positive integers $a$ and $b$,
 
@@ -159,7 +197,7 @@ $$\operatorname{lcm}(84,150)=\frac{84\cdot150}{6}=2{,}100.$$
 This formula is for **positive** integers in this course. When calculating by hand,
 divide by the GCD before multiplying when possible; it keeps numbers smaller.
 
-## 6. Applications
+## 7. Applications
 
 ### Reducing a Fraction
 
@@ -201,7 +239,7 @@ seconds, so the next simultaneous flash is at **12:01:12**.
 An LCM answers “when do repeating schedules next line up?” It is a time interval, so
 be sure all periods use the same unit before finding it.
 
-## 7. Class Practice
+## 8. Class Practice
 
 ### Problem 1
 
@@ -296,7 +334,7 @@ They next ring together $72$ minutes after 9:00 AM, at **10:12 AM**.
 
 </details>
 
-## 8. Common Mistakes
+## 9. Common Mistakes
 
 ### 8.1 Using maximum exponents for the GCD
 
@@ -328,6 +366,9 @@ Prime factorizations turn GCD and LCM into an exponent comparison:
 
 - For a **GCD**, keep every prime at its **smallest** exponent.
 - For an **LCM**, keep every prime at its **largest** exponent.
+
+Equivalently, every common divisor $x$ of $a$ and $b$ divides $\gcd(a,b)$, and
+$\operatorname{lcm}(a,b)$ divides every common multiple $x$ of $a$ and $b$.
 
 For positive integers,
 
