@@ -77,5 +77,11 @@ starting Algebra I:
 16. [11-homework-solving-linear-equations.md](./11-homework-solving-linear-equations.md)
     Homework covering Lessons 10–11: two-variable substitution and elimination, plus
     three-variable elimination.
+17. [12-line-equations-on-the-xy-plane.md](./12-line-equations-on-the-xy-plane.md)
+    Connecting ordered-pair solutions to line graphs; slope, intercepts, slope-intercept
+    form, standard form, vertical lines, and constant-rate models.
+18. [12-homework-line-equations-on-the-xy-plane.md](./12-homework-line-equations-on-the-xy-plane.md)
+    A 12-problem homework set on graphing, writing, and interpreting line equations on the
+    coordinate plane.
 
 More lessons can be added later as the course grows.

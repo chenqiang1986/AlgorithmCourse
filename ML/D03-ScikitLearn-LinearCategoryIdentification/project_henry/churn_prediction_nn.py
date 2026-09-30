@@ -90,7 +90,9 @@ categorical_features = [
 X = df[numeric_features + categorical_features]
 y = df["Churn"]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, shuffle=True, random_state=5)
+X_train_vali, X_test, y_train_vali, y_test = train_test_split(X, y, test_size = 0.2, shuffle=True, random_state=5)
+
+X_train, X_vali, y_train, y_vali = train_test_split(X_train_vali, y_train_vali, test_size = 0.25, shuffle=True, random_state=16)
 
 sample_weights = np.where(y_train == "Yes", X_train["MonthlyCharges"] / 20, 1)
 
@@ -123,14 +125,16 @@ model.fit(X_train, y_train,
           regressor__sample_weight=sample_weights
         )
 
+y_vali_pred = model.predict(X_vali)
+y_vali_pred_prob = model.predict_proba(X_vali)
 y_pred = model.predict(X_test)
 y_pred_prob = model.predict_proba(X_test)
-y_pred_prob_train = model.predict_proba(X_train)
 
 print(y_pred_prob)
-print(find_cost(X_test, y_test, y_pred_prob[:,1], 0.5))
-print(find_minimum_cost(X_test, y_test, y_pred_prob[:,1]))
-print(find_minimum_cost(X_train, y_train, y_pred_prob_train[:,1]))
+vali_cost, num = find_minimum_cost(X_vali, y_vali, y_vali_pred_prob[:,1])
+print("Testing Validation Cost:", vali_cost)
+print("Testing Cost:", find_cost(X_test, y_test, y_pred_prob[:,1], num/100))
+print("Cutoff:", num)
 
 print("Counts:\n", confusion_matrix(y_test, y_pred))
 print("Precision per class (normalize='pred'):\n", confusion_matrix(y_test, y_pred, normalize="pred").round(3))
@@ -138,6 +142,6 @@ print("Recall per class (normalize='true'):\n", confusion_matrix(y_test, y_pred,
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("F1:", f1_score(y_test, y_pred, pos_label="Yes"))
 
-plot_roc(y_pred_prob[:,1], y_test, positive_label="Yes")
-plot_precision_vs_recall(y_pred_prob[:,1], y_test, positive_label="Yes")
-plt.show()
+#plot_roc(y_pred_prob[:,1], y_test, positive_label="Yes")
+#plot_precision_vs_recall(y_pred_prob[:,1], y_test, positive_label="Yes")
+#plt.show()

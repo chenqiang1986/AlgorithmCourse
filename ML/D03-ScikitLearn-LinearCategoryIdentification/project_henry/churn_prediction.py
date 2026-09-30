@@ -94,9 +94,9 @@ categorical_features = [
 X = df[numeric_features + categorical_features + ["MonthlyCharges"]]
 y = df["Churn"]
 
-X_train, X_test_vali, y_train, y_test_vali = train_test_split(X, y, test_size = 0.4, shuffle=True, random_state=5)
+X_train_vali, X_test, y_train_vali, y_test = train_test_split(X, y, test_size = 0.2, shuffle=True, random_state=5)
 
-X_vali, X_test, y_vali, y_test = train_test_split(X_test_vali, y_test_vali, test_size = 0.5, shuffle=True, random_state=25)
+X_train, X_vali, y_train, y_vali = train_test_split(X_train_vali, y_train_vali, test_size = 0.25, shuffle=True, random_state=35)
 
 sample_weights = np.where((y_train == "Yes") & (X_train["MonthlyCharges"] > 20), X_train["MonthlyCharges"] / 20, 1)
 
@@ -104,22 +104,22 @@ preprocessor = ColumnTransformer(
     transformers=[
         ("num", StandardScaler(), numeric_features),
         ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
-        ("con", GroupInteraction("Contract"), ["Contract", "tenure", "tenure2"]),
-        ("for", FourierFeatures(degree = 10), ["MonthlyCharges"])
+        #("con", GroupInteraction("Contract"), ["Contract", "tenure", "tenure2"]),
+        ("for", FourierFeatures(degree = 1), ["MonthlyCharges"]),
     ]
 )
 
 feature_pipeline = Pipeline(
     steps=[
         ("preprocess", preprocessor),
-        ("regressor", LogisticRegression())
+        ("regressor", LogisticRegression(class_weight="balanced"))
     ]
 )
 
 model = feature_pipeline
 
 model.fit(X_train, y_train, 
-          regressor__sample_weight=sample_weights
+          #regressor__sample_weight=sample_weights
         )
 
 y_vali_pred = model.predict(X_vali)
@@ -128,15 +128,17 @@ y_pred = model.predict(X_test)
 y_pred_prob = model.predict_proba(X_test)
 
 print(y_pred_prob)
-_, num = find_minimum_cost(X_vali, y_vali, y_vali_pred_prob[:,1])
-print(find_cost(X_test, y_test, y_pred_prob[:,1], num/100))
+vali_cost, num = find_minimum_cost(X_vali, y_vali, y_vali_pred_prob[:,1])
+print("Testing Validation Cost:", vali_cost)
+print("Testing Cost:", find_cost(X_test, y_test, y_pred_prob[:,1], num/100))
+print("Cutoff:", num)
 
 print("Counts:\n", confusion_matrix(y_test, y_pred))
-print("Precision per class (normalize='pred'):\n", confusion_matrix(y_test, y_pred, normalize="pred").round(3))
-print("Recall per class (normalize='true'):\n", confusion_matrix(y_test, y_pred, normalize="true").round(3))
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("F1:", f1_score(y_test, y_pred, pos_label="Yes"))
+print("Testing Precision per class (normalize='pred'):\n", confusion_matrix(y_test, y_pred, normalize="pred").round(3))
+print("Testing Recall per class (normalize='true'):\n", confusion_matrix(y_test, y_pred, normalize="true").round(3))
+print("Testing Accuracy:", accuracy_score(y_test, y_pred))
+print("Testing F1:", f1_score(y_test, y_pred, pos_label="Yes"))
 
-plot_roc(y_pred_prob[:,1], y_test, positive_label="Yes")
-plot_precision_vs_recall(y_pred_prob[:,1], y_test, positive_label="Yes")
-plt.show()
+#plot_roc(y_pred_prob[:,1], y_test, positive_label="Yes")
+#plot_precision_vs_recall(y_pred_prob[:,1], y_test, positive_label="Yes")
+#plt.show()

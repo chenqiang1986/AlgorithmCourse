@@ -66,5 +66,12 @@ Course 3:
     A 20-problem homework set covering Lessons 7–8: evaluating expressions, combining like
     terms, the distributive property, and solving one- and two-step equations, including word
     problems that require building an equation first.
+12. [09-one-variable-linear-inequalities.md](./09-one-variable-linear-inequalities.md)
+    Introduces inequality symbols and number-line graphs, then solves one- and two-step linear
+    inequalities, including the rule to flip the inequality when multiplying or dividing by a
+    negative number.
+13. [09-homework-one-variable-linear-inequalities.md](./09-homework-one-variable-linear-inequalities.md)
+    A 20-problem homework set on reading, solving, checking, and graphing one-variable linear
+    inequalities, including negative coefficients and real-world applications.
 
 More lessons can be added later as the course grows.

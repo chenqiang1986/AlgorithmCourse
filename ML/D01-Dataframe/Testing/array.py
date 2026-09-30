@@ -1,14 +1,16 @@
-import pandas as pd
+import numpy as np
 
-students = pd.DataFrame({
-    "student_id": [1, 2, 3, 4],
-    "name": ["Ann", "Ben", "Cara", "Dan"]
-})
+w = np.ones((2,3,4))
+x = np.ones(4)
+y = np.ones((2,2))
 
-scores = pd.DataFrame({
-    "student_id": [1, 2, 3],
-    "math": [82, 94, 88]
-})
 
-merged = students.merge(scores, on="student_id", how="left")
-print(merged)
+print(np.einsum("ijk,l,mn->ijklmn",w,x,y).shape)
+
+#print(w @ x)
+#print(np.sum(x[None, :] * w, axis=1))
+
+
+
+#print(np.tensordot(w, x, axes=0))
+#print(np.einsum("ij,k->ijk", w,x))
