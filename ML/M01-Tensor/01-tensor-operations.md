@@ -436,6 +436,12 @@ For each sample, write an equivalent `np.einsum(...)` call. Then give the index 
 
    Assume `A.shape == (batch, tokens, outputs)`, `B.shape == (batch, tokens, features)`, and `C.shape == (features, outputs)`. Rewrite the contraction with `einsum`, keeping the elementwise addition explicit.
 
+6. Cyclic property of the trace: let `A.shape == (m, n)` and `B.shape == (n, m)`. Prove that
+
+   $$\operatorname{trace}(AB)=\operatorname{trace}(BA).$$
+
+   Expand both traces in index notation. Why are both products defined even when `A` and `B` are not square?
+
 ### D. Readability reflection
 
 Compare these equivalent implementations:
@@ -488,6 +494,17 @@ Try the exercises before opening this section.
 **C4.** `np.einsum('bof,bf->bo', A, x)`; $y_{bo} = \sum_f A_{bof}x_{bf}$; result order 2, shape `(batch, outputs)`.
 
 **C5.** `D = A + np.einsum('ijl,lk->ijk', B, C)`; $D_{ijk} = A_{ijk} + \sum_l B_{ijl}C_{lk}$; result order 3, shape `(batch, tokens, outputs)`.
+
+**C6.** Since $(AB)_{ii}=\sum_j A_{ij}B_{ji}$ and $(BA)_{jj}=\sum_i B_{ji}A_{ij}$,
+
+$$
+\operatorname{trace}(AB)
+=\sum_i\sum_j A_{ij}B_{ji}
+=\sum_j\sum_i B_{ji}A_{ij}
+=\operatorname{trace}(BA).
+$$
+
+`AB` has shape `(m, m)` and `BA` has shape `(n, n)`, so each trace is defined. The matrices themselves need not be square; only their inner dimensions must match.
 
 **D.** The `einsum` version makes the contracted axis `l` and retained axes `i`, `j`, and `k` explicit, so it is generally clearer when comparing code with a tensor derivation. `np.matmul` is still a strong choice when the operation is standard matrix multiplication and its axes are already obvious from the surrounding code.
 
