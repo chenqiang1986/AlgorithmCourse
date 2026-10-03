@@ -25,6 +25,7 @@ In this module, we will learn:
    Ordered arrangements ($P_n^r$) vs. unordered selections ($C_n^r$), plus repeated-item and circular arrangements.
 4. [04-adjacency-constraints.md](./04-adjacency-constraints.md)
    Special model: counting arrangements where two specific items must be adjacent, or must never be adjacent.
+   Practice homework: [04-homework-adjacency-constraints.md](./04-homework-adjacency-constraints.md).
 5. [05-stars-and-bars.md](./05-stars-and-bars.md)
    Special model: distributing identical items into distinct groups using separators.
 6. [06-recursive-counting.md](./06-recursive-counting.md)

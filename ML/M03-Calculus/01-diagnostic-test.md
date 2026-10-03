@@ -5,7 +5,7 @@ This diagnostic checks the multivariable-calculus skills used in this module.
 
 ## How to Use This Test
 
-- Suggested time: **60 minutes**. Show your reasoning and calculations.
+- Suggested time: **70 minutes**. Show your reasoning and calculations.
 - For the proof problem, clearly identify the chain rule and the definition of a tangent vector that you use.
 - This is a diagnostic, not a graded exam. Attempt every problem before consulting the [solutions](./02-diagnostic-test-solutions.md).
 
@@ -41,7 +41,19 @@ Suppose $\nabla f(p)\ne\mathbf 0$. Prove that $\nabla f(p)$ is orthogonal to eve
 
 You may represent a tangent vector using a differentiable curve $\boldsymbol\gamma(t)$ in $L_c$ with $\boldsymbol\gamma(t_0)=p$.
 
-## Problem 4: Extremum on an Unbounded Region
+## Problem 4: Convexity of a Function of Two Variables
+
+Let
+
+$$
+q(x,y)=e^{x-y}+x^2+2y^2-4x+2y.
+$$
+
+1. Find the Hessian matrix $H_q(x,y)$.
+2. Use the Hessian to determine whether $q$ is convex, strictly convex,
+   concave, or neither on $\mathbb R^2$. Justify your answer.
+
+## Problem 5: Extremum on an Unbounded Region
 
 Find all global extrema of
 
@@ -51,7 +63,7 @@ $$
 
 on the unbounded domain $\mathbb R^2$. State both the extremal value(s) and where they occur. If an extremum does not exist, explain why.
 
-## Problem 5: Extremum Subject to a Curve Constraint
+## Problem 6: Extremum Subject to a Curve Constraint
 
 Find the absolute maximum and absolute minimum of
 
@@ -74,5 +86,6 @@ Use Lagrange multipliers, and give all points at which each extremum occurs.
 | 1 | Differentiating a vector-valued parametrization |
 | 2 | Computing and evaluating a gradient |
 | 3 | Proving gradient–level-set orthogonality using the chain rule |
-| 4 | Global extrema on an unbounded domain and behavior at infinity |
-| 5 | Constrained extrema with Lagrange multipliers |
+| 4 | Testing convexity of a two-variable function using its Hessian |
+| 5 | Global extrema on an unbounded domain and behavior at infinity |
+| 6 | Constrained extrema with Lagrange multipliers |

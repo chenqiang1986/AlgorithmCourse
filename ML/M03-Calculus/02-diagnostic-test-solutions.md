@@ -69,7 +69,39 @@ Since $\boldsymbol\gamma'(t_0)$ is an arbitrary tangent vector to the level
 set at $p$, $\nabla f(p)$ is orthogonal to every such tangent vector. The
 assumption $\nabla f(p)\ne\mathbf0$ ensures that it is a nonzero normal vector.
 
-## Problem 4: Extremum on an Unbounded Region
+## Problem 4: Convexity of a Function of Two Variables
+
+1. The Hessian is
+
+$$
+H_q(x,y)=
+\begin{pmatrix}
+e^{x-y}+2 & -e^{x-y}\\
+-e^{x-y} & e^{x-y}+4
+\end{pmatrix}.
+$$
+
+2. The leading principal minor is
+
+$$
+e^{x-y}+2>0.
+$$
+
+Also,
+
+$$
+\begin{aligned}
+\det(H_q)
+&=(e^{x-y}+2)(e^{x-y}+4)-(-e^{x-y})^2\\
+&=6e^{x-y}+8>0.
+\end{aligned}
+$$
+
+Thus $H_q(x,y)$ is positive definite for every $(x,y)\in\mathbb R^2$.
+Therefore $q$ is **strictly convex** on $\mathbb R^2$. In particular, it is
+convex and is not concave.
+
+## Problem 5: Extremum on an Unbounded Region
 
 The gradient is
 
@@ -114,7 +146,7 @@ $$
 Likewise, $F(0,y)=6-(y+1)^2\to-\infty$ as $y\to\infty$. Hence there is no
 global minimum.
 
-## Problem 5: Extremum Subject to a Curve Constraint
+## Problem 6: Extremum Subject to a Curve Constraint
 
 Let
 
