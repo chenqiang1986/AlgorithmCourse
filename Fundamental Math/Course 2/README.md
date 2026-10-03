@@ -73,5 +73,9 @@ Course 3:
 13. [09-homework-one-variable-linear-inequalities.md](./09-homework-one-variable-linear-inequalities.md)
     A 20-problem homework set on reading, solving, checking, and graphing one-variable linear
     inequalities, including negative coefficients and real-world applications.
+14. [10-interim-test.md](./10-interim-test.md)
+    A 100-point, 60-minute interim assessment covering Lessons 3–9: integer and fraction
+    operations, expressions, equations, and one-variable inequalities. Worked solutions and
+    scoring guidance: [10-interim-test-solutions.md](./10-interim-test-solutions.md).
 
 More lessons can be added later as the course grows.

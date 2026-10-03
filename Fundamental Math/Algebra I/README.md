@@ -80,5 +80,11 @@ a diagnostic test that samples the full range of Algebra I skills:
 20. [13-homework-graphing-quadratic-functions.md](./13-homework-graphing-quadratic-functions.md)
    A 12-problem homework set on graphing quadratics, including vertex form, intercept
    cases, leading coefficients, and fractional completing-the-square work.
+21. [14-factoring-quadratic-equations.md](./14-factoring-quadratic-equations.md)
+   Factoring quadratic equations with the zero-product property, including the direct
+   connection among factors, roots, and $x$-intercepts.
+22. [14-homework-factoring-quadratic-equations.md](./14-homework-factoring-quadratic-equations.md)
+   A 12-problem practice set on factoring quadratics and using factors to find roots and
+   $x$-intercepts, with complete solutions.
 
 More lessons can be added later as the course grows.

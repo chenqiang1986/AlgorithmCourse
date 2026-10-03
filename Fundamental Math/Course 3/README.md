@@ -83,5 +83,9 @@ starting Algebra I:
 18. [12-homework-line-equations-on-the-xy-plane.md](./12-homework-line-equations-on-the-xy-plane.md)
     A 12-problem homework set on graphing, writing, and interpreting line equations on the
     coordinate plane.
+19. [13-interim-test.md](./13-interim-test.md)
+    A 60-minute, 100-point interim assessment covering Lessons 3–12: real numbers,
+    decimal conversions, exponents, scientific notation, linear equations, systems, and
+    line equations. Worked key: [14-interim-test-solutions.md](./14-interim-test-solutions.md).
 
 More lessons can be added later as the course grows.
