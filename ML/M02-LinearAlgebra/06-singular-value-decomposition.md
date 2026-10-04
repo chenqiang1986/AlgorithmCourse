@@ -246,6 +246,6 @@ directions of variation. PCA is therefore SVD applied to centered data.
 
 ## Practice
 
-Continue with [SVD Practice: Energy and Image Compression](./04-svd-practice.md)
+Continue with [SVD Practice: Energy and Image Compression](./06-singular-value-decomposition_homework.md)
 to prove the Frobenius-norm identity and use a truncated SVD to compress a
 grayscale image.
