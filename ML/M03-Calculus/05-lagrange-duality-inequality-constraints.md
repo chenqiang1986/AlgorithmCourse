@@ -56,7 +56,8 @@ side of a boundary rather than only on the boundary itself.
   <g font-family="sans-serif" font-size="17"><text x="430" y="284" fill="#9a3412">feasible: x ≥ 1</text><text x="416" y="142" fill="#111827">(1, 1)</text><text x="416" y="166" fill="#0f766e">constrained minimum</text><text x="397" y="279" fill="#111827">1</text><text x="515" y="85" fill="#0f766e">f(x) = x²</text></g>
 </svg>
 
-For a **minimization** problem, we will use
+**Definition (Primal optimal value).** For a minimization problem, the
+primal optimal value is
 
 $$
 \boxed{
@@ -73,7 +74,8 @@ attained.
 
 ## 2. The Lagrangian: a price for violating a limit
 
-Assign one multiplier $\lambda_i\geq0$ to each inequality and define
+**Definition (Lagrangian).** Assign one multiplier $\lambda_i\geq0$ to each
+inequality. The Lagrangian is
 
 $$
 \boxed{
@@ -126,9 +128,10 @@ $$
 \mathcal L(\mathbf x,\boldsymbol\lambda)}_{\text{original primal value }p_*}.
 $$
 
-The **Lagrange dual** reverses that order. First choose a nonnegative price
-vector; then allow $\mathbf x$ to minimize the resulting Lagrangian over all
-points, even infeasible ones:
+**Definition (Lagrange dual and dual optimal value).** The Lagrange dual
+reverses that order. First choose a nonnegative price vector; then allow
+$\mathbf x$ to minimize the resulting Lagrangian over all points, even
+infeasible ones. Its optimal value is
 
 $$
 \boxed{
@@ -137,7 +140,7 @@ d_*=
 \mathcal L(\mathbf x,\boldsymbol\lambda).}
 $$
 
-Define the inner value as the **dual function**,
+**Definition (Dual function).** The inner value is the dual function,
 
 $$
 q(\boldsymbol\lambda)=\inf_{\mathbf x}
@@ -146,8 +149,7 @@ $$
 
 so the dual question is $d_*=\sup_{\boldsymbol\lambda\geq0}q(\boldsymbol\lambda)$.
 
-The two orders need not give the same number. For every function of two
-variables, the minimax inequality says
+**Theorem (Weak Duality).** The dual value never exceeds the primal value:
 
 $$
 \boxed{
@@ -158,16 +160,26 @@ $$
 \mathcal L(\mathbf x,\boldsymbol\lambda).}
 $$
 
-In our notation, this is
+**Proof:** Let $\mathbf x$ be any primal-feasible point and let
+$\boldsymbol\lambda\geq\mathbf0$. Since every $g_i(\mathbf x)\leq0$,
 
 $$
-\boxed{d_*\leq p_*.}
+q(\boldsymbol\lambda)
+=\inf_{\mathbf z}\mathcal L(\mathbf z,\boldsymbol\lambda)
+\leq\mathcal L(\mathbf x,\boldsymbol\lambda)
+=f(\mathbf x)+\sum_i\lambda_i g_i(\mathbf x)
+\leq f(\mathbf x).
 $$
 
-This guaranteed inequality is **weak duality**. The dual produces lower
-bounds on the constrained minimum, but without additional assumptions it
-may not reach the primal value. The difference $p_*-d_*$ is the **duality
-gap**.
+Taking the infimum over all feasible $\mathbf x$, then the supremum over
+$\boldsymbol\lambda\geq\mathbf0$, gives $d_*\leq p_*$.
+
+$\square$
+
+The dual produces lower bounds on the constrained minimum, but without
+additional assumptions it may not reach the primal value.
+
+**Definition (Duality gap).** The difference $p_*-d_*$ is the duality gap.
 
 Even when $f$ and the $g_i$ are not convex, $q$ is always concave: it is the
 pointwise infimum of functions affine in $\boldsymbol\lambda$. Thus the
@@ -239,9 +251,9 @@ $\square$
 
 ## 5. KKT conditions: why they arise
 
-For differentiable $f$ and $g_i$, a candidate primal-dual pair
-$(\mathbf x_*,\boldsymbol\lambda_*)$ satisfies the
-**Karush–Kuhn–Tucker (KKT) conditions** when
+**Definition (Karush–Kuhn–Tucker conditions).** For differentiable $f$ and
+$g_i$, a candidate primal-dual pair $(\mathbf x_*,\boldsymbol\lambda_*)$
+satisfies the KKT conditions when
 
 $$
 \begin{aligned}
@@ -255,13 +267,18 @@ $$
 \end{aligned}
 $$
 
-Here is the informal idea behind these four lines. It is not a full proof;
-the standard theorem also needs a regularity condition. In the argument
-below, it is enough to assume that the gradients of the active constraints
-are linearly independent.
+**Theorem (KKT necessary conditions under LICQ).** Consider the problem of
+minimizing differentiable $f(\mathbf x)$ subject to differentiable
+constraints $g_i(\mathbf x)\leq0$. If $\mathbf x_*$ is a local minimizer
+(and hence if it is a global minimizer) and the gradients of its active
+constraints are linearly independent, then there is a vector
+$\boldsymbol\lambda_*\geq\mathbf0$ such that
+$(\mathbf x_*,\boldsymbol\lambda_*)$ satisfies the KKT conditions.
 
-Suppose $\mathbf x_*$ is a local solution. Relabel the constraints, if
-needed, so that the first $m$ are **active** and the rest are **slack**:
+**Proof Sketch:** The full theorem requires a careful constraint-
+qualification argument; here is the geometric idea under the stated linear-
+independence assumption. Relabel the constraints so that the first $m$ are
+**active** and the rest are **slack**:
 
 $$
 g_1(\mathbf x_*)=\cdots=g_m(\mathbf x_*)=0,
@@ -324,7 +341,12 @@ states:
 | $g_i(\mathbf x_*)<0$ (slack) | $\lambda_{i*}=0$ | The limit is not binding, so it has no price. |
 | $\lambda_{i*}>0$ | $g_i(\mathbf x_*)=0$ | The limit is binding. |
 
-For the example, stationarity gives $2x-\lambda=0$. At
+Together, stationarity, primal feasibility, dual feasibility, and
+complementary slackness establish the KKT conditions.
+
+$\square$
+
+For the earlier one-variable example, stationarity gives $2x-\lambda=0$. At
 $(x_*,\lambda_*)=(1,2)$, feasibility holds and
 
 $$
@@ -496,18 +518,29 @@ $\square$
 ## 6. When does the dual give the exact answer?
 
 Weak duality always holds, but equality $d_*=p_*$ needs additional
-assumptions. A widely used sufficient set is:
+assumptions.
+
+**Definition (Strong duality).** Strong duality holds when the primal and
+dual optimal values coincide:
+
+$$
+d_*=p_*.
+$$
+
+**Theorem (Strong duality under Slater's condition).** Suppose that
 
 - $f$ and every $g_i$ are convex;
-- any equality constraints are affine; and
+- all equality constraints are affine; and
 - there is a strictly feasible point with $g_i(\mathbf x)<0$ for every
   inequality (the **Slater condition**).
 
-Under these conditions, strong duality holds: $d_*=p_*$. In a differentiable
-convex problem satisfying this regularity condition, KKT conditions are both
-necessary and sufficient for optimality. Outside this setting, KKT may still
-find useful candidates, but it is not by itself a universal proof of a global
-minimum.
+Then strong duality holds: $d_*=p_*$. In a differentiable convex problem
+satisfying this regularity condition, KKT conditions are both necessary and
+sufficient for optimality.
+
+The proof of this standard result is beyond the scope of this lesson.
+Outside this setting, KKT may still find useful candidates, but it is not by
+itself a universal proof of a global minimum.
 
 ## 7. Maximization problems and a common sign error
 

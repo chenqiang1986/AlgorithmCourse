@@ -18,78 +18,105 @@ By the end of this lesson, you should be able to:
 
 ## Eigenpairs
 
-A nonzero vector $v$ is an **eigenvector** of $A$ if
+**Definition (Eigenpair).** A nonzero vector $v$ is an **eigenvector** of
+$A$ if
 
 $$
 Av=\lambda v,
 $$
 
-for some scalar $\lambda$, called its **eigenvalue**. To find candidates for
-$\lambda$, rearrange:
+for some scalar $\lambda$, called its **eigenvalue**. The pair $(\lambda,v)$
+is an **eigenpair** of $A$.
+
+**Theorem (Eigenvectors for Distinct Eigenvalues Are Linearly Independent).**
+Eigenvectors of a matrix that correspond to distinct eigenvalues are linearly
+independent.
+
+**Proof:** Let $v_1,\ldots,v_k$ be eigenvectors with distinct eigenvalues
+$\lambda_1,\ldots,\lambda_k$. Suppose, for a contradiction, that they are
+linearly dependent. Let $\ell$ be the smallest index for which
+$v_1,\ldots,v_\ell$ are linearly dependent. Then
 
 $$
-(A-\lambda I)v=0.
+c_1v_1+\cdots+c_\ell v_\ell=0
 $$
 
-This homogeneous system has a nonzero solution exactly when
+for some coefficients $c_i$, where $c_\ell\ne0$. At least one coefficient
+$c_i$ with $i<\ell$ is also nonzero; otherwise $c_\ell v_\ell=0$ would
+contradict $v_\ell\ne0$.
+
+Applying $A-\lambda_\ell I$ gives
 
 $$
-\boxed{\det(A-\lambda I)=0.}
+c_1(\lambda_1-\lambda_\ell)v_1+\cdots+
+c_{\ell-1}(\lambda_{\ell-1}-\lambda_\ell)v_{\ell-1}=0.
 $$
 
-For each root $\lambda$, solve $(A-\lambda I)v=0$ to obtain its eigenspace.
+This is a nontrivial linear relation among $v_1,\ldots,v_{\ell-1}$, because
+the eigenvalues are distinct. It contradicts the minimality of $\ell$.
+Therefore $v_1,\ldots,v_k$ are linearly independent.
 
-### Worked Example
+$\square$
 
-Let $A=\begin{pmatrix}4&1\\2&3\end{pmatrix}$. Then
+**Definition (Characteristic Polynomial).** The **characteristic polynomial**
+of an $n\times n$ matrix $A$ is
 
 $$
-\det(A-\lambda I)
-=\det\begin{pmatrix}4-\lambda&1\\2&3-\lambda\end{pmatrix}
+\chi_A(t)=\det(tI-A).
+$$
+
+**Theorem (Eigenvalues and the Characteristic Polynomial).** A scalar
+$\lambda$ is an eigenvalue of $A$ if and only if it is a root of the
+characteristic polynomial of $A$; equivalently,
+
+$$
+\chi_A(\lambda)=\det(\lambda I-A)=0.
+$$
+
+**Proof:** By definition, $\lambda$ is an eigenvalue precisely when there is
+a nonzero vector $v$ such that
+
+$$
+Av=\lambda v,
+$$
+
+which is equivalent to
+
+$$
+(\lambda I-A)v=0.
+$$
+
+This homogeneous system has a nonzero solution if and only if
+$\lambda I-A$ is singular, which holds if and only if
+$\det(\lambda I-A)=0$. Thus $\lambda$ is an eigenvalue if and only if it is
+a root of $\chi_A(t)$.
+
+$\square$
+
+For each root $\lambda$, solve $(\lambda I-A)v=0$ to obtain its eigenspace.
+
+**Example (Finding Eigenpairs).** Let
+$A=\begin{pmatrix}4&1\\2&3\end{pmatrix}$. Find its eigenvalues and one
+eigenvector for each eigenvalue.
+
+**Solution:**
+
+$$
+\det(\lambda I-A)
+=\det\begin{pmatrix}\lambda-4&-1\\-2&\lambda-3\end{pmatrix}
 =\lambda^2-7\lambda+10.
 $$
 
 The eigenvalues are $5$ and $2$. For $\lambda=5$, an eigenvector is
 $v_1=(1,1)^T$; for $\lambda=2$, an eigenvector is $v_2=(1,-2)^T$.
 
-### Trace and Determinant from Eigenvalues
-
-> **Theorem.** Let $A$ be an $n\times n$ matrix with eigenvalues
-> $\lambda_1,\ldots,\lambda_n$, counted with algebraic multiplicity. Then
->
-> $$
-> \boxed{\operatorname{tr}(A)=\lambda_1+\cdots+\lambda_n}
-> \qquad\text{and}\qquad
-> \boxed{\det(A)=\lambda_1\cdots\lambda_n.}
-> $$
-
-> This holds even when $A$ is not diagonalizable; if necessary, include its
-> complex eigenvalues.
-
-Indeed, the characteristic polynomial can be written as
-
-$$
-\det(\lambda I-A)
-=\lambda^n-M_1\lambda^{n-1}+M_2\lambda^{n-2}-\cdots+(-1)^nM_n
-=\prod_{i=1}^n(\lambda-\lambda_i).
-$$
-
-Here $M_k$ is the sum of all $k\times k$ **principal minors** of $A$:
-
-$$
-M_k=\sum_{\substack{S\subseteq\{1,\ldots,n\}\\|S|=k}}\det(A_{S,S}),
-$$
-
-where $A_{S,S}$ is formed by retaining the same indexed rows and columns in
-$S$. In particular, $M_1=\operatorname{tr}(A)$ and $M_n=\det(A)$.
-Comparing the coefficients of $\lambda^{n-1}$ and the constant terms gives
-the two formulas; equivalently, the theorem follows from Vieta's formulas
-applied to the characteristic polynomial.
+$\square$
 
 ### Algebraic and Geometric Multiplicity
 
-An eigenvalue can occur more than once. Its **algebraic multiplicity** is its
-multiplicity as a root of the characteristic polynomial. For example, if
+**Definition (Algebraic Multiplicity).** An eigenvalue can occur more than
+once. Its **algebraic multiplicity** is its multiplicity as a root of the
+characteristic polynomial. For example, if
 
 $$
 \det(\lambda I-A)=(\lambda-2)^3(\lambda+1),
@@ -98,7 +125,8 @@ $$
 then $2$ has algebraic multiplicity $3$, while $-1$ has algebraic
 multiplicity $1$.
 
-For an eigenvalue $\lambda$, its **eigenspace** is
+**Definition (Eigenspace and Geometric Multiplicity).** For an eigenvalue
+$\lambda$, its **eigenspace** is
 
 $$
 E_\lambda=\operatorname{Null}(A-\lambda I).
@@ -112,12 +140,13 @@ $$
 
 the number of linearly independent eigenvectors associated with $\lambda$.
 
-> **Theorem.** If $\lambda$ is an eigenvalue of $A$, then
->
-> $$
-> \boxed{1\le\text{geometric multiplicity of }\lambda
-> \le\text{algebraic multiplicity of }\lambda.}
-> $$
+**Theorem (Geometric Multiplicity Bound).** If $\lambda$ is an eigenvalue of
+$A$, then
+
+$$
+\boxed{1\le\text{geometric multiplicity of }\lambda
+\le\text{algebraic multiplicity of }\lambda.}
+$$
 
 **Proof.** Because $\lambda$ is an eigenvalue, its eigenspace contains a
 nonzero eigenvector. Thus its dimension, its geometric multiplicity, is at
@@ -181,24 +210,65 @@ eigenvalue equals its algebraic multiplicity. When they agree for every
 eigenvalue, however, there are enough independent eigenvectors to diagonalize
 the matrix, as the next section explains.
 
+$\square$
+
+### Trace and Determinant from Eigenvalues
+
+**Theorem (Trace and Determinant from Eigenvalues).** Let $A$ be an
+$n\times n$ matrix with eigenvalues $\lambda_1,\ldots,\lambda_n$, counted
+with algebraic multiplicity. Then
+
+$$
+\boxed{\operatorname{tr}(A)=\lambda_1+\cdots+\lambda_n}
+\qquad\text{and}\qquad
+\boxed{\det(A)=\lambda_1\cdots\lambda_n.}
+$$
+
+This holds even when $A$ is not diagonalizable; if necessary, include its
+complex eigenvalues.
+
+**Proof:**
+
+Indeed, the characteristic polynomial can be written as
+
+$$
+\det(\lambda I-A)
+=\lambda^n-M_1\lambda^{n-1}+M_2\lambda^{n-2}-\cdots+(-1)^nM_n
+=\prod_{i=1}^n(\lambda-\lambda_i).
+$$
+
+Here $M_k$ is the sum of all $k\times k$ **principal minors** of $A$:
+
+$$
+M_k=\sum_{\substack{S\subseteq\{1,\ldots,n\}\\|S|=k}}\det(A_{S,S}),
+$$
+
+where $A_{S,S}$ is formed by retaining the same indexed rows and columns in
+$S$. In particular, $M_1=\operatorname{tr}(A)$ and $M_n=\det(A)$.
+Comparing the coefficients of $\lambda^{n-1}$ and the constant terms gives
+the two formulas; equivalently, the theorem follows from Vieta's formulas
+applied to the characteristic polynomial.
+
+$\square$
+
 ## Diagonalization
 
-If an $n\times n$ matrix has $n$ linearly independent eigenvectors
-$v_1,\ldots,v_n$, place them in the columns of $P$ and place their eigenvalues
-in a diagonal matrix $D$:
+**Theorem (Diagonalization Criterion).** An $n\times n$ matrix $A$ is
+diagonalizable if it has $n$ linearly independent eigenvectors
+$v_1,\ldots,v_n$. If $P$ has these eigenvectors as its columns and
+$D=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)$ contains their
+corresponding eigenvalues, then
 
 $$
 P=\begin{pmatrix}\vert&&\vert\\v_1&\cdots&v_n\\\vert&&\vert\end{pmatrix},
 \qquad D=\operatorname{diag}(\lambda_1,\ldots,\lambda_n).
 $$
 
-Then
-
 $$
 \boxed{A=PDP^{-1}.}
 $$
 
-Here is why this factorization follows. Since the columns of $P$ are the
+**Proof:** Since the columns of $P$ are the
 eigenvectors of $A$, multiplying $A$ by $P$ applies $A$ to one eigenvector at
 a time:
 
@@ -228,18 +298,33 @@ $$
 A^k=PD^kP^{-1}.
 $$
 
+$\square$
+
+**Corollary (Distinct Eigenvalues).** If an $n\times n$ matrix $A$ has $n$
+distinct eigenvalues, then $A$ is diagonalizable.
+
+**Proof:** Choose an eigenvector for each eigenvalue. By the preceding
+theorem, these $n$ eigenvectors are linearly independent. The
+diagonalization criterion applies, so $A$ is diagonalizable.
+
+$\square$
+
 ## The Spectral Theorem for Real Symmetric Matrices
 
-A real matrix is **symmetric** when $A^T=A$. The spectral theorem states:
+**Definition (Symmetric Matrix).** A real matrix $A$ is **symmetric** when
+$A^T=A$.
 
-> Every real symmetric $n\times n$ matrix has real eigenvalues and an
-> orthonormal basis of eigenvectors.
+**Theorem (Spectral Theorem).** Every real symmetric $n\times n$ matrix has
+real eigenvalues and an orthonormal basis of eigenvectors.
 
 ### Why the Spectral Theorem Holds
 
-The result follows from three theorems.
+**Proof:** The result follows from the three theorems below.
 
-#### Theorem 1: Eigenvalues of a Real Symmetric Matrix Are Real
+**Theorem (Eigenvalues of a Real Symmetric Matrix Are Real).** Every
+eigenvalue of a real symmetric matrix is real.
+
+**Proof:**
 
 Let $Av=\lambda v$ with $v\ne0$; such a possibly complex eigenpair exists
 because the characteristic polynomial has a complex root. Using conjugate
@@ -254,9 +339,13 @@ Because $v^*v>0$, we have $\lambda=\overline{\lambda}$, so every eigenvalue
 is real. For a real eigenvalue, the real system $(A-\lambda I)v=0$ has a
 nonzero real solution, so we may choose its eigenvector to be real.
 
-#### Theorem 2: Eigenvectors for Distinct Eigenvalues Are Perpendicular
+$\square$
 
-Next, suppose $Av=\lambda v$ and $Aw=\mu w$, where $\lambda\ne\mu$. Then
+**Theorem (Eigenvectors for Distinct Eigenvalues Are Perpendicular).** If
+$v$ and $w$ are eigenvectors of a real symmetric matrix belonging to distinct
+eigenvalues, then $v\perp w$.
+
+**Proof:** Suppose $Av=\lambda v$ and $Aw=\mu w$, where $\lambda\ne\mu$. Then
 
 $$
 \lambda v^Tw=(Av)^Tw=v^TAw=\mu v^Tw.
@@ -265,9 +354,12 @@ $$
 Thus $(\lambda-\mu)v^Tw=0$, which gives $v^Tw=0$: eigenvectors belonging to
 different eigenvalues are perpendicular.
 
-#### Theorem 3: Every Real Symmetric Matrix Is Orthogonally Diagonalizable
+$\square$
 
-We prove this theorem by induction on $n$. For the inductive step, choose a
+**Theorem (Orthogonal Diagonalization of Symmetric Matrices).** Every real
+symmetric matrix is orthogonally diagonalizable.
+
+**Proof:** We prove this theorem by induction on $n$. For the inductive step, choose a
 unit eigenvector $v$ with eigenvalue $a$ and extend $v$ to an orthonormal
 basis.
 
@@ -321,6 +413,14 @@ The bracketed matrix is orthogonal, and the middle matrix is diagonal, so
 $A$ is orthogonally diagonalizable. The $1\times1$ case starts the induction,
 proving the theorem.
 
+$\square$
+
+The first theorem gives real eigenvalues, and orthogonal diagonalization
+gives an orthonormal basis of eigenvectors. These are precisely the two
+conclusions of the spectral theorem.
+
+$\square$
+
 So a real symmetric matrix has the stronger factorization
 
 $$
@@ -341,15 +441,13 @@ $Q^{-1}=Q^T$, so changing coordinates preserves lengths and angles.
   <line class="line" x1="447" y1="216" x2="704" y2="5"/><line class="line" x1="532" y1="66" x2="622" y2="156"/><text class="s" x="695" y="18">$\lambda_1v_1$</text><text class="s" x="625" y="163">$\lambda_2v_2$</text><text class="t" x="478" y="214">scale each direction</text>
 </svg>
 
-### Symmetric Example
-
-For
+**Example (Orthogonal Diagonalization).** Orthogonally diagonalize
 
 $$
-A=\begin{pmatrix}2&1\\1&2\end{pmatrix},
+A=\begin{pmatrix}2&1\\1&2\end{pmatrix}.
 $$
 
-the eigenvalues are $3$ and $1$, with unit eigenvectors
+**Solution:** The eigenvalues are $3$ and $1$, with unit eigenvectors
 
 $$
 q_1=\frac1{\sqrt2}\begin{pmatrix}1\\1\end{pmatrix},
@@ -361,10 +459,15 @@ Thus $A=Q\operatorname{diag}(3,1)Q^T$, where $Q=(q_1\ q_2)$. The diagonal
 form says directly that $A$ triples the $q_1$ direction and leaves the $q_2$
 direction unchanged.
 
+$\square$
+
 ## What Can Go Wrong Without Symmetry?
 
 The conclusions of the spectral theorem need not hold for a nonsymmetric real
-matrix. For example, the two-dimensional rotation matrix
+matrix.
+
+**Example (A Rotation Without Real Eigenvectors).** Consider the
+two-dimensional rotation matrix
 
 $$
 R_\theta=
@@ -374,16 +477,21 @@ R_\theta=
 \end{pmatrix}
 $$
 
-has eigenvalues $e^{i\theta}$ and $e^{-i\theta}$. For a $90^\circ$ rotation,
-these are $i$ and $-i$, so there are no real eigenvalues or real eigenvectors.
+**Solution:** Its eigenvalues are $e^{i\theta}$ and $e^{-i\theta}$. For a
+$90^\circ$ rotation, these are $i$ and $-i$, so there are no real eigenvalues
+or real eigenvectors.
 
-Also, some matrices are not diagonalizable at all. Consider
+$\square$
+
+**Example (A Nondiagonalizable Matrix).** Consider
 
 $$
 J=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
 $$
 
-Its only eigenvalue is $1$, with algebraic multiplicity $2$, since
+**Solution:** Its only eigenvalue is $1$, with algebraic multiplicity $2$,
+since
+
 $\det(tI-J)=(t-1)^2$. But
 
 $$
@@ -398,14 +506,27 @@ Thus its eigenspace is only the line spanned by $(1,0)^T$. Therefore $1$ has
 geometric multiplicity $1$, so $J$ has just one linearly independent
 eigenvector and cannot be diagonalized.
 
+$\square$
+
 ## Quick Check
 
-1. What equation finds the eigenvalues of $A$?
-2. What additional property does $Q$ have in $A=Q\Lambda Q^T$?
-3. Why is every real symmetric matrix diagonalizable?
+**Problem (Characteristic Equation).** What equation finds the eigenvalues
+of $A$?
 
-### Answers
+**Solution:** $\chi_A(\lambda)=\det(\lambda I-A)=0$.
 
-1. $\det(A-\lambda I)=0$.
-2. Its columns are orthonormal, so $Q^{-1}=Q^T$.
-3. The spectral theorem supplies an orthonormal eigenvector basis.
+$\square$
+
+**Problem (Orthogonal Matrix).** What additional property does $Q$ have in
+$A=Q\Lambda Q^T$?
+
+**Solution:** Its columns are orthonormal, so $Q^{-1}=Q^T$.
+
+$\square$
+
+**Problem (Symmetric Diagonalization).** Why is every real symmetric matrix
+diagonalizable?
+
+**Solution:** The spectral theorem supplies an orthonormal eigenvector basis.
+
+$\square$

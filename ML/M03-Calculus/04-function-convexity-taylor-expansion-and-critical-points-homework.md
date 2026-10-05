@@ -95,7 +95,23 @@ by examining the function along one or more paths.
 3. $h(x,y)=x^4+y^4$.
 4. $q(x,y)=x^4-y^4$.
 
-## 7. Least squares and a global minimum
+## 7. Hessians and critical points
+
+At a critical point, a twice-differentiable function has the following Hessian
+matrices. Classify the critical point as a strict local minimum, a strict local
+maximum, saddle point, or inconclusive from this test.
+
+$$
+H_1=\begin{pmatrix}6&1\\1&3\end{pmatrix},
+\qquad
+H_2=\begin{pmatrix}-2&0\\0&-5\end{pmatrix},
+\qquad
+H_3=\begin{pmatrix}1&0\\0&-4\end{pmatrix},
+\qquad
+H_4=\begin{pmatrix}1&0\\0&0\end{pmatrix}.
+$$
+
+## 8. Least squares and a global minimum
 
 For the data matrix and target vector
 
@@ -118,7 +134,7 @@ $$
    minimizer $\boldsymbol\beta_*$.
 3. Explain why your answer is the unique global minimizer.
 
-## 8. Derive directional first and second derivatives with index notation
+## 9. Derive directional first and second derivatives with index notation
 
 Let $f:\mathbb R^n\to\mathbb R$ be twice continuously differentiable, fix
 $\mathbf x_0\in\mathbb R^n$, and let $\mathbf e\in\mathbb R^n$ be a unit
@@ -147,7 +163,7 @@ $$
 Then explain in one or two sentences how $g''(t)\ge0$ for every unit vector
 $\mathbf e$ leads to the positive-semidefinite Hessian condition.
 
-## 9. Challenge — derive the multivariable second-order Taylor expansion
+## 10. Challenge — derive the multivariable second-order Taylor expansion
 
 Let $f:\mathbb R^n\to\mathbb R$ be twice continuously differentiable near
 $\mathbf a$, and let $\mathbf h$ be a small displacement vector. Derive the

@@ -75,21 +75,37 @@ already uses its eigenvector coordinates.
 3. Which direction has greater curvature, and how do you see it from the
    eigenvalues?
 
-## 6. Hessians and critical points
+## 6. Ellipses and hyperbolas from quadratic forms
 
-At a critical point, a twice-differentiable function has the following Hessian
-matrices. Classify the critical point as a strict local minimum, a strict local
-maximum, saddle point, or inconclusive from this test.
+For each level-set equation below, use the signs of the eigenvalues of its
+quadratic-form matrix to decide whether the curve is an ellipse or a
+hyperbola. Then answer the questions that follow.
 
-$$
-H_1=\begin{pmatrix}6&1\\1&3\end{pmatrix},
-\qquad
-H_2=\begin{pmatrix}-2&0\\0&-5\end{pmatrix},
-\qquad
-H_3=\begin{pmatrix}1&0\\0&-4\end{pmatrix},
-\qquad
-H_4=\begin{pmatrix}1&0\\0&0\end{pmatrix}.
-$$
+1. For $9x^2+4y^2=36$, find the semimajor-axis length, the semiminor-axis
+   length, and the direction of each axis.
+2. For $x^2-4y^2=4$, explain why the curve is a hyperbola rather than an
+   ellipse. Find its transverse and conjugate semiaxis lengths.
+3. For $xy=1$, write the equation as $x^TAx=1$ for a symmetric matrix $A$.
+   Use the eigenvalues and eigenvector directions of $A$ to explain why this
+   is a hyperbola, and identify its transverse and conjugate axes.
+4. Consider the rotated conic
+
+   $$
+   5x^2-6xy+5y^2=16.
+   $$
+
+   Find the eigenvalues and unit eigenvector directions of its quadratic-form
+   matrix. Use them to classify the curve and find its semimajor- and
+   semiminor-axis lengths.
+5. Consider the rotated conic
+
+   $$
+   x^2+4xy+y^2=8.
+   $$
+
+   Orthogonally diagonalize its quadratic-form matrix. Use the resulting
+   equation to classify the curve and identify the directions and lengths of
+   its transverse and conjugate semiaxes.
 
 ## Challenge: conditioning
 
