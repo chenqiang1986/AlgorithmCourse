@@ -33,18 +33,20 @@ normal vectors are therefore parallel.
 The diagram uses
 
 $$
-f(x,y)=x+2y,\qquad g(x,y)=x^2+y^2,\qquad g=5.
+f(x,y)=13x^2-8xy+7y^2,\qquad g(x,y)=x^2+y^2,\qquad g=5.
 $$
 
-At $P=(1,2)$, the $f$-contour and the constraint circle are tangent, and
+The contours of $f$ are rotated ellipses. At $P=(1,2)$, the $f$-contour and
+the constraint circle are tangent, and
 
 $$
-\nabla f(P)=(1,2),\qquad \nabla g(P)=(2,4)=2\nabla f(P).
+\nabla f(P)=(10,20),\qquad \nabla g(P)=(2,4),
+\qquad \nabla f(P)=5\nabla g(P).
 $$
 
 <svg viewBox="0 0 720 420" width="720" role="img" aria-labelledby="contour-title contour-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="contour-title">A contour of f tangent to a constraint circle</title>
-  <desc id="contour-desc">Several parallel contours of f and a circle g equals 5 touch at P. The gradients of f and g at P point in parallel directions.</desc>
+  <title id="contour-title">An elliptical contour of f tangent to a constraint circle</title>
+  <desc id="contour-desc">Several rotated elliptical contours of a quadratic function and a circle g equals 5 touch at P. The gradients of f and g at P point in parallel directions.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75"/></marker>
     <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/></marker>
@@ -55,18 +57,22 @@ $$
   <!-- Constraint: x squared plus y squared equals 5, centered at the origin -->
   <circle cx="175" cy="350" r="158.1" fill="none" stroke="#c2410c" stroke-width="4"/>
   <text x="292" y="230" fill="#9a3412" font-family="sans-serif" font-size="18">constraint: g(x,y) = 5</text>
-  <!-- Parallel contours x+2y=k; the middle one is tangent at P=(1,2) -->
+  <!-- Rotated elliptical contours of 13x squared minus 8xy plus 7y squared;
+       the middle ellipse f=25 is tangent at P=(1,2). -->
   <g fill="none" stroke="#0f766e" stroke-width="2.5" stroke-dasharray="8 6">
-    <path d="M80 60 L670 355"/><path d="M80 105 L650 390"/><path d="M80 125.75 L608.5 390"/><path d="M80 170 L520 390"/>
+    <ellipse cx="175" cy="350" rx="109.5" ry="63.2" transform="rotate(-63.435 175 350)"/>
+    <ellipse cx="175" cy="350" rx="158.1" ry="91.3" transform="rotate(-63.435 175 350)" stroke-width="3.5"/>
+    <ellipse cx="175" cy="350" rx="212.1" ry="122.5" transform="rotate(-63.435 175 350)"/>
   </g>
-  <text x="440" y="88" fill="#0f766e" font-family="sans-serif" font-size="18">contours of f</text>
+  <text x="425" y="88" fill="#0f766e" font-family="sans-serif" font-size="18">elliptical contours of f</text>
   <!-- P is coordinates (1,2), at pixel (245, 208.6) -->
   <circle cx="245.7" cy="208.6" r="6" fill="#111827"/>
   <text x="254" y="202" fill="#111827" font-family="sans-serif" font-size="17">P = (1, 2)</text>
-  <path d="M245.7 208.6 L290.5 119" stroke="#155e75" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="262" y="107" fill="#155e75" font-family="sans-serif" font-size="17">∇f = (1, 2)</text>
-  <path d="M245.7 208.6 L318.3 63.4" stroke="#c2410c" stroke-width="4" marker-end="url(#arrowOrange)"/>
-  <text x="319" y="52" fill="#c2410c" font-family="sans-serif" font-size="17">∇g = (2, 4)</text>
+  <!-- The arrow lengths reinforce that gradient f is five times gradient g. -->
+  <path d="M245.7 208.6 L335.1 29.8" stroke="#155e75" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="343" y="42" fill="#155e75" font-family="sans-serif" font-size="17">∇f = (10, 20)</text>
+  <path d="M245.7 208.6 L263.6 172.8" stroke="#c2410c" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <text x="269" y="175" fill="#c2410c" font-family="sans-serif" font-size="17">∇g = (2, 4)</text>
   <path d="M205 188.25 L335 253.25" stroke="#475569" stroke-width="2"/>
   <text x="335" y="265" fill="#475569" font-family="sans-serif" font-size="15">shared tangent</text>
 </svg>

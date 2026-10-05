@@ -7,7 +7,8 @@ objective values. Unless a problem says otherwise, find **absolute** extrema.
 
 ## 1. Read a contour map
 
-Let $f(x,y)=x+2y$ and let the constraint be $g(x,y)=x^2+y^2=5$.
+Let $f(x,y)=13x^2-8xy+7y^2$ and let the constraint be
+$g(x,y)=x^2+y^2=5$.
 
 1. Compute $\nabla f$ and $\nabla g$.
 2. At $P=(1,2)$, verify that the gradients are parallel.

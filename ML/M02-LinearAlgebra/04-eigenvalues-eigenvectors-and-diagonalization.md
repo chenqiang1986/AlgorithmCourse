@@ -86,6 +86,101 @@ Comparing the coefficients of $\lambda^{n-1}$ and the constant terms gives
 the two formulas; equivalently, the theorem follows from Vieta's formulas
 applied to the characteristic polynomial.
 
+### Algebraic and Geometric Multiplicity
+
+An eigenvalue can occur more than once. Its **algebraic multiplicity** is its
+multiplicity as a root of the characteristic polynomial. For example, if
+
+$$
+\det(\lambda I-A)=(\lambda-2)^3(\lambda+1),
+$$
+
+then $2$ has algebraic multiplicity $3$, while $-1$ has algebraic
+multiplicity $1$.
+
+For an eigenvalue $\lambda$, its **eigenspace** is
+
+$$
+E_\lambda=\operatorname{Null}(A-\lambda I).
+$$
+
+The **geometric multiplicity** of $\lambda$ is
+
+$$
+\dim(E_\lambda),
+$$
+
+the number of linearly independent eigenvectors associated with $\lambda$.
+
+> **Theorem.** If $\lambda$ is an eigenvalue of $A$, then
+>
+> $$
+> \boxed{1\le\text{geometric multiplicity of }\lambda
+> \le\text{algebraic multiplicity of }\lambda.}
+> $$
+
+**Proof.** Because $\lambda$ is an eigenvalue, its eigenspace contains a
+nonzero eigenvector. Thus its dimension, its geometric multiplicity, is at
+least $1$.
+
+Let the geometric multiplicity be $g$. Choose a basis
+$v_1,\ldots,v_g$ for $E_\lambda$, and extend it to a basis of the whole
+space,
+
+$$
+\mathcal B=(v_1,\ldots,v_g,b_1,\ldots,b_{n-g}).
+$$
+
+Put $P=[\,v_1\ \cdots\ v_g\ b_1\ \cdots\ b_{n-g}\,]$. Since
+$Av_i=\lambda v_i$, put $u_j=Ab_j$. Expressing the vectors $u_j$ in the
+basis $\mathcal B$ gives matrices $C$ and $B$ such that
+
+$$
+A[\,v_1\ \cdots\ v_g\ b_1\ \cdots\ b_{n-g}\,]
+= [\,\lambda v_1\ \cdots\ \lambda v_g\ u_1\ \cdots\ u_{n-g}\,]
+= P\begin{pmatrix}
+\lambda I_g & C\\
+0 & B
+\end{pmatrix}.
+$$
+
+Thus the matrix of $A$ relative to $\mathcal B$ is
+
+$$
+M=P^{-1}AP=
+\begin{pmatrix}
+\lambda I_g & C\\
+0 & B
+\end{pmatrix},
+$$
+
+a block upper-triangular matrix. This change-of-basis matrix has the same
+characteristic polynomial as $A$, because
+
+$$
+\det(tI-M)=\det\bigl(P^{-1}(tI-A)P\bigr)=\det(tI-A).
+$$
+
+On the other hand, the block upper-triangular form gives
+
+$$
+\det(tI-M)
+=\det\begin{pmatrix}
+(t-\lambda)I_g & -C\\
+0 & tI-B
+\end{pmatrix}
+=(t-\lambda)^g\det(tI-B).
+$$
+
+So $(t-\lambda)^g$ is a factor of the characteristic polynomial:
+$\lambda$ has algebraic multiplicity at least $g$. Hence geometric
+multiplicity is at most algebraic multiplicity.
+
+In general, there is no guarantee that the geometric multiplicity of an
+eigenvalue equals its algebraic multiplicity. When they agree for every
+eigenvalue, however, there are enough independent eigenvectors to diagonalize
+the matrix, as the next section explains.
+
 ## Diagonalization
 
 If an $n\times n$ matrix has $n$ linearly independent eigenvectors
@@ -288,7 +383,8 @@ $$
 J=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
 $$
 
-Its only eigenvalue is $1$. But
+Its only eigenvalue is $1$, with algebraic multiplicity $2$, since
+$\det(tI-J)=(t-1)^2$. But
 
 $$
 (J-I)v=0
@@ -298,8 +394,9 @@ $$
 \quad\Longrightarrow\quad y=0.
 $$
 
-Thus its eigenspace is only the line spanned by $(1,0)^T$, so $J$ has just one
-linearly independent eigenvector and cannot be diagonalized.
+Thus its eigenspace is only the line spanned by $(1,0)^T$. Therefore $1$ has
+geometric multiplicity $1$, so $J$ has just one linearly independent
+eigenvector and cannot be diagonalized.
 
 ## Quick Check
 
