@@ -251,6 +251,14 @@ $\square$
 
 ## 5. KKT conditions: why they arise
 
+The Lagrange dual is still a max--min problem: maximize
+$q(\boldsymbol\lambda)=\inf_{\mathbf x}\mathcal L(\mathbf x,\boldsymbol\lambda)$
+subject to $\boldsymbol\lambda\geq\mathbf0$. Its constraint is simpler
+than the primal constraints, but the dual formulation alone does not give a
+systematic way to find the minimizer of the Lagrangian (or the corresponding
+primal point). The KKT conditions give a system for identifying such
+candidates.
+
 **Definition (Karush–Kuhn–Tucker conditions).** For differentiable $f$ and
 $g_i$, a candidate primal-dual pair $(\mathbf x_*,\boldsymbol\lambda_*)$
 satisfies the KKT conditions when
@@ -526,6 +534,48 @@ dual optimal values coincide:
 $$
 d_*=p_*.
 $$
+
+**Lemma (A feasible primal--dual certificate gives strong duality).** Let
+$\boldsymbol\lambda_*$ solve the dual problem, and let $\mathbf x_*$ attain
+the infimum in $q(\boldsymbol\lambda_*)$. If $\mathbf x_*$ is primal
+feasible, meaning
+
+$$
+g_i(\mathbf x_*)\leq0
+\qquad\text{for every }i,
+$$
+
+and
+
+$$
+\lambda_{i*}g_i(\mathbf x_*)=0
+\qquad\text{for every }i,
+$$
+
+then strong duality holds, and $\mathbf x_*$ and
+$\boldsymbol\lambda_*$ are primal and dual optimal, respectively.
+
+**Proof:** Since $\mathbf x_*$ minimizes the Lagrangian at
+$\boldsymbol\lambda_*$,
+
+$$
+d_*=q(\boldsymbol\lambda_*)
+=\mathcal L(\mathbf x_*,\boldsymbol\lambda_*)
+=f(\mathbf x_*)+
+\sum_i\lambda_{i*}g_i(\mathbf x_*)
+=f(\mathbf x_*).
+$$
+
+Primal feasibility gives $p_*\leq f(\mathbf x_*)$, while weak duality gives
+$d_*\leq p_*$. Hence
+
+$$
+d_*\leq p_*\leq f(\mathbf x_*)=d_*,
+$$
+
+so $p_*=d_*=f(\mathbf x_*)$.
+
+$\square$
 
 **Theorem (Strong duality under Slater's condition).** Suppose that
 
