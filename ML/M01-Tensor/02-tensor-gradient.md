@@ -339,6 +339,20 @@ For Questions 5–8, also find the **second-order gradient**, meaning the gradie
 
    b. Find the Hessian $H=\nabla_w(\nabla_wL)$ and prove that it is positive semidefinite (non-negative definite).
 
+   c. Write code to verify your first-order gradient numerically. Choose a weight vector $w$ and a direction $dw$ of the same shape. For a small positive $\varepsilon$, compare the directional finite difference
+
+   $$
+   \frac{L(w+\varepsilon dw)-L(w)}{\varepsilon}
+   $$
+
+   with the directional derivative predicted by your hand calculation,
+
+   $$
+   (\nabla_wL)\mathbin{:}dw=\sum_j\frac{\partial L}{\partial w_j}dw_j.
+   $$
+
+   Report the two values and their absolute difference. Try a few decreasing values of $\varepsilon$ (while avoiding values so small that floating-point roundoff dominates).
+
    There is no bias term or regularization in this problem.
 
 10. **Logistic regression: binary cross-entropy.** Use the same feature matrix $X_{ij}$ and weights $w_j$. For binary label $t_i\in\{0,1\}$, define
@@ -350,6 +364,20 @@ For Questions 5–8, also find the **second-order gradient**, meaning the gradie
    a. Find $\nabla_wL$. Write the gradient vector in matrix form.
 
    b. Find the Hessian $H=\nabla_w(\nabla_wL)$ and prove that it is positive semidefinite (non-negative definite).
+
+   c. Write code to verify your first-order gradient numerically. Choose a weight vector $w$ and a direction $dw$ of the same shape. For a small positive $\varepsilon$, compare
+
+   $$
+   \frac{L(w+\varepsilon dw)-L(w)}{\varepsilon}
+   $$
+
+   with the directional derivative from your hand-derived gradient,
+
+   $$
+   (\nabla_wL)\mathbin{:}dw=\sum_j\frac{\partial L}{\partial w_j}dw_j.
+   $$
+
+   Report the two values and their absolute difference. Try a few decreasing values of $\varepsilon$ (while avoiding values so small that floating-point roundoff dominates).
 
 11. **Trace of a matrix product.** Let $A\in\mathbb{R}^{m\times n}$ and $B\in\mathbb{R}^{n\times m}$, and define the scalar
 
@@ -539,6 +567,15 @@ For Questions 5–8, also find the **second-order gradient**, meaning the gradie
 
    so $H$ is positive semidefinite (and positive definite when $X$ has full column rank).
 
+   **(c)** With a chosen direction $dw$, implement the stated forward finite difference and compare it with
+
+   $$
+   \nabla_wL\mathbin{:}dw
+   =\bigl[2X^T(Xw-t)\bigr]^Tdw.
+   $$
+
+   The two values should agree up to finite-difference and floating-point error.
+
 10. **(a)** The sigmoid derivative is $\frac{\partial p_i}{\partial z_i}=p_i(1-p_i)$, so
 
    $$
@@ -561,6 +598,15 @@ For Questions 5–8, also find the **second-order gradient**, meaning the gradie
    $$v^THv=\sum_i p_i(1-p_i)\bigl((Xv)_i\bigr)^2\ge0,$$
 
    so the Hessian is positive semidefinite and the binary cross-entropy loss is convex in $w$.
+
+   **(c)** With a chosen direction $dw$, implement the stated forward finite difference and compare it with
+
+   $$
+   \nabla_wL\mathbin{:}dw
+   =\bigl[X^T(\sigma(Xw)-t)\bigr]^Tdw.
+   $$
+
+   The two values should agree up to finite-difference and floating-point error.
 
 11. Write the trace as a sum over the shared index:
 
