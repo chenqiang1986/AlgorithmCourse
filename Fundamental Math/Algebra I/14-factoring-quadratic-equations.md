@@ -1,298 +1,324 @@
 # Lesson 14: Factoring Quadratic Equations and Finding Roots
 *Fundamental Math / Algebra I*
 
-Earlier quadratic lessons found roots by square roots and by completing the square. A
-different method is often faster when the quadratic can be written as a product:
+Factoring rewrites a quadratic as a product. Once the equation is equal to zero,
+the zero-product property turns its factors into roots:
 
 $$x^2+5x+6=(x+2)(x+3).$$
 
-Factoring is not just a way to rewrite an expression. Once an equation is equal to zero,
-each factor reveals a root. This lesson develops that connection and uses it to solve
-quadratic equations.
+This lesson uses a dependable order: recognize a special case first, use a
+cross-product chart for a general trinomial next, and use the quadratic formula
+to force a factorization when integer factoring does not work.
 
 ## 1. The Zero-Product Property
 
-The **zero-product property** says:
+**Theorem (Zero-Product Property).** If $AB=0$, then $A=0$ or $B=0$.
 
-$$AB=0\quad\Longrightarrow\quad A=0\text{ or }B=0.$$
+For example, from $(x-4)(x+1)=0$, either $x-4=0$ or $x+1=0$. Therefore,
+$x=4$ or $x=-1$.
 
-If neither $A$ nor $B$ were zero, their product could not be zero. This is the reason
-factoring can solve an equation.
-
-For example,
-
-$$
-(x-4)(x+1)=0
-$$
-
-is true when either factor is zero:
-
-$$
-x-4=0\quad\text{or}\quad x+1=0.
-$$
-
-Therefore, the roots are
-
-$$\boxed{x=4\text{ or }x=-1}.$$
-
-> The zero-product property applies only after one side of the equation is **zero**.
-> You may not split $(x-4)(x+1)=12$ into $x-4=12$ or $x+1=12$.
+> The zero-product property applies only after one side of the equation is $0$.
+> You may not split $(x-4)(x+1)=12$ into two separate equations.
 
 ## 2. Factors, Roots, and $x$-Intercepts
 
-Suppose a quadratic function is written in factored form:
+If
 
-$$f(x)=a(x-r_1)(x-r_2),\qquad a\ne0.$$
+$$f(x)=a(x-r_1)(x-r_2),\qquad a\ne0,$$
 
-To find its $x$-intercepts, set $f(x)=0$:
+then $f(x)=0$ when $x=r_1$ or $x=r_2$. The roots are also the $x$-coordinates of
+the $x$-intercepts: $(r_1,0)$ and $(r_2,0)$. Remember that the sign reverses in
+a factor: $(x-5)$ has root $5$, while $(x+5)$ has root $-5$.
 
-$$a(x-r_1)(x-r_2)=0.$$
+## 3. The Factoring Decision Order
 
-The number $a$ is nonzero, so it cannot make the product zero. The product is zero when
-$x-r_1=0$ or $x-r_2=0$. Thus:
+Before trying random pairs, use this order:
 
-- $r_1$ and $r_2$ are the **roots** (or solutions) of $f(x)=0$;
-- $(r_1,0)$ and $(r_2,0)$ are the graph's **$x$-intercepts**;
-- the signs in a factor are opposite the root: $(x-5)$ gives root $5$, while
-  $(x+5)$ gives root $-5$.
+1. Move all terms to one side so the other side is $0$.
+2. Factor out a GCF, if there is one.
+3. Look for a special pattern: difference of squares or a perfect-square trinomial.
+4. For a remaining trinomial, use the cross-product chart and try factor pairs.
+5. If it will not factor conveniently, find the roots with the quadratic formula and
+   write the factors from those roots.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" role="img" aria-labelledby="factor-roots-title factor-roots-desc" style="max-width:760px;width:100%;height:auto">
-  <title id="factor-roots-title">Factored form reveals roots and x-intercepts</title>
-  <desc id="factor-roots-desc">The equation f of x equals the product x minus 2 times x plus 3. Each factor is set to zero, giving roots 2 and negative 3, which are x-intercepts at 2 comma 0 and negative 3 comma 0.</desc>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#34506b"/>
-    </marker>
-  </defs>
-  <rect x="15" y="60" width="218" height="70" rx="10" fill="#eaf3fb" stroke="#34506b" stroke-width="2"/>
-  <text x="124" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#162b3d">f(x) = (x − 2)(x + 3)</text>
-  <text x="124" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#34506b">set f(x) equal to 0</text>
-  <path d="M235,95 H305" stroke="#34506b" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="320" y="18" width="170" height="55" rx="8" fill="#fff6df" stroke="#926a18" stroke-width="2"/>
-  <text x="405" y="51" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#523d11">x − 2 = 0 → x = 2</text>
-  <rect x="320" y="117" width="170" height="55" rx="8" fill="#fff6df" stroke="#926a18" stroke-width="2"/>
-  <text x="405" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#523d11">x + 3 = 0 → x = −3</text>
-  <path d="M490,46 H555" stroke="#34506b" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <path d="M490,144 H555" stroke="#34506b" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="570" y="18" width="174" height="55" rx="8" fill="#e7f5eb" stroke="#317a4c" stroke-width="2"/>
-  <text x="657" y="51" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f5132">x-intercept (2, 0)</text>
-  <rect x="570" y="117" width="174" height="55" rx="8" fill="#e7f5eb" stroke="#317a4c" stroke-width="2"/>
-  <text x="657" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f5132">x-intercept (−3, 0)</text>
-</svg>
+After any factorization, set every variable-containing factor equal to $0$.
 
-## 3. A Reliable Factoring-to-Roots Process
+## 4. Special Cases First
 
-Use this order every time:
+These cases should be checked before the general method because they are usually
+visible immediately.
 
-1. Move every term to one side so the equation is $0$ on the other side.
-2. Factor the quadratic expression completely.
-3. Set **each nonconstant factor** equal to $0$.
-4. Solve the resulting linear equations.
-5. Check by substituting the roots into the original equation, or by expanding the factors.
+### 4.1 Factor Out a Greatest Common Factor
 
-### Reading Example: A Monic Trinomial
+**Example (A Root at Zero).** Solve $3x^2-12x=0$.
 
-Solve $x^2+x-12=0$.
+**Solution:**
 
-We need two numbers with product $-12$ and sum $1$. They are $4$ and $-3$, so
+Both terms share $3x$:
 
-$$
-\begin{aligned}
-x^2+x-12&=0\\
-(x+4)(x-3)&=0.
-\end{aligned}
-$$
+$$3x^2-12x=3x(x-4).$$
 
-Now use the zero-product property:
+Thus $3x(x-4)=0$, so $x=0$ or $x-4=0$. The roots are
+$\boxed{x=0\text{ or }x=4}$.
 
-$$
-x+4=0\quad\text{or}\quad x-3=0.
-$$
+$\square$
 
-Therefore,
+The factor $x$ is $(x-0)$, so it reveals the intercept $(0,0)$.
 
-$$\boxed{x=-4\text{ or }x=3}.$$
-
-For the function $y=x^2+x-12$, the roots give $x$-intercepts $(-4,0)$ and $(3,0)$.
-
-## 4. Factoring When the Leading Coefficient Is Not 1
-
-For $ax^2+bx+c$, look for two binomials whose first terms multiply to $ax^2$ and whose
-last terms multiply to $c$. Check the middle terms by expanding or by combining the
-cross-products.
-
-### Reading Example: Non-Monic Trinomial
-
-Solve $2x^2+x-6=0$.
-
-The factors of $2x^2$ can be $2x$ and $x$; the factors of $-6$ can be $3$ and $-2$.
-Try $(2x-3)(x+2)$:
-
-$$
-(2x-3)(x+2)=2x^2+4x-3x-6=2x^2+x-6.
-$$
-
-So
-
-$$
-\begin{aligned}
-(2x-3)(x+2)&=0\\
-2x-3&=0\quad\text{or}\quad x+2=0\\
-x&=\frac32\quad\text{or}\quad x=-2.
-\end{aligned}
-$$
-
-The roots are $\boxed{x=\frac32\text{ or }x=-2}$. Notice that a factor like $2x-3$
-can produce a fractional root.
-
-## 5. Factor Out a Greatest Common Factor First
-
-Before factoring a trinomial, check whether every term has a **greatest common factor
-(GCF)**. Factoring it out can reveal a root immediately.
-
-### Reading Example: A Root at Zero
-
-Solve $3x^2-12x=0$.
-
-Both terms have $3x$ as a common factor:
-
-$$
-3x^2-12x=3x(x-4).
-$$
-
-Then
-
-$$
-3x(x-4)=0.
-$$
-
-The constant factor $3$ is never zero, but the other factors can be:
-
-$$
-x=0\quad\text{or}\quad x-4=0.
-$$
-
-Thus $\boxed{x=0\text{ or }x=4}$. The factor $x$ is really $(x-0)$, so it signals an
-$x$-intercept at $(0,0)$.
-
-## 6. Special Factor Patterns
-
-Two patterns appear often in quadratic equations.
-
-### Difference of Squares
+### 4.2 Difference of Squares
 
 $$a^2-b^2=(a-b)(a+b).$$
 
-For example, solve $9x^2-25=0$:
+**Example (Difference of Squares).** Solve $9x^2-25=0$.
+
+**Solution:**
+
+$$9x^2-25=(3x)^2-5^2=(3x-5)(3x+5).$$
+
+So $3x-5=0$ or $3x+5=0$. Therefore,
+$\boxed{x=\frac53\text{ or }x=-\frac53}$.
+
+$\square$
+
+### 4.3 Perfect-Square Trinomial
+
+$$a^2-2ab+b^2=(a-b)^2,\qquad a^2+2ab+b^2=(a+b)^2.$$
+
+**Example (Repeated Root).** Solve $x^2-10x+25=0$.
+
+**Solution:**
+
+$$x^2-10x+25=(x-5)^2.$$
+
+Then $(x-5)^2=0$, so $\boxed{x=5}$. This is a repeated (or double) root;
+the graph touches the $x$-axis at $(5,0)$ rather than crossing it.
+
+$\square$
+
+## 5. General Trinomials: Cross-Product Chart and Try
+
+For $ax^2+bx+c$, seek binomials $(px+q)(rx+s)$. Their products must satisfy
+
+$$pr=a,\qquad qs=c,\qquad ps+qr=b.$$
+
+The cross-products $psx$ and $qrx$ must add to the middle term $bx$. A chart keeps
+this check organized:
+
+| | First terms | Last terms |
+|---|---:|---:|
+| Choose factors | $px$ and $rx$ multiply to $ax^2$ | $q$ and $s$ multiply to $c$ |
+| Cross-products | $psx$ | $qrx$ |
+| Check | Together, they must equal $bx$ | |
+
+Try factor pairs systematically. The signs of $q$ and $s$ must multiply to the sign
+of $c$, and their cross-products must have the sign and size of $b$.
+
+**Example (Monic Trinomial).** Solve $x^2+x-12=0$.
+
+**Solution:**
+
+The first terms must be $x$ and $x$. For $-12$, try $4$ and $-3$:
+
+| Factor choice | Cross-products | Sum |
+|---|---:|---:|
+| $(x+4)(x-3)$ | $-3x$ and $4x$ | $x$ |
+
+Since the cross-products sum to $x$, the factorization is correct:
+
+$$x^2+x-12=(x+4)(x-3).$$
+
+So $x+4=0$ or $x-3=0$. Hence $\boxed{x=-4\text{ or }x=3}$.
+
+$\square$
+
+**Example (Non-Monic Trinomial).** Solve $2x^2+x-6=0$.
+
+**Solution:**
+
+Choose $2x$ and $x$ for the first terms. For $-6$, try $-3$ and $2$:
+
+| Factor choice | Cross-products | Sum |
+|---|---:|---:|
+| $(2x-3)(x+2)$ | $4x$ and $-3x$ | $x$ |
+
+The cross-products add to the required middle term, so
+
+$$2x^2+x-6=(2x-3)(x+2).$$
+
+Thus $2x-3=0$ or $x+2=0$, giving
+$\boxed{x=\frac32\text{ or }x=-2}$.
+
+$\square$
+
+## 6. Guaranteed Fallback: Use the Roots to Force the Factors
+
+Some quadratics do not factor using integer pairs. The quadratic formula always finds
+their roots (real or complex):
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
+
+If its roots are $r_1$ and $r_2$, then the quadratic factors as
+
+$$ax^2+bx+c=a(x-r_1)(x-r_2).$$
+
+This is factorization by force: find the roots first, then build the factors from them.
+
+**Example (Formula-Factored Quadratic).** Factor and solve $x^2+x-1=0$.
+
+**Solution:**
+
+Here $a=1$, $b=1$, and $c=-1$. The quadratic formula gives
 
 $$
-(3x-5)(3x+5)=0.
+x=\frac{-1\pm\sqrt{1^2-4(1)(-1)}}{2(1)}
+=\frac{-1\pm\sqrt5}{2}.
 $$
 
-So $3x-5=0$ or $3x+5=0$, giving
+Let $r_1=\frac{-1+\sqrt5}{2}$ and $r_2=\frac{-1-\sqrt5}{2}$. Therefore,
 
-$$\boxed{x=\frac53\text{ or }x=-\frac53}.$$
+$$
+x^2+x-1=
+\left(x-\frac{-1+\sqrt5}{2}\right)
+\left(x-\frac{-1-\sqrt5}{2}\right).
+$$
 
-### Perfect-Square Trinomial and a Repeated Root
+The roots are $\boxed{x=\frac{-1\pm\sqrt5}{2}}$.
 
-$$x^2-10x+25=(x-5)^2=(x-5)(x-5).$$
+$\square$
 
-Solving $x^2-10x+25=0$ gives $x=5$ twice. We call $5$ a **repeated root** (or double
-root). On the graph, the parabola touches the $x$-axis at $(5,0)$ rather than crossing it.
-This agrees with the one-intercept case from Lesson 13.
+If $b^2-4ac<0$, the same procedure factors the quadratic over the complex numbers.
+If you are working only with real numbers, say that there are no real roots instead.
 
-## 7. Factoring Is a Method, Not a Requirement
-
-Not every quadratic factors nicely over the integers. For example, $x^2+x-1=0$ has no
-integer pair whose product is $-1$ and sum is $1$. It still has real roots, but completing
-the square or the quadratic formula is a better method.
-
-When a quadratic does factor, factoring is usually faster than completing the square. It
-also makes the roots and $x$-intercepts visible immediately.
-
-## 8. Common Errors to Avoid
+## 7. Common Errors to Avoid
 
 - **Forgetting to make one side zero:** Rewrite $x^2+5x=14$ as
-  $x^2+5x-14=0$ before factoring.
-- **Getting a root's sign backward:** From $(x+6)=0$, the root is $x=-6$.
-- **Stopping after factoring:** $(x-1)(x+7)=0$ is not yet the solution; set each factor
-  equal to zero.
-- **Ignoring a GCF:** In $4x^2+20x=0$, factor $4x$ first; otherwise the root $x=0$ can
-  be missed.
-- **Using the zero-product property on a nonzero product:** It works for $AB=0$, not for
-  $AB=9$.
+  $x^2+5x-14=0$ first.
+- **Skipping the special-case check:** Factor a GCF before using a chart, or the root
+  $x=0$ may be missed.
+- **Getting a root's sign backward:** From $x+6=0$, the root is $x=-6$.
+- **Stopping after factoring:** $(x-1)(x+7)=0$ still requires setting both factors to $0$.
+- **Forcing integer pairs forever:** When no pair works, use the quadratic formula and
+  write $a(x-r_1)(x-r_2)$.
 
-## 9. Class Practice 1: Factor and Solve
+## 8. Class Practice
 
-### Problem
-
-Solve $x^2-7x+10=0$. Then state the $x$-intercepts of $y=x^2-7x+10$.
+**Problem (Special Case).** Solve $6x^2-15x=0$.
 
 <details>
 <summary>Solution</summary>
 
-The numbers $-5$ and $-2$ have product $10$ and sum $-7$:
+$$6x^2-15x=3x(2x-5)=0.$$
 
-$$
-(x-5)(x-2)=0.
-$$
+Thus $x=0$ or $2x-5=0$, so $\boxed{x=0\text{ or }x=\frac52}$.
 
-Thus $x=5$ or $x=2$. The roots are $\boxed{2\text{ and }5}$, and the $x$-intercepts
-are $\boxed{(2,0)\text{ and }(5,0)}$.
+$\square$
 
 </details>
 
-## 10. Class Practice 2: Leading Coefficient and GCF
-
-### Problem
-
-Solve $6x^2-15x=0$.
+**Problem (Cross-Product Chart).** Solve $x^2-7x+10=0$, then state the $x$-intercepts.
 
 <details>
 <summary>Solution</summary>
 
-First factor out the GCF:
+Try $(x-5)(x-2)$. The cross-products are $-2x$ and $-5x$, which add to $-7x$:
 
-$$6x^2-15x=3x(2x-5).$$
+$$x^2-7x+10=(x-5)(x-2)=0.$$
 
-Then
+Thus $\boxed{x=5\text{ or }x=2}$, with intercepts $\boxed{(5,0)}$ and $\boxed{(2,0)}$.
 
-$$3x(2x-5)=0.$$
-
-So $x=0$ or $2x-5=0$, which gives $x=\frac52$. The roots are
-$\boxed{x=0\text{ or }x=\frac52}$.
+$\square$
 
 </details>
 
-## 11. Class Practice 3: Put Zero on One Side First
+### More Cross-Product Chart Practice
 
-### Problem
+For each problem, choose factors for the first and last terms, record the two
+cross-products, and make sure their sum is the middle term before solving.
 
-Solve $x^2-2x=15$.
+**Problem (Positive Middle Term).** Solve $3x^2+11x+6=0$.
 
 <details>
 <summary>Solution</summary>
 
-First subtract $15$ from both sides:
+Try $(3x+2)(x+3)$. Its cross-products are $9x$ and $2x$, and
+$9x+2x=11x$:
 
-$$x^2-2x-15=0.$$
+$$3x^2+11x+6=(3x+2)(x+3)=0.$$
 
-Now factor:
+Therefore, $\boxed{x=-\frac23\text{ or }x=-3}$.
 
-$$
-(x-5)(x+3)=0.
-$$
-
-Therefore, $\boxed{x=5\text{ or }x=-3}$.
+$\square$
 
 </details>
 
-## 12. Lesson Checklist
+**Problem (Mixed Signs).** Solve $4x^2-4x-15=0$.
 
-Before leaving a factored quadratic equation, verify that:
+<details>
+<summary>Solution</summary>
 
-1. One side of the equation is zero.
-2. The expression is completely factored, including any GCF.
-3. Each variable-containing factor has been set equal to zero.
-4. Every root has been solved correctly, including its sign.
-5. For $y=f(x)$, each real root has been translated into an $x$-intercept $(r,0)$.
+Try $(2x-5)(2x+3)$. Its cross-products are $6x$ and $-10x$, and
+$6x-10x=-4x$:
+
+$$4x^2-4x-15=(2x-5)(2x+3)=0.$$
+
+Therefore, $\boxed{x=\frac52\text{ or }x=-\frac32}$.
+
+$\square$
+
+</details>
+
+**Problem (Different First-Term Pairs).** Solve $6x^2+7x-3=0$.
+
+<details>
+<summary>Solution</summary>
+
+Try $(3x-1)(2x+3)$. Its cross-products are $9x$ and $-2x$, and
+$9x-2x=7x$:
+
+$$6x^2+7x-3=(3x-1)(2x+3)=0.$$
+
+Therefore, $\boxed{x=\frac13\text{ or }x=-\frac32}$.
+
+$\square$
+
+</details>
+
+**Problem (Challenge: Both Coefficients Matter).** Solve $12x^2-7x-10=0$.
+
+<details>
+<summary>Solution</summary>
+
+Try $(3x+2)(4x-5)$. Its cross-products are $-15x$ and $8x$, and
+$-15x+8x=-7x$:
+
+$$12x^2-7x-10=(3x+2)(4x-5)=0.$$
+
+Therefore, $\boxed{x=-\frac23\text{ or }x=\frac54}$.
+
+$\square$
+
+</details>
+
+**Problem (Formula Fallback).** Factor and solve $x^2-2x-1=0$.
+
+<details>
+<summary>Solution</summary>
+
+The quadratic formula gives $x=\frac{2\pm\sqrt{(-2)^2-4(1)(-1)}}2=1\pm\sqrt2$.
+Therefore,
+
+$$x^2-2x-1=(x-(1+\sqrt2))(x-(1-\sqrt2)),$$
+
+and the roots are $\boxed{x=1\pm\sqrt2}$.
+
+$\square$
+
+</details>
+
+## 9. Lesson Checklist
+
+1. Put $0$ on one side of the equation.
+2. Check a GCF, a difference of squares, and a perfect-square trinomial first.
+3. For a general trinomial, choose factor pairs and verify them with the cross-products.
+4. If no convenient pairs work, use the quadratic formula and write $a(x-r_1)(x-r_2)$.
+5. Set each variable-containing factor equal to $0$ and check every root's sign.

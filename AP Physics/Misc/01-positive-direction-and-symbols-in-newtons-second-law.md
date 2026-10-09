@@ -1,291 +1,299 @@
-# 正方向、字母含义与牛顿第二定律
+# Positive Direction, Symbol Meaning, and Newton's Second Law
 *AP Physics / Misc*
 
-> **核心约定：先定义方向，再让字母有唯一含义。**
+> **Core rule: define the direction first, then give every symbol one meaning.**
 >
-> 学生困惑的根源通常不是正负号本身，而是同一个裸字母有时表示“沿所选正方向的分量”，有时又悄悄表示“大小”。本讲义把这两种含义彻底分开。
+> Students are rarely confused by a minus sign itself. The real problem is that the same bare letter is sometimes used for a component along a chosen direction and sometimes, without warning, for a magnitude. This note separates those meanings completely.
 
-## 1. 一套可执行的标准
+## 1. A usable standard
 
-对一维（或沿某一条约束方向）的受力问题，按下面的顺序书写。
+For a one-dimensional force problem, or a problem constrained to one direction, write in this order.
 
-1. **写出正方向的单位向量。** 例如 $\hat{\mathbf y}$ 表示竖直向上，或 $\hat{\mathbf s}$ 表示沿绳子指定的正向。它严格定义了“正”。
-2. **默认法则：有方向的量，其裸标量字母表示该向量在正方向上的分量。**
-
-   $$
-   a=\mathbf a\cdot\hat{\mathbf s},\qquad
-   F=\mathbf F\cdot\hat{\mathbf s}.
-   $$
-
-   所以 $a$、$F$、$T_s$ 可以是负数；负号是信息，不是错误。
-3. **Override（大小）法则：若要用一个符号表示某个向量的大小，必须写绝对值。**
+1. **Write a unit vector for the positive direction.** For example, $\hat y$ can mean vertically upward, and $\hat s$ can mean a specified positive direction along a rope. This rigorously defines “positive.”
+2. **Default rule: a bare scalar for a directional quantity is that vector's component in the positive direction.**
 
    $$
-   |\mathbf T|,\quad |\mathbf a|,\quad |\mathbf F|.
+   a=\vec a\cdot\hat s,\qquad F=\vec F\cdot\hat s.
    $$
 
-   例如 $|\mathbf T|$ 永远非负，而 $T_s=\mathbf T\cdot\hat{\mathbf s}$ 可能为正、零或负。不要让一个没有说明的 $T$ 在同一页里兼任这两个角色。
-4. **牛顿第二定律先写成向量式。**
+   Therefore, in a one-dimensional problem,
 
    $$
-   \boxed{\sum\mathbf F=m\mathbf a}
+   \vec a=a\hat s,\qquad \vec F=F\hat s.
    $$
 
-   之后若只需一个方向的信息，再与单位向量点乘。正负号就会由点乘自动产生，而不是靠“记住应该加还是减”。
+   Thus $a$, $F$, and $T_s$ may be negative. A negative sign is information, not an error.
+3. **Magnitude override rule: if a symbol represents a vector's magnitude, write absolute-value bars.**
 
-质量 $m$、重力场强度 $g$、长度等本身没有“方向分量”的物理量，仍是正的物理参数。例如重力写作
+   $$
+   |\vec T|,\quad |\vec a|,\quad |\vec F|.
+   $$
+
+   For example, $|\vec T|$ is never negative, while $T_s=\vec T\cdot\hat s$ may be positive, zero, or negative. Do not let an unexplained $T$ play both roles on the same page.
+4. **Write Newton's second law as a vector equation first.**
+
+   $$
+   \boxed{\sum\vec F=m\vec a}
+   $$
+
+   If only one direction is needed, dot both sides with the unit vector. The signs arise from the dot product; they are not something to memorize by force direction.
+
+Quantities such as mass $m$, the gravitational-field magnitude $g$, and length do not have direction components; they remain positive physical parameters. For example,
 
 $$
-\mathbf W=m\mathbf g=-mg\hat{\mathbf y},\qquad g=|\mathbf g|>0,
+\vec W=m\vec g=-mg\hat y,\qquad g=|\vec g|>0,
 $$
 
-这里 $g$ 是大小；$\mathbf g$ 才是矢量。
+where $g$ is a magnitude and $\vec g$ is a vector.
 
-## 2. 先看一个常见的混乱
+## 2. A common source of confusion
 
-下面两行若没有额外说明，$T$ 的意思不同：
-
-$$
-T-mg=ma \qquad\text{与}\qquad mg-T=ma.
-$$
-
-第一行常把 $T$ 当作“向上张力的大小”；第二行又把 $T$ 当作“向上张力的大小”，但把下方当作正向。它们本身可以对，却没有告诉读者 $a$ 是哪个方向的分量，也没有说明 $T$ 是分量还是大小。
-
-用本讲义的写法，若 $\hat{\mathbf y}$ 向上：
+Without more explanation, the symbol $T$ has an ambiguous role in these familiar equations:
 
 $$
-\underbrace{\mathbf T}_{|\mathbf T|\hat{\mathbf y}}
-+\underbrace{\mathbf W}_{-mg\hat{\mathbf y}}
-=m\underbrace{\mathbf a}_{a_y\hat{\mathbf y}}
+T-mg=ma \qquad\text{and}\qquad mg-T=ma.
+$$
+
+Both can be correct. In each, $T$ is often intended as the magnitude of an upward tension, while the chosen positive direction has changed. But neither equation tells the reader which directional component $a$ represents, or whether $T$ is a component or a magnitude.
+
+With this note's convention, if $\hat y$ points upward, write instead
+
+$$
+\underbrace{\vec T}_{|\vec T|\hat y}
++\underbrace{\vec W}_{-mg\hat y}
+=m\underbrace{\vec a}_{a_y\hat y}
 \quad\Longrightarrow\quad
-|\mathbf T|-mg=ma_y.
+|\vec T|-mg=ma_y.
 $$
 
-每个符号只做一件事：$|\mathbf T|$ 是大小，$a_y$ 是向上的分量。
+Every symbol has one job: $|\vec T|$ is a magnitude, and $a_y$ is an upward component.
 
-## 3. 统一例题：阿特伍德机
+## 3. One shared example: an Atwood machine
 
-**Example (两质量、轻绳、理想滑轮).** 两物体 $m_L$ 和 $m_R$ 由轻绳跨过无摩擦滑轮连接。忽略绳和滑轮质量，取 $g>0$。设 $m_R>m_L$。求两物体的加速度及绳的张力。
+**Example (Two masses, light rope, ideal pulley).** Masses $m_L$ and $m_R$ are connected by a light rope over a frictionless pulley. Neglect the masses of the rope and pulley, take $g>0$, and suppose $m_R>m_L$. Find the accelerations and the rope tension.
 
-<svg viewBox="0 0 740 340" width="740" role="img" aria-label="Atwood machine with an upward vertical unit vector and a rope-positive direction that goes up the left side and down the right side">
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#174a7c"/></marker><marker id="force" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#a33a25"/></marker></defs>
-  <line x1="140" y1="56" x2="140" y2="205" stroke="#333" stroke-width="4"/>
-  <path d="M140 56 A115 115 0 0 1 370 56" fill="none" stroke="#333" stroke-width="4"/>
-  <line x1="370" y1="56" x2="370" y2="205" stroke="#333" stroke-width="4"/>
-  <circle cx="255" cy="56" r="31" fill="#eceff2" stroke="#333" stroke-width="3"/>
-  <rect x="102" y="205" width="76" height="65" rx="5" fill="#d8eaf6" stroke="#174a7c" stroke-width="3"/>
-  <rect x="326" y="205" width="88" height="84" rx="5" fill="#f8ddd4" stroke="#a33a25" stroke-width="3"/>
-  <text x="121" y="244" font-size="23">mₗ</text><text x="349" y="254" font-size="23">mᵣ</text>
-  <line x1="75" y1="188" x2="75" y2="107" stroke="#174a7c" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="21" y="98" font-size="20" fill="#174a7c">ŷ（向上）</text>
-  <path d="M191 178 L191 93 Q191 69 216 56 L351 56 Q375 69 375 94 L375 178" fill="none" stroke="#174a7c" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
-  <text x="191" y="38" font-size="19" fill="#174a7c">+ŝ：左侧向上，右侧向下（沿绳跨过顶部向右）</text>
-  <line x1="140" y1="199" x2="140" y2="161" stroke="#a33a25" stroke-width="3" marker-end="url(#force)"/><text x="145" y="177" font-size="18" fill="#a33a25">Tₗ</text>
-  <line x1="370" y1="199" x2="370" y2="161" stroke="#a33a25" stroke-width="3" marker-end="url(#force)"/><text x="375" y="177" font-size="18" fill="#a33a25">Tᵣ</text>
-  <line x1="140" y1="277" x2="140" y2="320" stroke="#a33a25" stroke-width="3" marker-end="url(#force)"/><text x="145" y="314" font-size="18" fill="#a33a25">Wₗ</text>
-  <line x1="370" y1="295" x2="370" y2="329" stroke="#a33a25" stroke-width="3" marker-end="url(#force)"/><text x="375" y="323" font-size="18" fill="#a33a25">Wᵣ</text>
-</svg>
-
-理想绳的张力大小处处相同：
+For an ideal rope, the tension magnitude is the same everywhere:
 
 $$
-|\mathbf T_L|=|\mathbf T_R|\equiv|\mathbf T|>0.
+|\vec T_L|=|\vec T_R|\equiv|\vec T|>0.
 $$
 
-下列四种坐标约定会给出不同符号的“加速度分量”，但同一个物理运动和同一个张力大小。每次都从 $\sum\mathbf F=m\mathbf a$ 出发。
+The next four coordinate conventions produce differently signed acceleration components, but they describe the same physical motion and the same tension magnitude. Each begins with $\sum\vec F=m\vec a$.
 
-### Convention A：沿绳向右为正
+### Convention A: rightward along the rope is positive
 
-定义 $+\hat{\mathbf s}$ 如图：左边向上、越过滑轮向右、右边向下。令 $a$ 为沿这个绳坐标的加速度分量。因此
+Define $+\hat s$ as in the diagram: upward on the left, across the pulley toward the right, and downward on the right. Follow the $\hat s$ direction at each object.
 
-$$
-\mathbf a_L=a\hat{\mathbf y},\qquad \mathbf a_R=-a\hat{\mathbf y}.
-$$
+<img src="assets/atwood-rope-right-positive.png" alt="Convention A: blue arrows show the positive rope direction; red arrows show tension and weight." width="560">
 
 **Solution:**
 
-左、右物体各自应用向量形式的牛顿第二定律：
+Define the shared rope-coordinate acceleration component by
+
+$$
+a\equiv\vec a_L\cdot\hat s=\vec a_R\cdot\hat s,
+\qquad
+\vec a_L=a\hat s,\quad \vec a_R=a\hat s.
+$$
+
+Now apply vector Newton's second law to each mass:
 
 $$
 \begin{aligned}
-\mathbf T_L+\mathbf W_L&=m_L\mathbf a_L,
-&|\mathbf T|\hat{\mathbf y}-m_Lg\hat{\mathbf y}&=m_La\hat{\mathbf y},\\
-\mathbf T_R+\mathbf W_R&=m_R\mathbf a_R,
-&|\mathbf T|\hat{\mathbf y}-m_Rg\hat{\mathbf y}&=-m_Ra\hat{\mathbf y}.
+|\vec T|\hat s+m_Lg(-\hat s)&=m_La\hat s,\\
+|\vec T|(-\hat s)+m_Rg\hat s&=m_Ra\hat s.
 \end{aligned}
 $$
 
-取 $\hat{\mathbf y}$ 分量并联立：
+Taking $\hat s$ components and solving gives
 
 $$
-|\mathbf T|-m_Lg=m_La,\qquad |\mathbf T|-m_Rg=-m_Ra.
+|\vec T|-m_Lg=m_La,\qquad -|\vec T|+m_Rg=m_Ra,
 $$
 
 $$
-\boxed{a=\frac{m_R-m_L}{m_L+m_R}g>0},\qquad
-\boxed{|\mathbf T|=\frac{2m_Lm_R}{m_L+m_R}g}.
+\boxed{a=\frac{m_R-m_L}{m_L+m_R}g>0},\qquad \boxed{|\vec T|=\frac{2m_Lm_R}{m_L+m_R}g}.
 $$
 
-$a>0$ 的意思恰好是：运动沿所选的 $+\hat{\mathbf s}$，即右物体下落。
+$a>0$ says exactly that the motion is along $+\hat s$: the right mass falls.
 
 $\square$
 
-### Convention B：沿绳向左为正
+### Convention B: leftward along the rope is positive
 
-这次定义 $+\hat{\mathbf s}'=-\hat{\mathbf s}$：左边向下、右边向上。令 $a'$ 是这个新坐标中的分量，于是
+Now define $+\hat s'=-\hat s$: downward on the left and upward on the right. Follow the $\hat s'$ direction at each object.
 
-$$
-\mathbf a_L=-a'\hat{\mathbf y},\qquad \mathbf a_R=a'\hat{\mathbf y}.
-$$
+<img src="assets/atwood-rope-left-positive.png" alt="Convention B: blue arrows show the positive rope direction; red arrows show tension and weight." width="560">
 
 **Solution:**
+
+Define the shared rope-coordinate acceleration component by
+
+$$
+a'\equiv\vec a_L\cdot\hat s'=\vec a_R\cdot\hat s',
+\qquad
+\vec a_L=a'\hat s',\quad \vec a_R=a'\hat s'.
+$$
 
 $$
 \begin{aligned}
-\mathbf T_L+\mathbf W_L&=m_L(-a'\hat{\mathbf y}),\\
-\mathbf T_R+\mathbf W_R&=m_R(a'\hat{\mathbf y}).
+|\vec T|(-\hat s')+m_Lg\hat s'&=m_La'\hat s',\\
+|\vec T|\hat s'+m_Rg(-\hat s')&=m_Ra'\hat s'.
 \end{aligned}
 $$
 
-因此
+Therefore,
 
 $$
-|\mathbf T|-m_Lg=-m_La',\qquad |\mathbf T|-m_Rg=m_Ra'.
+-|\vec T|+m_Lg=m_La',\qquad |\vec T|-m_Rg=m_Ra',
 $$
 
 $$
-\boxed{a'=\frac{m_L-m_R}{m_L+m_R}g<0},\qquad
-\boxed{|\mathbf T|=\frac{2m_Lm_R}{m_L+m_R}g}.
+\boxed{a'=\frac{m_L-m_R}{m_L+m_R}g<0},\qquad \boxed{|\vec T|=\frac{2m_Lm_R}{m_L+m_R}g}.
 $$
 
-$a'<0$ 不是“解错”；它精确地说运动与新选的正方向相反。并且 $a'=-a$。
+$a'<0$ is not a wrong answer: it says precisely that the motion is opposite the newly selected positive direction. Also, $a'=-a$.
 
 $\square$
 
-### Convention C：对所有物体都取竖直向上为正
+### Convention C: upward is positive for every object
 
-定义唯一的空间单位向量 $+\hat{\mathbf y}$ 向上。令
+Define the one spatial unit vector $+\hat y$ upward.
 
-$$
-a_L\equiv\mathbf a_L\cdot\hat{\mathbf y},\qquad a_R\equiv\mathbf a_R\cdot\hat{\mathbf y}.
-$$
-
-绳不可伸长给出约束 $a_R=-a_L$；注意它不是“感觉上反着动”，而是关于同一个单位向量的分量关系。
+<img src="assets/atwood-up-positive.png" alt="Convention C: blue arrows show the upward positive direction; red arrows show tension and weight." width="560">
 
 **Solution:**
+
+Define
+
+$$
+a_L\equiv\vec a_L\cdot\hat y,\qquad a_R\equiv\vec a_R\cdot\hat y,
+\qquad
+\vec a_L=a_L\hat y,\quad \vec a_R=a_R\hat y.
+$$
+
+The inextensible-rope constraint will supply a third equation: $a_R=-a_L$.
 
 $$
 \begin{aligned}
-\mathbf T_L+\mathbf W_L&=m_La_L\hat{\mathbf y},\\
-\mathbf T_R+\mathbf W_R&=m_R(-a_L\hat{\mathbf y}).
+|\vec T|\hat y+m_Lg(-\hat y)&=m_La_L\hat y,\\
+|\vec T|\hat y+m_Rg(-\hat y)&=m_Ra_R\hat y,\\
+a_R&=-a_L.
 \end{aligned}
 $$
 
-投影到 $\hat{\mathbf y}$：
+Therefore,
 
 $$
-|\mathbf T|-m_Lg=m_La_L,\qquad |\mathbf T|-m_Rg=-m_Ra_L.
+|\vec T|-m_Lg=m_La_L,\qquad |\vec T|-m_Rg=m_Ra_R,\qquad a_R=-a_L.
 $$
 
 $$
-\boxed{a_L=\frac{m_R-m_L}{m_L+m_R}g>0},\qquad
-\boxed{a_R=-a_L<0}.
+\boxed{a_L=\frac{m_R-m_L}{m_L+m_R}g>0},\qquad \boxed{a_R=-a_L<0}.
 $$
 
-左块的向上分量为正，右块的向上分量为负；这是同一运动的两个坐标描述。
+The left mass has a positive upward component and the right mass a negative upward component. This is the same motion.
 
 $\square$
 
-### Convention D：对所有物体都取竖直向下为正
+### Convention D: downward is positive for every object
 
-定义 $+\hat{\mathbf d}=-\hat{\mathbf y}$ 向下，令 $b_L=\mathbf a_L\cdot\hat{\mathbf d}$。约束仍为 $b_R=-b_L$。现在张力的 $\hat{\mathbf d}$ 分量是 $-|\mathbf T|$，重力的分量是 $+mg$。
+Define $+\hat d=-\hat y$ downward. The tension component along $\hat d$ is $-|\vec T|$ and the gravitational component is $+mg$.
+
+<img src="assets/atwood-down-positive.png" alt="Convention D: blue arrows show the downward positive direction; red arrows show tension and weight." width="560">
 
 **Solution:**
+
+Define
+
+$$
+b_L\equiv\vec a_L\cdot\hat d,\qquad b_R\equiv\vec a_R\cdot\hat d,
+\qquad
+\vec a_L=b_L\hat d,\quad \vec a_R=b_R\hat d.
+$$
+
+The rope constraint is $b_R=-b_L$.
 
 $$
 \begin{aligned}
-\mathbf T_L+\mathbf W_L&=m_Lb_L\hat{\mathbf d},\\
-\mathbf T_R+\mathbf W_R&=m_R(-b_L\hat{\mathbf d}),
+|\vec T|(-\hat d)+m_Lg\hat d&=m_Lb_L\hat d,\\
+|\vec T|(-\hat d)+m_Rg\hat d&=m_Rb_R\hat d,\\
+b_R&=-b_L.
 \end{aligned}
 $$
 
-投影到 $\hat{\mathbf d}$：
+Therefore,
 
 $$
--|\mathbf T|+m_Lg=m_Lb_L,\qquad -|\mathbf T|+m_Rg=-m_Rb_L.
+-|\vec T|+m_Lg=m_Lb_L,\qquad -|\vec T|+m_Rg=m_Rb_R,\qquad b_R=-b_L.
 $$
 
 $$
-\boxed{b_L=\frac{m_L-m_R}{m_L+m_R}g<0},\qquad
-\boxed{b_R=-b_L>0}.
+\boxed{b_L=\frac{m_L-m_R}{m_L+m_R}g<0},\qquad \boxed{b_R=-b_L>0}.
 $$
 
-下为正时，左块的结果为负，右块的结果为正；这正是图中的实际运动。
+With down as positive, the left mass has a negative result and the right mass a positive result—the actual motion in the diagram.
 
 $\square$
 
-### Convention E：完全使用正的“大小”——但要把它写成特例
+### Convention E: use only positive magnitudes—but name it as an exception
 
-有些教材不先建立一个共同的正方向，而是先根据 $m_R>m_L$ 判断：左块向上、右块向下。然后令
+Some textbooks do not first establish a shared positive direction. Instead, from $m_R>m_L$, they decide that the left mass rises and the right mass falls.
 
-$$
-a\equiv|\mathbf a_L|=|\mathbf a_R|>0,\qquad
-T\equiv|\mathbf T|>0.
-$$
+This is not the default component rule; it is an explicit override. It can work, but every direction must be supplied by an arrow or words.
 
-这不是默认分量法；这是一次明确的 **override**。它可用，但每一个方向都必须由箭头或文字给出。
+<img src="assets/atwood-positive-magnitudes.png" alt="Convention E: the assumed motion directions are shown, but no positive coordinate direction is chosen." width="560">
 
 **Solution:**
 
-仍先写向量式：
+Define the positive magnitudes
 
 $$
-T\hat{\mathbf y}-m_Lg\hat{\mathbf y}=m_L(a\hat{\mathbf y}),
+a\equiv|\vec a_L|=|\vec a_R|>0,\qquad T\equiv|\vec T|>0.
 $$
 
+Start with the vector equations:
+
 $$
-T\hat{\mathbf y}-m_Rg\hat{\mathbf y}=m_R(-a\hat{\mathbf y}).
+T\hat y-m_Lg\hat y=m_L(a\hat y),\qquad T\hat y-m_Rg\hat y=m_R(-a\hat y).
 $$
 
-把第二式整体乘以 $-1$ 后，才得到两条“大小式”：
+Only after multiplying the second equation by $-1$ do the two magnitude equations appear:
 
 $$
 T-m_Lg=m_La,\qquad m_Rg-T=m_Ra.
 $$
 
 $$
-\boxed{a=\frac{m_R-m_L}{m_L+m_R}g},\qquad
-\boxed{T=\frac{2m_Lm_R}{m_L+m_R}g}.
+\boxed{a=\frac{m_R-m_L}{m_L+m_R}g},\qquad \boxed{T=\frac{2m_Lm_R}{m_L+m_R}g}.
 $$
 
-这套写法让 $a,T$ 都保持正值，但代价是：必须事先判定实际方向；若猜反了，方程不能“自动”给你一个负数来纠正。这里的裸 $a,T$ 是**明确声明的全正大小约定**，故意暂时取代了本讲义的默认分量法则；课堂上最容易造成混乱的，正是没有声明就把这种大小写法和前四种分量写法混在一起。
+This makes $a$ and $T$ positive, but it requires the actual direction to be determined beforehand. If the direction is guessed incorrectly, the equations cannot automatically correct the guess with a negative result. Here bare $a,T$ are an **explicit, all-positive magnitude convention** that deliberately replaces the default component rule. The usual classroom confusion comes from mixing this convention with the first four without saying so.
 
 $\square$
 
-## 4. 四套分量约定的对照
+## 4. Comparison of the conventions
 
-| 约定 | 裸字母表示什么 | $m_R>m_L$ 时的结果 | 负号说什么？ |
+| Convention | Meaning of bare symbol(s) | Result when $m_R>m_L$ | What does a negative sign say? |
 |---|---|---|---|
-| 沿绳向右 $+\hat{\mathbf s}$ | 沿绳正向分量 $a$ | $a>0$ | 运动沿绳向右 |
-| 沿绳向左 $+\hat{\mathbf s}'$ | 沿新正向分量 $a'$ | $a'<0$ | 实际向右，反于新正向 |
-| 竖直向上 $+\hat{\mathbf y}$ | $a_L,a_R$ 为向上分量 | $a_L>0,\ a_R<0$ | 左上、右下 |
-| 竖直向下 $+\hat{\mathbf d}$ | $b_L,b_R$ 为向下分量 | $b_L<0,\ b_R>0$ | 左上、右下 |
-| 全部取大小 | $a=|\mathbf a|,\ T=|\mathbf T|$ | 两者均 $>0$ | 方向在字母之外另行声明 |
+| Rope rightward, $+\hat s$ | $a$: component along rope positive direction | $a>0$ | Motion is rightward along the rope |
+| Rope leftward, $+\hat s'$ | $a'$: component along new positive direction | $a'<0$ | Actual motion is rightward, opposite the new positive direction |
+| Upward, $+\hat y$ | $a_L,a_R$: upward components | $a_L>0,\ a_R<0$ | Left rises; right falls |
+| Downward, $+\hat d$ | $b_L,b_R$: downward components | $b_L<0,\ b_R>0$ | Left rises; right falls |
+| All magnitudes | $a=|\vec a|,\ T=|\vec T|$ | Both $>0$ | Direction is declared outside the symbols |
 
-无论选哪一种，物理上不变的是
+No matter which convention is used, the invariant physical quantities are
 
 $$
-|\mathbf a|=\frac{|m_R-m_L|}{m_L+m_R}g,
-\qquad
-|\mathbf T|=\frac{2m_Lm_R}{m_L+m_R}g.
+|\vec a|=\frac{|m_R-m_L|}{m_L+m_R}g,\qquad |\vec T|=\frac{2m_Lm_R}{m_L+m_R}g.
 $$
 
-## 5. 交卷前的 30 秒检查
+## 5. A 30-second check before turning in work
 
-- 我是否写出了 $+\hat{\mathbf e}$，而不仅是“取右为正”？
-- 每个有方向的裸标量（如 $a,F_x,T_s$）是否确实是相对同一单位向量的分量？
-- 若某个字母是大小，我是否把它写成 $|\mathbf Q|$，或明确声明了它是正的大小？
-- 我是否先写了 $\sum\mathbf F=m\mathbf a$，再投影到所需方向？
-- 得到负号时，我是否把它翻译成“方向与正向相反”，而不是立即怀疑计算？
+- Did I write $+\hat e$, rather than only “take right as positive”?
+- Is every bare scalar for a directional quantity (such as $a$, $F_x$, or $T_s$) genuinely a component relative to the same unit vector?
+- If a symbol is a magnitude, did I write $|\vec Q|$, or explicitly state that it is a positive magnitude?
+- Did I write $\sum\vec F=m\vec a$ before projecting onto the needed direction?
+- If I obtained a negative result, did I translate it as “opposite the positive direction,” rather than immediately assuming an error?
 
-最后一个习惯尤其重要：**正方向不是对运动的预测，而是一把尺的朝向。** 选哪边都可以；只要单位向量、字母含义和牛顿第二定律三者一致，答案描述的是同一个世界。
+The final habit matters most: **a positive direction is not a prediction of the motion; it is the orientation of a ruler.** Either orientation works. If the unit vector, symbol meanings, and Newton's second law agree, they describe the same physical world.

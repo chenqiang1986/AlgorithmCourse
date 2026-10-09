@@ -119,33 +119,7 @@ For this system:
   variables): independent equations plus free variables equals the number of
   variables.
 
-<svg viewBox="0 0 720 300" width="100%" role="img" aria-label="The row-echelon matrix with pivot columns one and three, free columns two and four, and the first nonzero entry in each nonzero row circled.">
-  <style>
-    .label{font:600 15px sans-serif;letter-spacing:.06em}
-    .pivot-label{fill:#166534}.free-label{fill:#9a3412}
-    .entry{font:22px sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}
-    .bracket{fill:none;stroke:#334155;stroke-width:3}
-    .grid{stroke:#cbd5e1;stroke-width:1.5}
-    .pivot-cell{fill:#dcfce7}.free-cell{fill:#ffedd5}
-    .pivot-ring{fill:none;stroke:#15803d;stroke-width:3}
-    .caption{font:16px sans-serif;fill:#334155;text-anchor:middle}
-  </style>
-  <text class="label pivot-label" x="210" y="32" text-anchor="middle">PIVOT</text>
-  <text class="label free-label" x="330" y="32" text-anchor="middle">FREE</text>
-  <text class="label pivot-label" x="450" y="32" text-anchor="middle">PIVOT</text>
-  <text class="label free-label" x="570" y="32" text-anchor="middle">FREE</text>
-  <path d="M210 42v18 M330 42v18 M450 42v18 M570 42v18" stroke="#94a3b8" stroke-width="1.5"/>
-  <rect class="pivot-cell" x="150" y="70" width="120" height="55" rx="4"/><rect class="free-cell" x="270" y="70" width="120" height="55" rx="4"/><rect class="pivot-cell" x="390" y="70" width="120" height="55" rx="4"/><rect class="free-cell" x="510" y="70" width="120" height="55" rx="4"/>
-  <rect class="pivot-cell" x="150" y="125" width="120" height="55" rx="4"/><rect class="free-cell" x="270" y="125" width="120" height="55" rx="4"/><rect class="pivot-cell" x="390" y="125" width="120" height="55" rx="4"/><rect class="free-cell" x="510" y="125" width="120" height="55" rx="4"/>
-  <rect class="pivot-cell" x="150" y="180" width="120" height="55" rx="4"/><rect class="free-cell" x="270" y="180" width="120" height="55" rx="4"/><rect class="pivot-cell" x="390" y="180" width="120" height="55" rx="4"/><rect class="free-cell" x="510" y="180" width="120" height="55" rx="4"/>
-  <path class="grid" d="M270 70v165 M390 70v165 M510 70v165 M150 125h480 M150 180h480"/>
-  <path class="bracket" d="M132 70h-12v165h12 M648 70h12v165h-12"/>
-  <text class="entry" x="210" y="97">1</text><text class="entry" x="330" y="97">2</text><text class="entry" x="450" y="97">0</text><text class="entry" x="570" y="97">−1</text>
-  <text class="entry" x="210" y="152">0</text><text class="entry" x="330" y="152">0</text><text class="entry" x="450" y="152">1</text><text class="entry" x="570" y="152">3</text>
-  <text class="entry" x="210" y="207">0</text><text class="entry" x="330" y="207">0</text><text class="entry" x="450" y="207">0</text><text class="entry" x="570" y="207">0</text>
-  <circle class="pivot-ring" cx="210" cy="97" r="23"/><circle class="pivot-ring" cx="450" cy="152" r="23"/>
-  <text class="caption" x="390" y="278">Circled entries are the pivots: the first nonzero coefficient in each nonzero row.</text>
-</svg>
+![Row-echelon matrix with pivot columns one and three, free columns two and four, and the first nonzero entry in each nonzero row circled](assets/pivots-and-free-variables.png)
 
 ## Determinant: the Full Definition
 
@@ -247,15 +221,7 @@ $\det(A)=0$ means that $A$ flattens the plane into a line (or a point), so it
 cannot be reversed. For an $n\times n$ matrix, the analogous meaning is signed
 $n$-dimensional volume scaling.
 
-<svg viewBox="0 0 740 210" width="100%" role="img" aria-label="A unit square transformed into a parallelogram of signed area determinant A.">
-  <style>.axis{stroke:#94a3b8;stroke-width:1.5}.edge{fill:#bfdbfe;stroke:#2563eb;stroke-width:2.5}.arrow{stroke:#334155;stroke-width:2;marker-end:url(#detArrow)}.t{font:16px sans-serif;fill:#0f172a}.s{font:14px sans-serif;fill:#334155}</style>
-  <defs><marker id="detArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#334155"/></marker></defs>
-  <line class="axis" x1="35" y1="165" x2="225" y2="165"/><line class="axis" x1="80" y1="195" x2="80" y2="20"/>
-  <rect class="edge" x="80" y="75" width="75" height="90"/><text class="t" x="76" y="205">unit square</text><text class="s" x="44" y="62">area 1</text>
-  <line class="arrow" x1="250" y1="112" x2="335" y2="112"/><text class="t" x="279" y="92">A</text>
-  <line class="axis" x1="375" y1="165" x2="700" y2="165"/><line class="axis" x1="425" y1="195" x2="425" y2="20"/>
-  <polygon class="edge" points="425,165 590,165 650,67 485,67"/><text class="t" x="486" y="205">parallelogram</text><text class="s" x="502" y="54">area $|\det(A)|$</text>
-</svg>
+![A unit square transformed into a parallelogram of signed area determinant A](assets/determinant-area-scaling.png)
 
 ## Row Operations Make Determinants Computable
 
