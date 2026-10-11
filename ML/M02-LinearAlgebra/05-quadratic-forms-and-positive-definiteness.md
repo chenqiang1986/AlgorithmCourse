@@ -65,15 +65,10 @@ $$
 Orthogonal diagonalization therefore removes cross terms by rotating to the
 eigenvector axes. The eigenvalues determine the shape.
 
-<svg viewBox="0 0 760 230" width="100%" role="img" aria-label="Positive definite quadratic form has elliptical contours, while an indefinite form has hyperbolic contours.">
-  <style>.axis{stroke:#94a3b8;stroke-width:1.5}.pos{fill:none;stroke:#2563eb;stroke-width:2}.ind{fill:none;stroke:#dc2626;stroke-width:2}.t{font:16px sans-serif;fill:#0f172a}.s{font:14px sans-serif;fill:#334155}</style>
-  <line class="axis" x1="25" y1="110" x2="350" y2="110"/><line class="axis" x1="185" y1="210" x2="185" y2="12"/>
-  <ellipse class="pos" cx="185" cy="110" rx="48" ry="24" transform="rotate(-28 185 110)"/><ellipse class="pos" cx="185" cy="110" rx="88" ry="44" transform="rotate(-28 185 110)"/><ellipse class="pos" cx="185" cy="110" rx="128" ry="64" transform="rotate(-28 185 110)"/>
-  <text class="t" x="82" y="225">positive definite: ellipses</text><text class="s" x="120" y="33">$q(x)=\text{constant}>0$</text>
-  <line class="axis" x1="415" y1="110" x2="735" y2="110"/><line class="axis" x1="575" y1="210" x2="575" y2="12"/>
-  <path class="ind" d="M440 25 C485 45 515 74 535 110 C515 146 485 175 440 195 M710 25 C665 45 635 74 615 110 C635 146 665 175 710 195"/><path class="ind" d="M460 5 C515 41 545 75 555 110 C545 145 515 179 460 215 M690 5 C635 41 605 75 595 110 C605 145 635 179 690 215"/>
-  <text class="t" x="498" y="225">indefinite: hyperbolas</text><text class="s" x="511" y="33">positive and negative values</text>
-</svg>
+<div style="display: flex; gap: 1rem; align-items: center;">
+  <img src="assets/quadratic-form-ellipses.png" alt="Elliptical level contours of a positive-definite quadratic form, with dashed eigenvector axes" style="width: 48%; height: auto;">
+  <img src="assets/quadratic-form-hyperbolas.svg" alt="Nested hyperbolic level contours of an indefinite quadratic form for two different positive constants, with dashed eigenvector axes" style="width: 48%; height: auto;">
+</div>
 
 ## Positive Definiteness
 
@@ -232,6 +227,173 @@ For a twice-differentiable function, a positive-definite Hessian at a critical
 point signals a strict local minimum; a negative-definite Hessian signals a
 strict local maximum; and an indefinite Hessian signals a saddle point. This
 connects the geometry of quadratic forms to gradient-based machine learning.
+
+## Class Practice: Ellipses, Hyperbolas, and Principal Axes
+
+For a level set $x^TAx=c$ with $c>0$, diagonalize the symmetric matrix
+$A=Q\Lambda Q^T$. In eigenvector coordinates $y=Q^Tx$, the equation becomes
+$\lambda_1y_1^2+\lambda_2y_2^2=c$. If both eigenvalues are positive, the
+curve is an ellipse; its principal directions are the eigenvectors and the
+semiaxis for $\lambda_i$ has length $\sqrt{c/\lambda_i}$. If the eigenvalues
+have opposite signs, the curve is a hyperbola; the positive eigenvalue gives
+the transverse direction and the negative eigenvalue the conjugate direction.
+
+Work in pairs. For each equation, classify the curve and find its principal
+axis directions and semiaxis lengths. Axis directions are lines, so either
+sign of a unit eigenvector is acceptable.
+
+### Practice A: Identify the conic
+
+1. $\frac{18}{5}x_1^2+\frac{8}{5}x_1x_2+\frac{12}{5}x_2^2=8$
+2. $\frac{11}{5}x_1^2+\frac{16}{5}x_1x_2-\frac{1}{5}x_2^2=8$
+
+For each equation, find the eigenvalues of its quadratic-form matrix and use
+their signs to classify the conic. Then find its principal directions and
+semiaxis lengths.
+
+### Practice B: Find the axes
+
+Consider $\frac75x_1^2-\frac85x_1x_2+\frac{13}{5}x_2^2=6$.
+
+1. Write its symmetric matrix.
+2. Find its eigenvalues and unit eigenvectors.
+3. Classify the curve and give the direction and length of each principal
+   semiaxis.
+
+### Answers
+
+In each solution, the columns of $P$ are orthonormal eigenvectors of $A$,
+so $A=PDP^T$. To find an axis as a line in the original coordinates, set
+the *other* new coordinate equal to zero. For example, the $y_1$ axis is
+$y_2=0$.
+
+**Practice A(1).**
+
+**Solution:**
+
+$$
+A=\frac15\begin{pmatrix}18&4\\4&12\end{pmatrix}
+$$
+
+has eigenvalues $4$ and $2$, with unit eigenvectors
+$u_1=\frac1{\sqrt5}(2,1)^T$ and $u_2=\frac1{\sqrt5}(-1,2)^T$,
+respectively. Thus
+
+$$
+P=\frac1{\sqrt5}\begin{pmatrix}2&-1\\1&2\end{pmatrix},\qquad
+D=\begin{pmatrix}4&0\\0&2\end{pmatrix},\qquad A=PDP^T.
+$$
+
+Set $y=P^Tx$. Explicitly,
+
+$$
+y_1=\frac{2x_1+x_2}{\sqrt5},\qquad
+y_2=\frac{-x_1+2x_2}{\sqrt5}.
+$$
+
+Now the given equation is
+
+$$
+x^TAx=x^TPDP^Tx=y^TDy=4y_1^2+2y_2^2=8.
+$$
+
+Divide by $8$ to obtain standard ellipse form:
+
+$$
+\frac{y_1^2}{2}+\frac{y_2^2}{4}=1.
+$$
+
+The **major axis** has direction $u_2$ and line $y_1=0$, equivalently
+$2x_1+x_2=0$; its semiaxis length is $2$. The **minor axis** has direction
+$u_1$ and line $y_2=0$, equivalently $-x_1+2x_2=0$; its semiaxis length is
+$\sqrt2$.
+
+$\square$
+
+**Practice A(2).**
+
+**Solution:**
+
+$$
+A=\frac15\begin{pmatrix}11&8\\8&-1\end{pmatrix}
+$$
+
+has eigenvalues $3$ and $-1$, with unit eigenvectors
+$u_1=\frac1{\sqrt5}(2,1)^T$ and $u_2=\frac1{\sqrt5}(-1,2)^T$,
+respectively. Hence
+
+$$
+P=\frac1{\sqrt5}\begin{pmatrix}2&-1\\1&2\end{pmatrix},\qquad
+D=\begin{pmatrix}3&0\\0&-1\end{pmatrix},\qquad A=PDP^T.
+$$
+
+Set $y=P^Tx$, so
+
+$$
+y_1=\frac{2x_1+x_2}{\sqrt5},\qquad
+y_2=\frac{-x_1+2x_2}{\sqrt5}.
+$$
+
+The given equation becomes
+
+$$
+x^TAx=x^TPDP^Tx=y^TDy=3y_1^2-y_2^2=8.
+$$
+
+Divide by $8$ to obtain standard hyperbola form:
+
+$$
+\frac{y_1^2}{8/3}-\frac{y_2^2}{8}=1.
+$$
+
+The **transverse axis** has direction $u_1$ and line $y_2=0$,
+equivalently $-x_1+2x_2=0$; its semiaxis length is $\sqrt{8/3}$. The
+**conjugate axis** has direction $u_2$ and line $y_1=0$, equivalently
+$2x_1+x_2=0$; its semiaxis length is $\sqrt8$.
+
+$\square$
+
+**Practice B.**
+
+**Solution:**
+
+$$
+A=\frac15\begin{pmatrix}7&-4\\-4&13\end{pmatrix}
+$$
+
+has eigenvalue $1$ along $u_1=\frac1{\sqrt5}(2,1)^T$ and eigenvalue $3$
+along $u_2=\frac1{\sqrt5}(-1,2)^T$. Set
+
+$$
+P=\frac1{\sqrt5}\begin{pmatrix}2&-1\\1&2\end{pmatrix},\qquad
+D=\begin{pmatrix}1&0\\0&3\end{pmatrix},\qquad A=PDP^T.
+$$
+
+Set $y=P^Tx$, so
+
+$$
+y_1=\frac{2x_1+x_2}{\sqrt5},\qquad
+y_2=\frac{-x_1+2x_2}{\sqrt5}.
+$$
+
+The given equation becomes
+
+$$
+x^TAx=x^TPDP^Tx=y^TDy=y_1^2+3y_2^2=6.
+$$
+
+Divide by $6$ to obtain standard ellipse form:
+
+$$
+\frac{y_1^2}{6}+\frac{y_2^2}{2}=1.
+$$
+
+The **major axis** has direction $u_1$ and line $y_2=0$, equivalently
+$-x_1+2x_2=0$; its semiaxis length is $\sqrt6$. The **minor axis** has
+direction $u_2$ and line $y_1=0$, equivalently $2x_1+x_2=0$; its
+semiaxis length is $\sqrt2$.
+
+$\square$
 
 ## Quick Check
 

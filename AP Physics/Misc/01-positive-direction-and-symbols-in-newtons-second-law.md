@@ -252,13 +252,7 @@ $$
 a\equiv|\vec a_L|=|\vec a_R|>0,\qquad T\equiv|\vec T|>0.
 $$
 
-Start with the vector equations:
-
-$$
-T\hat y-m_Lg\hat y=m_L(a\hat y),\qquad T\hat y-m_Rg\hat y=m_R(-a\hat y).
-$$
-
-Only after multiplying the second equation by $-1$ do the two magnitude equations appear:
+Because this convention uses positive magnitudes and the directions have already been specified, write the scalar force equation along each object's motion direction:
 
 $$
 T-m_Lg=m_La,\qquad m_Rg-T=m_Ra.
@@ -280,7 +274,7 @@ $\square$
 | Rope leftward, $+\hat s'$ | $a'$: component along new positive direction | $a'<0$ | Actual motion is rightward, opposite the new positive direction |
 | Upward, $+\hat y$ | $a_L,a_R$: upward components | $a_L>0,\ a_R<0$ | Left rises; right falls |
 | Downward, $+\hat d$ | $b_L,b_R$: downward components | $b_L<0,\ b_R>0$ | Left rises; right falls |
-| All magnitudes | $a=|\vec a|,\ T=|\vec T|$ | Both $>0$ | Direction is declared outside the symbols |
+| All magnitudes | $a=\lvert\vec a\rvert,\ T=\lvert\vec T\rvert$ | Both $>0$ | Direction is declared outside the symbols |
 
 No matter which convention is used, the invariant physical quantities are
 

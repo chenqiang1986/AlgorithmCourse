@@ -120,3 +120,43 @@ $$
 
 Prove that $\det(D)=0$. Then explain why $Dx=b$ cannot have exactly one
 solution for every $b\in\mathbb R^4$.
+
+## Challenge: prove a rank inequality for a product
+
+Let $A$ be an $m\times n$ matrix and $B$ an $n\times p$ matrix. Prove
+that
+
+$$
+\operatorname{rank}(AB)\leq \min\bigl(\operatorname{rank}(A),\operatorname{rank}(B)\bigr).
+$$
+
+Use the following steps as guidance:
+
+**Part A.** Let $M$ be an $m\times n$ matrix with $n>m$. Explain why
+$Mx=0$ must have a nontrivial solution, using rank--nullity and the fact that
+$\operatorname{rank}(M)\leq m$.
+
+**Part B.** Suppose $a_1,\ldots,a_m$ are vectors and each of
+$v_1,\ldots,v_n$ is a linear combination of $a_1,\ldots,a_m$, where $n>m$.
+Use Part A (or its dependence principle) to explain why
+$v_1,\ldots,v_n$ must be linearly dependent.
+
+**Part C.** Write $A$ as a horizontal concatenation of its column vectors,
+$A=[a_1\ \cdots\ a_n]$, and display the entries of $B$ as
+
+$$
+B=\begin{pmatrix}
+b_{11}&b_{12}&\cdots&b_{1p}\\
+b_{21}&b_{22}&\cdots&b_{2p}\\
+\vdots&\vdots&\ddots&\vdots\\
+b_{n1}&b_{n2}&\cdots&b_{np}
+\end{pmatrix}.
+$$
+
+Use matrix multiplication to express each column of $AB$ as a linear
+combination of $a_1,\ldots,a_n$ (for example, its j-th column is
+$b_{1j}a_1+\cdots+b_{nj}a_n$). What does this tell you about the span of the
+columns of $AB$ and therefore about $\operatorname{rank}(AB)$ compared with
+$\operatorname{rank}(A)$? Then apply the same conclusion to
+$(AB)^T=B^TA^T$ and use $\operatorname{rank}(X^T)=\operatorname{rank}(X)$ to
+obtain the bound involving $\operatorname{rank}(B)$.

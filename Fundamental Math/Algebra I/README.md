@@ -86,5 +86,8 @@ a diagnostic test that samples the full range of Algebra I skills:
 22. [14-homework-factoring-quadratic-equations.md](./14-homework-factoring-quadratic-equations.md)
    A 12-problem practice set on factoring quadratics and using factors to find roots and
    $x$-intercepts, with complete solutions.
+23. [15-interim-test.md](./15-interim-test.md)
+   A 60-minute, 100-point assessment of Lessons 3–14, with worked answers and scoring
+   guidance in [15-interim-test-solutions.md](./15-interim-test-solutions.md).
 
 More lessons can be added later as the course grows.

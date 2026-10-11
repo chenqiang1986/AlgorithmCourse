@@ -86,6 +86,12 @@ starting Algebra I:
 19. [13-interim-test.md](./13-interim-test.md)
     A 60-minute, 100-point interim assessment covering Lessons 3–12: real numbers,
     decimal conversions, exponents, scientific notation, linear equations, systems, and
-    line equations. Worked key: [14-interim-test-solutions.md](./14-interim-test-solutions.md).
+    line equations. Worked key: [13-interim-test-solutions.md](./13-interim-test-solutions.md).
+20. [14-intersections-of-two-lines-on-the-xy-plane.md](./14-intersections-of-two-lines-on-the-xy-plane.md)
+    Finding a shared solution by graphing and algebra, interpreting the intersection as
+    an ordered pair, and recognizing parallel and overlapping lines.
+21. [14-homework-intersections-of-two-lines-on-the-xy-plane.md](./14-homework-intersections-of-two-lines-on-the-xy-plane.md)
+    A 13-problem homework set on graphing and solving intersections, classifying pairs
+    of lines, writing an equation before solving, and interpreting a real-world crossing.
 
 More lessons can be added later as the course grows.

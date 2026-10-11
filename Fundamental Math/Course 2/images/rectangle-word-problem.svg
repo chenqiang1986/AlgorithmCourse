@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" role="img" aria-labelledby="title desc">
+  <title id="title">Rectangle with variable side lengths</title>
+  <desc id="desc">Both horizontal sides are labeled length; both vertical sides are labeled width.</desc>
+  <rect width="440" height="230" fill="#ffffff"/>
+  <rect x="100" y="55" width="240" height="120" fill="#eaf4ff" stroke="#235c91" stroke-width="3"/>
+  <text x="220" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#172c44">length</text>
+  <text x="220" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#172c44">length</text>
+  <text x="75" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#172c44">width</text>
+  <text x="365" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#172c44">width</text>
+</svg>

@@ -77,5 +77,11 @@ Course 3:
     A 100-point, 60-minute interim assessment covering Lessons 3–9: integer and fraction
     operations, expressions, equations, and one-variable inequalities. Worked solutions and
     scoring guidance: [10-interim-test-solutions.md](./10-interim-test-solutions.md).
+15. [11-linear-equation-word-problems.md](./11-linear-equation-word-problems.md)
+    A lesson on defining variables, translating words into one-variable equations, solving,
+    and checking answers in context, with worked examples and practice problems.
+16. [11-homework-linear-equation-word-problems.md](./11-homework-linear-equation-word-problems.md)
+    A 20-problem homework set for Lesson 11, with worked solutions to number statements,
+    totals and rates, related quantities, and comparison problems.
 
 More lessons can be added later as the course grows.
