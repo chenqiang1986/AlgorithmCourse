@@ -304,7 +304,7 @@ $$
 g_i(\mathbf x)=0\quad(i=1,\ldots,m).
 $$
 
-The ordinary equality-constraint multiplier rule from Lesson 3 gives
+The ordinary equality-constraint multiplier rule from Lesson 4 gives
 numbers $\lambda_1,\ldots,\lambda_m$ for which
 
 $$
