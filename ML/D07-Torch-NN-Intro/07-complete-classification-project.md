@@ -332,23 +332,156 @@ $\square$
 
 </details>
 
-## 12. Final Mental Model
+## 12. Real Practice Project: Telecom Customer Churn
 
-```text
-choose task
-    -> define output/loss/target contract
-    -> split data
-    -> build Dataset and DataLoader objects
-    -> construct nn.Module
-    -> move model and each batch to one device
-    -> repeat forward/loss/backward/step on training batches
-    -> evaluate without updates on validation data
-    -> select the model
-    -> test once
-    -> save state_dict
+Return to the churn problem from
+[D03-ScikitLearn-LinearCategoryIdentification](../D03-ScikitLearn-LinearCategoryIdentification/README.md).
+Use the existing
+[`WA_Fn-UseC_-Telco-Customer-Churn.csv`](../D03-ScikitLearn-LinearCategoryIdentification/project_henry/WA_Fn-UseC_-Telco-Customer-Churn.csv)
+data to compare a PyTorch neural network with the earlier logistic-regression
+baseline.
+
+### 12.1 Clean and split the raw table
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+df = pd.read_csv(
+    "ML/D03-ScikitLearn-LinearCategoryIdentification/"
+    "project_henry/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+)
+df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
+df = df.drop(columns="customerID")
+
+train_val_df, test_df = train_test_split(
+    df,
+    test_size=0.20,
+    random_state=5,
+    stratify=df["Churn"],
+)
+
+train_df, val_df = train_test_split(
+    train_val_df,
+    test_size=0.25,
+    random_state=16,
+    stratify=train_val_df["Churn"],
+)
 ```
 
-## 13. Key Takeaways
+This produces a $60\%/20\%/20\%$ train/validation/test split while preserving
+approximately the same churn rate in each subset.
+
+### 12.2 Fit preprocessing on training data only
+
+```python
+numeric_columns = ["tenure", "MonthlyCharges", "TotalCharges"]
+categorical_columns = [
+    "gender", "SeniorCitizen", "Partner", "Dependents",
+    "PhoneService", "MultipleLines", "InternetService",
+    "OnlineSecurity", "OnlineBackup", "DeviceProtection",
+    "TechSupport", "StreamingTV", "StreamingMovies", "Contract",
+    "PaperlessBilling", "PaymentMethod",
+]
+```
+
+Build a `ColumnTransformer`: median-impute and standardize numeric columns;
+most-frequent-impute and one-hot encode categorical columns using
+`OneHotEncoder(handle_unknown="ignore", sparse_output=False)`.
+
+Call `fit_transform` only on the training features. Call `transform` on
+validation and test features. Convert the resulting arrays to `float32` tensors.
+
+```python
+y_train = torch.from_numpy(
+    train_df["Churn"]
+    .map({"No": 0.0, "Yes": 1.0})
+    .to_numpy(dtype="float32")
+).reshape(-1, 1)
+```
+
+Apply the same mapping to validation and test targets.
+
+### 12.3 Required Comparison: Minimize Retention Cost
+
+Accuracy treats every mistake equally, but these two churn mistakes have
+different financial consequences. For this exercise, define the cost for
+customer $i$ as
+
+$$
+C_i=
+\begin{cases}
+M_i,&y_i=1\text{ and }\widehat y_i=0,\\
+20,&y_i=0\text{ and }\widehat y_i=1,\\
+0,&\text{otherwise},
+\end{cases}
+$$
+
+where $M_i$ is the customer's `MonthlyCharges`, $y_i=1$ means the customer
+actually churned, and $\widehat y_i=1$ means the model predicted churn. Total
+business loss is $C_{\mathrm{total}}=\sum_i C_i$.
+
+Materialize that objective in code:
+
+```python
+import numpy as np
+
+
+def retention_cost(frame, y_true, y_pred):
+    actual = np.asarray(y_true).reshape(-1).astype(int)
+    predicted = np.asarray(y_pred).reshape(-1).astype(int)
+    monthly_charge = frame["MonthlyCharges"].to_numpy(dtype=float)
+
+    false_negative = (actual == 1) & (predicted == 0)
+    false_positive = (actual == 0) & (predicted == 1)
+
+    missed_churn_loss = monthly_charge[false_negative].sum()
+    unnecessary_incentive_loss = 20.0 * false_positive.sum()
+
+    return {
+        "missed_churn_loss": float(missed_churn_loss),
+        "unnecessary_incentive_loss": float(unnecessary_incentive_loss),
+        "total_cost": float(missed_churn_loss + unnecessary_incentive_loss),
+    }
+```
+
+The rows in `frame`, `y_true`, and `y_pred` must remain in the same order.
+
+Train a logistic-regression baseline and at least one PyTorch neural network on
+exactly the same training rows and preprocessing. You decide how to minimize
+validation cost. Possible experiments include model architecture, regularization,
+sampling, sample or class weights, the training loss, and the rule that converts
+probabilities into decisions. None of these choices is required in advance.
+
+Use validation cost to select the complete strategy. Freeze every choice before
+evaluating the test set; never tune against test cost. Report:
+
+| Model | Chosen strategy | Validation total cost | Test missed-churn loss | Test unnecessary-incentive loss | Test total cost |
+|---|---|---:|---:|---:|---:|
+| Logistic-regression baseline | | | | | |
+| Selected PyTorch network | | | | | |
+
+Also report the confusion matrix, precision, recall, and $F_1$ as diagnostic
+information, but rank the models by total business cost.
+
+### 12.4 Investigation questions
+
+1. Which modeling or decision choices reduced validation cost most?
+2. Which contributes more to total cost: missed churn or unnecessary incentives?
+3. Does the model treat high-charge churners differently from low-charge churners?
+4. Does the model with the best $F_1$ also have the lowest business cost?
+5. Is the cost improvement stable and large enough to justify the network?
+
+## 13. Final Mental Model
+
+```text
+define task and cost -> split -> fit preprocessing on training data
+    -> build loaders and nn.Module -> train on mini-batches
+    -> select the complete strategy using validation cost
+    -> test once -> save preprocessing and state_dict
+```
+
+## 14. Key Takeaways
 
 - Binary models should return one raw logit per example during training.
 - Convert logits to probabilities and decisions only when interpreting output.
@@ -358,4 +491,6 @@ choose task
   updates, and only then architecture or hyperparameters.
 - A model is trustworthy only when the complete data and evaluation workflow is
   trustworthy.
+- A neural network should be compared with a simpler baseline on identical
+  rows, preprocessing, business-cost rules, and held-out evaluation protocol.
 

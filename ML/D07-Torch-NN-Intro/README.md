@@ -50,9 +50,11 @@ By the end of this module, students should be able to:
    Convert a pandas DataFrame to tensors, then use data loaders, epoch loops,
    evaluation mode, and correctly aggregated metrics.
 6. [Complete regression project](./06-complete-regression-project.md)  
-   Fit a nonlinear curve and judge the result on held-out data.
+   Fit a nonlinear curve, then compare a PyTorch network with the earlier
+   Walmart sales linear-regression baseline.
 7. [Complete classification project and debugging guide](./07-complete-classification-project.md)  
-   Learn a nonlinear decision boundary, save a checkpoint, and debug common failures.
+   Learn a nonlinear decision boundary, then compare a PyTorch network with
+   the earlier Telecom churn classifier.
 
 The complete script used in Lesson 7 is available at
 [`practice_ws/train_xor_classifier.py`](./practice_ws/train_xor_classifier.py).

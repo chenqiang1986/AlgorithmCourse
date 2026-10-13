@@ -290,7 +290,147 @@ $\square$
 
 </details>
 
-## 13. Key Takeaways
+## 13. Real Practice Project: Walmart Weekly Sales
+
+Return to the Walmart problem from
+[D02-ScikitLearn-LinearRegression](../D02-ScikitLearn-LinearRegression/README.md).
+Use the existing
+[`Walmart_Sales.csv`](../D02-ScikitLearn-LinearRegression/project_henry/Walmart_Sales.csv)
+data to test whether a feedforward neural network improves on the earlier
+linear-regression model.
+
+The target is `Weekly_Sales`. Available raw inputs include the store, date,
+holiday flag, temperature, fuel price, CPI, and unemployment rate.
+
+### 13.1 Preserve the time order
+
+Sales observations are dated. Sort by the parsed date and place later dates in
+validation and test sets:
+
+```python
+from pathlib import Path
+
+import pandas as pd
+
+csv_path = Path(
+    "ML/D02-ScikitLearn-LinearRegression/"
+    "project_henry/Walmart_Sales.csv"
+)
+
+df = pd.read_csv(csv_path)
+df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+df = df.sort_values("Date").reset_index(drop=True)
+
+dates = df["Date"].drop_duplicates().sort_values()
+n_test_dates = int(0.20 * len(dates))
+n_val_dates = int(0.20 * (len(dates) - n_test_dates))
+
+train_dates = dates.iloc[: -(n_val_dates + n_test_dates)]
+val_dates = dates.iloc[-(n_val_dates + n_test_dates) : -n_test_dates]
+test_dates = dates.iloc[-n_test_dates:]
+
+train_df = df[df["Date"].isin(train_dates)]
+val_df = df[df["Date"].isin(val_dates)]
+test_df = df[df["Date"].isin(test_dates)]
+
+assert train_df["Date"].max() < val_df["Date"].min()
+assert val_df["Date"].max() <= test_df["Date"].min()
+```
+
+Do not randomly shuffle before splitting. Random splitting would allow the
+model to train on future weeks while being evaluated on earlier weeks.
+
+### 13.2 Engineer named features before tensor conversion
+
+Write one function that is applied identically to all three DataFrames:
+
+```python
+def add_sales_features(frame):
+    result = frame.copy()
+    result["year"] = result["Date"].dt.year
+    result["month"] = result["Date"].dt.month
+    result["day_of_year"] = result["Date"].dt.dayofyear
+    result["week_of_year"] = result["Date"].dt.isocalendar().week.astype(int)
+    return result.drop(columns="Date")
+
+
+X_train_df = add_sales_features(train_df.drop(columns="Weekly_Sales"))
+X_val_df = add_sales_features(val_df.drop(columns="Weekly_Sales"))
+X_test_df = add_sales_features(test_df.drop(columns="Weekly_Sales"))
+```
+
+Begin with these groups:
+
+```python
+numeric_columns = [
+    "Temperature",
+    "Fuel_Price",
+    "CPI",
+    "Unemployment",
+    "month",
+    "day_of_year",
+    "week_of_year",
+]
+
+categorical_columns = ["Store", "Holiday_Flag", "year"]
+```
+
+Use a fitted `ColumnTransformer` to standardize numeric columns and one-hot
+encode categorical columns. Fit it on `X_train_df` only. Use
+`OneHotEncoder(handle_unknown="ignore", sparse_output=False)` so its result can
+be converted to a dense `float32` tensor.
+
+### 13.3 Train the network
+
+After preprocessing, let `n_features = X_train.shape[1]` and begin with:
+
+```python
+model = nn.Sequential(
+    nn.Linear(n_features, 64),
+    nn.ReLU(),
+    nn.Linear(64, 32),
+    nn.ReLU(),
+    nn.Linear(32, 1),
+)
+
+loss_fn = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+```
+
+Use mini-batches, preserve the state with the lowest validation MSE, and do not
+inspect test performance while choosing width, learning rate, batch size, or
+number of epochs.
+
+### 13.4 Required comparison
+
+Rerun the earlier linear model on exactly the same time-based split. Report this
+table for both models:
+
+| Model | Train MAE | Validation MAE | Test MAE | Test MAPE | Test $R^2$ |
+|---|---:|---:|---:|---:|---:|
+| Linear-regression baseline | | | | | |
+| PyTorch neural network | | | | | |
+
+Also plot predicted and actual weekly sales in date order for the test period.
+A single overall score can hide holiday spikes, store-specific bias, or drift
+near the end of the dataset.
+
+### 13.5 Investigation questions
+
+1. Does the neural network beat the linear baseline on the untouched test set?
+2. Is its improvement consistent across stores, or concentrated in a few stores?
+3. Which model handles holiday weeks better?
+4. Does the network begin overfitting before the chosen stopping point?
+5. Does adding cyclical sine/cosine date features improve validation MAE?
+6. Compare training on raw sales, standardized sales, and $\log(1+y)$. Which
+   target representation trains most reliably and gives the best validation
+   result? Convert every prediction back to dollars before comparing metrics.
+7. Is any apparent gain large enough to justify the network's extra complexity?
+
+The goal is not to prove that neural networks are always better. The goal is to
+measure whether nonlinear capacity helps this particular dataset.
+
+## 14. Key Takeaways
 
 - Split data before making data-dependent preprocessing choices.
 - Fit preprocessing statistics on training data only.
@@ -298,6 +438,8 @@ $\square$
 - Track validation performance and restore the best validation state.
 - Evaluate on the test set after model choices are complete.
 - Compare against a simple baseline and inspect individual predictions.
+- Compare models on identical splits and metrics; otherwise the comparison is
+  not meaningful.
 
 Next, we will train a binary classifier, convert logits into decisions, save its
 learned state, and use a debugging checklist.
