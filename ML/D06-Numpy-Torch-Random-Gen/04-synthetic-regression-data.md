@@ -33,13 +33,15 @@ noise_std = 0.5
 
 X = rng.normal(loc=0.0, scale=1.0, size=(n_samples, n_features))
 true_w = np.array([2.0, -1.5, 0.75])
-true_b = 3.0
+true_b = np.array([3.0])
 
 signal = X @ true_w + true_b
 noise = rng.normal(loc=0.0, scale=noise_std, size=n_samples)
 y = signal + noise
 
 assert X.shape == (1_000, 3)
+assert true_w.shape == (3,)
+assert true_b.shape == (1,)
 assert y.shape == (1_000,)
 ```
 
@@ -58,52 +60,24 @@ n_features = 3
 noise_std = 0.5
 
 X = torch.randn((n_samples, n_features), generator=g)
-true_w = torch.tensor([[2.0], [-1.5], [0.75]])
-true_b = 3.0
+true_w = torch.tensor([2.0, -1.5, 0.75])
+true_b = torch.tensor([3.0])
 
 signal = X @ true_w + true_b
-noise = noise_std * torch.randn((n_samples, 1), generator=g)
+noise = noise_std * torch.randn((n_samples,), generator=g)
 y = signal + noise
 
 assert X.shape == (1_000, 3)
-assert y.shape == (1_000, 1)
+assert true_w.shape == (3,)
+assert true_b.shape == (1,)
+assert y.shape == (1_000,)
 ```
 
-Here `true_w` and `y` use column-vector shapes. Because both `signal` and
-`noise` have shape `(n_samples, 1)`, their addition is unambiguous.
+The NumPy and PyTorch versions use the same convention: `true_w`, `signal`,
+`noise`, and `y` are one-dimensional. The one-element `true_b` is also
+one-dimensional and adds the same intercept to every observation.
 
-## 3. The Broadcasting Trap
-
-This code is wrong:
-
-```python
-signal = X @ true_w                         # shape: (1000, 1)
-noise = torch.randn(1_000, generator=g)    # shape: (1000,)
-y = signal + noise                         # shape: (1000, 1000)!
-```
-
-PyTorch and NumPy compare dimensions from the right when broadcasting. Shapes
-`(1000, 1)` and `(1000,)` expand against each other to make a matrix.
-
-Two safe conventions are:
-
-```python
-# Convention A: everything is one-dimensional
-true_w = torch.tensor([2.0, -1.5, 0.75])
-signal = X @ true_w
-noise = torch.randn((n_samples,), generator=g)
-y = signal + noise
-
-# Convention B: targets are column vectors
-true_w = torch.tensor([[2.0], [-1.5], [0.75]])
-signal = X @ true_w
-noise = torch.randn((n_samples, 1), generator=g)
-y = signal + noise
-```
-
-Add assertions immediately after generating the data.
-
-## 4. Noise Controls Difficulty
+## 3. Noise Controls Difficulty
 
 Use the same $X$ and signal while changing only the noise level:
 
@@ -130,7 +104,7 @@ $$
 
 when the noise has mean zero and is independent of $X$.
 
-## 5. Nonlinear Targets
+## 4. Nonlinear Targets
 
 The target function does not have to be linear.
 
@@ -165,7 +139,7 @@ y = signal + noise
 This is useful for testing whether a model can learn curvature and feature
 interactions.
 
-## 6. Heteroscedastic Noise
+## 5. Heteroscedastic Noise
 
 Constant-variance noise is called **homoscedastic**. Some real problems become
 noisier as a feature grows. We can simulate that too:
@@ -189,7 +163,7 @@ $$
 
 so residual spread grows with $x$.
 
-## 7. Separate Data Noise from Parameter Randomness
+## 6. Separate Data Noise from Parameter Randomness
 
 These are different experiments:
 
@@ -202,7 +176,7 @@ For a basic learning experiment, keep the true parameters visible and fixed.
 Otherwise it becomes difficult to tell whether a change came from the data, the
 noise, or the underlying task.
 
-## 8. A Reusable NumPy Function
+## 7. A Reusable NumPy Function
 
 ```python
 def make_linear_regression_data(
@@ -214,6 +188,7 @@ def make_linear_regression_data(
 ):
     rng = np.random.default_rng(seed)
     weights = np.asarray(weights, dtype=float)
+    bias = np.asarray(bias, dtype=float).reshape(1)
 
     X = rng.standard_normal((n_samples, len(weights)))
     signal = X @ weights + bias
@@ -226,22 +201,24 @@ def make_linear_regression_data(
 Keep `seed` as an argument so callers can reproduce one dataset or request a
 new realization deliberately.
 
-## 9. Class Practice
+## 8. Class Practice
 
 1. Generate $X$ with shape `(500, 4)` and a target using known coefficients.
 2. Generate three targets from the same signal with noise standard deviations
    `0.0`, `0.5`, and `2.0`.
-3. Write assertions that would catch the broadcasting trap.
+3. Assert that `true_w`, `true_b`, `signal`, `noise`, and `y` follow the
+   one-dimensional convention used in this lesson.
 4. Create a nonlinear target containing a squared term and an interaction term.
 5. Create noise whose standard deviation is larger for rows where `X[:, 0] > 0`.
 
-## 10. Key Takeaways
+## 9. Key Takeaways
 
 - Synthetic regression starts with $X$, computes a signal $f(X)$, then adds a
   separate random error term.
 - Normal samplers take a standard deviation; variance is its square.
 - Keep signal and noise in separate variables so the experiment is inspectable.
-- Shape mismatches can silently create an enormous incorrect target matrix.
+- Use the same one-dimensional parameter and target convention in NumPy and
+  PyTorch code.
 - Changing the noise distribution or scale changes the learning problem even
   when the true function remains fixed.
 
