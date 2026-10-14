@@ -2,8 +2,9 @@
 *ML / D07-Torch-NN-Intro*
 
 This module introduces the PyTorch API for constructing and training small
-feedforward neural networks. It starts with one linear layer, then builds toward
-a reusable mini-batch training workflow for regression and classification.
+feedforward neural networks. It starts with one linear layer, expands one
+training step into a full-batch epoch loop, and then builds toward a reusable
+mini-batch workflow for regression and classification.
 
 The focus is not memorizing one finished script. The focus is understanding the
 contract between data shapes, a model's output, the loss function, automatic
@@ -29,40 +30,44 @@ By the end of this module, students should be able to:
 3. match regression, binary-classification, and multiclass outputs to the
    correct loss and target format;
 4. explain and execute the five operations in a PyTorch training step;
-5. load CSV data with pandas, convert prepared columns to tensors, and use
-   `TensorDataset` and `DataLoader` to train with mini-batches;
-6. write separate training and evaluation loops using `train()`, `eval()`, and
+5. load CSV data with pandas, convert prepared columns to tensors, and train by
+   passing the entire training set to the model as one batch;
+6. use `TensorDataset` and `DataLoader` to train with mini-batches;
+7. write separate training and evaluation loops using `train()`, `eval()`, and
    `torch.inference_mode()`;
-7. train and evaluate complete regression and classification models; and
-8. diagnose common shape, dtype, device, gradient, and overfitting problems.
+8. train and evaluate complete regression and classification models; and
+9. diagnose common shape, dtype, device, gradient, and overfitting problems.
 
 ## Lessons
 
-1. [A neuron is a linear layer](./01-a-neuron-is-a-linear-layer.md)  
-   Connect $xW^T+b$ to `nn.Linear`, batch shapes, and trainable parameters.
-2. [Build a network with modules and activations](./02-modules-sequential-and-activations.md)  
-   Stack layers with `nn.Sequential` and define reusable models with `nn.Module`.
-3. [Choose outputs and loss functions](./03-output-loss-and-target-contracts.md)  
-   Match model outputs, target shapes, and target dtypes for three common tasks.
-4. [Perform one training step](./04-autograd-and-one-training-step.md)  
-   Follow forward, loss, zero-gradient, backward, and optimizer-step operations.
-5. [Load CSV data, train with mini-batches, and evaluate](./05-dataloaders-training-and-evaluation.md)  
-   Convert a pandas DataFrame to tensors, then use data loaders, epoch loops,
-   evaluation mode, and correctly aggregated metrics.
-6. [Complete regression project](./06-complete-regression-project.md)  
-   Fit a nonlinear curve, then compare a PyTorch network with the earlier
+1. [A neuron is a linear layer](./01-a-neuron-is-a-linear-layer.md)
+   — Connect $xW^T+b$ to `nn.Linear`, batch shapes, and trainable parameters.
+2. [Build a network with modules and activations](./02-modules-sequential-and-activations.md)
+   — Stack layers with `nn.Sequential` and define reusable models with `nn.Module`.
+3. [Choose outputs and loss functions](./03-output-loss-and-target-contracts.md)
+   — Match model outputs, target shapes, and target dtypes for three common tasks.
+4. [Perform one training step](./04-autograd-and-one-training-step.md)
+   — Follow forward, loss, zero-gradient, backward, and optimizer-step operations.
+5. [Load CSV data and train with one full batch](./05-full-batch-training.md)
+   — Convert a pandas DataFrame to tensors, then make one full-training-set
+   update per epoch.
+6. [Train with mini-batches and evaluate](./06-dataloaders-training-and-evaluation.md)
+   — Use data loaders, mini-batch loops, evaluation mode, and correctly
+   aggregated metrics.
+7. [Complete regression project](./07-complete-regression-project.md)
+   — Fit a nonlinear curve, then compare a PyTorch network with the earlier
    Walmart sales linear-regression baseline.
-7. [Complete classification project and debugging guide](./07-complete-classification-project.md)  
-   Learn a nonlinear decision boundary, then compare a PyTorch network with
+8. [Complete classification project and debugging guide](./08-complete-classification-project.md)
+   — Learn a nonlinear decision boundary, then compare a PyTorch network with
    the earlier Telecom churn classifier.
 
-The complete script used in Lesson 7 is available at
+The complete script used in Lesson 8 is available at
 [`practice_ws/train_xor_classifier.py`](./practice_ws/train_xor_classifier.py).
 
 ## The Training Workflow at a Glance
 
 ```text
-batch (X, y)
+full batch or mini-batch (X, y)
     │
     ▼
 model(X) ──► prediction/logits ──► loss_fn(output, y) ──► scalar loss

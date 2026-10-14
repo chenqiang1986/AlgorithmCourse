@@ -77,7 +77,7 @@ alpha_array = []
 
 for name in names:
     if "month" in name:
-        alpha_array.append(0.02)
+        alpha_array.append(1e-6)
     else:
         alpha_array.append(1e-6)
 

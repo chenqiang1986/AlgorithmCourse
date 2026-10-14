@@ -10,7 +10,7 @@ the computation that uses them inside `torch.nn` modules.
 One neuron with $d$ input features computes
 
 $$
-z=w_1x_1+cdots+w_dx_d+b=w^Tx+b.
+z=w_1x_1+\cdots+w_dx_d+b=w^Tx+b.
 $$
 
 For a batch of $n$ examples and $m$ output neurons, PyTorch computes

@@ -1,4 +1,4 @@
-# Lesson 7: Complete Classification Project and Debugging Guide
+# Lesson 8: Complete Classification Project and Debugging Guide
 *ML / D07-Torch-NN-Intro*
 
 This lesson trains a network to learn a nonlinear binary pattern. It completes

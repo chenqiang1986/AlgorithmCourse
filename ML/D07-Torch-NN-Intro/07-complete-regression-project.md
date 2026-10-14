@@ -1,4 +1,4 @@
-# Lesson 6: Complete Regression Project
+# Lesson 7: Complete Regression Project
 *ML / D07-Torch-NN-Intro*
 
 This lesson trains a neural network on a nonlinear regression problem from
@@ -304,13 +304,15 @@ holiday flag, temperature, fuel price, CPI, and unemployment rate.
 
 ### 13.1 Preserve the time order
 
-Sales observations are dated. Sort by the parsed date and place later dates in
+Sales observations are dated. Sort by the parsed date, then use
+`train_test_split` with `shuffle=False` so later observations are placed in the
 validation and test sets:
 
 ```python
 from pathlib import Path
 
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 csv_path = Path(
     "ML/D02-ScikitLearn-LinearRegression/"
@@ -321,24 +323,25 @@ df = pd.read_csv(csv_path)
 df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y")
 df = df.sort_values("Date").reset_index(drop=True)
 
-dates = df["Date"].drop_duplicates().sort_values()
-n_test_dates = int(0.20 * len(dates))
-n_val_dates = int(0.20 * (len(dates) - n_test_dates))
+train_val_df, test_df = train_test_split(
+    df,
+    test_size=0.20,
+    shuffle=False,
+)
+train_df, val_df = train_test_split(
+    train_val_df,
+    test_size=0.20,
+    shuffle=False,
+)
 
-train_dates = dates.iloc[: -(n_val_dates + n_test_dates)]
-val_dates = dates.iloc[-(n_val_dates + n_test_dates) : -n_test_dates]
-test_dates = dates.iloc[-n_test_dates:]
-
-train_df = df[df["Date"].isin(train_dates)]
-val_df = df[df["Date"].isin(val_dates)]
-test_df = df[df["Date"].isin(test_dates)]
-
-assert train_df["Date"].max() < val_df["Date"].min()
+assert train_df["Date"].max() <= val_df["Date"].min()
 assert val_df["Date"].max() <= test_df["Date"].min()
 ```
 
-Do not randomly shuffle before splitting. Random splitting would allow the
-model to train on future weeks while being evaluated on earlier weeks.
+The second split assigns 20% of the remaining 80% to validation, so the final
+proportions are 64% training, 16% validation, and 20% test. Do not randomly
+shuffle before splitting. Random splitting would allow the model to train on
+future weeks while being evaluated on earlier weeks.
 
 ### 13.2 Engineer named features before tensor conversion
 
