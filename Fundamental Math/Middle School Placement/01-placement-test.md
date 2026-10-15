@@ -1,179 +1,105 @@
-# Middle School Math Placement Test
-*Fundamental Math / Middle School Placement*
+# Middle Grades Math Placement Test
 
-This test is for a student finishing **5th grade**. It samples the core 5th-grade math
-skills, plus a few slightly-above-grade-level questions near the end, to help decide
-whether the student should start middle school on the **faster track** (accelerated
-pre-algebra pathway, starting with [Course 3](../Course%203)) or the **slower track**
-(standard-paced 6th grade math).
+*A 40-question sample from* Saxon Homeschool Middle Grades Placement Test
 
-## How to Use This Test
+## Directions
 
-- Time limit: **40 minutes**. No calculator.
-- Attempt every problem — if you're unsure, mark your best guess and move on rather than
-  spending more than 2 minutes on any one question.
-- This is a placement tool, not a graded exam. The answer key, full solutions, and track
-  recommendation live in
-  [02-placement-test-solutions.md](./02-placement-test-solutions.md).
+- Do not use a calculator.
+- Work independently and show all work.
+- Attempt every problem. The questions are sampled from Math 5/4, Math 6/5, Math 7/6, Math 8/7, and Algebra 1/2.
 
-## Problem 1: Multi-Digit Multiplication
+## Questions
 
-Evaluate: $347 \times 26$
+### Math 5/4
 
-(A) 9022  (B) 8022  (C) 9922  (D) 6940  (E) 2082
+1. Mae-Ying bought a package of paper priced at $1.98 and 2 pens priced at $0.49 each. The tax on the entire purchase was 18¢. What was the total cost of the items?
 
-## Problem 2: Long Division
+2. Robo could run 7 miles in 1 hour. At that rate, how many miles could Robo run in 3 hours?
 
-Evaluate: $4896 \div 24$
+3. At 11:45 A.M. Jason glanced at the clock. His doctor’s appointment was in $2\frac{1}{2}$ hours. At what time was his appointment?
 
-(A) 240  (B) 204  (C) 214  (D) 24  (E) 200
+4. Find the sixth number in this counting sequence: 7, 14, 21, $\ldots$
 
-## Problem 3: Adding and Subtracting Decimals
+5. Twenty-five percent of a square is shaded. What percent of the square is not shaded?
 
-Evaluate: $12.6 + 8.75 - 3.4$
+6. A rectangle is 6 inches long and 4 inches wide. What is its perimeter?
 
-(A) 16.95  (B) 18.75  (C) 17.95  (D) 20.85  (E) 17.05
+7. A square has one side that is 7 inches long. What is the area of the square?
 
-## Problem 4: Multiplying Decimals
+8. Evaluate: $4.2 + 3.5 + 0.25 + 4.0$
 
-Evaluate: $3.2 \times 1.5$
+### Math 6/5
 
-(A) 48  (B) 0.48  (C) 3.7  (D) 4.8  (E) 4.5
+9. In 2 hours, 3 boys picked a total of 1347 cherries. If they share the cherries evenly, how many cherries will each boy get?
 
-## Problem 5: Dividing Decimals
+10. Adriana’s age is $\frac{1}{3}$ of her dad’s age. If her dad is 36 years old, how old is Adriana?
 
-Evaluate: $7.2 \div 0.6$
+11. Estimate the sum of 672 and 830 by rounding each number to the nearest hundred before adding.
 
-(A) 1.2  (B) 120  (C) 0.12  (D) 4.32  (E) 12
+12. Use digits to write eight hundred eighteen thousand, eighty.
 
-## Problem 6: Adding Fractions With Unlike Denominators
+13. Evaluate: $2.54 + 5.36 + 0.75$
 
-Evaluate: $\dfrac{2}{3} + \dfrac{1}{6}$
+14. Evaluate: $4287 \times 5$
 
-(A) $\dfrac{5}{6}$  (B) $\dfrac{3}{9}$  (C) $\dfrac{1}{2}$  (D) $\dfrac{3}{6}$  (E) $\dfrac{5}{9}$
+15. Divide: $3647 \div 6$
 
-## Problem 7: Subtracting Fractions With Unlike Denominators
+16. Solve for $m$: $30m = 6000$.
 
-Evaluate: $\dfrac{7}{8} - \dfrac{1}{4}$
+### Math 7/6
 
-(A) $\dfrac{6}{4}$  (B) $\dfrac{5}{8}$  (C) $\dfrac{3}{4}$  (D) $\dfrac{6}{8}$  (E) $\dfrac{5}{4}$
+17. Which digit is in the hundred-thousands place in the number 987,654,321?
 
-## Problem 8: Multiplying Fractions
+18. Write the number twenty-one and five hundredths.
 
-Evaluate: $\dfrac{3}{5} \times \dfrac{2}{7}$
+19. In an auditorium there are 25 rows with 18 chairs in each row. How many chairs are in the auditorium?
 
-(A) $\dfrac{5}{12}$  (B) $\dfrac{6}{12}$  (C) $\dfrac{6}{35}$  (D) $\dfrac{5}{35}$  (E) $\dfrac{1}{2}$
+20. What is the total price of a $45.79 item when 7% sales tax is added?
 
-## Problem 9: Dividing a Fraction by a Whole Number
+21. There were 13 original states. There are now 50 states. What fraction of the states are the original states?
 
-Evaluate: $\dfrac{3}{4} \div 3$
+22. Evaluate: $3.7 \times 0.25$
 
-(A) $\dfrac{9}{4}$  (B) $\dfrac{1}{12}$  (C) 4  (D) $\dfrac{1}{4}$  (E) $\dfrac{2}{4}$
+23. Evaluate: $2\frac{1}{2} + 1\frac{1}{6}$.
 
-## Problem 10: Comparing Fractions and Decimals
+24. Evaluate: $2^3 + \sqrt{25} \times 3 - 4^2 \div \sqrt{4}$.
 
-Which of the following is greatest?
+### Math 8/7
 
-(A) 0.6  (B) 0.58  (C) $\dfrac{3}{5}$  (D) They are all equal  (E) $\dfrac{5}{8}$
+25. Round 7.49362 to the nearest thousandth.
 
-## Problem 11: Place Value / Powers of Ten
+26. A one-quart container of oil costs 89¢. A case of 12 one-quart containers costs $8.64. How much is saved per container by buying the oil by the case?
 
-What is $4.7 \times 100$?
+27. Ricardo ran the 400-meter race 3 times. His fastest time was 54.3 seconds, his slowest time was 56.1 seconds, and his average time was 55.0 seconds. What was his time for the third race?
 
-(A) 470  (B) 47  (C) 4700  (D) 0.47  (E) 407
+28. The perimeter of a square is one yard. What is the area of the square in square inches?
 
-## Problem 12: Order of Operations
+29. The sale price of an item on sale for 40% off is $48. What was the regular price?
 
-Evaluate: $5 + 2 \times (9 - 4)$
+30. A bag contains 3 red marbles, 4 white marbles, and 5 blue marbles. If one marble is drawn from the bag, what is the probability that it will be blue?
 
-(A) 35  (B) 15  (C) 19  (D) 25  (E) 45
+31. Solve for $w$: $6w = 6^3$.
 
-## Problem 13: Area
+32. Evaluate $x^3 - xy - \frac{x}{y}$ if $x = 2$ and $y = 0.5$.
 
-A rectangular garden is 12 ft by 7 ft. A square patio 4 ft by 4 ft is built inside the
-garden and is not part of the planting area. What is the area of the garden available for
-planting?
+### Algebra 1/2
 
-(A) 84 ft²  (B) 16 ft²  (C) 68 ft²  (D) 100 ft²  (E) 52 ft²
+33. The first flock contained 5283 birds. The second flock contained 5 times as many birds. The third flock had twice as many birds as the second flock. How many birds were there in all?
 
-## Problem 14: Volume of a Rectangular Prism
+34. For 4 hours Sam traveled at 40 miles per hour. Then he increased his speed to 60 miles per hour and drove for another 3 hours. How far did he travel in the 7 hours?
 
-A rectangular prism has length 6 units, width 4 units, and height 3 units. Find its volume.
+35. The ratio of roses to snapdragons was 4 to 5. If there were 26,000 roses on the float, how many snapdragons were there?
 
-(A) 13 units³  (B) 24 units³  (C) 42 units³  (D) 72 units³  (E) 18 units³
+36. Six times a number is 45 greater than the product of the number and $-3$. Find the number.
 
-## Problem 15: Perimeter Word Problem
+37. If 200 is increased by 130 percent, what is the resulting number?
 
-A rectangular field is twice as long as it is wide. If the width is 15 meters, what is the
-perimeter?
+38. Write 0.000387 in scientific notation.
 
-(A) 45 m  (B) 60 m  (C) 120 m  (D) 450 m  (E) 90 m
+39. Evaluate: $9876.5 - 643.99$.
 
-## Problem 16: Coordinate Plane
+40. Reduce $\frac{102}{170}$ to lowest terms.
 
-Point $A$ is located at $(3, 5)$. Point $B$ is located 4 units to the right and 2 units
-down from point $A$. What are the coordinates of point $B$?
+---
 
-(A) $(7, 3)$  (B) $(7, 7)$  (C) $(-1, 3)$  (D) $(1, 3)$  (E) $(7, -1)$
-
-## Problem 17: Line Plot / Mean
-
-A line plot shows the lengths of 5 pencils, in inches: 3, 3.5, 4, 3.5, 4.5. What is the
-mean (average) length?
-
-(A) 3.5 in  (B) 3.7 in  (C) 4 in  (D) 3.9 in  (E) 18.5 in
-
-## Problem 18: Multi-Step Word Problem
-
-Sam buys 4 packs of markers at \$3.25 each and a notebook for \$2.50. He pays with a \$20
-bill. How much change does he get?
-
-(A) \$5.50  (B) \$6.50  (C) \$4.50  (D) \$15.50  (E) \$4.00
-
-## Problem 19: Numerical Patterns
-
-Pattern A starts at 0 and adds 3 each time. Pattern B starts at 0 and adds 6 each time.
-What is the relationship between corresponding terms of Pattern A and Pattern B?
-
-(A) Each term of A is twice the corresponding term of B
-(B) The terms are always equal
-(C) Each term of B is 6 more than the corresponding term of A
-(D) Each term of B is twice the corresponding term of A
-(E) Each term of B is 3 more than the corresponding term of A
-
-## Problem 20: Challenge — Unit Rate Reasoning
-
-A store sells notebooks for the same price each. 3 notebooks cost \$7.50. How much would
-10 notebooks cost?
-
-(A) \$22.50  (B) \$17.50  (C) \$30.00  (D) \$20.00  (E) \$25.00
-
-## Topic Map
-
-Use this after checking your answers to see which skills to review, without re-reading each
-problem statement.
-
-| Problem | Topic |
-|---|---|
-| 1 | Multi-digit multiplication |
-| 2 | Long division |
-| 3 | Adding and subtracting decimals |
-| 4 | Multiplying decimals |
-| 5 | Dividing decimals |
-| 6 | Adding fractions with unlike denominators |
-| 7 | Subtracting fractions with unlike denominators |
-| 8 | Multiplying fractions |
-| 9 | Dividing a fraction by a whole number |
-| 10 | Comparing fractions and decimals |
-| 11 | Place value / powers of ten |
-| 12 | Order of operations |
-| 13 | Area of composite figures |
-| 14 | Volume of a rectangular prism |
-| 15 | Perimeter word problems |
-| 16 | Coordinate plane (Quadrant I) |
-| 17 | Line plots and mean |
-| 18 | Multi-step word problems |
-| 19 | Numerical patterns and relationships |
-| 20 | Unit rate reasoning (challenge) |
-
-Check your work against [02-placement-test-solutions.md](./02-placement-test-solutions.md).
+Source questions: *Saxon Homeschool Middle Grades Placement Test*, original question numbers 1, 3–5, 7–9, 11, 21, 24–27, 29–30, 32, 41–43, 45, 47, 49, 51, 53, 61, 64–66, 69–71, 78, 81, 83–84, 86–87, 91, 94, and 97.
