@@ -161,21 +161,52 @@ labels, cells, or rows were changed.
 
 ## Problem 12: Distribution Shift Investigation
 
-Use the same regression function for both sets, but generate:
+Create a training set with 1,500 rows and a test set with 500 rows. Each row
+has five independent features. Generate the features from different
+distributions:
 
 $$
-X_{\text{train}}\sim\mathcal{N}(0,1)
+X_{\text{train},j}\sim\mathcal{N}(0,1)
 $$
 
 and
 
 $$
-X_{\text{test}}\sim\mathcal{N}(1.5,1.8^2).
+X_{\text{test},j}\sim\mathcal{N}(1.5,1.8^2),
+\qquad j=1,\ldots,5.
 $$
 
-Compare the feature means and standard deviations. Train a linear regression
-model if available. Does performance change? Explain what stayed fixed and what
-changed.
+For both sets, generate the scalar target with the *same* linear data-generating
+process:
+
+$$
+w=
+\begin{bmatrix}
+2\\
+-1\\
+0.5\\
+3\\
+-2.5
+\end{bmatrix},
+\qquad b=4,
+\qquad
+y=Xw+b+\varepsilon,
+\qquad \varepsilon\sim\mathcal{N}(0,0.7^2).
+$$
+
+Thus `y_train` has shape `(1500,)` (or `(1500, 1)`) and `y_test` has shape
+`(500,)` (or `(500, 1)`), with one target value per feature row.
+
+1. Generate `X_train`, `X_test`, `y_train`, and `y_test` according to the
+   distributions above. Assert their shapes.
+2. Compute and compare the feature-wise means and standard deviations of
+   `X_train` and `X_test`.
+3. Fit a linear regression model on `(X_train, y_train)`.
+4. Evaluate the model on `(X_test, y_test)` and report test RMSE and $R^2$.
+5. Did the test metrics change relative to a no-shift test set? Explain that
+   the conditional relationship $y\mid X$ (the weights, intercept, and noise
+   distribution) stayed fixed, while the marginal feature distribution $P(X)$
+   changed.
 
 ## Extension Challenges
 
