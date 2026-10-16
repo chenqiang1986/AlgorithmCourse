@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380" role="img" aria-labelledby="title desc">
+  <title id="title">Three learning-rate schedules</title>
+  <desc id="desc">A graph comparing step decay, smooth exponential decay, and cosine decay over training steps.</desc>
+  <rect width="720" height="380" rx="16" fill="#f8fafc"/>
+  <g stroke="#64748b" stroke-width="2"><path d="M75 35V320H680"/><path d="M75 250H680" stroke="#cbd5e1"/><path d="M75 180H680" stroke="#cbd5e1"/><path d="M75 110H680" stroke="#cbd5e1"/></g>
+  <path d="M75 55 H225 V145 H375 V225 H525 V285 H680" fill="none" stroke="#c2410c" stroke-width="5"/>
+  <path d="M75 55 C200 82 295 132 375 180 S555 255 680 292" fill="none" stroke="#0f766e" stroke-width="5"/>
+  <path d="M75 55 C145 57 210 74 275 107 S405 190 475 250 S605 307 680 310" fill="none" stroke="#1d4ed8" stroke-width="5"/>
+  <g font-family="sans-serif" font-size="18" fill="#1e293b"><text x="23" y="45">rate</text><text x="622" y="350">step</text><text x="470" y="100" fill="#c2410c">step decay</text><text x="445" y="155" fill="#0f766e">exponential</text><text x="455" y="235" fill="#1d4ed8">cosine</text><text x="67" y="345">0</text><text x="665" y="345">T</text></g>
+</svg>

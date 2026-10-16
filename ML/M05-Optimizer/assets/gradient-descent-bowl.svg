@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Gradient descent on a quadratic bowl</title>
+  <desc id="desc">Elliptical contours of a quadratic loss with arrows leading downhill toward the minimum.</desc>
+  <rect width="720" height="360" rx="16" fill="#f8fafc"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="2"><ellipse cx="370" cy="185" rx="285" ry="125"/><ellipse cx="370" cy="185" rx="220" ry="96"/><ellipse cx="370" cy="185" rx="155" ry="67"/><ellipse cx="370" cy="185" rx="90" ry="39"/></g>
+  <g stroke="#0f766e" stroke-width="5" stroke-linecap="round"><path d="M130 85 L204 116"/><path d="M220 123 L281 149"/><path d="M296 155 L343 174"/></g>
+  <g fill="#0f766e"><path d="M204 116 l-20 -2 l8 17z"/><path d="M281 149 l-20 -2 l8 17z"/><path d="M343 174 l-20 -2 l8 17z"/></g>
+  <circle cx="130" cy="85" r="8" fill="#c2410c"/><circle cx="370" cy="185" r="9" fill="#1d4ed8"/>
+  <g font-family="sans-serif" font-size="20" fill="#1e293b"><text x="90" y="58">start</text><text x="388" y="181">minimum</text><text x="440" y="318">loss contours</text></g>
+  <text x="248" y="99" font-family="sans-serif" font-size="18" fill="#0f766e">negative-gradient steps</text>
+</svg>
