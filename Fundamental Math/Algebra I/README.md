@@ -89,5 +89,10 @@ a diagnostic test that samples the full range of Algebra I skills:
 23. [15-interim-test.md](./15-interim-test.md)
    A 60-minute, 100-point assessment of Lessons 3–14, with worked answers and scoring
    guidance in [15-interim-test-solutions.md](./15-interim-test-solutions.md).
+24. [16-practice-review-two-variable-linear-equations.md](./16-practice-review-two-variable-linear-equations.md)
+   A guided review of substitution, elimination, solution counts, and applications of
+   two-variable linear systems.
+25. [16-homework-two-variable-linear-equations.md](./16-homework-two-variable-linear-equations.md)
+   A 10-problem homework set reinforcing two-variable linear systems and their applications.
 
 More lessons can be added later as the course grows.

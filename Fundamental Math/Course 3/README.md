@@ -93,5 +93,11 @@ starting Algebra I:
 21. [14-homework-intersections-of-two-lines-on-the-xy-plane.md](./14-homework-intersections-of-two-lines-on-the-xy-plane.md)
     A 13-problem homework set on graphing and solving intersections, classifying pairs
     of lines, writing an equation before solving, and interpreting a real-world crossing.
+22. [15-practice-review-line-equations.md](./15-practice-review-line-equations.md)
+    A guided cumulative review of slopes, using a point and slope, writing line equations,
+    intersections, and constant-rate word problems, with worked solutions and an exit ticket.
+23. [15-homework-line-equations.md](./15-homework-line-equations.md)
+    A 9-problem homework set covering line equations, intersections, and constant-rate
+    word problems.
 
 More lessons can be added later as the course grows.

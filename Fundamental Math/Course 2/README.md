@@ -83,5 +83,12 @@ Course 3:
 16. [11-homework-linear-equation-word-problems.md](./11-homework-linear-equation-word-problems.md)
     A 20-problem homework set for Lesson 11, with worked solutions to number statements,
     totals and rates, related quantities, and comparison problems.
+17. [12-linear-equation-and-inequality-word-problems.md](./12-linear-equation-and-inequality-word-problems.md)
+    Extends word-problem modeling to exact equations and inequality limits, including
+    integer-context answers, plan comparisons, and heads-and-legs puzzles such as the
+    chicken-and-bunny count problem.
+18. [12-homework-linear-equation-and-inequality-word-problems.md](./12-homework-linear-equation-and-inequality-word-problems.md)
+    A 20-problem homework set on modeling exact totals, limits, and cost comparisons,
+    with context checks and progressively more challenging heads-and-legs problems.
 
 More lessons can be added later as the course grows.
