@@ -57,17 +57,32 @@ observations.
    **total** number of observations needed to achieve the requested
    confidence level and margin of error. Let $C=\texttt{confidence}$ and
    $E=\texttt{margin}$. Hold the current $s$ fixed as a planning estimate of
-   the population standard deviation. Starting at $n=m$, find the smallest
-   integer $n$ satisfying
+   the population standard deviation, and retain the pilot sample's degrees
+   of freedom.  Find the smallest total sample size $n\ge m$ satisfying
 
    $$
-   t_{n-1,\,1-\alpha/2}\frac{s}{\sqrt n}\le E,
+   t_{m-1,\,1-\alpha/2}\frac{s}{\sqrt n}\le E,
    \qquad \alpha=1-C.
    $$
 
-   A simple loop is appropriate because the critical value changes with
-   $n$: its degrees of freedom are $n-1$. If the current sample is already
-   sufficient, return $m$.
+   Thus, with $t_* = t_{m-1,\,1-\alpha/2}$, compute directly
+
+   $$
+   n=\max\!\left\{m,\ \left\lceil\left(\frac{t_*s}{E}\right)^2\right\rceil\right\}.
+   $$
+
+   The degrees of freedom remain $m-1$ because $s$ was estimated once from
+   the original $m$ observations; the proposed additional observations do
+   not update that estimate.  Under the Normal model, if the $n$-observation
+   mean includes those $m$ pilot observations, then
+
+   $$
+   \frac{\bar X_n-\mu}{S_m/\sqrt n}\sim t_{m-1}.
+   $$
+
+   Indeed, $\bar X_n$ is independent of the pilot residual variation $S_m^2$
+   (their covariance is zero, and the data are jointly Normal), while
+   $\bar X_n-\mu$ has variance $\sigma^2/n$.
 
 Use `t.ppf(1 - alpha / 2, df=...)` for a critical value and
 `t.cdf(value, df=...)` for a CDF value. Validate that the confidence level is
@@ -75,9 +90,10 @@ strictly between 0 and 1 and that the margin is positive.
 
 > **Planning caveat.** Part 3 is an estimate, not a guarantee. The current
 > $s$ is only an estimate of the unknown population standard deviation, and
-> the standard deviation of a future enlarged sample can change. After
-> collecting more data, recompute the confidence interval using the new
-> sample standard deviation.
+> this fixed-pilot calculation does not incorporate variation in a future
+> standard-deviation estimate. After collecting more data, recompute the
+> usual confidence interval using the enlarged sample's standard deviation
+> and its $n-1$ degrees of freedom.
 
 Test your functions with:
 
