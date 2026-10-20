@@ -1,4 +1,4 @@
-# Practice Set 2: Implement Learning-Rate Schedules
+# Practice Set 3: Implement Learning-Rate Schedules
 *ML / M05 — Optimizer*
 
 Use your hand-written gradient and update code from Practice Set 1. Do not use

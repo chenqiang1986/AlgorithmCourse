@@ -1,4 +1,4 @@
-# Practice Set 3: Implement Momentum, Nesterov, and Adam
+# Practice Set 4: Implement Momentum, Nesterov, and Adam
 *ML / M05 — Optimizer*
 
 Implement every optimizer yourself with NumPy. Do not call `torch.optim`,

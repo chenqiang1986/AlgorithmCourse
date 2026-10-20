@@ -1,4 +1,4 @@
-# Lesson 3: Momentum, Nesterov Momentum, and Adam
+# Lesson 4: Momentum, Nesterov Momentum, and Adam
 *ML / M05 — Optimizer*
 
 ## The question

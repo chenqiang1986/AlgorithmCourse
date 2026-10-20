@@ -1,4 +1,4 @@
-# Lesson 2: Dynamic Learning-Rate Schedules
+# Lesson 3: Dynamic Learning-Rate Schedules
 *ML / M05 — Optimizer*
 
 ## The question
