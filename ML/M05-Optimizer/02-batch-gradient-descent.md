@@ -20,7 +20,8 @@ By the end of this lesson, you should be able to:
 1. distinguish an epoch from an optimizer step;
 2. state how many examples each gradient-descent variant uses per step; and
 3. implement a shuffled mini-batch training loop with the correct loss
-   normalization.
+   normalization; and
+4. use PyTorch's `Dataset` and `DataLoader` to feed mini-batches to a model.
 
 ## 1. One dataset, three update sizes
 
@@ -108,7 +109,60 @@ the **mean batch loss**. That also correctly handles the smaller final batch.
 For full-batch gradient descent, set `batch_size = len(X_train)`; the inner
 loop then makes exactly one update per epoch. For SGD, set `batch_size = 1`.
 
-## 4. Compare training budgets carefully
+## 4. Feeding mini-batches with PyTorch
+
+PyTorch separates *what the data is* from *how it is delivered during
+training*:
+
+- A `Dataset` maps an index to one example, such as `(features, target)`.
+- A `DataLoader` takes a dataset and yields batches. It handles batching,
+  shuffling, and (when configured) parallel data loading.
+
+For tensors that already fit in memory, `TensorDataset` is a convenient
+dataset implementation:
+
+~~~python
+import torch
+from torch.utils.data import DataLoader, TensorDataset
+
+# X_train: shape (n, num_features); y_train: shape (n,) or (n, 1)
+train_dataset = TensorDataset(X_train, y_train)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+
+model = torch.nn.Linear(X_train.shape[1], 1)
+loss_fn = torch.nn.MSELoss()       # reduction="mean" by default
+optimizer = torch.optim.SGD(model.parameters(), lr=0.05)
+
+for epoch in range(num_epochs):
+    for X_batch, y_batch in train_loader:
+        prediction = model(X_batch).squeeze(-1)
+        loss = loss_fn(prediction, y_batch)
+
+        optimizer.zero_grad()      # discard gradients from the previous step
+        loss.backward()            # compute gradients for this batch
+        optimizer.step()           # one optimizer step
+~~~
+
+`shuffle=True` gives the loader a new randomized ordering each time it is
+iterated, so the outer loop above shuffles once per epoch. The loader emits a
+smaller final batch when the dataset size is not divisible by `batch_size`.
+This is usually what you want; set `drop_last=True` only when every batch must
+have exactly the same size (for example, for a batch-size-sensitive layer).
+
+`torch.nn.MSELoss()` averages the loss over the batch by default, matching the
+mean-batch-loss normalization in the NumPy loop. Other loss functions also
+commonly default to `reduction="mean"`; check a loss function's documentation
+before changing its reduction, since a summed loss makes gradient magnitudes
+grow with the batch size.
+
+For data stored in files, images, or a database, write a custom subclass of
+`torch.utils.data.Dataset` that implements `__len__` and `__getitem__`, then
+pass it to `DataLoader` in exactly the same way. For I/O-bound workloads,
+`num_workers` can load examples in worker processes while the accelerator is
+training, but start with its default of `0` while developing and tune it only
+after measuring.
+
+## 5. Compare training budgets carefully
 
 “Train for 10 epochs” and “train for 10,000 steps” are different budgets.
 Changing the batch size changes how many steps fit in an epoch. It can also
@@ -136,3 +190,5 @@ dataset's loss.
   about $\lceil n/b\rceil$ steps per epoch.
 - Normalize gradients by the current batch size, and shuffle before forming
   batches for each epoch.
+- In PyTorch, `DataLoader(..., shuffle=True)` supplies shuffled mini-batches;
+  `optimizer.step()` performs one parameter update per batch.

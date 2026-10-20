@@ -12,7 +12,7 @@ $t$.
 
 By the end of this lesson, you should be able to implement step, exponential,
 and cosine schedules; distinguish their behavior; and insert a time-varying
-rate into manual gradient descent.
+rate into manual gradient descent or a PyTorch optimizer.
 
 ## 1. The update stays the same
 
@@ -91,7 +91,73 @@ for step in range(total_steps):
 Log the current rate beside the loss. A late plateau might mean that training
 is near a minimum, or simply that the schedule has made updates tiny.
 
-## 5. Choosing a schedule in practice
+## 5. Learning-rate schedulers in PyTorch
+
+In PyTorch, create an optimizer with its initial learning rate, then give that
+optimizer to a scheduler. The scheduler changes the optimizer's learning rate
+in place; do not create a new optimizer at each decay.
+
+~~~python
+import torch
+
+optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
+scheduler = torch.optim.lr_scheduler.StepLR(
+    optimizer, step_size=10, gamma=0.1
+)
+
+for epoch in range(num_epochs):
+    for X_batch, y_batch in train_loader:
+        optimizer.zero_grad()
+        loss = loss_fn(model(X_batch), y_batch)
+        loss.backward()
+        optimizer.step()
+
+    scheduler.step()  # call once per epoch: decay after every 10 epochs
+    current_lr = optimizer.param_groups[0]["lr"]
+    print(f"epoch {epoch + 1}: lr = {current_lr:.5g}")
+~~~
+
+Always call `optimizer.step()` before `scheduler.step()`. Most schedulers do
+not know whether their clock means an epoch or a batch: it advances whenever
+you call `scheduler.step()`. The example calls it after the inner loop, so
+`step_size=10` means 10 epochs. If you call it after every batch, the same
+value means 10 optimizer steps instead.
+
+PyTorch includes direct counterparts to the schedules above:
+
+| Desired behavior | Scheduler | Important setting |
+|---|---|---|
+| Multiply the rate by $\gamma$ every $k$ calls | `StepLR` | `step_size=k`, `gamma=γ` |
+| Multiply the rate by $\gamma$ at every call | `ExponentialLR` | `gamma=γ` |
+| Cosine decay over $T$ calls | `CosineAnnealingLR` | `T_max=T`, `eta_min` |
+
+For example, a cosine schedule measured in optimizer steps uses the total
+number of batches as its horizon and steps after each parameter update:
+
+~~~python
+steps_per_epoch = len(train_loader)
+optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+    optimizer,
+    T_max=num_epochs * steps_per_epoch,
+    eta_min=1e-5,
+)
+
+for epoch in range(num_epochs):
+    for X_batch, y_batch in train_loader:
+        optimizer.zero_grad()
+        loss = loss_fn(model(X_batch), y_batch)
+        loss.backward()
+        optimizer.step()
+        scheduler.step()  # one scheduler tick per optimizer step
+~~~
+
+For a validation-driven schedule rather than a preset timeline, use
+`ReduceLROnPlateau`. It is different: call `scheduler.step(validation_loss)`
+after computing a validation metric, because the metric determines whether the
+rate should decrease.
+
+## 6. Choosing a schedule in practice
 
 | Schedule | Useful when | Main caution |
 |---|---|---|
@@ -109,4 +175,6 @@ which it reached that loss.
 - A schedule supplies $\eta_t$ to the same gradient-descent update.
 - Step decay changes rate in intervals; exponential and cosine decay are smooth.
 - State whether the clock advances per batch, epoch, or optimizer update.
+- PyTorch schedulers mutate an optimizer's learning rate; call their `step()`
+  method after the corresponding optimizer update.
 - A schedule is a hyperparameter to test, not a universal cure.
