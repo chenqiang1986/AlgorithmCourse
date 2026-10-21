@@ -11,7 +11,8 @@ valley, or scale updates differently for different parameters?
 
 By the end of this lesson, you should be able to implement classical momentum,
 Nesterov momentum, and Adam; identify the state each method stores; and explain
-why Adam needs bias correction at early steps.
+why Adam needs bias correction at early steps; and select these optimizers in
+PyTorch.
 
 ## 1. Classical momentum: mix old motion with a new gradient
 
@@ -121,7 +122,67 @@ for t in range(1, total_steps + 1):
     b -= lr * m_b_hat / (np.sqrt(s_b_hat) + eps)
 ~~~
 
-## 4. What to compare
+## 4. Selecting an optimizer in PyTorch
+
+PyTorch optimizer objects receive the model parameters they are allowed to
+update. Choose and construct one **once**, before training: the object stores
+momentum or Adam moment estimates between steps.
+
+~~~python
+import torch
+
+# Plain SGD
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+# SGD with classical momentum
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+
+# SGD with Nesterov momentum (requires momentum > 0)
+optimizer = torch.optim.SGD(
+    model.parameters(), lr=0.01, momentum=0.9, nesterov=True
+)
+
+# Adam: betas is (beta_1, beta_2); these are its usual defaults
+optimizer = torch.optim.Adam(
+    model.parameters(), lr=1e-3, betas=(0.9, 0.999), eps=1e-8
+)
+~~~
+
+Only keep the one assignment matching the optimizer you want to test. The
+standard PyTorch training pattern is the same for all of them:
+
+~~~python
+for X_batch, y_batch in train_loader:
+    optimizer.zero_grad()  # PyTorch accumulates gradients by default
+    prediction = model(X_batch)
+    loss = loss_fn(prediction, y_batch)
+    loss.backward()
+    optimizer.step()       # updates every parameter passed to the optimizer
+~~~
+
+With `momentum=0.9` and PyTorch's default `dampening=0`, `SGD` uses the
+classical momentum form from this lesson. Set `nesterov=True` to use its
+look-ahead variant. `Adam` implements the first and second moments and bias
+correction described above. `AdamW` has the same adaptive-moment mechanism,
+but applies weight decay in a decoupled way; it is often a useful option for
+neural networks when regularization is desired.
+
+An optimizer can also use **parameter groups** when different parts of a
+model need different settings, for example a smaller learning rate for a
+pretrained feature extractor:
+
+~~~python
+optimizer = torch.optim.AdamW([
+    {"params": model.features.parameters(), "lr": 1e-4},
+    {"params": model.classifier.parameters(), "lr": 1e-3},
+], weight_decay=1e-2)
+~~~
+
+All trainable parameters should appear in exactly one group. Do not recreate
+the optimizer inside an epoch or batch loop: doing so discards its velocity or
+moment estimates.
+
+## 5. What to compare
 
 | Method | Stored state per parameter | Main strength | Main risk |
 |---|---|---|---|
@@ -138,4 +199,6 @@ criterion. Log loss and, when useful, parameter or gradient norms.
 - Momentum blends historical velocity with the current gradient.
 - Nesterov evaluates the gradient at a momentum look-ahead point.
 - Adam uses gradient and squared-gradient averages with bias correction.
+- In PyTorch, pass `model.parameters()` to one optimizer created before the
+  training loop; `optimizer.step()` then applies its chosen update rule.
 - Optimizers do not remove the need to tune rates and validate results.
