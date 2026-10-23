@@ -90,5 +90,11 @@ Course 3:
 18. [12-homework-linear-equation-and-inequality-word-problems.md](./12-homework-linear-equation-and-inequality-word-problems.md)
     A 20-problem homework set on modeling exact totals, limits, and cost comparisons,
     with context checks and progressively more challenging heads-and-legs problems.
+19. [13-geometry-linear-equation-word-problems.md](./13-geometry-linear-equation-word-problems.md)
+    Applies one-variable linear equations to circle circumference and square or rectangle
+    perimeter comparisons, then uses the solved lengths to find area.
+20. [13-homework-geometry-linear-equation-word-problems.md](./13-homework-geometry-linear-equation-word-problems.md)
+    A 10-problem homework set on modeling circle circumference, square and rectangle
+    perimeter, combined boundaries, and comparison relationships before finding area.
 
 More lessons can be added later as the course grows.

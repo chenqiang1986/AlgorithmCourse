@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">A circle and a square sharing the same variable length</title>
+  <desc id="desc">The radius of the circle and each side of the square are both labeled x centimeters. The circle circumference and square perimeter are highlighted.</desc>
+  <rect width="720" height="300" fill="#ffffff"/>
+  <circle cx="175" cy="152" r="94" fill="#eaf4ff" stroke="#235c91" stroke-width="4"/>
+  <line x1="175" y1="152" x2="269" y2="152" stroke="#c34b28" stroke-width="4"/>
+  <text x="221" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#812c15">radius = x cm</text>
+  <text x="175" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#172c44">circumference = 2πx</text>
+  <rect x="445" y="58" width="188" height="188" fill="#f4f0ff" stroke="#5d3d91" stroke-width="4"/>
+  <text x="539" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#4c2e78">side = x cm</text>
+  <text x="539" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#4c2e78">x cm</text>
+  <text x="539" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#172c44">perimeter = 4x</text>
+  <text x="360" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#172c44">Same length, two perimeter formulas</text>
+</svg>

@@ -94,5 +94,10 @@ a diagnostic test that samples the full range of Algebra I skills:
    two-variable linear systems.
 25. [16-homework-two-variable-linear-equations.md](./16-homework-two-variable-linear-equations.md)
    A 10-problem homework set reinforcing two-variable linear systems and their applications.
+26. [17-practice-review-three-variable-linear-equations.md](./17-practice-review-three-variable-linear-equations.md)
+   A class-practice-centered review of three-variable systems, emphasizing two independent
+   elimination steps, method choice, and error analysis.
+27. [17-homework-three-variable-linear-equations.md](./17-homework-three-variable-linear-equations.md)
+   Three elimination problems on solving systems of three linear equations in three variables.
 
 More lessons can be added later as the course grows.

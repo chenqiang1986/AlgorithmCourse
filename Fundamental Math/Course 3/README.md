@@ -99,5 +99,11 @@ starting Algebra I:
 23. [15-homework-line-equations.md](./15-homework-line-equations.md)
     A 9-problem homework set covering line equations, intersections, and constant-rate
     word problems.
+24. [16-practice-review-systems-and-intersections.md](./16-practice-review-systems-and-intersections.md)
+    A practice-forward review connecting substitution and elimination with the intersection
+    of two lines, including special systems and contextual models.
+25. [16-homework-systems-and-intersections.md](./16-homework-systems-and-intersections.md)
+    A 12-problem homework set on solving two-variable systems, classifying solution
+    structures, graphing intersections, and applying systems in context.
 
 More lessons can be added later as the course grows.
