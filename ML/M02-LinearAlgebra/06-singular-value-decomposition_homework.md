@@ -4,6 +4,70 @@
 This practice connects one algebraic fact about SVD to a visible application:
 compressing a grayscale image while retaining its most important patterns.
 
+## Part 0: Guided Proof — Existence of the SVD
+
+Let $A$ be an $m\times n$ real matrix. In this exercise, prove that $A$ has a
+singular value decomposition by building it from the eigenvalues and
+eigenvectors of $A^TA$. You may use the spectral theorem for real symmetric
+matrices: a real symmetric matrix has an orthonormal basis of eigenvectors.
+
+Let $r$ be the number of positive eigenvalues of $A^TA$. Choose orthonormal
+eigenvectors $v_1,\ldots,v_n$ of $A^TA$ so that their eigenvalues are
+
+$$
+\sigma_1^2,\ldots,\sigma_r^2,0,\ldots,0,
+$$
+
+where $\sigma_i>0$ for $1\le i\le r$. Let
+
+$$
+V_r=[v_1\ v_2\ \cdots\ v_r],
+\qquad
+U_r=\left[\frac{Av_1}{\sigma_1}\ \frac{Av_2}{\sigma_2}\ \cdots\ \frac{Av_r}{\sigma_r}\right],
+$$
+
+and let $V=[v_1\ v_2\ \cdots\ v_n]=[V_r\ V_{\mathrm{extra}}]$.
+
+### Exercise 0
+
+Complete the following steps.
+
+1. Show that $A^TA$ is symmetric. Then show that every eigenvalue of $A^TA$
+   is nonnegative. *(Hint: evaluate $x^TA^TAx$.)*
+
+2. For $1\le i,j\le r$, show that the vectors
+
+   $$
+   u_i=\frac{Av_i}{\sigma_i}
+   $$
+
+   are orthonormal; that is, prove $u_i^Tu_j=\delta_{ij}$.
+
+3. Let $\Sigma_r=\operatorname{diag}(\sigma_1,\ldots,\sigma_r)$. Show that
+
+   $$
+   AV_rV_r^T=U_r\Sigma_rV_r^T.
+   $$
+
+4. Show that $Av_i=0$ for every $i>r$. *(Hint: compute $\|Av_i\|^2$.)*
+
+5. Use $V=[V_r\ V_{\mathrm{extra}}]$, $V^TV=I$, and the result of step 4 to
+   show that
+
+   $$
+   A=AVV^T=AV_rV_r^T.
+   $$
+
+6. Combine steps 3 and 5 to conclude that
+
+   $$
+   A=U_r\Sigma_rV_r^T.
+   $$
+
+   Explain why this is a reduced SVD of $A$. Finally, explain how extending
+   the orthonormal columns of $U_r$ to an orthonormal basis of $\mathbb{R}^m$
+   gives the full SVD $A=U\Sigma V^T$.
+
 ## Part 1: Frobenius Norm and Singular Values
 
 For an $m\times n$ matrix $A=(a_{ij})$, the **Frobenius norm** is

@@ -150,6 +150,16 @@ A=U_r\Sigma_rV_r^T,
 $$
 
 where $U_r$ is $m\times r$, $\Sigma_r$ is $r\times r$, and $V_r$ is $n\times r$.
+The columns of $U_r$ and $V_r$ are orthonormal, so these are **quasi-orthogonal**
+(or thin orthogonal) matrices:
+
+$$
+U_r^TU_r=I_r,\qquad V_r^TV_r=I_r.
+$$
+
+Because they are generally rectangular, the reverse products need not be identity:
+$U_rU_r^T\ne I_m$ and $V_rV_r^T\ne I_n$ in general. (They are instead
+orthogonal projection matrices onto the retained left and right singular subspaces.)
 Equivalently,
 
 $$

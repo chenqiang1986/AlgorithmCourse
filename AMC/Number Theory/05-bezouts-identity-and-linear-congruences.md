@@ -74,15 +74,15 @@ $$\begin{aligned}
 1&=3(\underline{15}-\underline{11})-\underline{11}\\
  &=3\cdot\underline{15}-4\cdot\underline{11}\\
  &=3\cdot\underline{15}-4(\underline{56}-3\cdot\underline{15})\\
- &=13\cdot\underline{15}-4\cdot\underline{56}.
+ &=15\cdot\underline{15}-4\cdot\underline{56}.
 \end{aligned}$$
 
 Therefore
 
-$$\boxed{1=(-4)\cdot56+13\cdot15.}$$
+$$\boxed{1=(-4)\cdot56+15\cdot15.}$$
 
 This is Bézout's identity in action. A quick check confirms it:
-$-4(56)+13(15)=-224+195=1$.
+$-4(56)+15(15)=-224+225=1$.
 
 A rigorous proof of Bézout's identity follows this same idea, formalized with an
 induction argument along the decreasing remainders of the Euclidean algorithm. The
@@ -147,18 +147,18 @@ Bézout gives $au+nv=1$; reducing modulo $n$ leaves $au\equiv1\pmod n$.
 
 From the previous example,
 
-$$1=(-4)\cdot56+13\cdot15.$$
+$$1=(-4)\cdot56+15\cdot15.$$
 
 Reduce both sides modulo $56$. The $-4\cdot56$ term becomes $0$, giving
 
-$$13\cdot15\equiv1\pmod {56}.$$
+$$15\cdot15\equiv1\pmod {56}.$$
 
 So
 
-$$\boxed{15^{-1}\equiv13\pmod {56}.}$$
+$$\boxed{15^{-1}\equiv15\pmod {56}.}$$
 
-Notice that $-43$ is also an inverse, since $-43\equiv13\pmod {56}$. We normally
-report the least nonnegative representative, $13$.
+Notice that $-41$ is also an inverse, since $-41\equiv15\pmod {56}$. We normally
+report the least nonnegative representative, $15$.
 
 ### A Crucial Warning About “Dividing”
 
