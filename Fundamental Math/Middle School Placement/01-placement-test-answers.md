@@ -37,8 +37,8 @@ Answers for [01-placement-test.md](./01-placement-test.md).
 | 19 | 450 chairs |
 | 20 | $49.00 |
 | 21 | $\frac{13}{50}$ |
-| 22 | 0.925 |
-| 23 | $3\frac{2}{3}$ |
+| 22 | -0.925 |
+| 23 | $-1\frac{1}{3}$ |
 | 24 | 15 |
 
 ## Math 8/7

@@ -51,7 +51,7 @@ Complete the following steps.
 
 4. Show that $Av_i=0$ for every $i>r$. *(Hint: compute $\|Av_i\|^2$.)*
 
-5. Use $V=[V_r\ V_{\mathrm{extra}}]$, $V^TV=I$, and the result of step 4 to
+5. Use $V=[V_r\ V_{\mathrm{extra}}]$, $VV^T=I$, and the result of step 4 to
    show that
 
    $$

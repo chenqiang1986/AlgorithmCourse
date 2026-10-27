@@ -58,9 +58,9 @@
 
 21. There were 13 original states. There are now 50 states. What fraction of the states are the original states?
 
-22. Evaluate: $3.7 \times 0.25$
+22. Evaluate: $-3.7 \times 0.25$
 
-23. Evaluate: $2\frac{1}{2} + 1\frac{1}{6}$.
+23. Evaluate: $-2\frac{1}{2} + 1\frac{1}{6}$.
 
 24. Evaluate: $2^3 + \sqrt{25} \times 3 - 4^2 \div \sqrt{4}$.
 
