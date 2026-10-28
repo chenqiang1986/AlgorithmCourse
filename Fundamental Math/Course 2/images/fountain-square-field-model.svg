@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 390" role="img" aria-labelledby="title desc">
+  <title id="title">A circular fountain centered in a square field</title>
+  <desc id="desc">A circle of radius r is inscribed in a square. The square side is labeled 2r, showing that the circle touches all four sides.</desc>
+  <rect width="680" height="390" fill="#ffffff"/>
+  <text x="340" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#172c44">Fountain in a square field</text>
+  <rect x="190" y="68" width="260" height="260" fill="#dff3df" stroke="#367247" stroke-width="4"/>
+  <circle cx="320" cy="198" r="130" fill="#bde7f4" stroke="#23728c" stroke-width="4"/>
+  <circle cx="320" cy="198" r="4" fill="#172c44"/>
+  <line x1="320" y1="198" x2="450" y2="198" stroke="#c34b28" stroke-width="4"/>
+  <text x="385" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#812c15">r</text>
+  <line x1="190" y1="350" x2="450" y2="350" stroke="#367247" stroke-width="2"/>
+  <line x1="190" y1="342" x2="190" y2="358" stroke="#367247" stroke-width="2"/>
+  <line x1="450" y1="342" x2="450" y2="358" stroke="#367247" stroke-width="2"/>
+  <text x="320" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#235c36">square side = 2r</text>
+  <text x="510" y="170" font-family="Arial, sans-serif" font-size="20" fill="#172c44">circle: C = 2πr</text>
+  <text x="510" y="202" font-family="Arial, sans-serif" font-size="20" fill="#172c44">square: P = 4(2r)</text>
+</svg>

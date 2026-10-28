@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="title desc">
+  <title id="title">A circular fountain centered in a square field with a one meter border</title>
+  <desc id="desc">A circle of radius r is centered inside a square. The distance from the circle to every side of the square is one meter, so the square side is 2r plus 2 meters.</desc>
+  <rect width="680" height="410" fill="#ffffff"/>
+  <text x="340" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#172c44">Concentric fountain and square field</text>
+  <rect x="220" y="70" width="240" height="240" fill="#dff3df" stroke="#367247" stroke-width="4"/>
+  <circle cx="340" cy="190" r="96" fill="#bde7f4" stroke="#23728c" stroke-width="4"/>
+  <circle cx="340" cy="190" r="4" fill="#172c44"/>
+  <line x1="340" y1="190" x2="436" y2="190" stroke="#c34b28" stroke-width="4"/>
+  <text x="388" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#812c15">r</text>
+  <line x1="340" y1="70" x2="340" y2="94" stroke="#6a4b13" stroke-width="3"/>
+  <line x1="332" y1="70" x2="348" y2="70" stroke="#6a4b13" stroke-width="2"/>
+  <line x1="332" y1="94" x2="348" y2="94" stroke="#6a4b13" stroke-width="2"/>
+  <text x="361" y="87" font-family="Arial, sans-serif" font-size="20" fill="#6a4b13">1 m</text>
+  <text x="490" y="163" font-family="Arial, sans-serif" font-size="20" fill="#235c36">1 m border</text>
+  <text x="490" y="188" font-family="Arial, sans-serif" font-size="20" fill="#235c36">on every side</text>
+</svg>

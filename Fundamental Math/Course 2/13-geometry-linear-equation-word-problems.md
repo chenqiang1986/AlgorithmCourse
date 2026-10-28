@@ -4,8 +4,8 @@
 In [Lesson 11](./11-linear-equation-word-problems.md), a perimeter formula helped us
 model a rectangle. This lesson uses formulas as the background of the story: a circle's
 circumference and a rectangle's or square's perimeter. The algebra is still a
-one-variable linear equation. The main task is to turn each shape description into the
-correct expression before solving.
+one-variable linear equation. The main task is to read the diagram, turn each shape
+description into the correct expression, and then solve.
 
 ## 1. Formulas Are Translation Tools
 
@@ -33,9 +33,11 @@ $2\pi x$ and the square's perimeter is $4x$.
 2. **Write each geometric expression** from its formula.
 3. **Translate the comparison.** “Is $d$ cm greater than” means larger expression
    $=$ smaller expression $+d$.
-4. **Solve the linear equation.**
-5. **Answer every question asked.** A side length may be needed before finding an area.
-6. **Check units and the story.** Perimeter and circumference use cm; area uses
+4. **Use the diagram's relationships.** A circle that fits exactly in a square, for
+   example, has a diameter equal to the square's side length.
+5. **Solve the linear equation.**
+6. **Answer every question asked.** A side length may be needed before finding an area.
+7. **Check units and the story.** Perimeter and circumference use cm; area uses
    $\text{cm}^2$.
 
 ## 3. Worked Example: Circle and Square
@@ -131,15 +133,17 @@ $\square$
 > happen to give a whole-number side length. A length can be decimal, so do not round it
 > to a whole number unless the question asks you to.
 
-## 6. Worked Example: Circle and Rectangle Together
+## 6. Worked Example: Fountain Inside a Square Field
 
-**Example (Fountain and garden).** A rectangular garden is beside a circular fountain.
-The garden's width is the same as the fountain's radius, and its length is $5$ m longer
-than its width. Using $\pi=3$, the sum of the fountain's circumference and the garden's
-perimeter is $50$ m. Find the fountain radius, the garden's dimensions, and the garden's
-area.
+**Example (Fountain and field).** A circular fountain fits exactly inside a square
+field, as shown. The fountain's circumference and the field's perimeter have a combined
+length of $56$ m. Use $\pi=3$. Find the fountain's radius and the area of the square
+field.
 
-> **Hint:** Let $r$ be the radius of the circular fountain in meters.
+![A circular fountain of radius r inscribed in a square field whose side is 2r.](./images/fountain-square-field-model.svg)
+
+> Because the circle touches opposite sides of the square, its diameter is the square's
+> side length. Thus, if the radius is $r$, the side length is $2r$.
 
 **Solution:**
 
@@ -147,27 +151,26 @@ Let $r$ be the fountain's radius in meters. Its circumference is
 
 $$C=2(3)r=6r.$$
 
-The garden has width $r$ and length $r+5$, so its perimeter is
+The field is a square with side length $2r$, so its perimeter is
 
-$$P=2r+2(r+5)=4r+10.$$
+$$P=4(2r)=8r.$$
 
-The two boundary lengths add to $50$ m:
+The two boundary lengths add to $56$ m:
 
-$$6r+(4r+10)=50.$$
+$$6r+8r=56.$$
 
 Solve:
 
-$$10r+10=50$$
-$$10r=40$$
+$$14r=56$$
 $$r=4.$$
 
-The garden is $4$ m by $4+5=9$ m. Its area is
+The field's side length is $2(4)=8$ m. Its area is
 
-$$A=4(9)=36\text{ m}^2.$$
+$$A=8^2=64\text{ m}^2.$$
 
-Check: the fountain circumference is $6(4)=24$ m and the garden perimeter is
-$2(4)+2(9)=26$ m. Their sum is $24+26=50$ m. The fountain radius is **$4$ m**;
-the garden is **$4$ m by $9$ m**, with area **$36\text{ m}^2$**.
+Check: the fountain circumference is $6(4)=24$ m and the field perimeter is
+$4(8)=32$ m. Their sum is $24+32=56$ m. The fountain radius is **$4$ m** and the
+square field's area is **$64\text{ m}^2$**.
 
 $\square$
 
@@ -272,32 +275,40 @@ $\square$
 
 </details>
 
-### Practice 6: Combined Circle and Rectangle Boundaries
+### Practice 6: Two Circles in a Rectangle
 
-**Problem (Pool and deck).** A rectangular deck surrounds a circular pool. The deck's
-width is the same as the pool's radius, and its length is $3$ m more than twice its
-width. Using $\pi=3$, the pool circumference and deck perimeter have a combined length
-of $72$ m. Find the pool's radius, the deck's dimensions, and the deck's area.
+**Problem (Plaza fountains).** Two congruent circular fountains fit exactly side by side
+inside a rectangular plaza, as shown. Each fountain touches the rectangle and the other
+fountain. Using $\pi=3$, the two fountain circumferences and the plaza perimeter have a
+combined length of $96$ m. Find the radius of each fountain, the plaza's dimensions, and
+the plaza's area.
 
-> **Hint:** Let $r$ be the radius of the circular pool in meters.
+![Two circles of radius r fit side by side in a rectangle with dimensions 4r by 2r.](./images/two-circles-rectangle-model.svg)
+
+> **Diagram clue:** Each circle has diameter $2r$. Two diameters make the rectangle's
+> length $4r$, and one diameter makes its width $2r$.
 
 <details>
 <summary>Solution</summary>
 
 **Solution:**
 
-The pool circumference is $6r$. The deck perimeter is
-$2r+2(2r+3)=6r+6$. Their sum gives
+The circumference of one fountain is $6r$, so the two fountains have total
+circumference $12r$. The plaza has length $4r$ and width $2r$, so its perimeter is
 
-$$6r+(6r+6)=72.$$
+$$2(4r)+2(2r)=12r.$$
 
-Thus $12r+6=72$, so $12r=66$ and $r=5.5$ m. The deck width is $5.5$ m and its
-length is $2(5.5)+3=14$ m. Its area is
+Their combined boundary length gives
 
-$$5.5(14)=77\text{ m}^2.$$
+$$12r+12r=96.$$
 
-The radius is **$5.5$ m**; the deck is **$5.5$ m by $14$ m**, with area
-**$77\text{ m}^2$**.
+Thus $24r=96$, so $r=4$ m. The plaza width is $2(4)=8$ m and its length is
+$4(4)=16$ m. Its area is
+
+$$8(16)=128\text{ m}^2.$$
+
+Each fountain has radius **$4$ m**; the plaza is **$8$ m by $16$ m**, with area
+**$128\text{ m}^2$**.
 
 $\square$
 
@@ -309,6 +320,8 @@ $\square$
 field's width is three times the track's radius, and its length is $3$ m more than four
 times the track's radius. Using $\pi=3$, the field's perimeter is $12$ m more than twice
 the track's circumference. Find the track's radius and the field's area.
+
+![A circular track with radius r and a rectangular field with width 3r and length 4r plus 3 meters.](./images/track-field-relationship-model.svg)
 
 > **Hint:** Let $r$ be the radius of the circular track in meters.
 

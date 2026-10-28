@@ -111,19 +111,28 @@ $\square$
 
 ### Problem 7: Combined Boundaries
 
-**Problem (Fountain and garden).** A rectangular garden's width is the same as the radius
-of a circular fountain, and its length is $5$ m longer than its width. Using $\pi=3$,
-the fountain's circumference and garden's perimeter add to $50$ m. Find the fountain's
-radius, the garden's dimensions, and the garden's area.
+**Problem (Fountain and field).** A circular fountain is centered inside a square field,
+as shown. There is a $1$ m-wide strip of field between the fountain and each side of the
+square. Using $\pi=3$, the fountain's circumference and the field's perimeter have a
+combined length of $64$ m. Find the fountain's radius, the field's side length, and the
+field's area.
 
-> **Hint:** Let $r$ be the radius of the circular fountain in meters.
+![A circular fountain of radius r centered in a square field with a one meter border on every side.](./images/concentric-fountain-square-field-model.svg)
+
+> **Hint:** Let $r$ be the fountain's radius in meters. The circle's diameter is $2r$,
+> and the $1$ m border occurs on both sides of that diameter.
 
 <details><summary>Solution</summary>
 
-**Solution:** The circumference is $6r$; the garden perimeter is $2r+2(r+5)=4r+10$.
-So $6r+4r+10=50$, giving $r=4$ m. The garden is $4$ m by $9$ m and has area
-$36\text{ m}^2$. The radius is **$4$ m**; the garden is **$4$ m by $9$ m**, with area
-**$36\text{ m}^2$**.
+**Solution:** The fountain's circumference is $6r$. Its diameter is $2r$, and the
+$1$ m border on each side makes the square field's side length $2r+2$. Therefore, the
+field perimeter is $4(2r+2)=8r+8$. The combined-boundary equation is
+
+$$6r+(8r+8)=64.$$
+
+Thus $14r=56$, so $r=4$ m. The field's side length is $2(4)+2=10$ m, and its area is
+$10^2=100\text{ m}^2$. The fountain radius is **$4$ m**; the field has side length
+**$10$ m** and area **$100\text{ m}^2$**.
 
 $\square$
 
@@ -156,6 +165,8 @@ circular track. Its length is $3$ m more than four times the track's radius. Usi
 $\pi=3$, the field's perimeter is $12$ m more than twice the track's circumference.
 Find the track's radius and the field's area.
 
+![A circular track with radius r and a rectangular field with width 3r and length 4r plus 3 meters.](./images/track-field-relationship-model.svg)
+
 > **Hint:** Let $r$ be the radius of the circular track in meters.
 
 <details><summary>Solution</summary>
@@ -177,6 +188,8 @@ $\square$
 circular track, and its length is $3$ m more than four times the track's radius. Using
 $\pi=3$, the field's perimeter is $12$ m more than twice the track's circumference. A
 student says the radius is $4$ m. Is the student correct? Solve the equation and explain.
+
+![A circular track with radius r and a rectangular field with width 3r and length 4r plus 3 meters.](./images/track-field-relationship-model.svg)
 
 > **Hint:** Let $r$ be the radius of the circular track in meters.
 

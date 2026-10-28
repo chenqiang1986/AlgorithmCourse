@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 390" role="img" aria-labelledby="title desc">
+  <title id="title">Circular track and rectangular field with dimensions expressed using r</title>
+  <desc id="desc">A circular track has radius r. A separate rectangular field has width 3r and length 4r plus 3 meters.</desc>
+  <rect width="820" height="390" fill="#ffffff"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#172c44">Track and field relationships</text>
+  <circle cx="170" cy="200" r="60" fill="#d9f0fb" stroke="#23728c" stroke-width="4"/>
+  <circle cx="170" cy="200" r="5" fill="#172c44"/>
+  <line x1="170" y1="200" x2="230" y2="200" stroke="#c34b28" stroke-width="4"/>
+  <text x="200" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#812c15">r</text>
+  <text x="170" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#172c44">circular track</text>
+  <rect x="390" y="110" width="300" height="180" fill="#def1d9" stroke="#367247" stroke-width="4"/>
+  <line x1="390" y1="314" x2="690" y2="314" stroke="#367247" stroke-width="2"/>
+  <line x1="390" y1="306" x2="390" y2="322" stroke="#367247" stroke-width="2"/>
+  <line x1="690" y1="306" x2="690" y2="322" stroke="#367247" stroke-width="2"/>
+  <text x="540" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#235c36">length = 4r + 3 m</text>
+  <line x1="716" y1="110" x2="716" y2="290" stroke="#367247" stroke-width="2"/>
+  <line x1="708" y1="110" x2="724" y2="110" stroke="#367247" stroke-width="2"/>
+  <line x1="708" y1="290" x2="724" y2="290" stroke="#367247" stroke-width="2"/>
+  <text x="738" y="190" font-family="Arial, sans-serif" font-size="20" fill="#235c36">width</text>
+  <text x="738" y="214" font-family="Arial, sans-serif" font-size="20" fill="#235c36">= 3r</text>
+  <text x="540" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#235c36">rectangular field</text>
+  <text x="410" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#526779">The diagram shows the stated length relationships.</text>
+</svg>

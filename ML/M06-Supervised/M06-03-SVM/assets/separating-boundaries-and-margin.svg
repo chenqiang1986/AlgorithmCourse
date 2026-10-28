@@ -1,0 +1,67 @@
+<svg viewBox="0 0 820 500" width="820" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">Several separating boundaries, including the SVM maximum-margin boundary</title>
+  <desc id="desc">Red points on the left and blue points on the right are linearly separable. Thin gray lines are valid decision boundaries. A thick dark line is the maximum-margin boundary. Dashed parallel lines run through the nearest points, and a double arrow marks the margin width.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect width="820" height="500" rx="16" fill="#fffdf8"/>
+  <rect x="72" y="52" width="644" height="354" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+
+  <g stroke="#cbd5e1" stroke-width="1">
+    <path d="M72 123H716M72 194H716M72 265H716M72 336H716" stroke-dasharray="4 6"/>
+    <path d="M200 52V406M328 52V406M456 52V406M584 52V406" stroke-dasharray="4 6"/>
+  </g>
+  <g stroke="#64748b" stroke-width="2">
+    <path d="M72 406H738"/><path d="M72 406V31"/>
+    <path d="M738 406l-10-5v10z" fill="#64748b"/><path d="M72 31l-5 10h10z" fill="#64748b"/>
+  </g>
+  <g fill="#475569" font-family="sans-serif" font-size="17">
+    <text x="744" y="413">x₁</text><text x="54" y="37">x₂</text>
+  </g>
+
+  <!-- Several correct, but non-optimal, separating boundaries. -->
+  <g fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="10 8">
+    <path d="M301 406L483 52"/>
+    <path d="M422 406L360 52"/>
+    <path d="M278 406L564 52"/>
+  </g>
+  <g fill="#64748b" font-family="sans-serif" font-size="16">
+    <text x="485" y="88">other valid boundaries</text>
+  </g>
+
+  <!-- Margin boundaries and the selected maximum-margin separator. -->
+  <g fill="none" stroke="#0f766e" stroke-width="2.5" stroke-dasharray="8 6">
+    <path d="M344 52V406"/><path d="M472 52V406"/>
+  </g>
+  <path d="M408 52V406" stroke="#0f172a" stroke-width="5"/>
+  <g fill="#0f172a" font-family="sans-serif" font-size="17" font-weight="600">
+    <text x="420" y="290">maximum-margin</text><text x="420" y="312">decision boundary</text>
+  </g>
+  <path d="M344 82H472" stroke="#0f172a" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="359" y="91" width="100" height="25" rx="4" fill="#fffdf8"/>
+  <text x="370" y="109" fill="#0f172a" font-family="sans-serif" font-size="15">margin width</text>
+
+  <!-- Class points. The outlined closest points are support vectors. -->
+  <g fill="#dc2626" stroke="#991b1b" stroke-width="1.5">
+    <circle cx="158" cy="115" r="9"/><circle cx="221" cy="159" r="9"/><circle cx="277" cy="104" r="9"/>
+    <circle cx="180" cy="235" r="9"/><circle cx="254" cy="278" r="9"/><circle cx="310" cy="218" r="9"/>
+    <circle cx="150" cy="340" r="9"/><circle cx="235" cy="359" r="9"/><circle cx="344" cy="335" r="10" fill="#ef4444" stroke="#0f766e" stroke-width="4"/>
+  </g>
+  <g fill="#2563eb" stroke="#1e3a8a" stroke-width="1.5">
+    <circle cx="487" cy="116" r="9"/><circle cx="559" cy="150" r="9"/><circle cx="650" cy="102" r="9"/>
+    <circle cx="472" cy="235" r="10" fill="#3b82f6" stroke="#0f766e" stroke-width="4"/><circle cx="550" cy="263" r="9"/><circle cx="631" cy="216" r="9"/>
+    <circle cx="505" cy="349" r="9"/><circle cx="594" cy="338" r="9"/><circle cx="670" cy="369" r="9"/>
+  </g>
+
+  <g fill="#0f766e" font-family="sans-serif" font-size="15">
+    <text x="269" y="385">support vector</text><path d="M329 374L342 344" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="486" y="198">support vector</text><path d="M505 202L478 228" stroke="#0f766e" stroke-width="1.5"/>
+  </g>
+  <g font-family="sans-serif" font-size="17" font-weight="600">
+    <text x="120" y="435" fill="#b91c1c">red class (−1)</text>
+    <text x="560" y="435" fill="#1d4ed8">blue class (+1)</text>
+  </g>
+  <text x="410" y="476" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="16">All shown boundaries separate the data; SVM selects the one farthest from its nearest points.</text>
+</svg>
