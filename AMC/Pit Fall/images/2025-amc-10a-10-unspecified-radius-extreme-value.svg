@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">2025 AMC 10A Problem 10 semicircles</title>
+  <desc id="desc">A large shaded semicircle with horizontal diameter AB. A chord CD, of length 16, is parallel to the diameter. A smaller white semicircle resting on AB is tangent to the chord.</desc>
+  <rect width="720" height="430" fill="white"/>
+  <path d="M 110 335 A 250 250 0 0 1 610 335 Z" fill="#d9eaf7" stroke="#1f2933" stroke-width="4"/>
+  <path d="M 240 335 A 120 120 0 0 1 480 335 Z" fill="white" stroke="#1f2933" stroke-width="4"/>
+  <line x1="141" y1="215" x2="579" y2="215" stroke="#1f2933" stroke-width="4"/>
+  <circle cx="141" cy="215" r="4.5" fill="#1f2933"/>
+  <circle cx="579" cy="215" r="4.5" fill="#1f2933"/>
+  <circle cx="110" cy="335" r="4.5" fill="#1f2933"/>
+  <circle cx="610" cy="335" r="4.5" fill="#1f2933"/>
+  <text x="94" y="365" font-family="Arial, sans-serif" font-size="25" font-style="italic">A</text>
+  <text x="613" y="365" font-family="Arial, sans-serif" font-size="25" font-style="italic">B</text>
+  <text x="123" y="204" font-family="Arial, sans-serif" font-size="25" font-style="italic">C</text>
+  <text x="585" y="204" font-family="Arial, sans-serif" font-size="25" font-style="italic">D</text>
+  <text x="343" y="203" font-family="Arial, sans-serif" font-size="24">16</text>
+</svg>

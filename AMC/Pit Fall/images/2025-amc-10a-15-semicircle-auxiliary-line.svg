@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">2025 AMC 10A Problem 15 with auxiliary diagonal</title>
+  <desc id="desc">Rectangle ABEF with C on BE and D below it. The auxiliary diagonal AE is highlighted in blue.</desc>
+  <style>
+    .edge { fill: none; stroke: #1f2937; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .aux { fill: none; stroke: #2563eb; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .right { fill: none; stroke: #1f2937; stroke-width: 2.5; stroke-linejoin: round; }
+    .point { fill: #111827; }
+    .label { font: 23px Georgia, serif; fill: #111827; }
+    .measure { font: 20px Georgia, serif; fill: #374151; }
+  </style>
+
+  <!-- Rectangle ABEF and segments through C and D. -->
+  <path class="edge" d="M 130 110 L 130 180 L 620 180 L 620 110 Z" />
+  <path class="edge" d="M 130 110 L 340 390 L 620 180" />
+
+  <!-- Auxiliary diagonal. -->
+  <path class="aux" d="M 130 110 L 620 180" />
+
+  <!-- Right-angle marker at D. -->
+  <path class="right" d="M 322 366 L 346 348 L 364 372" />
+
+  <!-- Points. -->
+  <circle class="point" cx="130" cy="110" r="4.5" />
+  <circle class="point" cx="130" cy="180" r="4.5" />
+  <circle class="point" cx="182.5" cy="180" r="4.5" />
+  <circle class="point" cx="620" cy="180" r="4.5" />
+  <circle class="point" cx="620" cy="110" r="4.5" />
+  <circle class="point" cx="340" cy="390" r="4.5" />
+
+  <!-- Labels. -->
+  <text class="label" x="105" y="101">A</text>
+  <text class="label" x="103" y="205">B</text>
+  <text class="label" x="171" y="205">C</text>
+  <text class="label" x="629" y="205">E</text>
+  <text class="label" x="629" y="101">F</text>
+  <text class="label" x="345" y="419">D</text>
+
+  <text class="measure" x="79" y="151">1</text>
+  <text class="measure" x="362" y="98">7</text>
+  <text class="measure" x="210" y="302">5</text>
+
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+  <title id="title">2021 AMC 10A Problem 17 diagram</title>
+  <desc id="desc">A geometry diagram with points A, B, C, D, O, and P. Segment CP is dotted to emphasize connecting the orphan midpoint P to C.</desc>
+  <rect width="1200" height="670" fill="white"/>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="4" d="M85 590H1090L980 75H470L85 590M85 590L980 75M470 75L1090 590M470 75L1090 590"/>
+    <path stroke-width="4" d="M85 590L980 75"/>
+    <path stroke-width="4" d="M470 75L1090 590"/>
+    <path stroke="#2369a8" stroke-width="4" stroke-dasharray="11 10" d="M773 327L980 75"/>
+    <path stroke-width="3" d="M490 91l-17 20 20 17 17-20M781 344l-18 21 20 17 18-21"/>
+  </g>
+  <g fill="#111">
+    <circle cx="85" cy="590" r="11"/><circle cx="1090" cy="590" r="11"/><circle cx="980" cy="75" r="11"/><circle cx="470" cy="75" r="11"/>
+    <circle cx="679" cy="248" r="11"/><circle cx="773" cy="327" r="11"/>
+  </g>
+  <g font-family="Times New Roman, serif" font-size="37" font-style="italic" fill="#111">
+    <text x="48" y="635">A</text><text x="1101" y="635">B</text><text x="990" y="63">C</text><text x="435" y="62">D</text>
+    <text x="664" y="237">O</text><text x="765" y="374">P</text>
+  </g>
+  <g font-family="Times New Roman, serif" font-size="36" fill="#111">
+    <text x="710" y="64">43</text><text x="1020" y="335">43</text><text x="710" y="317">11</text>
+  </g>
+  <text x="835" y="230" fill="#2369a8" font-family="Arial, sans-serif" font-size="25">draw CP</text>
+</svg>
