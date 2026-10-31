@@ -96,5 +96,11 @@ Course 3:
 20. [13-homework-geometry-linear-equation-word-problems.md](./13-homework-geometry-linear-equation-word-problems.md)
     A 10-problem homework set on modeling circle circumference, square and rectangle
     perimeter, combined boundaries, and comparison relationships before finding area.
+21. [14-ratio-proportion-tax-discount.md](./14-ratio-proportion-tax-discount.md)
+    Introduces tax and discount as percent ratios, using proportions to find percent
+    amounts, original prices, and rates through cross-product equations.
+22. [14-homework-ratio-proportion-tax-discount.md](./14-homework-ratio-proportion-tax-discount.md)
+    A 10-problem homework set on using cross-product proportions to find tax and
+    discount amounts, rates, and original prices.
 
 More lessons can be added later as the course grows.

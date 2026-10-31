@@ -99,5 +99,11 @@ a diagnostic test that samples the full range of Algebra I skills:
    elimination steps, method choice, and error analysis.
 27. [17-homework-three-variable-linear-equations.md](./17-homework-three-variable-linear-equations.md)
    Three elimination problems on solving systems of three linear equations in three variables.
+28. [18-linear-system-word-problems.md](./18-linear-system-word-problems.md)
+   Modeling and solving meaningful two- and three-variable linear-system applications,
+   including ticket sales, fixed-plus-variable pricing, shipping, and fundraising.
+29. [18-homework-linear-system-word-problems.md](./18-homework-linear-system-word-problems.md)
+   Five translation-only word problems and one complete three-variable modeling and
+   solving problem.
 
 More lessons can be added later as the course grows.

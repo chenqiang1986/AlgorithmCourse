@@ -105,5 +105,8 @@ starting Algebra I:
 25. [16-homework-systems-and-intersections.md](./16-homework-systems-and-intersections.md)
     A 12-problem homework set on solving two-variable systems, classifying solution
     structures, graphing intersections, and applying systems in context.
+26. [16-homework2-comprehensive-line-equations.md](./16-homework2-comprehensive-line-equations.md)
+    A 15-problem cumulative homework on checking points, completing points, slope and
+    intercepts, writing equations from a slope and point, and line intersections.
 
 More lessons can be added later as the course grows.
