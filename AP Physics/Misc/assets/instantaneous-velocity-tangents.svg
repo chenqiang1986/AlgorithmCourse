@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Instantaneous velocity vectors tangent to a curved path</title>
+  <desc id="desc">A curved path with four arrows tangent to it at different points, representing instantaneous velocity vectors.</desc>
+  <defs>
+    <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#2e7d32"/></marker>
+  </defs>
+  <rect width="720" height="360" fill="white"/>
+  <path d="M72,276 C152,68 271,325 383,181 C484,50 560,101 654,64" fill="none" stroke="#333" stroke-width="5"/>
+  <text x="340" y="308" font-family="Arial, sans-serif" font-size="20" fill="#333">path r(t)</text>
+  <circle cx="130" cy="197" r="8" fill="#222"/>
+  <circle cx="232" cy="211" r="8" fill="#222"/>
+  <circle cx="329" cy="223" r="8" fill="#222"/>
+  <circle cx="508" cy="90" r="8" fill="#222"/>
+  <line x1="130" y1="197" x2="193" y2="167" stroke="#2e7d32" stroke-width="5" marker-end="url(#greenArrow)"/>
+  <line x1="232" y1="211" x2="297" y2="236" stroke="#2e7d32" stroke-width="5" marker-end="url(#greenArrow)"/>
+  <line x1="329" y1="223" x2="406" y2="197" stroke="#2e7d32" stroke-width="5" marker-end="url(#greenArrow)"/>
+  <line x1="508" y1="90" x2="576" y2="73" stroke="#2e7d32" stroke-width="5" marker-end="url(#greenArrow)"/>
+  <text x="72" y="86" font-family="Arial, sans-serif" font-size="19" fill="#2e7d32">v(t)</text>
+  <text x="277" y="281" font-family="Arial, sans-serif" font-size="19" fill="#2e7d32">v(t)</text>
+  <text x="445" y="93" font-family="Arial, sans-serif" font-size="19" fill="#2e7d32">v(t)</text>
+  <text x="606" y="59" font-family="Arial, sans-serif" font-size="19" fill="#2e7d32">v(t)</text>
+</svg>

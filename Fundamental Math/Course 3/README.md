@@ -108,5 +108,11 @@ starting Algebra I:
 26. [16-homework2-comprehensive-line-equations.md](./16-homework2-comprehensive-line-equations.md)
     A 15-problem cumulative homework on checking points, completing points, slope and
     intercepts, writing equations from a slope and point, and line intersections.
+27. [17-parallel-lines-in-coordinate-geometry.md](./17-parallel-lines-in-coordinate-geometry.md)
+    Identifying parallel, coincident, and intersecting lines from their equations, and
+    writing parallel-line equations through a given point.
+28. [17-homework-parallel-lines-in-coordinate-geometry.md](./17-homework-parallel-lines-in-coordinate-geometry.md)
+    A 14-problem homework set on classifying line relationships, writing parallel-line
+    equations, vertical and horizontal cases, and standard-form reasoning.
 
 More lessons can be added later as the course grows.

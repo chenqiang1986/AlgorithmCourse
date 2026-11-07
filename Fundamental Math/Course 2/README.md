@@ -59,48 +59,58 @@ Course 3:
 9. [07-algebraic-expressions-and-like-terms.md](./07-algebraic-expressions-and-like-terms.md)
    Introduces variables, terms, and coefficients; evaluating expressions by substitution;
    combining like terms; and the distributive property for removing parentheses.
-10. [08-one-variable-linear-equations.md](./08-one-variable-linear-equations.md)
+10. [07-homework-simplifying-expressions.md](./07-homework-simplifying-expressions.md)
+    An independent 30-problem homework set for Lesson 7 on simplifying expressions with the
+    distributive property, fraction calculations, and like terms.
+11. [08-one-variable-linear-equations.md](./08-one-variable-linear-equations.md)
     Solving one-step equations (undoing addition/subtraction or multiplication/division) and
     two-step equations, using the balance-scale model to keep both sides equal.
-11. [08-homework-expressions-and-equations.md](./08-homework-expressions-and-equations.md)
+12. [08-homework-expressions-and-equations.md](./08-homework-expressions-and-equations.md)
     A 20-problem homework set covering Lessons 7–8: evaluating expressions, combining like
     terms, the distributive property, and solving one- and two-step equations, including word
     problems that require building an equation first.
-12. [09-one-variable-linear-inequalities.md](./09-one-variable-linear-inequalities.md)
+13. [09-one-variable-linear-inequalities.md](./09-one-variable-linear-inequalities.md)
     Introduces inequality symbols and number-line graphs, then solves one- and two-step linear
     inequalities, including the rule to flip the inequality when multiplying or dividing by a
     negative number.
-13. [09-homework-one-variable-linear-inequalities.md](./09-homework-one-variable-linear-inequalities.md)
+14. [09-homework-one-variable-linear-inequalities.md](./09-homework-one-variable-linear-inequalities.md)
     A 20-problem homework set on reading, solving, checking, and graphing one-variable linear
     inequalities, including negative coefficients and real-world applications.
-14. [10-interim-test.md](./10-interim-test.md)
+15. [10-interim-test.md](./10-interim-test.md)
     A 100-point, 60-minute interim assessment covering Lessons 3–9: integer and fraction
     operations, expressions, equations, and one-variable inequalities. Worked solutions and
     scoring guidance: [10-interim-test-solutions.md](./10-interim-test-solutions.md).
-15. [11-linear-equation-word-problems.md](./11-linear-equation-word-problems.md)
+16. [11-linear-equation-word-problems.md](./11-linear-equation-word-problems.md)
     A lesson on defining variables, translating words into one-variable equations, solving,
     and checking answers in context, with worked examples and practice problems.
-16. [11-homework-linear-equation-word-problems.md](./11-homework-linear-equation-word-problems.md)
+17. [11-homework-linear-equation-word-problems.md](./11-homework-linear-equation-word-problems.md)
     A 20-problem homework set for Lesson 11, with worked solutions to number statements,
     totals and rates, related quantities, and comparison problems.
-17. [12-linear-equation-and-inequality-word-problems.md](./12-linear-equation-and-inequality-word-problems.md)
+18. [12-linear-equation-and-inequality-word-problems.md](./12-linear-equation-and-inequality-word-problems.md)
     Extends word-problem modeling to exact equations and inequality limits, including
     integer-context answers, plan comparisons, and heads-and-legs puzzles such as the
     chicken-and-bunny count problem.
-18. [12-homework-linear-equation-and-inequality-word-problems.md](./12-homework-linear-equation-and-inequality-word-problems.md)
+19. [12-homework-linear-equation-and-inequality-word-problems.md](./12-homework-linear-equation-and-inequality-word-problems.md)
     A 20-problem homework set on modeling exact totals, limits, and cost comparisons,
     with context checks and progressively more challenging heads-and-legs problems.
-19. [13-geometry-linear-equation-word-problems.md](./13-geometry-linear-equation-word-problems.md)
+20. [13-geometry-linear-equation-word-problems.md](./13-geometry-linear-equation-word-problems.md)
     Applies one-variable linear equations to circle circumference and square or rectangle
     perimeter comparisons, then uses the solved lengths to find area.
-20. [13-homework-geometry-linear-equation-word-problems.md](./13-homework-geometry-linear-equation-word-problems.md)
+21. [13-homework-geometry-linear-equation-word-problems.md](./13-homework-geometry-linear-equation-word-problems.md)
     A 10-problem homework set on modeling circle circumference, square and rectangle
     perimeter, combined boundaries, and comparison relationships before finding area.
-21. [14-ratio-proportion-tax-discount.md](./14-ratio-proportion-tax-discount.md)
+22. [14-ratio-proportion-tax-discount.md](./14-ratio-proportion-tax-discount.md)
     Introduces tax and discount as percent ratios, using proportions to find percent
     amounts, original prices, and rates through cross-product equations.
-22. [14-homework-ratio-proportion-tax-discount.md](./14-homework-ratio-proportion-tax-discount.md)
+23. [14-homework-ratio-proportion-tax-discount.md](./14-homework-ratio-proportion-tax-discount.md)
     A 10-problem homework set on using cross-product proportions to find tax and
     discount amounts, rates, and original prices.
+24. [15-final-price-tax-discount.md](./15-final-price-tax-discount.md)
+    Extends tax and discount questions to final prices: adding tax, subtracting a
+    discount, applying tax after a discount, and working backward from a post-tax or
+    post-discount price.
+25. [15-homework-final-price-tax-discount.md](./15-homework-final-price-tax-discount.md)
+    A 12-problem homework set on final prices with tax and discounts, reverse
+    calculations, and discount-then-tax transactions.
 
 More lessons can be added later as the course grows.

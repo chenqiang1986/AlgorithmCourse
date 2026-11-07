@@ -105,5 +105,12 @@ a diagnostic test that samples the full range of Algebra I skills:
 29. [18-homework-linear-system-word-problems.md](./18-homework-linear-system-word-problems.md)
    Five translation-only word problems and one complete three-variable modeling and
    solving problem.
+30. [19-quadratic-equation-word-problems.md](./19-quadratic-equation-word-problems.md)
+   Applying quadratic equations to rectangle dimensions, product relationships, triangle
+   area, price-and-demand revenue, and vertical-motion situations, with contextual
+   interpretation of roots.
+31. [19-homework-quadratic-equation-word-problems.md](./19-homework-quadratic-equation-word-problems.md)
+   A 12-problem homework set on modeling and solving quadratic applications involving
+   geometry, products, price-and-demand revenue, and vertical motion.
 
 More lessons can be added later as the course grows.

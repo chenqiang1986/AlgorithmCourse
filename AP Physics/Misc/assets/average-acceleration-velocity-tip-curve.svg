@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Change in velocity between two points on a curve</title>
+  <desc id="desc">A curve with velocity-tip points. A blue arrow from the initial point to the final point represents the change in velocity.</desc>
+  <defs>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#1565c0"/></marker>
+  </defs>
+  <rect width="720" height="390" fill="white"/>
+  <path d="M72,276 C152,68 271,325 383,181 C484,50 560,101 654,64" fill="none" stroke="#333" stroke-width="5"/>
+  <circle cx="130" cy="197" r="8" fill="#222"/>
+  <circle cx="232" cy="211" r="8" fill="#222"/>
+  <circle cx="329" cy="223" r="8" fill="#222"/>
+  <circle cx="508" cy="90" r="8" fill="#222"/>
+  <line x1="130" y1="197" x2="508" y2="90" stroke="#1565c0" stroke-width="5" marker-end="url(#blueArrow)"/>
+  <text x="143" y="182" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2e7d32">v_i</text>
+  <text x="519" y="82" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2e7d32">v_f</text>
+  <text x="309" y="121" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#1565c0">Δv</text>
+</svg>

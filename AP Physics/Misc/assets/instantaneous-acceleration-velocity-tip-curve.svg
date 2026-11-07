@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Instantaneous acceleration tangent to a curve</title>
+  <desc id="desc">A curve with four points and orange arrows tangent to the curve at those points.</desc>
+  <defs>
+    <marker id="orangeArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#e65100"/></marker>
+  </defs>
+  <rect width="720" height="390" fill="white"/>
+  <path d="M72,276 C152,68 271,325 383,181 C484,50 560,101 654,64" fill="none" stroke="#333" stroke-width="5"/>
+  <circle cx="130" cy="197" r="8" fill="#222"/>
+  <circle cx="232" cy="211" r="8" fill="#222"/>
+  <circle cx="329" cy="223" r="8" fill="#222"/>
+  <circle cx="508" cy="90" r="8" fill="#222"/>
+  <line x1="130" y1="197" x2="193" y2="167" stroke="#e65100" stroke-width="5" marker-end="url(#orangeArrow)"/>
+  <line x1="232" y1="211" x2="297" y2="236" stroke="#e65100" stroke-width="5" marker-end="url(#orangeArrow)"/>
+  <line x1="329" y1="223" x2="406" y2="197" stroke="#e65100" stroke-width="5" marker-end="url(#orangeArrow)"/>
+  <line x1="508" y1="90" x2="576" y2="73" stroke="#e65100" stroke-width="5" marker-end="url(#orangeArrow)"/>
+  <text x="192" y="158" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">a(t)</text>
+  <text x="299" y="253" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">a(t)</text>
+  <text x="410" y="195" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">a(t)</text>
+  <text x="578" y="70" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">a(t)</text>
+</svg>
