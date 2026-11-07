@@ -56,6 +56,22 @@ Course 3:
    A 20-problem homework set covering Lessons 5–6: fraction signs, multiplication, and
    division; adding fractions with same and different denominators and reducing to
    simplest form; plus composite expressions that combine multiplication and addition.
+
+### Numeric-Expression Bridge Lessons
+
+These short classes sit between Lessons 6 and 7. They use numbers only and emphasize
+rewriting an expression into an equivalent requested form, without calculating a final value.
+
+- [06.1-generalized-addition-commutative-law.md](./06.1-generalized-addition-commutative-law.md)
+  Rewrites subtraction as addition of negative numbers, then uses generalized addition and
+  commutativity to rearrange numeric expressions without introducing new number magnitudes.
+- [06.2-distributive-law-numeric-expressions.md](./06.2-distributive-law-numeric-expressions.md)
+  Uses the distributive law with numeric expressions only, opening and factoring parentheses
+  without evaluating products.
+- [06.3-complicated-fraction-calculation.md](./06.3-complicated-fraction-calculation.md)
+  Practices structurally reading complex fractions, reciprocal division, same-denominator
+  fraction combination, and subtraction-to-addition transformations without final evaluation.
+
 9. [07-algebraic-expressions-and-like-terms.md](./07-algebraic-expressions-and-like-terms.md)
    Introduces variables, terms, and coefficients; evaluating expressions by substitution;
    combining like terms; and the distributive property for removing parentheses.

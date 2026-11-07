@@ -1,11 +1,11 @@
 # Lesson 7: Algebraic Expressions — Terms, Like Terms, and the Distributive Property
 *Fundamental Math / Course 2*
 
-Lessons 3–6 worked entirely with numbers. This lesson introduces the **variable** — a letter
-standing in for an unknown or changing number — and the vocabulary needed to read and simplify
-an **algebraic expression**: terms, coefficients, and like terms. It ends with the
-**distributive property**, the tool that lets an expression like $3(x + 4)$ be rewritten
-without parentheses so its terms can be combined.
+Lessons 3–6 and the numeric-expression bridge lessons worked entirely with numbers. This
+lesson introduces the **variable** — a letter standing in for an unknown or changing number —
+and the vocabulary needed to read and simplify an **algebraic expression**: terms,
+coefficients, and like terms. It extends the numeric distributive work to expressions such as
+$3(x + 4)$, which can be rewritten without parentheses so their terms can be combined.
 
 ## 1. Vocabulary: Variables, Terms, and Coefficients
 
