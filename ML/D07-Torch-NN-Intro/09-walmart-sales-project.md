@@ -28,4 +28,10 @@ Adjust NN model to be
 - Two layer MVP, namely just one hidden layer and one output layer
 - Adjust the size of the hidden layer, pick a reasonable range for trials.
 - For each model Repeat the step 2
-- Pick the best model whose mean + std is smallest.
+- Pick the best model whose mean + std is smallest, and fill the following table
+
+| Hidden Size | Mean of Validation Losses | Std of Validation Losses |
+| --- | --- | --- |
+| 5 | ... | ... |
+| 7 | ... | ... |
+| ... | ... | ... |
