@@ -56,11 +56,18 @@ fourier_features = [
 ]
 
 # Step 3: choose features and target
-X = df[numeric_features + categorical_features + fourier_features + group_features]
+X = df[numeric_features + categorical_features + fourier_features + group_features + ["dates"]]
 y = df["Weekly_Sales"]
 
 # Step 4: split first
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, shuffle=False)
+X_train_val, X_super_test, y_train_val, y_super_test = train_test_split(X, y, test_size = 0.2, shuffle=False)
+X_train, X_test, y_train, y_test = train_test_split(X_train_val, y_train_val, test_size = 0.2, shuffle=False)
+print(X_train["dates"].min())
+print(X_train["dates"].max())
+print(X_test["dates"].min())
+print(X_test["dates"].max())
+print(X_super_test["dates"].min())
+print(X_super_test["dates"].max())
 
 # Step 5: tell sklearn which columns need which preprocessing
 preprocessor = ColumnTransformer(
