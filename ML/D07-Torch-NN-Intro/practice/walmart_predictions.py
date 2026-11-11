@@ -1,4 +1,3 @@
-from jinja2 import BaseLoader
 import pandas as pd
 import numpy as np
 from sklearn.compose import ColumnTransformer
@@ -8,7 +7,7 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
-def get_data():
+def get_data(train_val_split):
     df = pd.read_csv("Walmart_Sales.csv")
 
     df["Weekly_Sales"]=np.log(df["Weekly_Sales"])
@@ -38,8 +37,8 @@ def get_data():
     X = df[numeric_features + categorical_features+["dates"]]
     y = df["Weekly_Sales"]
 
-    X_train_validation, X_test, y_train_validation, y_test = train_test_split(X, y, test_size = 0.2, shuffle=False)
-    X_train, X_validation, y_train, y_validation = train_test_split(X_train_validation, y_train_validation, test_size = 0.2, shuffle=False)
+    X_train_validation, X_test, y_train_validation, y_test = train_test_split(X, y, test_size = 0.15, shuffle=False)
+    X_train, X_validation, y_train, y_validation = train_test_split(X_train_validation, y_train_validation, test_size = train_val_split, shuffle=False)
 
     preprocessor = ColumnTransformer(
         transformers=[
@@ -96,14 +95,26 @@ def evaluate(model, loader, loss_fn, device):
 
     return total_loss / total_examples
 
-def train(model, train_loader, val_loader, loss_fn, optimizer, device):
+def train(model, train_loader, val_loader, loss_fn, optimizer, device, train_val_split, hidden_features):
     n_epochs = 500
+
+    lowest_val_loss=1.0
+
+    checkpoint = {}
 
     for epoch in range(1, n_epochs + 1):
         train_loss = train_one_epoch(
             model, train_loader, loss_fn, optimizer, device
         )
         val_loss = evaluate(model, val_loader, loss_fn, device)
+        if val_loss < lowest_val_loss:
+            lowest_val_loss=val_loss
+            checkpoint = {
+                'epoch': epoch,
+                'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': train_loss,
+            }
 
         if epoch == 1 or epoch % 10 == 0:
             print(
@@ -111,42 +122,54 @@ def train(model, train_loader, val_loader, loss_fn, optimizer, device):
                 f"train_loss={train_loss:.4f} "
                 f"val_loss={val_loss:.4f}"
             )
+    torch.save(checkpoint, f"data/NN-{hidden_features}-{train_val_split}.cpt")
+    print(lowest_val_loss)
+    return lowest_val_loss.item()
 
-X_train, X_test, y_train, y_test, X_validation, y_validation = get_data()
+def best_val_for_fold(train_val_split, hidden_features):
+    X_train, X_test, y_train, y_test, X_validation, y_validation = get_data(train_val_split)
 
-X_train = torch.from_numpy(X_train.to_numpy(dtype="float32"))
-X_test = torch.from_numpy(X_test.to_numpy(dtype="float32"))
-y_train = torch.from_numpy(y_train.to_numpy(dtype="float32")[:,None])
-y_test = torch.from_numpy(y_test.to_numpy(dtype="float32")[:,None])
-X_validation = torch.from_numpy(X_validation.to_numpy(dtype="float32"))
-y_validation = torch.from_numpy(y_validation.to_numpy(dtype="float32")[:,None])
+    X_train = torch.from_numpy(X_train.to_numpy(dtype="float32"))
+    X_test = torch.from_numpy(X_test.to_numpy(dtype="float32"))
+    y_train = torch.from_numpy(y_train.to_numpy(dtype="float32")[:,None])
+    y_test = torch.from_numpy(y_test.to_numpy(dtype="float32")[:,None])
+    X_validation = torch.from_numpy(X_validation.to_numpy(dtype="float32"))
+    y_validation = torch.from_numpy(y_validation.to_numpy(dtype="float32")[:,None])
 
-device=torch.device("mps")
+    device=torch.device("mps")
 
-model=nn.Sequential(
-    nn.Linear(in_features=X_train.shape[1], out_features=7),
-    nn.ReLU(),
-    nn.Linear(in_features=7, out_features=4),
-    nn.ReLU(),
-    nn.Linear(in_features=4, out_features=1),
-).to(device)
+    model=nn.Sequential(
+        nn.Linear(in_features=X_train.shape[1], out_features=hidden_features),
+        nn.ReLU(),
+        nn.Linear(in_features=hidden_features, out_features=1),
+    ).to(device)
 
-loss_fn=nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.02)
+    loss_fn=nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.02)
 
-train_dataset = TensorDataset(X_train, y_train)
-val_dataset = TensorDataset(X_validation, y_validation)
+    train_dataset = TensorDataset(X_train, y_train)
+    val_dataset = TensorDataset(X_validation, y_validation)
 
-train_loader = DataLoader(
-    train_dataset,
-    batch_size=64,
-    shuffle=True,
-)
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=64,
+        shuffle=True,
+    )
 
-val_loader = DataLoader(
-    val_dataset,
-    batch_size=128,
-    shuffle=False,
-)
+    val_loader = DataLoader(
+        val_dataset,
+        batch_size=128,
+        shuffle=False,
+    )
 
-train(model, train_loader, val_loader, loss_fn, optimizer, device)
+    return train(model, train_loader, val_loader, loss_fn, optimizer, device, train_val_split, hidden_features)
+
+hidden_features=3
+folds=[0.10, 0.15, 0.20, 0.25]
+
+losses=np.array([])
+for fold in folds:
+    losses=np.append(losses, best_val_for_fold(fold, hidden_features))
+loss_mean=losses.mean()
+loss_std=losses.std()
+torch.save([], f"data/NN-{hidden_features}-{loss_mean:.4f}-{loss_std:.4f}")

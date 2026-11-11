@@ -101,11 +101,13 @@ causal verdict.
 
 ## 4. Choosing between them
 
+
 | Method | Penalty | Typical coefficient behavior | Useful when |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | OLS | none | May be unstable under collinearity | Data are ample and conditioning is good. |
 | Ridge | $L_2$ | All coefficients shrink | Predictors are correlated; stable prediction matters. |
 | Lasso | $L_1$ | Some coefficients become exactly zero | A compact feature set is useful. |
+
 
 Choose $\lambda$ using validation data or cross-validation, with preprocessing
 fitted inside each training fold. Never choose it by the training loss alone:
