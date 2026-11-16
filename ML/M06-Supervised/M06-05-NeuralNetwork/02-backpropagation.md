@@ -133,7 +133,7 @@ For familiar activations,
 $$
 \begin{aligned}
 \text{ReLU}'(z)&=
-\begin{cases}1&z>0\\0&z<0\end{cases},\\
+\begin{cases}1&z>0 \\ 0&z<0 \end{cases},\\
 \sigma'(z)&=\sigma(z)(1-\sigma(z)),\\
 \tanh'(z)&=1-\tanh^2(z).
 \end{aligned}
