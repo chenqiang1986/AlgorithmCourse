@@ -95,6 +95,7 @@ More specifically this is what we are going to do:
 
 3. At node $x$, let's assume that nodes $y_1$, $y_2$ ... $y_k$ are the direct functions
 of $x$, and further assume that $\frac{\partial L}{\partial y_i}$ are already calculated. Then we can use the following formula:
+
 $$
 \frac{\partial L}{\partial x} = \sum_{i=1}^k \frac{\partial L}{\partial y_i} \frac{\partial y_i}{\partial x}
 $$
