@@ -159,13 +159,13 @@ carry it through the activation and the affine mapping:
 $$
 \begin{aligned}
 \frac{\partial\mathcal L}{\partial a}&=a-y,\\
-\frac{\partial\mathcal L}{\partial z}&=(a-y)\text{ReLU}'(z),\\
+\frac{\partial\mathcal L}{\partial z}&=\frac{\partial L}{\partial a}\text{ReLU}'(z),\\
 \frac{\partial\mathcal L}{\partial w}&=
-\frac{\partial\mathcal L}{\partial z}\,x,\\
+\frac{\partial\mathcal L}{\partial z}x,\\
 \frac{\partial\mathcal L}{\partial b}&=
-\frac{\partial\mathcal L}{\partial z},\\
+\frac{\partial\mathcal L}{\partial z}\\
 \frac{\partial\mathcal L}{\partial x}&=
-\frac{\partial\mathcal L}{\partial z}\,w.
+\frac{\partial\mathcal L}{\partial z}w.
 \end{aligned}
 $$
 
