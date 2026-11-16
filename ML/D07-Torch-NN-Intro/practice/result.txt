@@ -1,0 +1,47 @@
+Hidden Size: 1
+Cost Mean: 7.385116090439014
+Cost Std: 0.41949615913130056
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 1514.2857142857142
+Epochs Std: 786.3633682584506
+
+Hidden Size: 2
+Cost Mean: 7.433397546385481
+Cost Std: 0.3433872777252561
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 1271.4285714285713
+Epochs Std: 839.5820145665779
+
+Hidden Size: 3
+Cost Mean: 7.305799452499239
+Cost Std: 0.40045690393613526
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 1785.7142857142858
+Epochs Std: 857.6189154173506
+
+Hidden Size: 5
+Cost Mean: 7.341437696441245
+Cost Std: 0.3513653072887509
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 2328.5714285714284
+Epochs Std: 557.3259772323189
+
+Hidden Size: 10
+Cost Mean: 7.446613606407787
+Cost Std: 0.38388278574344575
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 1285.7142857142858
+Epochs Std: 967.2177645606148
+
+Hidden Size: 15
+Cost Mean: 7.4414883909561
+Cost Std: 0.34900890801381806
+Threshold Mean: 30.0
+Threshold Std: 0.0
+Epochs Mean: 1228.5714285714287
+Epochs Std: 409.57917676661293

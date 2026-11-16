@@ -112,5 +112,11 @@ a diagnostic test that samples the full range of Algebra I skills:
 31. [19-homework-quadratic-equation-word-problems.md](./19-homework-quadratic-equation-word-problems.md)
    A 12-problem homework set on modeling and solving quadratic applications involving
    geometry, products, price-and-demand revenue, and vertical motion.
+32. [20-quadratic-extreme-value-word-problems.md](./20-quadratic-extreme-value-word-problems.md)
+   Modeling quadratic maximum and minimum applications through the vertex, including
+   revenue, greatest-area, height, and cost contexts.
+33. [20-homework-quadratic-extreme-value-word-problems.md](./20-homework-quadratic-extreme-value-word-problems.md)
+   A 12-problem homework set on modeling and interpreting quadratic maximum and minimum
+   applications, including revenue, area, motion, costs, and domain restrictions.
 
 More lessons can be added later as the course grows.

@@ -131,6 +131,7 @@ print(y_pred_prob)
 vali_cost, num = find_minimum_cost(X_vali, y_vali, y_vali_pred_prob[:,1])
 print("Testing Validation Cost:", vali_cost)
 print("Testing Cost:", find_cost(X_test, y_test, y_pred_prob[:,1], num/100))
+print("Testing Cost Avg:", find_cost(X_test, y_test, y_pred_prob[:,1], num/100)/y_test.shape[0])
 print("Cutoff:", num)
 
 print("Counts:\n", confusion_matrix(y_test, y_pred))

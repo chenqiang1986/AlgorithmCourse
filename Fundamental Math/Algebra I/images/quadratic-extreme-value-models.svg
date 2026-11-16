@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Quadratic maximum and minimum models</title>
+  <desc id="desc">A downward-opening revenue parabola has a maximum vertex, and an upward-opening cost parabola has a minimum vertex.</desc>
+  <rect width="960" height="430" fill="#ffffff"/>
+  <style>text{font-family:Arial,sans-serif;fill:#172033}.axis{stroke:#475569;stroke-width:2}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:7 6}.curve1{fill:none;stroke:#2563eb;stroke-width:5}.curve2{fill:none;stroke:#dc2626;stroke-width:5}.point1{fill:#2563eb}.point2{fill:#dc2626}.small{font-size:17px}.label{font-size:20px;font-weight:700}.title{font-size:23px;font-weight:700}</style>
+  <text x="240" y="38" text-anchor="middle" class="title">Revenue: maximum</text>
+  <line x1="62" y1="350" x2="435" y2="350" class="axis"/><line x1="96" y1="385" x2="96" y2="70" class="axis"/>
+  <text x="421" y="377" class="small">price</text><text x="42" y="88" class="small">R</text>
+  <path d="M118 322 Q181 118 244 118 Q321 118 398 322" class="curve1"/>
+  <line x1="244" y1="118" x2="244" y2="350" class="dash"/><line x1="96" y1="118" x2="244" y2="118" class="dash"/>
+  <circle cx="244" cy="118" r="7" class="point1"/><text x="255" y="108" class="label">vertex</text><text x="255" y="133" class="small">greatest revenue</text>
+  <text x="244" y="404" text-anchor="middle" class="small">best price</text>
+  <text x="720" y="38" text-anchor="middle" class="title">Cost: minimum</text>
+  <line x1="526" y1="350" x2="900" y2="350" class="axis"/><line x1="560" y1="385" x2="560" y2="70" class="axis"/>
+  <text x="882" y="377" class="small">batches</text><text x="542" y="88" class="small">C</text>
+  <path d="M582 112 Q651 315 720 315 Q797 315 874 112" class="curve2"/>
+  <line x1="720" y1="315" x2="720" y2="350" class="dash"/><line x1="560" y1="315" x2="720" y2="315" class="dash"/>
+  <circle cx="720" cy="315" r="7" class="point2"/><text x="731" y="303" class="label">vertex</text><text x="731" y="328" class="small">least cost</text>
+  <text x="720" y="404" text-anchor="middle" class="small">fewest-cost batches</text>
+</svg>
