@@ -132,7 +132,7 @@ For familiar activations,
 
 $$
 \begin{aligned}
-\operatorname{ReLU}'(z)&=
+\text{ReLU}'(z)&=
 \begin{cases}1&z>0\\0&z<0\end{cases},\\
 \sigma'(z)&=\sigma(z)(1-\sigma(z)),\\
 \tanh'(z)&=1-\tanh^2(z).
@@ -148,7 +148,7 @@ continuous-valued training data and parameters.
 Take one neuron with a ReLU activation:
 
 $$
-z=wx+b,\qquad a=\operatorname{ReLU}(z),\qquad
+z=wx+b,\qquad a=\text{ReLU}(z),\qquad
 \mathcal L=\frac12(a-y)^2.
 $$
 
@@ -158,7 +158,7 @@ carry it through the activation and the affine mapping:
 $$
 \begin{aligned}
 \frac{\partial\mathcal L}{\partial a}&=a-y,\\
-\frac{\partial\mathcal L}{\partial z}&=(a-y)\operatorname{ReLU}'(z),\\
+\frac{\partial\mathcal L}{\partial z}&=(a-y)\text{ReLU}'(z),\\
 \frac{\partial\mathcal L}{\partial w}&=
 \frac{\partial\mathcal L}{\partial z}\,x,\\
 \frac{\partial\mathcal L}{\partial b}&=
@@ -243,7 +243,7 @@ $$
 
 ### Type 2: Gradients of a ReLU neuron
 
-For $z=wx+b$, $a=\operatorname{ReLU}(z)$, and
+For $z=wx+b$, $a=\text{ReLU}(z)$, and
 $\mathcal L=\frac12(a-y)^2$, use
 
 $$

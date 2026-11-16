@@ -177,10 +177,10 @@ create thresholds, bends, and more complicated decision boundaries.
 
 | Activation | Definition | Common use |
 | --- | --- | --- |
-| ReLU | $\operatorname{ReLU}(z)=\max(0,z)$ | Default hidden-layer activation. |
+| ReLU | $\text{ReLU}(z)=\max(0,z)$ | Default hidden-layer activation. |
 | Sigmoid | $\sigma(z)=1/(1+e^{-z})$ | Binary-classification output. |
 | Tanh | $\tanh(z)=(e^z-e^{-z})/(e^z+e^{-z})$ | Zero-centered hidden activation. |
-| Softmax | $\operatorname{softmax}(\mathbf z)_j=e^{z_j}/\sum_k e^{z_k}$ | Multiclass output probabilities. |
+| Softmax | $\text{softmax}(\mathbf z)_j=e^{z_j}/\sum_k e^{z_k}$ | Multiclass output probabilities. |
 
 ReLU is nonlinear because its rule changes at $z=0$: negative values become
 zero, while positive values pass through. Sigmoid and tanh smoothly bend their
@@ -233,7 +233,7 @@ prediction.
 Let the intermediate variables and output be
 
 $$
-u=2x-y,\qquad v=\operatorname{ReLU}(u),\qquad f=3v+1.
+u=2x-y,\qquad v=\text{ReLU}(u),\qquad f=3v+1.
 $$
 
 1. Draw the computation graph. Include a node for each variable and an arrow
