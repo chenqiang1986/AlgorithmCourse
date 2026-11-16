@@ -256,12 +256,15 @@ $$
 3. Find $\partial\mathcal L/\partial w$ and
    $\partial\mathcal L/\partial b$.
 4. With learning rate $\eta=0.1$, perform one gradient-descent update. Namely calculate
+
 $$
 w_{new} = w - \eta \frac{\partial L}{\partial w}
 $$
+
 $$
 b_{new} = b - \eta \frac{\partial L}{\partial b}
 $$
+
 <details>
 <summary>Solution</summary>
 
