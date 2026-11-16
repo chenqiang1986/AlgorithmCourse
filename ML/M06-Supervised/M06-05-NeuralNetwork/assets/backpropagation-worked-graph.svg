@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="470" viewBox="0 0 1060 470" role="img" aria-labelledby="title desc">
+  <title id="title">Forward propagation in a small computation graph</title>
+  <desc id="desc">Inputs x equals 2 and y equals 3 produce u equals 5 and v equals 6, then f equals 30 and loss L equals 50. Blue arrows indicate forward computation.</desc>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2563a9"/></marker>
+    <style>.node{fill:#f8fbff;stroke:#26384a;stroke-width:2.2}.out{fill:#fff8ed;stroke:#26384a;stroke-width:2.2}.lab{font:600 19px Arial,sans-serif;fill:#16212c}.sub{font:15px Arial,sans-serif;fill:#34495e}.forward{stroke:#2563a9;stroke-width:2.5;fill:none;marker-end:url(#blue)}.btext{font:15px Arial,sans-serif;fill:#a3312c}.legend{font:14px Arial,sans-serif;fill:#34495e}</style>
+  </defs>
+  <rect width="1060" height="470" fill="white"/>
+  <path class="forward" d="M150 145C205 132 224 119 272 108"/><path class="forward" d="M150 145C205 162 224 197 272 208"/>
+  <path class="forward" d="M150 325C205 275 225 145 272 120"/><path class="forward" d="M150 325C207 315 225 238 272 220"/>
+  <path class="forward" d="M442 112C493 132 515 158 564 180"/><path class="forward" d="M442 212C495 205 515 198 564 193"/><path class="forward" d="M734 190L813 190"/>
+  <rect class="node" x="40" y="105" width="110" height="80" rx="12"/><text class="lab" x="95" y="137" text-anchor="middle">x = 2</text><text class="sub" x="95" y="163" text-anchor="middle">input</text>
+  <rect class="node" x="40" y="285" width="110" height="80" rx="12"/><text class="lab" x="95" y="317" text-anchor="middle">y = 3</text><text class="sub" x="95" y="343" text-anchor="middle">input</text>
+  <rect class="node" x="272" y="70" width="170" height="84" rx="12"/><text class="lab" x="357" y="102" text-anchor="middle">u = x + y = 5</text><text class="sub" x="357" y="129" text-anchor="middle">addition</text>
+  <rect class="node" x="272" y="188" width="170" height="84" rx="12"/><text class="lab" x="357" y="220" text-anchor="middle">v = xy = 6</text><text class="sub" x="357" y="247" text-anchor="middle">product</text>
+  <rect class="node" x="564" y="150" width="170" height="84" rx="12"/><text class="lab" x="649" y="182" text-anchor="middle">f = uv = 30</text><text class="sub" x="649" y="209" text-anchor="middle">output</text>
+  <rect class="out" x="813" y="150" width="205" height="84" rx="12"/><text class="lab" x="916" y="181" text-anchor="middle">L = ½(f − 20)² = 50</text><text class="sub" x="916" y="209" text-anchor="middle">squared-error loss</text>
+  <line x1="55" y1="418" x2="115" y2="418" class="forward"/><text class="legend" x="125" y="423">forward values</text>
+</svg>
+

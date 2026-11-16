@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+  <title id="title">One-hidden-layer neural network computation graph</title>
+  <desc id="desc">Input features feed a linear mapping, then a hidden activation, then an output linear mapping and output activation to produce y hat.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="920" height="470" fill="#f8fafc"/>
+  <text x="460" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Forward propagation through one hidden layer</text>
+  <text x="105" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">input</text>
+  <text x="305" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">linear mapping</text>
+  <text x="505" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">nonlinear activation</text>
+  <text x="705" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">linear mapping</text>
+  <text x="835" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">prediction</text>
+  <g stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M175 230 H235"/>
+    <path d="M375 230 H435"/>
+    <path d="M575 230 H635"/>
+    <path d="M775 230 H805"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="15" fill="#334155" text-anchor="middle">
+    <text x="205" y="211">x</text>
+    <text x="405" y="211">z<tspan baseline-shift="super" font-size="11">[1]</tspan></text>
+    <text x="605" y="211">a<tspan baseline-shift="super" font-size="11">[1]</tspan></text>
+    <text x="790" y="211">z<tspan baseline-shift="super" font-size="11">[2]</tspan></text>
+  </g>
+  <g stroke-width="3">
+    <rect x="35" y="175" width="140" height="110" rx="14" fill="#dbeafe" stroke="#2563eb"/>
+    <rect x="235" y="175" width="140" height="110" rx="14" fill="#ede9fe" stroke="#7c3aed"/>
+    <rect x="435" y="175" width="140" height="110" rx="14" fill="#dcfce7" stroke="#16a34a"/>
+    <rect x="635" y="175" width="140" height="110" rx="14" fill="#ede9fe" stroke="#7c3aed"/>
+    <rect x="805" y="175" width="85" height="110" rx="14" fill="#fef3c7" stroke="#d97706"/>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, sans-serif" fill="#0f172a">
+    <text x="105" y="218" font-size="20" font-weight="700">x</text>
+    <text x="105" y="247" font-size="14">features</text>
+    <text x="305" y="216" font-size="14" font-weight="700">z<tspan baseline-shift="super" font-size="10">[1]</tspan> = W<tspan baseline-shift="super" font-size="10">[1]</tspan>x + b<tspan baseline-shift="super" font-size="10">[1]</tspan></text>
+    <text x="305" y="246" font-size="14">weighted sum</text>
+    <text x="505" y="216" font-size="15" font-weight="700">a<tspan baseline-shift="super" font-size="11">[1]</tspan> = φ<tspan baseline-shift="super" font-size="11">[1]</tspan>(z<tspan baseline-shift="super" font-size="11">[1]</tspan>)</text>
+    <text x="505" y="246" font-size="14">hidden layer</text>
+    <text x="705" y="216" font-size="14" font-weight="700">z<tspan baseline-shift="super" font-size="10">[2]</tspan> = W<tspan baseline-shift="super" font-size="10">[2]</tspan>a<tspan baseline-shift="super" font-size="10">[1]</tspan> + b<tspan baseline-shift="super" font-size="10">[2]</tspan></text>
+    <text x="705" y="246" font-size="14">weighted sum</text>
+    <text x="847" y="218" font-size="20" font-weight="700">ŷ</text>
+    <text x="847" y="247" font-size="14">φ<tspan baseline-shift="super" font-size="10">[2]</tspan>(z<tspan baseline-shift="super" font-size="10">[2]</tspan>)</text>
+  </g>
+  <path d="M60 345 H860" stroke="#cbd5e1" stroke-width="2"/>
+  <g font-family="system-ui, sans-serif" fill="#334155">
+    <text x="70" y="380" font-size="16" font-weight="700">Each arrow carries a value forward.</text>
+    <text x="70" y="410" font-size="15">The learned weights and biases form each linear mapping; the activation φ bends the computation so stacked layers can model nonlinear relationships.</text>
+  </g>
+</svg>

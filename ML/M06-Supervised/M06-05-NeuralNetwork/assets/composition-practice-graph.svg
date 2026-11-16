@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="400" viewBox="0 0 820 400" role="img" aria-labelledby="title desc">
+  <title id="title">Computation graph for a class-practice problem</title>
+  <desc id="desc">Input variables x and y feed u equals two to the power x plus y and v equals x minus two to the power y. Both intermediate variables feed f equals u times v.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Practice computation graph</text>
+  <g stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M175 140 L330 140"/><path d="M175 275 L330 168"/>
+    <path d="M175 140 L330 247"/><path d="M175 275 L330 275"/>
+    <path d="M525 155 L650 208"/><path d="M525 260 L650 222"/>
+  </g>
+  <g stroke-width="3">
+    <rect x="55" y="105" width="120" height="66" rx="12" fill="#dbeafe" stroke="#2563eb"/>
+    <rect x="55" y="240" width="120" height="66" rx="12" fill="#dbeafe" stroke="#2563eb"/>
+    <rect x="330" y="105" width="195" height="66" rx="12" fill="#dcfce7" stroke="#16a34a"/>
+    <rect x="330" y="240" width="195" height="66" rx="12" fill="#dcfce7" stroke="#16a34a"/>
+    <rect x="650" y="190" width="120" height="66" rx="12" fill="#fef3c7" stroke="#d97706"/>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, sans-serif" fill="#0f172a">
+    <text x="115" y="145" font-size="20" font-weight="700">x</text>
+    <text x="115" y="280" font-size="20" font-weight="700">y</text>
+    <text x="427" y="145" font-size="19" font-weight="700">u = 2<tspan baseline-shift="super" font-size="13">x</tspan> + y</text>
+    <text x="427" y="280" font-size="19" font-weight="700">v = x − 2<tspan baseline-shift="super" font-size="13">y</tspan></text>
+    <text x="710" y="230" font-size="19" font-weight="700">f = uv</text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">
+    <text x="115" y="80">inputs</text>
+    <text x="427" y="80">intermediate variables</text>
+    <text x="710" y="165">output</text>
+  </g>
+  <text x="410" y="358" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#334155">Follow the arrows: calculate u and v first, then calculate f.</text>
+</svg>

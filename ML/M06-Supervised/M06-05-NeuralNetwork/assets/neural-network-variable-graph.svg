@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="750" viewBox="0 0 920 750" role="img" aria-labelledby="title desc">
+  <title id="title">Detailed one-hidden-layer neural network computation graph</title>
+  <desc id="desc">Four input variables at the bottom feed each of three hidden weighted-sum nodes. Each weighted sum passes through its activation node. The three activations feed an output weighted-sum node and then the final prediction at the top.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="920" height="750" fill="#f8fafc"/>
+  <text x="460" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Detailed computation graph: one variable per node</text>
+  <text x="460" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">Forward propagation moves from the input variables at the bottom to the prediction at the top.</text>
+
+  <!-- Arrows are drawn first so nodes remain easy to read. -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M175 650 L175 550"/><path d="M175 650 L460 550"/><path d="M175 650 L745 550"/>
+    <path d="M365 650 L175 550"/><path d="M365 650 L460 550"/><path d="M365 650 L745 550"/>
+    <path d="M555 650 L175 550"/><path d="M555 650 L460 550"/><path d="M555 650 L745 550"/>
+    <path d="M745 650 L175 550"/><path d="M745 650 L460 550"/><path d="M745 650 L745 550"/>
+  </g>
+  <g stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M175 460 V400"/><path d="M460 460 V400"/><path d="M745 460 V400"/>
+    <path d="M175 340 L380 290"/><path d="M460 340 V290"/><path d="M745 340 L540 290"/>
+    <path d="M460 210 V155"/>
+  </g>
+
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#0f172a">
+    <g fill="#dbeafe" stroke="#2563eb" stroke-width="3">
+      <circle cx="175" cy="650" r="40"/><circle cx="365" cy="650" r="40"/><circle cx="555" cy="650" r="40"/><circle cx="745" cy="650" r="40"/>
+    </g>
+    <g font-size="20" font-weight="700">
+      <text x="175" y="657">x₁</text><text x="365" y="657">x₂</text><text x="555" y="657">x₃</text><text x="745" y="657">x₄</text>
+    </g>
+    <text x="460" y="714" font-size="15" fill="#475569">input layer: 4 feature variables</text>
+
+    <g fill="#ede9fe" stroke="#7c3aed" stroke-width="3">
+      <rect x="35" y="460" width="280" height="90" rx="14"/>
+      <rect x="320" y="460" width="280" height="90" rx="14"/>
+      <rect x="605" y="460" width="280" height="90" rx="14"/>
+    </g>
+    <g font-size="13" font-weight="600">
+      <text x="175" y="484">z₁<tspan baseline-shift="super" font-size="9">[1]</tspan> = w₁₁<tspan baseline-shift="super" font-size="9">[1]</tspan>x₁ + w₁₂<tspan baseline-shift="super" font-size="9">[1]</tspan>x₂</text>
+      <text x="175" y="505">+ w₁₃<tspan baseline-shift="super" font-size="9">[1]</tspan>x₃ + w₁₄<tspan baseline-shift="super" font-size="9">[1]</tspan>x₄ + b₁<tspan baseline-shift="super" font-size="9">[1]</tspan></text>
+      <text x="175" y="530" font-size="12" font-weight="400" fill="#475569">hidden weighted sum 1</text>
+      <text x="460" y="484">z₂<tspan baseline-shift="super" font-size="9">[1]</tspan> = w₂₁<tspan baseline-shift="super" font-size="9">[1]</tspan>x₁ + w₂₂<tspan baseline-shift="super" font-size="9">[1]</tspan>x₂</text>
+      <text x="460" y="505">+ w₂₃<tspan baseline-shift="super" font-size="9">[1]</tspan>x₃ + w₂₄<tspan baseline-shift="super" font-size="9">[1]</tspan>x₄ + b₂<tspan baseline-shift="super" font-size="9">[1]</tspan></text>
+      <text x="460" y="530" font-size="12" font-weight="400" fill="#475569">hidden weighted sum 2</text>
+      <text x="745" y="484">z₃<tspan baseline-shift="super" font-size="9">[1]</tspan> = w₃₁<tspan baseline-shift="super" font-size="9">[1]</tspan>x₁ + w₃₂<tspan baseline-shift="super" font-size="9">[1]</tspan>x₂</text>
+      <text x="745" y="505">+ w₃₃<tspan baseline-shift="super" font-size="9">[1]</tspan>x₃ + w₃₄<tspan baseline-shift="super" font-size="9">[1]</tspan>x₄ + b₃<tspan baseline-shift="super" font-size="9">[1]</tspan></text>
+      <text x="745" y="530" font-size="12" font-weight="400" fill="#475569">hidden weighted sum 3</text>
+    </g>
+
+    <g fill="#dcfce7" stroke="#16a34a" stroke-width="3">
+      <rect x="80" y="340" width="190" height="60" rx="14"/>
+      <rect x="365" y="340" width="190" height="60" rx="14"/>
+      <rect x="650" y="340" width="190" height="60" rx="14"/>
+    </g>
+    <g font-size="17" font-weight="700">
+      <text x="175" y="366">a₁<tspan baseline-shift="super" font-size="12">[1]</tspan> = φ<tspan baseline-shift="super" font-size="12">[1]</tspan>(z₁<tspan baseline-shift="super" font-size="12">[1]</tspan>)</text>
+      <text x="460" y="366">a₂<tspan baseline-shift="super" font-size="12">[1]</tspan> = φ<tspan baseline-shift="super" font-size="12">[1]</tspan>(z₂<tspan baseline-shift="super" font-size="12">[1]</tspan>)</text>
+      <text x="745" y="366">a₃<tspan baseline-shift="super" font-size="12">[1]</tspan> = φ<tspan baseline-shift="super" font-size="12">[1]</tspan>(z₃<tspan baseline-shift="super" font-size="12">[1]</tspan>)</text>
+    </g>
+    <g font-size="12" fill="#475569">
+      <text x="175" y="386">hidden activation 1</text>
+      <text x="460" y="386">hidden activation 2</text>
+      <text x="745" y="386">hidden activation 3</text>
+    </g>
+
+    <g fill="#ede9fe" stroke="#7c3aed" stroke-width="3">
+      <rect x="280" y="210" width="360" height="80" rx="14"/>
+    </g>
+    <text x="460" y="240" font-size="15" font-weight="700">z<tspan baseline-shift="super" font-size="11">[2]</tspan> = w₁<tspan baseline-shift="super" font-size="11">[2]</tspan>a₁<tspan baseline-shift="super" font-size="11">[1]</tspan> + w₂<tspan baseline-shift="super" font-size="11">[2]</tspan>a₂<tspan baseline-shift="super" font-size="11">[1]</tspan> + w₃<tspan baseline-shift="super" font-size="11">[2]</tspan>a₃<tspan baseline-shift="super" font-size="11">[1]</tspan> + b<tspan baseline-shift="super" font-size="11">[2]</tspan></text>
+    <text x="460" y="266" font-size="12" fill="#475569">output weighted sum</text>
+    <g fill="#fef3c7" stroke="#d97706" stroke-width="3">
+      <rect x="335" y="95" width="250" height="60" rx="14"/>
+    </g>
+    <text x="460" y="122" font-size="20" font-weight="700">ŷ = φ<tspan baseline-shift="super" font-size="14">[2]</tspan>(z<tspan baseline-shift="super" font-size="14">[2]</tspan>)</text>
+    <text x="460" y="142" font-size="12" fill="#475569">prediction</text>
+  </g>
+</svg>

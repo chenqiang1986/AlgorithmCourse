@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="810" viewBox="0 0 1500 810" role="img" aria-labelledby="title desc">
+  <title id="title">Backward propagation and the chain rule</title>
+  <desc id="desc">A reverse graph for u equals x plus y, v equals xy, f equals uv, and L equals one half of f minus 20 squared. Each node shows the chain-rule expression and calculated gradient.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b53b35"/></marker>
+    <style>.node{fill:#fff8f6;stroke:#87312e;stroke-width:2.5}.loss{fill:#fff1e7;stroke:#87312e;stroke-width:2.5}.edge{fill:none;stroke:#b53b35;stroke-width:3;marker-end:url(#arrow)}.var{font:700 21px Arial,sans-serif;fill:#3b1716}.eq{font:16px Arial,sans-serif;fill:#3b1716}.small{font:15px Arial,sans-serif;fill:#572827}.note{font:16px Arial,sans-serif;fill:#6a3633}</style>
+  </defs>
+  <rect width="1500" height="810" fill="white"/>
+  <text class="note" x="750" y="38" text-anchor="middle">Backward propagation: follow arrows from the loss to the inputs, multiplying local derivatives at each step.</text>
+  <path class="edge" d="M1250 273C1155 273 1085 273 980 273"/>
+  <path class="edge" d="M760 235C680 201 642 177 570 163"/><path class="edge" d="M760 311C680 345 642 369 570 383"/>
+  <path class="edge" d="M300 183C244 198 223 227 175 248"/><path class="edge" d="M300 417C244 393 223 358 175 334"/>
+  <path class="edge" d="M300 209C242 257 220 505 175 534"/><path class="edge" d="M300 391C243 433 220 512 175 548"/>
+  <rect class="loss" x="1250" y="185" width="220" height="175" rx="14"/>
+  <text class="var" x="1360" y="225" text-anchor="middle">loss L</text><text class="eq" x="1360" y="264" text-anchor="middle">∂L/∂L = 1</text><text class="small" x="1360" y="300" text-anchor="middle">the seed gradient</text>
+  <rect class="node" x="760" y="160" width="220" height="225" rx="14"/>
+  <text class="var" x="870" y="200" text-anchor="middle">output f = uv</text><text class="eq" x="870" y="241" text-anchor="middle">∂L/∂f</text><text class="eq" x="870" y="272" text-anchor="middle">= (∂L/∂L)(∂L/∂f)</text><text class="eq" x="870" y="303" text-anchor="middle">= 1 · (f − 20)</text><text class="eq" x="870" y="334" text-anchor="middle">= 10</text>
+  <rect class="node" x="300" y="60" width="270" height="230" rx="14"/>
+  <text class="var" x="435" y="100" text-anchor="middle">u = x + y</text><text class="eq" x="435" y="141" text-anchor="middle">∂L/∂u</text><text class="eq" x="435" y="172" text-anchor="middle">= (∂L/∂f)(∂f/∂u)</text><text class="eq" x="435" y="203" text-anchor="middle">= 10 · v = 10 · 6</text><text class="eq" x="435" y="234" text-anchor="middle">= 60</text>
+  <rect class="node" x="300" y="310" width="270" height="230" rx="14"/>
+  <text class="var" x="435" y="350" text-anchor="middle">v = xy</text><text class="eq" x="435" y="391" text-anchor="middle">∂L/∂v</text><text class="eq" x="435" y="422" text-anchor="middle">= (∂L/∂f)(∂f/∂v)</text><text class="eq" x="435" y="453" text-anchor="middle">= 10 · u = 10 · 5</text><text class="eq" x="435" y="484" text-anchor="middle">= 50</text>
+  <rect class="node" x="20" y="155" width="155" height="215" rx="14"/>
+  <text class="var" x="98" y="193" text-anchor="middle">input x</text><text class="eq" x="98" y="229" text-anchor="middle">∂L/∂x</text><text class="eq" x="98" y="257" text-anchor="middle">= (∂L/∂u)(∂u/∂x)</text><text class="eq" x="98" y="282" text-anchor="middle">+ (∂L/∂v)(∂v/∂x)</text><text class="eq" x="98" y="310" text-anchor="middle">= 60·1 + 50·3</text><text class="eq" x="98" y="338" text-anchor="middle">= 210</text>
+  <rect class="node" x="20" y="465" width="155" height="215" rx="14"/>
+  <text class="var" x="98" y="503" text-anchor="middle">input y</text><text class="eq" x="98" y="539" text-anchor="middle">∂L/∂y</text><text class="eq" x="98" y="567" text-anchor="middle">= (∂L/∂u)(∂u/∂y)</text><text class="eq" x="98" y="592" text-anchor="middle">+ (∂L/∂v)(∂v/∂y)</text><text class="eq" x="98" y="620" text-anchor="middle">= 60·1 + 50·2</text><text class="eq" x="98" y="648" text-anchor="middle">= 160</text>
+  <text class="note" x="410" y="625">At x and y, add the contributions from both paths.</text>
+</svg>
+
