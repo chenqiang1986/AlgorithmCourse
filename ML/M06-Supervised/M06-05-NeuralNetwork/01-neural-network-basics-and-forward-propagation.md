@@ -159,7 +159,9 @@ makes the intermediate variables and dependencies visible.
 
 ## 5. Why nonlinearity is necessary
 
+
 If every layer were linear, two layers would collapse into one:
+
 
 $$
 W^{[2]}\bigl(W^{[1]}\mathbf x+\mathbf b^{[1]}\bigr)+\mathbf b^{[2]}
