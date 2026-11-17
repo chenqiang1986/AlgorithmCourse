@@ -238,9 +238,7 @@ The matrix `weight` is the parameter. For a batch `X` of shape
 class ManualLinear(nn.Module):
     def __init__(self, in_features, out_features):
         super().__init__()
-        self.weight = nn.Parameter(
-            torch.tensor([[1.0], [2.0]])  # shape (2, 1)
-        )
+        self.weight = nn.Parameter(torch.ones(in_features, out_features))
 
     def forward(self, X):
         return X @ self.weight  # no bias
@@ -252,13 +250,13 @@ X = torch.tensor([[1.0, 3.0],
 Y = model(X)
 
 print(Y)
-# tensor([[ 7.],
-#         [10.]], grad_fn=<MmBackward0>)
+# tensor([[4.],
+#         [6.]], grad_fn=<MmBackward0>)
 
 Y.sum().backward()
 print("d(sum Y)/dX =\n", X.grad)
-# tensor([[1., 2.],
-#         [1., 2.]])
+# tensor([[1., 1.],
+#         [1., 1.]])
 print("d(sum Y)/dweight =\n", model.weight.grad)
 # tensor([[3.],
 #         [7.]])
@@ -274,7 +272,7 @@ $$
 $$
 
 The derivatives printed above follow directly: each row of `X.grad` is
-`[1, 2]`, while the two entries of `weight.grad` are the column sums `3` and
+`[1, 1]`, while the two entries of `weight.grad` are the column sums `3` and
 `7`.
 
 ## Class practice
