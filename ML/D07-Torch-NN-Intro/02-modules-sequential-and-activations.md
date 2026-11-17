@@ -39,7 +39,7 @@ useful when nonlinear activations appear between the layers.
 The rectified linear unit is
 
 $$
-\operatorname{ReLU}(z)=\max(0,z).
+\text{ReLU}(z)=\max(0,z).
 $$
 
 It operates element by element. Positive values remain unchanged and negative

@@ -23,7 +23,7 @@ PyTorch's common loss modules use `reduction="mean"` by default, so
 For one continuous target, let both prediction and target have shape `(n, 1)`.
 
 $$
-\operatorname{MSE}=\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2.
+\text{MSE}=\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2.
 $$
 
 ```python
