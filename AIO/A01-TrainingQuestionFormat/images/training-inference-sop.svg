@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C44E52"/>
+    </marker>
+  </defs>
+  <rect width="900" height="440" fill="#ffffff"/>
+
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3a5f">Training SOP vs. Inference SOP</text>
+  <text x="450" y="52" text-anchor="middle" font-size="13" fill="#333333">The .joblib files are the only bridge between the two notebooks</text>
+
+  <!-- Training panel -->
+  <rect x="10" y="66" width="880" height="118" rx="8" fill="none" stroke="#4C72B0" stroke-width="1.5"/>
+  <text x="22" y="86" font-size="13" font-weight="bold" fill="#4C72B0">TRAINING — Training.ipynb (you run it)</text>
+
+  <g font-size="12" fill="#333333" text-anchor="middle">
+    <rect x="20" y="100" width="125" height="66" rx="6" fill="#eaf0f8" stroke="#4C72B0"/>
+    <text x="82" y="128">RAW DATA</text><text x="82" y="146">JSON / CSV</text>
+
+    <rect x="167" y="100" width="125" height="66" rx="6" fill="#eaf0f8" stroke="#4C72B0"/>
+    <text x="229" y="128">Pandas</text><text x="229" y="146">DataFrame</text>
+
+    <rect x="314" y="100" width="125" height="66" rx="6" fill="#fbeee4" stroke="#DD8452" stroke-width="2"/>
+    <text x="376" y="122">Feature Eng.</text><text x="376" y="139" font-weight="bold" fill="#DD8452">fit + dump</text><text x="376" y="155">training=True</text>
+
+    <rect x="461" y="100" width="125" height="66" rx="6" fill="#eaf0f8" stroke="#4C72B0"/>
+    <text x="523" y="128">NumPy</text><text x="523" y="146">.to_numpy()</text>
+
+    <rect x="608" y="100" width="125" height="66" rx="6" fill="#eaf0f8" stroke="#4C72B0"/>
+    <text x="670" y="128">Train</text><text x="670" y="146">model.fit(X, y)</text>
+
+    <rect x="755" y="100" width="125" height="66" rx="6" fill="#e8f3eb" stroke="#55A868" stroke-width="2"/>
+    <text x="817" y="128">Save Model</text><text x="817" y="146">joblib.dump</text>
+  </g>
+  <g stroke="#333333" stroke-width="1.5" marker-end="url(#arr)">
+    <line x1="145" y1="133" x2="165" y2="133"/>
+    <line x1="292" y1="133" x2="312" y2="133"/>
+    <line x1="439" y1="133" x2="459" y2="133"/>
+    <line x1="586" y1="133" x2="606" y2="133"/>
+    <line x1="733" y1="133" x2="753" y2="133"/>
+  </g>
+
+  <!-- Bridge files -->
+  <g stroke="#C44E52" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#arrRed)">
+    <line x1="376" y1="166" x2="376" y2="296"/>
+    <line x1="817" y1="166" x2="817" y2="296"/>
+  </g>
+  <g font-size="12" text-anchor="middle">
+    <rect x="296" y="214" width="160" height="34" rx="5" fill="#ffffff" stroke="#C44E52"/>
+    <text x="376" y="228" fill="#C44E52" font-weight="bold">scaler.joblib</text>
+    <text x="376" y="243" fill="#C44E52" font-weight="bold">onehot.joblib</text>
+    <rect x="752" y="214" width="130" height="34" rx="5" fill="#ffffff" stroke="#C44E52"/>
+    <text x="817" y="236" fill="#C44E52" font-weight="bold">model.joblib</text>
+  </g>
+  <text x="603" y="228" text-anchor="middle" font-size="12" fill="#333333">download → upload → put in the ZIP</text>
+  <text x="603" y="245" text-anchor="middle" font-size="12" fill="#333333">(every dumped file ships with submission.py)</text>
+
+  <!-- Inference panel -->
+  <rect x="10" y="276" width="880" height="140" rx="8" fill="none" stroke="#8172B2" stroke-width="1.5"/>
+  <text x="22" y="408" font-size="13" font-weight="bold" fill="#8172B2">INFERENCE — submission.py → predict(test_path) (the grader runs it on hidden test data)</text>
+
+  <g font-size="12" fill="#333333" text-anchor="middle">
+    <rect x="20" y="300" width="125" height="66" rx="6" fill="#f0eef6" stroke="#8172B2"/>
+    <text x="82" y="328">RAW DATA</text><text x="82" y="346">json.load(test)</text>
+
+    <rect x="167" y="300" width="125" height="66" rx="6" fill="#f0eef6" stroke="#8172B2"/>
+    <text x="229" y="328">Pandas</text><text x="229" y="346">DataFrame</text>
+
+    <rect x="314" y="300" width="125" height="66" rx="6" fill="#fbeee4" stroke="#DD8452" stroke-width="2"/>
+    <text x="376" y="322">Feature Eng.</text><text x="376" y="339" font-weight="bold" fill="#DD8452">load + transform</text><text x="376" y="355">training=False</text>
+
+    <rect x="461" y="300" width="125" height="66" rx="6" fill="#f0eef6" stroke="#8172B2"/>
+    <text x="523" y="328">NumPy</text><text x="523" y="346">.to_numpy()</text>
+
+    <rect x="608" y="300" width="125" height="66" rx="6" fill="#f0eef6" stroke="#8172B2"/>
+    <text x="670" y="328">Prediction</text><text x="670" y="346">model.predict(X)</text>
+
+    <rect x="755" y="300" width="125" height="66" rx="6" fill="#e8f3eb" stroke="#55A868" stroke-width="2"/>
+    <text x="817" y="328">Load Model</text><text x="817" y="346">joblib.load</text>
+  </g>
+  <g stroke="#333333" stroke-width="1.5" marker-end="url(#arr)">
+    <line x1="145" y1="333" x2="165" y2="333"/>
+    <line x1="292" y1="333" x2="312" y2="333"/>
+    <line x1="439" y1="333" x2="459" y2="333"/>
+    <line x1="586" y1="333" x2="606" y2="333"/>
+    <line x1="755" y1="333" x2="735" y2="333"/>
+  </g>
+</svg>
