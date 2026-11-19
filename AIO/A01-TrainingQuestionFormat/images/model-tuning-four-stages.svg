@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3a5f">Model Tuning: Four Stages, Four Different Data Uses</text>
+  <text x="450" y="52" text-anchor="middle" font-size="13" fill="#333333">The test block is touched once (Stage 3). Everything before it uses only the train + validation block.</text>
+
+  <!-- Stage 1 -->
+  <text x="30" y="92" font-size="14" font-weight="bold" fill="#1f3a5f">Stage 1  Hold out test</text>
+  <rect x="260" y="72" width="440" height="30" fill="#4C72B0" fill-opacity="0.35" stroke="#333333"/>
+  <text x="480" y="92" text-anchor="middle" font-size="13" fill="#333333">train + validation (80%)</text>
+  <rect x="700" y="72" width="110" height="30" fill="#C44E52" fill-opacity="0.45" stroke="#333333"/>
+  <text x="755" y="92" text-anchor="middle" font-size="13" fill="#333333">test (20%) locked</text>
+
+  <!-- Stage 2 -->
+  <text x="30" y="142" font-size="14" font-weight="bold" fill="#1f3a5f">Stage 2  Compare plans</text>
+  <text x="30" y="160" font-size="12" fill="#333333">5-fold: each fold takes a turn</text>
+  <g stroke="#333333" font-size="12" text-anchor="middle" fill="#333333">
+    <rect x="260" y="120" width="88" height="22" fill="#DD8452" fill-opacity="0.6"/><rect x="348" y="120" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="436" y="120" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="524" y="120" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="612" y="120" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/>
+    <rect x="260" y="146" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="348" y="146" width="88" height="22" fill="#DD8452" fill-opacity="0.6"/><rect x="436" y="146" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="524" y="146" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="612" y="146" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/>
+    <rect x="260" y="172" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="348" y="172" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="436" y="172" width="88" height="22" fill="#DD8452" fill-opacity="0.6"/><rect x="524" y="172" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/><rect x="612" y="172" width="88" height="22" fill="#4C72B0" fill-opacity="0.35"/>
+    <text x="304" y="136">val</text><text x="392" y="162">val</text><text x="480" y="188">val</text>
+    <text x="480" y="212" stroke="none">... fold 4, fold 5</text>
+  </g>
+  <text x="720" y="160" font-size="12" fill="#333333">report mean and std of</text>
+  <text x="720" y="176" font-size="12" fill="#333333">validation MSE per plan</text>
+
+  <!-- Stage 3 -->
+  <text x="30" y="262" font-size="14" font-weight="bold" fill="#1f3a5f">Stage 3  Check on test</text>
+  <text x="30" y="280" font-size="12" fill="#333333">refit chosen plan on all 80%</text>
+  <rect x="260" y="250" width="440" height="30" fill="#55A868" fill-opacity="0.45" stroke="#333333"/>
+  <text x="480" y="270" text-anchor="middle" font-size="13" fill="#333333">train (all of the 80%, test_size tiny)</text>
+  <rect x="700" y="250" width="110" height="30" fill="#C44E52" fill-opacity="0.45" stroke="#333333"/>
+  <text x="755" y="270" text-anchor="middle" font-size="13" fill="#333333">test: score ONCE</text>
+  <text x="260" y="304" font-size="12" fill="#333333">test MSE close to the Stage 2 mean? yes: go on. No: diagnose (Section 5.1).</text>
+
+  <!-- Stage 4 -->
+  <text x="30" y="352" font-size="14" font-weight="bold" fill="#1f3a5f">Stage 4  Final model</text>
+  <text x="30" y="370" font-size="12" fill="#333333">same plan, all provided data</text>
+  <rect x="260" y="340" width="550" height="30" fill="#8172B2" fill-opacity="0.45" stroke="#333333"/>
+  <text x="535" y="360" text-anchor="middle" font-size="13" fill="#333333">train + validation + test (100%)  →  model.joblib, scaler.joblib, onehot.joblib</text>
+  <text x="260" y="394" font-size="12" fill="#333333">No score is available now; trust Stages 2 and 3.</text>
+
+  <rect x="20" y="420" width="860" height="36" rx="8" fill="none" stroke="#333333"/>
+  <text x="450" y="443" text-anchor="middle" font-size="13" fill="#333333">Legend: blue = training, orange = validation fold, green = training in Stage 3, red = test, purple = final training</text>
+</svg>
