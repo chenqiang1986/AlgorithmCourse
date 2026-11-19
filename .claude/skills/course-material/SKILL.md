@@ -160,6 +160,27 @@ lesson NN" rather than claiming a new slot in the lesson sequence. Place the hom
 README.md entry immediately after the last lesson it covers, regardless of how the
 filenames alphabetize.
 
+A **practice-set / worksheet file** (e.g. `Extra Practice/OperationRules/`) is a printable
+drill where students write their answers by hand. Structure: `# Practice: Title`, breadcrumb,
+a short `## Rules` section, then `## Part A/B/...` sections with numbered questions
+continuous across parts, and finally an `## Answers` section in `<details>`. Rules:
+
+- **Leave blank writing space under every question.** Put a spacer after each question:
+  `<div style="height: 70px"></div>` (about 70px for one-line rewrites; 120–150px for
+  multi-step work). Never stack questions tightly in a list — a printed page must have room
+  to write.
+- Put the question and its spacer in the same block, one question per block, e.g.
+  ```markdown
+  **1.** $7 - 3$
+
+  <div style="height: 70px"></div>
+  ```
+  Use bold `**N.**` labels instead of a Markdown ordered list, so the spacer doesn't break
+  the list numbering.
+- Start the answers on a new printed page: `<div style="page-break-before: always"></div>`
+  before `## Answers`, so students can't see them while working.
+- When the user says "don't calculate", questions ask for rewriting/transforming only.
+
 ## Step 3: Length control — split, don't cram
 
 This is the most important rule the user asked for. Observed lesson files run roughly

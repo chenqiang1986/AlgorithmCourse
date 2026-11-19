@@ -29,6 +29,8 @@ a diagnostic test that samples the full range of Algebra I skills:
    Two-variable linear systems and solving them by substitution and elimination, including
    rearranging an equation before substituting, picking either variable, and scaling one or
    both equations before eliminating.
+   Homework: [03-homework-two-variable-linear-equations.md](./03-homework-two-variable-linear-equations.md)
+   (12 problems: solution check, substitution, elimination, special systems, find-the-error).
 4. [04-three-variable-linear-equations.md](./04-three-variable-linear-equations.md)
    Extending elimination to three-variable systems: eliminating one variable from two
    different pairs of equations, and why that two-step process is the generic method

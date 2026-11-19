@@ -68,9 +68,18 @@ rewriting an expression into an equivalent requested form, without calculating a
 - [06.2-distributive-law-numeric-expressions.md](./06.2-distributive-law-numeric-expressions.md)
   Uses the distributive law with numeric expressions only, opening and factoring parentheses
   without evaluating products.
-- [06.3-complicated-fraction-calculation.md](./06.3-complicated-fraction-calculation.md)
-  Practices structurally reading complex fractions, reciprocal division, same-denominator
-  fraction combination, and subtraction-to-addition transformations without final evaluation.
+- [06.3-fraction-multiplication-division-reduction.md](./06.3-fraction-multiplication-division-reduction.md)
+  Multiplies and divides chains of fractions (including fractions over fractions), handles
+  signs, and reduces by cancelling common factors before multiplying.
+- [06.3-homework-fraction-multiplication-division-reduction.md](./06.3-homework-fraction-multiplication-division-reduction.md)
+  A 10-problem homework set on Lesson 6.3: multiplying and dividing fractions with signs,
+  reducing, and fractions over fractions.
+- [06.4-fraction-addition-different-denominators.md](./06.4-fraction-addition-different-denominators.md)
+  Adds and subtracts fractions with unlike or partly shared denominators, then combines
+  addition with multiplication and complex fractions, leaving results in unevaluated form.
+- [06.4-homework-fraction-addition-different-denominators.md](./06.4-homework-fraction-addition-different-denominators.md)
+  An 11-problem homework set on Lesson 6.4: adding and subtracting fractions with unlike
+  denominators, mixed operations, and complex fractions with a sum inside.
 
 9. [07-algebraic-expressions-and-like-terms.md](./07-algebraic-expressions-and-like-terms.md)
    Introduces variables, terms, and coefficients; evaluating expressions by substitution;
